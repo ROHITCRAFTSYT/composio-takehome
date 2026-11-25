@@ -1,0 +1,170 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "one_liner": "Ecommerce platform offering store catalog, orders, customers and storefront REST and GraphQL APIs",
+  "auth_methods": [
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Store-level API account token sent as X-Auth-Token header (api_key). App-level API account client ID plus client secret used to decode a JWT for Current Customer (other). OAuth app flow was not verified in pages I fetched, so it is not listed.",
+  "access": "self_serve_trial",
+  "access_notes": "API accounts are created in the store control panel. I did not read a pricing or plan page, so plan gating is unverified; confidence on access is low.",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "Separate REST Admin API, Storefront GraphQL API and Storefront REST API, plus B2B Edition REST API on api-b2b.bigcommerce.com.",
+  "docs_url": "https://developer.bigcommerce.com/",
+  "mcp": "official",
+  "mcp_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve store-level API tokens and documented REST API. Official Store Management MCP exists. Storefront MCP was described as Early Access in a vendor blog, so that surface may be gated.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+    "quote": "the token from your store-level API account should be passed in the X-Auth-Token header"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/authentication-apis/current-customer/overview",
+    "quote": "send the client ID of an app-level API account as a query parameter with your request"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+    "quote": "Creating an account and token for the B2B REST API follows the same process that is used for all such accounts in the BigCommerce control panel."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/authentication-apis/storefront-api-tokens/overview",
+    "quote": "Get and manage storefront API tokens for authenticating requests to the GraphQL Storefront API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "Use Store Management MCP to let an administrator work on the store through an agent"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+    "quote": "the token from your store-level API account should be passed in the X-Auth-Token header"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "BigCommerce API authentication developer docs",
+     "domains": [
+      "developer.bigcommerce.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "BigCommerce MCP server official",
+     "domains": [
+      "developer.bigcommerce.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/docs/rest-authentication",
+     "find": [
+      "API account",
+      "OAuth",
+      "X-Auth-Token",
+      "app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/docs/rest-authentication/api-accounts",
+     "find": [
+      "API account",
+      "access token",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/docs/rest-authentication/oauth",
+     "find": [
+      "OAuth",
+      "approved",
+      "app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/llms.txt",
+     "find": [
+      "MCP",
+      "mcp"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/docs/rest-authentication/current-customer",
+     "find": [
+      "API account",
+      "client secret",
+      "X-Auth-Token"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "BigCommerce official MCP server store API developer",
+     "domains": [
+      "developer.bigcommerce.com",
+      "bigcommerce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+     "find": [
+      "Enablement",
+      "permissions",
+      "Store Management MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+     "find": [
+      "X-Auth-Token",
+      "X-Store-Hash",
+      "API account"
+     ]
+    }
+   }
+  ]
+ }
+}

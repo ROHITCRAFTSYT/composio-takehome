@@ -1,0 +1,5 @@
+{"t": 1795578205.7, "tool": "fetch_page", "input": {"url": "https://www.bigcommerce.com/pricing/", "find": ["free trial", "API", "days"]}}
+{"t": 1795578404.7, "tool": "fetch_page", "input": {"url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview", "find": ["Early Access", "Store Management", "remote", "OAuth"]}}
+{"t": 1795578417.8, "tool": "composio_search", "input": {"query": "BigCommerce MCP server", "domains": []}}
+{"t": 1795578486.5, "tool": "composio_search", "input": {"query": "BigCommerce create API account OAuth scopes sandbox store developer", "domains": []}}
+{"t": 1795578554.3, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/docs/start/authentication", "find": ["OAuth", "client_id", "API account"]}}

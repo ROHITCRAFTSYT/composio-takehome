@@ -1,0 +1,126 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "one_liner": "FX audit layer that compares the rate a bank or card applied against the mid-market rate and quantifies hidden FX spreads.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "critic: api_key confirmed via vendor-org GitHub README: hosted MCP uses a Bearer API key from ipayx.ai/ai-access; some tools need no auth (3 free audits per IP per month). No OAuth documented. ipayx.ai/docs and /ai-access render only a landing page.",
+  "access": "self_serve_free",
+  "access_notes": "critic: kept self_serve_free, now backed by vendor-owned README: 'get a free key at ipayx.ai'. Some tools work with no auth.",
+  "api_style": "none",
+  "api_breadth": "narrow",
+  "api_notes": "critic: no documented REST/GraphQL HTTP API found on any vendor page; the product is exposed as an MCP server (hosted mcp.ipayx.ai/mcp and npm @ipayx/mcp-fx-audit). api_style stays none.",
+  "docs_url": "https://www.ipayx.ai/docs",
+  "mcp": "official",
+  "mcp_url": "https://mcp.ipayx.ai/mcp",
+  "verdict": "blocked",
+  "main_blocker": "unclear_docs",
+  "blocker_notes": "critic: mcp community -> official (vendor GitHub org iPAYX-Technologies hosts mcp-fx-audit and a vendor-domain remote MCP URL). Verdict stays blocked: no documented public HTTP API, only MCP access; vendor docs pages are a bare landing page.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "one_liner",
+    "url": "https://www.ipayx.ai/docs",
+    "quote": "iPayX Protocol is the neutral FX verification layer for fintech sales teams and FX brokers."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "Auth: Bearer — API key from https://www.ipayx.ai/ai-access"
+   },
+   {
+    "field": "access",
+    "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+    "quote": "For live provider comparisons, get a free key at ipayx.ai."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "https://mcp.ipayx.ai/mcp"
+   },
+   {
+    "field": "api_style",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "Website: www.ipayx.ai | API access: ipayx.ai/ai-access"
+   },
+   {
+    "field": "verdict",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "Auth: None | Cost: 3 free audits per IP per calendar month"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.ipayx.ai/docs",
+     "find": [
+      "api",
+      "key",
+      "mcp",
+      "authorization",
+      "endpoint"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "iPayX API key REST endpoint docs mcp server",
+     "domains": [
+      "ipayx.ai",
+      "github.com",
+      "npmjs.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+     "find": [
+      "API",
+      "key",
+      "https://",
+      "REST",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+     "find": [
+      "key",
+      "free",
+      "ipayx.ai",
+      "REST"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.ipayx.ai/ai-access",
+     "find": [
+      "key",
+      "free",
+      "API",
+      "Bearer",
+      "curl",
+      "POST"
+     ]
+    }
+   }
+  ]
+ }
+}

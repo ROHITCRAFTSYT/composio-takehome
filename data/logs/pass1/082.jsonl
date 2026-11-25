@@ -1,0 +1,5 @@
+{"t": 1795529539.8, "tool": "composio_search", "input": {"query": "Plaid API authentication client_id secret access token docs", "domains": ["plaid.com"]}}
+{"t": 1795529616.5, "tool": "composio_search", "input": {"query": "Plaid MCP server official", "domains": []}}
+{"t": 1795529700.4, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/quickstart/", "find": ["sandbox", "free", "client_id", "secret", "Production", "Limited"]}}
+{"t": 1795529769.1, "tool": "fetch_page", "input": {"url": "https://plaid.com/pricing/", "find": ["free", "sandbox", "Production", "contact", "trial", "pay"]}}
+{"t": 1795529840.0, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/api/oauth/", "find": ["client_id", "secret", "access_token", "OAuth", "Basic"]}}

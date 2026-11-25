@@ -1,0 +1,103 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "SEO and SERP data API (SERP, keywords, backlinks, on-page and content analysis) for developers and AI agents.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Login plus a generated API password, sent as HTTP Basic auth. The API password is issued in the dashboard and is not the account password. OAuth 2.0 is used only by the hosted MCP server, not the REST API.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access kept self_serve_free. A free account gets API credentials; Sandbox is free for any registered user (dummy data) and new accounts get a $1 trial credit. Real live data needs a $50 minimum top-up (pay-as-you-go, no subscription).",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API at api.dataforseo.com/v3 with many API families; breadth judged from the docs index, not counted endpoint by endpoint.",
+  "docs_url": "https://docs.dataforseo.com/v3/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.dataforseo.com/v3/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials are self-serve and a free sandbox exists; live data spends prepaid balance ($50 minimum top-up), which is pay-as-you-go usage, not a plan gate on API access.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Basic authentication is the only way to access DataForSEO API; credentials should always be passed in the header of the request."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Note that the API password is generated automatically by DataForSEO and is different from your account password."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+    "quote": "Sandbox is completely free for any registered user at DataForSEO."
+   },
+   {
+    "field": "access",
+    "url": "https://dataforseo.com/pricing",
+    "quote": "Yes. The minimum account top-up is $50."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/dataforseo/mcp-server-typescript",
+    "quote": "Public remote MCP server URL: https://mcp.dataforseo.com/v3/mcp"
+   },
+   {
+    "field": "mcp",
+    "url": "https://dataforseo.com/dev-starter-kit",
+    "quote": "Point your client at the hosted server and authorise it over OAuth"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dataforseo.com/pricing",
+     "find": [
+      "minimum",
+      "free",
+      "trial",
+      "deposit",
+      "sandbox"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+     "find": [
+      "free",
+      "sandbox",
+      "balance",
+      "account"
+     ]
+    }
+   }
+  ]
+ }
+}

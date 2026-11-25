@@ -1,0 +1,4 @@
+{"t": 1795576765.5, "tool": "composio_search", "input": {"query": "Lark Larksuite MCP server official open platform", "domains": []}}
+{"t": 1795576858.0, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials", "find": ["user_access_token", "OAuth", "app_secret"]}}
+{"t": 1795576925.7, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction", "find": ["MCP", "Features"]}}
+{"t": 1795577126.6, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes", "find": ["reviewed", "Custom"]}}

@@ -1,0 +1,93 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "one_liner": "Airtable: a database-style workspace of bases, tables and records with a REST API for external integrations.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Personal access tokens (api_key class) and OAuth access tokens are the two supported methods. Legacy API keys were retired in February 2024. critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan includes Base Data endpoints (except Views); public API limit enforced on Free. critic: access self_serve_free confirmed from billing-plans page.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Base data endpoints cover records, fields, tables, bases, comments, webhooks, views and enterprise endpoints.",
+  "docs_url": "https://airtable.com/developers/web/api/introduction",
+  "mcp": "official",
+  "mcp_url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: OAuth integration guide shows self-registration with a redirect URL; no vendor review step found for use. Privacy/TOS URLs only required to share an integration.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://airtable.com/developers/web/api/authentication",
+    "quote": "We currently support using personal access tokens and OAuth access tokens during the authentication process."
+   },
+   {
+    "field": "access",
+    "url": "https://airtable.com/developers/web/api/billing-plans",
+    "quote": "Access to all \"Base Data\" endpoints except \"Views\""
+   },
+   {
+    "field": "api_style",
+    "url": "https://airtable.com/developers/web/api/introduction",
+    "quote": "The API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+    "quote": "Airtable maintains its own official MCP server and skills library, built and supported directly by Airtable."
+   },
+   {
+    "field": "verdict",
+    "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+    "quote": "Give your integration a unique name and register a valid redirect URL and click ‘Register integration’."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/api/billing-plans",
+     "find": [
+      "Free",
+      "Base",
+      "Views"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+     "find": [
+      "official",
+      "mcp.airtable.com",
+      "server"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+     "find": [
+      "review",
+      "approval",
+      "register",
+      "publish"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "one_liner": "Airtable: a database-style workspace of bases, tables and records with a REST API for external integrations.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Personal access tokens (api_key class) and OAuth access tokens are the two supported methods. Legacy API keys were retired in February 2024.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan includes Base Data endpoints; the public API limit is enforced on the Free plan.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Base data endpoints cover records, fields, tables, bases, comments, webhooks, views and enterprise endpoints.",
+  "docs_url": "https://airtable.com/developers/web/api/introduction",
+  "mcp": "official",
+  "mcp_url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No approval or paid step found for personal access tokens; OAuth marketplace review was not verified.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://airtable.com/developers/web/api/authentication",
+    "quote": "We currently support using personal access tokens and OAuth access tokens during the authentication process."
+   },
+   {
+    "field": "access",
+    "url": "https://airtable.com/developers/web/api/billing-plans",
+    "quote": "Access to all \"Base Data\" endpoints except \"Views\""
+   },
+   {
+    "field": "api_style",
+    "url": "https://airtable.com/developers/web/api/introduction",
+    "quote": "The API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+    "quote": "Airtable maintains its own official MCP server and skills library, built and supported directly by Airtable."
+   },
+   {
+    "field": "verdict",
+    "url": "https://airtable.com/developers/web/api/authentication",
+    "quote": "Personal access tokens are for personal development, like building an integration for yourself, your client, or your company."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Airtable API authentication personal access token OAuth",
+     "domains": [
+      "airtable.com",
+      "support.airtable.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Airtable MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "find": [
+      "personal access token",
+      "OAuth",
+      "API key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/api/introduction",
+     "find": [
+      "REST",
+      "rate limit",
+      "Authorization"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+     "find": [
+      "official",
+      "MCP",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/api/billing-plans",
+     "find": [
+      "free",
+      "API",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://airtable.com/developers/web/api/oauth-reference",
+     "find": [
+      "OAuth",
+      "register",
+      "integration"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+     "find": [
+      "official MCP server"
+     ]
+    }
+   }
+  ]
+ }
+}

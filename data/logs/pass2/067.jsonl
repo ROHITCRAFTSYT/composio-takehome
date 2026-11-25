@@ -1,0 +1,3 @@
+{"t": 1795590803.8, "tool": "composio_search", "input": {"query": "Snowflake free plan no credit card sign up free tier 2026", "domains": ["snowflake.com", "docs.snowflake.com"]}}
+{"t": 1795590852.5, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "find": ["free", "paid", "upgrade", "expire"]}}
+{"t": 1795590885.6, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/developer-guide/sql-api/index", "find": ["REST API", "submit SQL"]}}

@@ -1,0 +1,6 @@
+{"t": 1795529346.6, "tool": "composio_search", "input": {"query": "ClickUp API authentication personal token OAuth docs", "domains": ["clickup.com", "developer.clickup.com"]}}
+{"t": 1795529382.1, "tool": "composio_search", "input": {"query": "ClickUp MCP server official", "domains": []}}
+{"t": 1795529415.6, "tool": "fetch_page", "input": {"url": "https://clickup.com/api", "find": ["api", "token", "oauth", "key"]}}
+{"t": 1795529499.0, "tool": "fetch_page", "input": {"url": "https://developer.clickup.com/docs/authentication", "find": ["Personal token", "personal token", "OAuth", "pk_"]}}
+{"t": 1795529532.4, "tool": "fetch_page", "input": {"url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server", "find": ["official", "MCP server", "Remote MCP", "beta", "OAuth"]}}
+{"t": 1795529612.5, "tool": "fetch_page", "input": {"url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API", "find": ["Anyone with a ClickUp account", "personal token", "free"]}}

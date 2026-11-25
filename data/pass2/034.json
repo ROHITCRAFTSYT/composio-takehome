@@ -1,0 +1,118 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "All-in-one marketing, CRM and agency platform (GoHighLevel / HighLevel) with a documented public API and an official MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 and Private Integration Tokens (PIT). PIT is a bearer token, counted as api_key per the rubric. Legacy API key generation is being phased out per the official docs.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: access paid_plan -> self_serve_trial. Pricing page offers a 14-day free trial with full access to the chosen tier, and API access (OAuth and Private Integration Tokens) is available across plans including Starter. A free Marketplace developer account (sign up, phone and email verification) lets you create OAuth apps, but installing/using them needs a HighLevel account. No permanently free plan.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Versioned REST-style API with bearer auth (v2 and v3 routes). Some higher-tier endpoints are restricted by plan, scope or eligibility. api_style is inferred from the v3 bearer-auth reference; the page does not use the word REST.",
+  "docs_url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+  "mcp": "official",
+  "mcp_url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: blocked/paid_plan -> ready/none. A 14-day free trial gives full tier access so credentials can be obtained self-serve; ongoing production use needs a paid subscription after the trial, and marketplace publishing has a submission workflow, but building and testing is not blocked.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://www.gohighlevel.com/pricing",
+    "quote": "Yes, we offer a 14-day free trial."
+   },
+   {
+    "field": "access",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "HighLevel offers API access across its subscription plans, including Starter, Unlimited, and Founder."
+   },
+   {
+    "field": "access",
+    "url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount",
+    "quote": "Click Sign Up to create a developer account."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "Private Integration Tokens allow developers to securely connect internal applications to HighLevel."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "Both OAuth 2.0 and Private Integration Tokens (PIT) are available across plans."
+   },
+   {
+    "field": "api_style",
+    "url": "https://marketplace.gohighlevel.com/docs/ghl/users/users-api-v-3",
+    "quote": "All APIs available via /v3 route prefix with AIP-compliant responses."
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+    "quote": "The HighLevel MCP Server, also called the LeadConnector MCP Server, connects through OAuth"
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.gohighlevel.com/pricing",
+    "quote": "Yes, we offer a 14-day free trial."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HighLevel developer marketplace create app free developer account free trial API access",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+     "find": [
+      "account",
+      "trial",
+      "free",
+      "sub-account",
+      "review",
+      "approval"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount",
+     "find": [
+      "developer account",
+      "sub-account",
+      "test",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.gohighlevel.com/pricing",
+     "find": [
+      "free trial",
+      "14-day",
+      "day free"
+     ]
+    }
+   }
+  ]
+ }
+}

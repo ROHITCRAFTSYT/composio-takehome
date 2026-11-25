@@ -1,0 +1,134 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "one_liner": "Sales CRM for small and medium-sized businesses covering leads, deals, contacts and pipeline management",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "API token obtained manually from the Pipedrive app (api_key); OAuth 2.0 authorization_code flow for apps installed by customers (oauth2).",
+  "access": "self_serve_free",
+  "access_notes": "critic: access self_serve_trial -> self_serve_free. Pipedrive offers a free developer sandbox account (a regular Pipedrive company account for app developers, requested via a form on the developer site) that gives Developer Hub access for building integrations; the 14-day trial also exists. Sandbox is kept while the developer is building or publishing an app.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "RESTful v1 API with OpenAPI reference. Object-level coverage was not checked endpoint by endpoint.",
+  "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "mcp": "official",
+  "mcp_url": "https://www.pipedrive.com/en/features/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready confirmed. Self-serve API token plus documented REST API; developer sandbox available. Marketplace listing of public OAuth apps may need review but is not required to build.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API token can be obtained manually from the Pipedrive app."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+    "quote": "After the customer has confirmed the app installation, you will need to exchange the authorization_code to a pair of access and refresh tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+    "quote": "Our developer sandbox account is essentially like a regular Pipedrive company account."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "To test your applications, we recommend creating a new, separate Pipedrive account for sandboxing purposes."
+   },
+   {
+    "field": "access",
+    "url": "https://www.pipedrive.com/en/pricing",
+    "quote": "Free 14-day trial. Full access. No credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "This reference helps you implement the RESTful Pipedrive API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API token can be obtained manually from the Pipedrive app."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "find": [
+      "sandbox",
+      "free",
+      "trial",
+      "API token",
+      "developer"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pipedrive developer sandbox account free",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pipedrive MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.pipedrive.com/en/features/mcp-server",
+     "find": [
+      "official",
+      "OAuth",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+     "find": [
+      "free",
+      "sandbox",
+      "seats",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pipedrive.com",
+     "find": [
+      "sandbox",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

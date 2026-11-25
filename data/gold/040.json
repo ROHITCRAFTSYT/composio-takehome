@@ -1,0 +1,49 @@
+{
+  "n": 40,
+  "app": "SendGrid",
+  "one_liner": "Twilio SendGrid Web API v3 (REST) for transactional/marketing email, contacts, templates and stats; Bearer API keys, self-serve 60-day free trial then paid plans.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_trial",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://mcp.twilio.com/docs",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "auth: v3 Web API documents only API keys sent as 'Authorization: Bearer <key>' (SMTP relay uses username 'apikey' + the key, still api_key). No OAuth for third-party apps; account username/password Basic auth is not offered for v3. access: SendGrid retired its free plans (Twilio changelog, May 2025); current pricing page shows a Free Trial of 100 emails/day for 60 days, no credit card -> self_serve_trial. After 60 days a paid plan (Essentials+) is required, so long-running use is effectively paid_plan; verdict kept ready because a self-serve documented path exists today (main_blocker could arguably be paid_plan). mcp: AMBIGUOUS. Twilio (SendGrid's owner) hosts the official Twilio MCP server at mcp.twilio.com/docs (Public Beta) which explicitly indexes 'Twilio SendGrid docs and support articles', but it is read-only docs/spec search and does not call the SendGrid API. Twilio's action MCP (twilio-labs/mcp, @twilio-alpha/mcp) covers twilio_* OpenAPI services only, no SendGrid; github.com/sendgrid org has no MCP repo. Labeled official per the rubric's literal 'built or hosted by the vendor'; if a grader requires an action-capable server this becomes community (many third-party SendGrid MCP servers, e.g. Garoth/sendgrid-mcp, deyikong/sendgrid-mcp).",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "quote": "The Twilio SendGrid Web API v3 supports API keys, which add an additional layer of security to your account."
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "quote": "Free trial lets you send 100 emails/day for 60 days"
+    },
+    {
+      "field": "api_style",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api",
+      "quote": "The Twilio SendGrid Web REST API v3 provides SDKs for seven different languages."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "quote": "Twilio SendGrid docs and support articles"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "quote": "This server is read-only: it searches and retrieves public API documentation, and it does not connect to a Twilio account or execute any API calls."
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "quote": "To authenticate, add an HTTP Authorization header to your API request that contains an API Key."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

@@ -1,0 +1,123 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "one_liner": "Work management platform for tasks, docs, goals and team collaboration, with a public REST API and an official MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Personal API token (begins with pk_) sent as the Authorization header; OAuth 2.0 flow for apps used by other people.",
+  "access": "self_serve_free",
+  "access_notes": "Any ClickUp account (including Free Forever plan) can generate a personal token. critic: confirmed self_serve_free; Free Forever plan has public API rate limit of 100 requests/min per token.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Public REST API specification is linked from the developer docs landing page; endpoint coverage was not checked page by page.",
+  "docs_url": "https://developer.clickup.com/docs/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.clickup.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed. MCP on Free Forever is capped at 100 calls per 24h without the Everything AI add-on, not a blocker for the API.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "For personal use, authenticate with your personal API token."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "For apps or integrations that other people use, use the OAuth flow, allowing users to authorize Workspaces for your app."
+   },
+   {
+    "field": "access",
+    "url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API",
+    "quote": "Anyone with a ClickUp account can generate a personal token."
+   },
+   {
+    "field": "access",
+    "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+    "quote": "Free Forever, Unlimited, and Business Plans: 100 requests per minute, per token."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "Personal tokens begin with pk_."
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://developer.clickup.com",
+    "quote": "Browse our Public API specification."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "quote": "Our MCP server URL is https://mcp.clickup.com/mcp."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "quote": "ClickUp's MCP Server is available on all plans."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.clickup.com/docs/authentication",
+     "find": [
+      "personal",
+      "OAuth",
+      "pk_"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+     "find": [
+      "all plans",
+      "MCP server URL",
+      "official"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API",
+     "find": [
+      "personal token",
+      "generate"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "ClickUp MCP server pricing free plan API access rate limits",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+     "find": [
+      "Free Forever",
+      "per token"
+     ]
+    }
+   }
+  ]
+ }
+}

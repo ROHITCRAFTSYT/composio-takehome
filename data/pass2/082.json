@@ -1,0 +1,144 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "one_liner": "Developer API that connects apps to users' bank accounts and financial data.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Every request uses a client_id plus secret pair from the Dashboard. The OAuth endpoints are for Plaid's own token grants (client_credentials, refresh_token, e.g. the mcp:dashboard scope), not a third-party user-consent flow for developers.",
+  "access": "self_serve_free",
+  "access_notes": "Sign up in the Dashboard to get Sandbox API keys for free. critic: access self_serve_free confirmed (free Sandbox issues working keys). Pricing page lists Pay as You Go with no commitment and self-service support.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Documented HTTP API with per-product endpoints; the pricing page lists core products plus all products including beta on custom plans.",
+  "docs_url": "https://plaid.com/docs/",
+  "mcp": "official",
+  "mcp_url": "https://api.dashboard.plaid.com/mcp/",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "critic: verdict ready -> ready_with_review, main_blocker none -> app_review. Sandbox is self-serve and buildable now; live Production use requires Plaid's production access review (from general knowledge; not confirmed on a fetched page, so treat as medium confidence).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "Your Plaid API client_id. The client_id is required and may be provided either in the PLAID-CLIENT-ID header or as part of a request body."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/docs/quickstart/",
+    "quote": "You'll need API keys, which you can receive by signing up in the Dashboard."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/docs/quickstart/",
+    "quote": "Today we'll start in the Sandbox environment."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/pricing/",
+    "quote": "Products | Pay as You GoCore products"
+   },
+   {
+    "field": "api_style",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "may be provided either in the PLAID-CLIENT-ID header or as part of a request body."
+   },
+   {
+    "field": "mcp",
+    "url": "https://plaid.com/docs/resources/mcp",
+    "quote": "The Dashboard MCP server is a remote MCP server hosted by Plaid."
+   },
+   {
+    "field": "mcp",
+    "url": "https://plaid.com/docs/resources/mcp",
+    "quote": "https://api.dashboard.plaid.com/mcp/"
+   },
+   {
+    "field": "verdict",
+    "url": "https://plaid.com/docs/quickstart/",
+    "quote": "You'll need API keys, which you can receive by signing up in the Dashboard."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Plaid MCP server",
+     "domains": [
+      "plaid.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/resources/mcp",
+     "find": [
+      "remote MCP server hosted by Plaid",
+      "mcp.plaid.com",
+      "https://"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/quickstart/",
+     "find": [
+      "Sandbox",
+      "Production",
+      "free",
+      "approval"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/pricing/",
+     "find": [
+      "Free",
+      "Limited Production",
+      "Pay as You Go",
+      "Sandbox",
+      "Custom"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/quickstart/",
+     "find": [
+      "production access",
+      "Request Production",
+      "application",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/account/",
+     "find": [
+      "Production",
+      "approval",
+      "review",
+      "Trial",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,5 @@
+{"t": 1795528695.2, "tool": "composio_search", "input": {"query": "Bright Data API authentication developer docs", "domains": ["brightdata.com"]}}
+{"t": 1795528730.5, "tool": "composio_search", "input": {"query": "Bright Data MCP server official github", "domains": ["brightdata.com", "github.com"]}}
+{"t": 1795528813.9, "tool": "fetch_page", "input": {"url": "https://docs.brightdata.com/api-reference/authentication", "find": ["API key", "Bearer", "CLI", "OAuth"]}}
+{"t": 1795528844.7, "tool": "fetch_page", "input": {"url": "https://brightdata.com/products/web-scraper", "find": ["free", "OAuth", "MCP", "trial", "pricing"]}}
+{"t": 1795528871.1, "tool": "fetch_page", "input": {"url": "https://github.com/brightdata/brightdata-mcp", "find": ["API_TOKEN", "official", "free", "OAuth"]}}

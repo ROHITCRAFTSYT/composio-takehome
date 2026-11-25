@@ -1,0 +1,2 @@
+{"t": 1795578198.8, "tool": "fetch_page", "input": {"url": "https://woocommerce.com/document/woocommerce-ai/mcp-server/", "find": ["MCP", "Automattic", "enable", "experimental"]}}
+{"t": 1795578288.0, "tool": "fetch_page", "input": {"url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication", "find": ["Generate API", "Basic Auth", "OAuth", "permissions", "HTTPS"]}}

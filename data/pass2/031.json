@@ -1,0 +1,107 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 31,
+  "app": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Google's API for programmatic management, reporting and ad management of Google Ads accounts and campaigns.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "OAuth 2.0 user flow plus service account flow (graded as other); every call also needs a 22-character developer token sent in the developer-token header (api_key). login-customer-id header needed for manager accounts.",
+  "access": "approval_required",
+  "access_notes": "Enabling the API gives Test access (test accounts only) automatically; production accounts need an Explorer/Basic/Standard access-level application on the Google Ads API Overview page. critic: confirmed approval_required.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs describe the REST interface alongside gRPC client libraries; no GraphQL. Covers campaigns, ad groups, assets, labels and GAQL reporting.",
+  "docs_url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+  "mcp": "official",
+  "mcp_url": "https://github.com/googleads/google-ads-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Test access works for test accounts immediately; production use needs an access-level application (Explorer/Basic/Standard). critic: confirmed. MCP is documented on Google's developer docs and hosted in the googleads GitHub org.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "Both OAuth 2.0 user authentication flow and service account flow are supported."
+   },
+   {
+    "field": "api_key",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "A developer token is required in the developer-token HTTP header for every API call."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "apply for Explorer access on the Google Ads API Overview page to access production accounts"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "Enable Google Ads API in your Google Cloud project to automatically be granted Test access for your project."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "Google may automatically upgrade your project's API access level to Explorer after you submit your application."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "when using the REST interface"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "quote": "The Google Ads MCP server provides a standardized bridge to the Google Ads API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+     "find": [
+      "Explorer",
+      "Test",
+      "Basic",
+      "approval",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "find": [
+      "official",
+      "Google",
+      "read-only",
+      "github"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+     "find": [
+      "The Explorer access level allows",
+      "Basic access level",
+      "Standard access level",
+      "review"
+     ]
+    }
+   }
+  ]
+ }
+}

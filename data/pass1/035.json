@@ -1,0 +1,153 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Email and SMS marketing platform (audiences, campaigns, automations, reports) with a Marketing API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Official docs say an API key authenticates against the account that created it, and OAuth 2 is for accessing an account belonging to someone else. Keys and OAuth tokens are sent as HTTP Bearer or Basic (token as password). Legacy and scoped API keys both appear in the endpoint docs. Basic here means a token as password, not username+password, so basic is not listed.",
+  "access": "self_serve_free",
+  "access_notes": "Users with Manager permissions can generate their own API keys from the account (verified in the API keys help page). A Free plan exists (250 contacts, 500 sends/month per the pricing help page in search results, not fetched). I did not fetch a page that explicitly says API access is available on the Free plan, so this is inferred. Key expiry: keys created from June 22, 2026 expire after 1 year.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Marketing API endpoints are documented under /developer/marketing/api/... with bearer-auth parameters, path and query parameters. The fetched pages do not use the word REST, so rest is inferred from the endpoint structure. Breadth (broad) was not verified against a full endpoint list.",
+  "docs_url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "The official MCP server is a docs-search server and does not access the user's account (per its page). Account actions must go through the API directly or Agent skills. Verdict ready is for building an API-based toolkit; no approval step is documented in the pages fetched.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "An API key authenticates against the account that created it."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "OAuth 2 authenticates against an account belonging to someone else."
+   },
+   {
+    "field": "access",
+    "url": "https://mailchimp.com/help/about-api-keys/",
+    "quote": "Users with Manager permissions can generate their own API keys."
+   },
+   {
+    "field": "api_style",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "Every request to the Marketing API carries a credential."
+   },
+   {
+    "field": "mcp",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+    "quote": "This documentation site is itself an MCP server."
+   },
+   {
+    "field": "verdict",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "An API key authenticates against the account that created it."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Mailchimp API authentication OAuth API key docs",
+     "domains": [
+      "mailchimp.com",
+      "mailchimp.com/developer"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Mailchimp official MCP server github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "find": [
+      "OAuth",
+      "API key",
+      "Basic",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/help/about-api-keys",
+     "find": [
+      "free",
+      "plan",
+      "paid",
+      "account"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app",
+     "find": [
+      "review",
+      "approval",
+      "public",
+      "submit",
+      "register"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Mailchimp free plan API access pricing developer",
+     "domains": [
+      "mailchimp.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/docs/mcp-server/",
+     "find": [
+      "MCP",
+      "server",
+      "official",
+      "Claude"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "find": [
+      "official",
+      "MCP",
+      "Claude",
+      "server",
+      "Bearer",
+      "OAuth"
+     ]
+    }
+   }
+  ]
+ }
+}

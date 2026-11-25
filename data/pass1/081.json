@@ -1,0 +1,156 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "one_liner": "Payments and billing API for accepting payments, subscriptions and payouts online.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Secret and restricted API keys (sk_/rk_) from the Dashboard; OAuth for Connect (Standard accounts) and for the MCP server.",
+  "access": "self_serve_free",
+  "access_notes": "Sandboxes with test keys are created in the Dashboard without a paid plan.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Resource-oriented REST API with form-encoded requests and JSON responses. Some v2 endpoints exist alongside v1.",
+  "docs_url": "https://docs.stripe.com/api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.stripe.com",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Test mode secret keys start with sk_test_ and have unrestricted access to their sandboxes."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "OAuth: Use OAuth when a client accesses Stripe on behalf of your Stripe user account."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.stripe.com/keys",
+    "quote": "Build and test: Create or select a sandbox and use its test keys."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.stripe.com/api",
+    "quote": "The Stripe API is organized around REST."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "Manage MCP access and sessions"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "\"url\": \"https://mcp.stripe.com\""
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.stripe.com/keys",
+    "quote": "Build and test: Create or select a sandbox and use its test keys."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Stripe API authentication secret key restricted keys docs",
+     "domains": [
+      "stripe.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.stripe.com/api/authentication",
+     "find": [
+      "secret key",
+      "restricted",
+      "Basic",
+      "OAuth",
+      "Connect"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Stripe MCP server official",
+     "domains": [
+      "stripe.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Stripe Connect OAuth standard account authorize",
+     "domains": [
+      "stripe.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.stripe.com/keys",
+     "find": [
+      "test mode",
+      "sandbox",
+      "free",
+      "Dashboard"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.stripe.com/mcp",
+     "find": [
+      "official",
+      "OAuth",
+      "remote"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.stripe.com/connect/oauth-reference",
+     "find": [
+      "OAuth",
+      "authorization code",
+      "client_id"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.stripe.com/api",
+     "find": [
+      "REST",
+      "JSON",
+      "HTTP",
+      "resources"
+     ]
+    }
+   }
+  ]
+ }
+}

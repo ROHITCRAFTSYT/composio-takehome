@@ -1,0 +1,7933 @@
+{
+ "001": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-auth-jwt-flow.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "002": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.hubspot.com/ai-tools/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "003": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.pipedrive.com/en/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.pipedrive.com/en/features/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "004": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.attio.com/rest-api/guides/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.attio.com/rest-api/guides/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.attio.com/rest-api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://attio.com/help/reference/apps/generating-an-api-key",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://attio.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.attio.com/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://attio.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "005": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.twenty.com/developers/extend/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.twenty.com/developers/extend/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://twenty.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.twenty.com/developers/extend/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.twenty.com/developers/extend/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "006": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.progress.com/podio/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "007": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.zoho.com/crm/developer/docs/api/graphql/getting-started.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "008": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.close.com/api/overview/api-key-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.close.com/api/overview/oauth-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://close.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://close.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.close.com/api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://developer.close.com/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://close.com/integrations/close-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://close.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.close.com/api/overview/api-key-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.close.com/integrations/publish",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "009": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.copper.com/resources/choosing-between-streak-vs-copper-crm",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.copper.com/en/articles/8823347-generating-an-api-key",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.copper.com/introduction/oauth/index.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.copper.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.copper.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "010": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://api.docs.dealcloud.com/docs/data",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://api.docs.dealcloud.com/docs/data",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://api.docs.dealcloud.com/docs/data",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://api.docs.dealcloud.com/mcp/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "011": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "012": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "013": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.freshdesk.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000001047-do-we-have-api-and-integration-capabilities-in-the-free-sprout-plan-",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.freshdesk.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.freshdesk.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "014": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.front.com/en/articles/2331",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.front.com/en/articles/2178",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://dev.frontapp.com/docs/rate-limiting",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://help.front.com/en/articles/2482",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.front.com/en/articles/4883136",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://dev.frontapp.com/docs/rate-limiting",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "015": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.usepylon.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.usepylon.com/pylon-facts",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "016": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.liveagent.com/pricing/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.liveagent.com/help-desk-software/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.liveagent.com/help-desk-software/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.liveagent.com/150554-AI-features",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://support.liveagent.com/150554-AI-features",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "017": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.plain.com/docs/graphql/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://www.plain.com/docs/graphql/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.plain.com/llms.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.plain.com/blog/startups-customer-support-tools",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.plain.com/llms.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.plain.com/docs/integrations/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.plain.com/docs/graphql/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "018": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.helpscout.com/docs-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.helpscout.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "019": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://www.gorgias.com/blog/gorgias-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.gorgias.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.gorgias.com/blog/gorgias-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.gorgias.com/blog/gorgias-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "020": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.gladly.com/rest",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.gladly.com/rest",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.gladly.com/rest/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.gladly.com/rest",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "021": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.slack.dev/authentication/tokens/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://slack.com/intl/en-gb/help/articles/13345326945043-Build-apps-with-Slack%E2%80%99s-developer-tools",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.slack.dev/apis/web-api/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://slack.com/intl/en-in/help/articles/48855576908307-Guide-to-MCP-in-Slack",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.slack.dev/app-management/distribution/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "022": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.twilio.com/docs/iam/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.twilio.com/docs/iam/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/en-us/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.twilio.com/en-us/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.twilio.com/docs/ai/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "023": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/cliq/pricing.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "024": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://github.com/larksuite/lark-openapi-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://open.larksuite.com/document/server-docs/getting-started/terminology",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/larksuite/lark-openapi-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "mcp",
+     "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "025": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://pumble.com/help/integrations/add-pumble-apps/guide-to-pumble-integrations",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://pumble.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "026": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.discord.com/developers/reference",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.discord.com/developers/reference",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.discord.com/developers/bots/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.discord.com/developers/bots/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/SaseQ/discord-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "027": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://core.telegram.org/bots/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://core.telegram.org/bots/telegram-login",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://core.telegram.org/bots/tutorial",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://core.telegram.org/bots/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.usecarly.com/blog/telegram-mcp/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://core.telegram.org/bots/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "028": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "029": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.aircall.io/docs/basic-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.aircall.io/docs/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://aircall.io/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://aircall.io/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.aircall.io/docs/sms",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.aircall.io/docs/basic-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://aircall.io/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "030": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.vonage.com/en/mcp-server/conceptual-guides/introduction-to-vonage-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "031": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.google.com/google-ads/api/rest/auth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_key",
+     "url": "https://developers.google.com/google-ads/api/rest/auth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.google.com/google-ads/api/rest/auth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "032": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "033": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.markifact.com/linkedin-ads-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "034": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "access",
+     "url": "https://www.gohighlevel.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://marketplace.gohighlevel.com/docs/ghl/users/users-api-v-3",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.gohighlevel.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "035": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://mailchimp.com/help/about-api-keys/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "036": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.klaviyo.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.klaviyo.com/hc/en-us/articles/7423954176283",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.klaviyo.com/en/reference",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "037": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://systeme.io/circle-alternative",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.systeme.io/reference/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.systeme.io/docs/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.systeme.io/reference/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "038": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "039": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.facebook.com/documentation/threads/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/threads/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/threads/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.facebook.com/documentation/threads",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/griffinwork40/threads-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.facebook.com/documentation/threads/get-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "040": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/Garoth/sendgrid-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "041": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://shopify.dev/docs/apps/build/stores/development-stores",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://shopify.dev/docs/apps/build/stores/development-stores",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://shopify.dev/docs/api/ai-toolkit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://shopify.dev/docs/api/ai-toolkit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "042": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://woocommerce.com/document/woocommerce-ai/mcp-server/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "043": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/authentication-apis/current-customer/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.bigcommerce.com/pricing/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/authentication-apis/storefront-api-tokens/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "044": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "045": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.adobe.com/commerce/webapi/rest/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.adobe.com/commerce/webapi/rest/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "046": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.squarespace.com/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "047": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ecwid.com/launch-apps/native-and-external-apps",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ecwid.com/develop-apps/app-settings",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.ecwid.com/develop-apps/app-settings",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "048": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "api_style",
+     "url": "https://gumroad.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://gumroad.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://gumroad.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://gumroad.com/help/article/280-create-application-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://gumroad.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://gumroad.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://gumroad.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "049": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://sell.amazon.com/developers",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://sell.amazon.com/developers",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/amzn/selling-partner-api-samples/discussions/382",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://sell.amazon.com/developers",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "050": {
+  "lint": [
+   "no auth method for an app with an API",
+   "agent reported low confidence"
+  ],
+  "evidence": {
+   "items": [
+    {
+     "field": "mcp",
+     "url": "https://commas.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://commas.com/enterprises",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://commas.com/enterprises",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "api_style",
+     "url": "https://commas.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://commas.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": false,
+    "access": false,
+    "api_style": false,
+    "mcp": false,
+    "verdict": false
+   }
+  },
+  "unsupported_fields": []
+ },
+ "051": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://dataforseo.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.dataforseo.com/v3/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/dataforseo/mcp-server-typescript",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://dataforseo.com/dev-starter-kit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.dataforseo.com/v3/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "052": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://seranking.com/api/data/getting-started/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://seranking.com/api.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://seranking.com/api.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://seranking.com/api/data/getting-started/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://seranking.com/mcp.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://seranking.com/mcp.html",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "053": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "access",
+     "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "054": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.mrscraper.com/docs/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.mrscraper.com/docs/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "055": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.apify.com/api/v2",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.apify.com/api/v2",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://apify.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.apify.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.apify.com/api/v2",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.apify.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.apify.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://apify.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "056": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.firecrawl.dev/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.firecrawl.dev/introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.firecrawl.dev/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.firecrawl.dev/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.firecrawl.dev/introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.firecrawl.dev/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.firecrawl.dev/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "057": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.brightdata.com/api-reference/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://brightdata.com/products/web-scraper",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://github.com/brightdata/brightdata-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.brightdata.com/api-reference/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/brightdata/brightdata-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://brightdata.com/products/web-scraper",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "058": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "one_liner",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/Burnsedia/sherlock-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": false,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "059": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.waterfall.io/v1/introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.waterfall.io/v1/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.waterfall.io/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.waterfall.io/v1/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "060": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.clay.com/public-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.clay.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.clay.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.clay.com/public-api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.clay.com/guides/clay-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.clay.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "061": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://github.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "access",
+     "url": "https://docs.github.com/en/rest",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.github.com/en/rest",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.github.com/en/graphql",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/github/github-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": false,
+    "access": false,
+    "api_style": false,
+    "mcp": true,
+    "verdict": false
+   }
+  },
+  "unsupported_fields": []
+ },
+ "062": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "api_style",
+     "url": "https://vercel.com/docs/rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://vercel.com/docs/rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://vercel.com/docs/sign-in-with-vercel",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://vercel.com/docs/accounts/access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://vercel.com/docs/plans/hobby",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://vercel.com/docs/rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://vercel.com/docs/accounts/access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "063": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.netlify.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.netlify.com/manage/accounts-and-billing/user-settings",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/netlify/netlify-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.netlify.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.netlify.com/manage/accounts-and-billing/user-settings",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "064": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.cloudflare.com/api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.cloudflare.com/fundamentals/oauth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.cloudflare.com/api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.cloudflare.com/plans/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://github.com/cloudflare/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://github.com/cloudflare/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/cloudflare/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://github.com/cloudflare/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "065": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://supabase.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://supabase.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://supabase.com/docs/guides/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://supabase.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://supabase.com/docs/guides/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "066": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://neo4j.com/docs/query-api/2/authentication-authorization/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://neo4j.com/docs/aura/api/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/neo4j/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "067": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.snowflake.com/en/user-guide/programmatic-access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "068": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.mongodb.com/docs/atlas/reference/free-shared-limitations",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.mongodb.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.mongodb.com/docs/mcp-server/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "069": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.datadoghq.com/api/latest/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.datadoghq.com/pricing/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.datadoghq.com/api/latest/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.datadoghq.com/mcp_server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "070": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.sentry.io/api/auth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.sentry.io/pricing/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.sentry.io/api/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.sentry.io/api/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://mcp.sentry.dev",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/getsentry/sentry-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "071": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.notion.com/reference/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/guides/notion-api/quick-start",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.notion.com/reference/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.notion.com/guides/mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.notion.com/guides/authorization/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "072": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://airtable.com/developers/web/api/billing-plans",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://airtable.com/developers/web/api/introduction",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "073": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://linear.app/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://linear.app/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://linear.app/docs/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://linear.app/docs/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "074": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.atlassian.com/software/jira/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.atlassian.com/cloud/rovo-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "075": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.asana.com/docs/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.asana.com/docs/personal-access-token",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.asana.com/docs/quick-start",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.asana.com/reference/rest-api-reference",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.asana.com/docs/publish-your-app",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.asana.com/docs/publish-your-app",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "076": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.monday.com/api-reference/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.monday.com/apps/docs/oauth",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.monday.com/api-reference/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "077": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://developer.clickup.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "078": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "079": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://www.smartsheet.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "080": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://help.getharvest.com/api-v2/introduction/overview/general",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://help.getharvest.com/api-v2/introduction/overview/general",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "081": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.stripe.com/api/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.stripe.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.stripe.com/keys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.stripe.com/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.stripe.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.stripe.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.stripe.com/keys",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "082": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://plaid.com/docs/api/oauth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/quickstart/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/quickstart/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/pricing/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://plaid.com/docs/api/oauth/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://plaid.com/docs/resources/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://plaid.com/docs/resources/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://plaid.com/docs/quickstart/",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "083": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.binance.com/en/docs/products/spot/faqs/api_key_types",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.binance.com/en/docs/products/spot/faqs/api_key_types",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.binance.com/en/support/faq/detail/360002502072",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.binance.com/en/docs/products/spot/rest-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.binance.com/en/docs/products/spot/faqs/api_key_types",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "084": {
+  "lint": [
+   "no evidence for 'mcp'"
+  ],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.payaconnect.com/developers/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.payaconnect.com/developers/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.payaconnect.com/developers/quick-start",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.payaconnect.com/developers/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.payaconnect.com/developers/api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": [
+   "mcp"
+  ]
+ },
+ "085": {
+  "lint": [
+   "agent reported low confidence"
+  ],
+  "evidence": {
+   "items": [
+    {
+     "field": "one_liner",
+     "url": "https://www.ipayx.ai/docs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "086": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes",
+     "status": "verified",
+     "score": 1.0,
+     "via": "reader",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app/security-requirements",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": false,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "087": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developer.xero.com/faq/getting-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.xero.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.xero.com/documentation/development-accounts",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.xero.com/faq/getting-started",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.xero.com/documentation/guides/remote-mcp/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/xeroapi/xero-mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.xero.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "088": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "one_liner",
+     "url": "https://developer.brex.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.brex.com/guides/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developer.brex.com/docs/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.brex.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://www.brex.com/support/brex-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/docs/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developer.brex.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.brex.com/docs/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developer.brex.com/guides/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "089": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://ramp.com/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.ramp.com/ramp-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/ramp-public/ramp_mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "090": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "access",
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "091": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/PleasePrompto/notebooklm-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "092": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "093": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://developers.fathom.ai/api-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://developers.fathom.ai/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.fathom.ai/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://developers.fathom.ai",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.fathom.ai/api-overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.fathom.ai/mcp-docs",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://developers.fathom.ai/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "094": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.consensus.app/api-plans-and-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://docs.consensus.app/enterprise/connection-reference",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.consensus.app/api-plans-and-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.consensus.app/api-plans-and-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.consensus.app/consensus-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.consensus.app/api-plans-and-access",
+     "status": "verified",
+     "score": 1.0,
+     "via": "browser",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "095": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.reducto.ai/quickstart",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.reducto.ai/quickstart",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://reducto.ai/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.reducto.ai/agent-guide",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.reducto.ai/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.reducto.ai/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.reducto.ai/quickstart",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "096": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+     "status": "not_found",
+     "score": 0.636,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.devin.ai/admin/billing/self-serve?full=1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://devin.ai/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_breadth",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": "not_found",
+     "score": 0.5,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://docs.devin.ai/admin/billing/self-serve?full=1",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "main_blocker",
+     "url": "https://devin.ai/pricing",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": false,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": false,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": [
+   "auth_methods"
+  ]
+ },
+ "097": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://docs.higgsfield.ai/docs/authentication",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://higgsfield.ai/higgsfield-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://higgsfield.ai/blog/higgsfield-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://docs.higgsfield.ai/docs/help/faq",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://higgsfield.ai/higgsfield-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://higgsfield.ai/cli",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "098": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "api_style",
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://mermaid.ai/docs/ai/mcp-server",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": false
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": false,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "099": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://transcriptapi.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://transcriptapi.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://transcriptapi.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://transcriptapi.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://transcriptapi.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://transcriptapi.com/blog/youtube-transcript-api-complete-developer-guide",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ },
+ "100": {
+  "lint": [],
+  "evidence": {
+   "items": [
+    {
+     "field": "auth_methods",
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "auth_methods",
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "access",
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "api_style",
+     "url": "https://developers.grain.com",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.grain.com/mcp",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    },
+    {
+     "field": "verdict",
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "status": "verified",
+     "score": 1.0,
+     "via": "http",
+     "primary": true
+    }
+   ],
+   "supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   },
+   "primary_supported": {
+    "auth_methods": true,
+    "access": true,
+    "api_style": true,
+    "mcp": true,
+    "verdict": true
+   }
+  },
+  "unsupported_fields": []
+ }
+}

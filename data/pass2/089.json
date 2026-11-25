@@ -1,0 +1,131 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "one_liner": "Ramp: spend management, corporate cards, bill pay and expense reporting for businesses, with a Developer API for Transactions, Reimbursements, Cards and other business data.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Client Credentials: client_id:client_secret sent as Basic auth to /developer/v1/token for a bearer token (server-to-server). Authorization Code (with optional Refresh Token) for third-party apps with user consent. Basic-auth client secret treated as api_key per rubric; token exchange is OAuth 2.0 so oauth2 also listed.",
+  "access": "self_serve_free",
+  "access_notes": "Any Ramp customer admin creates a developer app under Company > Developer; Ramp Free plan is $0/mo/user so no paid tier is needed to get credentials. Sandbox via a sandbox access request. critic: access re-derived, self_serve_free confirmed; pricing page does not list API as a paid add-on.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST endpoints on api.ramp.com (sandbox demo-api.ramp.com); OpenAPI spec at /openapi/developer-api.json. Product areas: Banking, Bill Pay, Cards, Procurement, Reimbursements, Spend Controls, Users.",
+  "docs_url": "https://docs.ramp.com/developer-api/v1/authorization",
+  "mcp": "official",
+  "mcp_url": "https://mcp.ramp.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No blocker found. critic: mcp confirmed official; mcp_url changed from the GitHub repo to the vendor-hosted remote server (ramp-public/ramp_mcp also exists).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Send `client_id:client_secret`, base64-encoded, in an `Authorization: Basic ...` header."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Third-party apps, public integrations"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "Click **Create New App**."
+   },
+   {
+    "field": "access",
+    "url": "https://ramp.com/pricing",
+    "quote": "Best for smaller teams who want to simplify finances."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "`https://api.ramp.com` for Production"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.ramp.com/ramp-mcp",
+    "quote": "Any tool that supports remote MCP servers with OAuth can connect to https://mcp.ramp.com/mcp."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/ramp-public/ramp_mcp",
+    "quote": "Run the MCP server from your CLI with:"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "Click **Create New App**."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ramp MCP server official developer API",
+     "domains": [
+      "ramp.com",
+      "docs.ramp.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.ramp.com/ramp-mcp",
+     "find": [
+      "MCP",
+      "server",
+      "connect"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "find": [
+      "sandbox",
+      "approval",
+      "plan",
+      "Admin"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://ramp.com/pricing",
+     "find": [
+      "API",
+      "Free",
+      "Plus",
+      "developer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ramp.com/developer-api/v1/sandbox-access",
+     "find": [
+      "sandbox",
+      "request",
+      "approve"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,3 @@
+{"t": 1795591089.2, "tool": "composio_search", "input": {"query": "Stripe MCP server", "domains": ["docs.stripe.com", "github.com"]}}
+{"t": 1795591121.3, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/keys", "find": ["sandbox", "test keys", "Build and test"]}}
+{"t": 1795591138.1, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/mcp", "find": ["OAuth", "mcp.stripe.com", "Manage MCP"]}}

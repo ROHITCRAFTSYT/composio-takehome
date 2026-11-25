@@ -1,0 +1,8 @@
+{"t": 1795527570.9, "tool": "composio_search", "input": {"query": "Meta Marketing API authentication access token app review", "domains": ["developers.facebook.com"]}}
+{"t": 1795527615.2, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/docs/marketing-apis", "find": ["Marketing API", "access", "REST", "Graph API", "app review"]}}
+{"t": 1795527689.2, "tool": "composio_search", "input": {"query": "Meta Ads official MCP server", "domains": []}}
+{"t": 1795527720.6, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/docs/marketing-api/overview", "find": ["access token", "App Review", "Advanced Access", "Standard Access", "developer"]}}
+{"t": 1795527794.8, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/docs/marketing-api/overview/authorization", "find": ["OAuth", "access token", "System User", "app secret"]}}
+{"t": 1795527922.7, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview", "find": ["Meta-hosted", "open beta", "OAuth", "Business", "free", "access"]}}
+{"t": 1795528026.6, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization", "find": ["System-user", "system user", "access token", "App Review"]}}
+{"t": 1795528126.8, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/docs/marketing-api/overview", "find": ["Graph API", "endpoint", "HTTP", "REST", "SDK"]}}

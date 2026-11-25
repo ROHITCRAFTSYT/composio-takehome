@@ -1,0 +1,4 @@
+{"t": 1795576732.4, "tool": "fetch_page", "input": {"url": "https://docs.slack.dev/authentication/tokens/", "find": ["Bot tokens", "Marketplace", "OAuth"]}}
+{"t": 1795576766.7, "tool": "composio_search", "input": {"query": "Slack MCP server docs.slack.dev", "domains": ["docs.slack.dev", "slack.com"]}}
+{"t": 1795576811.6, "tool": "fetch_page", "input": {"url": "https://docs.slack.dev/app-management/distribution/", "find": ["Marketplace", "internal", "unlisted"]}}
+{"t": 1795576834.8, "tool": "fetch_page", "input": {"url": "https://docs.slack.dev/ai/slack-mcp-server", "find": ["Marketplace", "approved", "directory"]}}

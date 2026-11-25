@@ -1,0 +1,9 @@
+{"t": 1795528518.2, "tool": "composio_search", "input": {"query": "MrScraper API documentation authentication", "domains": ["docs.mrscraper.com", "mrscraper.com"]}}
+{"t": 1795528552.8, "tool": "composio_search", "input": {"query": "MrScraper MCP server github", "domains": []}}
+{"t": 1795528639.7, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/api/authentication", "find": ["x-api-token", "dashboard", "token"]}}
+{"t": 1795528667.3, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/getting-started/api-token", "find": ["API Tokens", "plan", "free", "trial", "paid", "subscription", "upgrade"]}}
+{"t": 1795528752.7, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/api/overview", "find": ["x-api-token", "REST", "GraphQL", "endpoint", "Scraper"]}}
+{"t": 1795528779.9, "tool": "fetch_page", "input": {"url": "https://github.com/mrscraper-com/mrscraper-mcp", "find": ["hosted", "API key", "Streamable", "npx", "MrScraper app"]}}
+{"t": 1795528865.7, "tool": "composio_search", "input": {"query": "MrScraper pricing free plan API access", "domains": []}}
+{"t": 1795528899.1, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/getting-started/api-token", "find": ["Free", "Trial", "Starter", "Pro", "Plan Tokens", "Included"]}}
+{"t": 1795529010.8, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/getting-started/billing", "find": ["Scraper Free", "API Tokens", "no credit card", "Free Plan"]}}

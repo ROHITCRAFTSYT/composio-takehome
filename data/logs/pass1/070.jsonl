@@ -1,0 +1,8 @@
+{"t": 1795529128.6, "tool": "composio_search", "input": {"query": "Sentry API authentication auth tokens developer docs", "domains": ["docs.sentry.io"]}}
+{"t": 1795529166.6, "tool": "fetch_page", "input": {"url": "https://docs.sentry.io/api/auth/", "find": ["Bearer", "auth token", "OAuth", "API Key", "Internal Integration"]}}
+{"t": 1795529246.6, "tool": "fetch_page", "input": {"url": "https://docs.sentry.io/api/", "find": ["REST", "API", "Internal Integration", "rate limit"]}}
+{"t": 1795529274.1, "tool": "composio_search", "input": {"query": "Sentry MCP server official github getsentry", "domains": ["github.com", "docs.sentry.io", "sentry.io"]}}
+{"t": 1795529363.0, "tool": "fetch_page", "input": {"url": "https://docs.sentry.io/integrations/integration-platform/internal-integration", "find": ["Developer Settings", "internal integration", "plan", "free", "tokens"]}}
+{"t": 1795529449.0, "tool": "fetch_page", "input": {"url": "https://github.com/getsentry/sentry-mcp", "find": ["official", "MCP", "sentry-mcp", "npx"]}}
+{"t": 1795529487.3, "tool": "composio_search", "input": {"query": "Sentry pricing plans free developer plan API access", "domains": ["sentry.io"]}}
+{"t": 1795529574.3, "tool": "fetch_page", "input": {"url": "https://docs.sentry.io/pricing", "find": ["free Developer plan", "API"]}}

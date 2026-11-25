@@ -1,0 +1,2 @@
+{"t": 1795590814.1, "tool": "fetch_page", "input": {"url": "https://www.clay.com/pricing", "find": ["API access", "Free", "free plan", "API"]}}
+{"t": 1795590863.3, "tool": "composio_search", "input": {"query": "Clay MCP server official", "domains": []}}

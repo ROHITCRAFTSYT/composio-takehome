@@ -1,0 +1,6 @@
+{"t": 1795526757.5, "tool": "composio_search", "input": {"query": "Salesforce REST API authentication OAuth connected app developer docs", "domains": ["salesforce.com"]}}
+{"t": 1795526792.1, "tool": "composio_search", "input": {"query": "Salesforce official MCP server", "domains": ["salesforce.com", "github.com"]}}
+{"t": 1795526855.1, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm", "find": ["OAuth", "connected app", "access token", "username-password", "JWT"]}}
+{"t": 1795526911.1, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available", "find": ["generally available", "hosted MCP", "External Client App", "Setup"]}}
+{"t": 1795526986.0, "tool": "composio_search", "input": {"query": "Salesforce Developer Edition free org sign up API access", "domains": ["salesforce.com"]}}
+{"t": 1795527006.0, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/signup", "find": ["Developer Edition", "free", "Enterprise"]}}

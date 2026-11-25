@@ -1,0 +1,60 @@
+{
+  "n": 30,
+  "app": "Vonage",
+  "one_liner": "Communications APIs (SMS, Messages, Voice, Video, Verify, Numbers) with self-serve API key/secret or JWT auth and free trial credit; official docs and tooling MCP servers.",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://developer.vonage.com/en/mcp-server/overview",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "auth: API key+secret (sent as HTTP Basic username/password or as request params) = api_key; JWTs signed with an application private key, and HMAC message signatures (SIGNATURE_SECRET) = other. SIP Trunking digest auth also uses API key/secret (still api_key). Not included: the Vonage Network APIs (CAMARA Number Verification etc.) use an OIDC/OAuth2 authorization-code flow for end-user/operator consent (developer.vonage.com/en/api/camara/auth); that is carrier consent for a niche product line, not a way to grant a third-party app access to a Vonage account, so oauth2 was not added - a strict 'every method' reading could add it. Vonage Business Communications (UC) API is a separate product with its own token flow, excluded. access: new accounts get EUR 2 free test credit in DEMO mode (max 10 destination numbers), not time-limited -> self_serve_free; continued use is pay-as-you-go top-ups. mcp: Vonage documents two first-party MCP servers - hosted Documentation MCP (https://documentation-mcp.vonage.dev/mcp) and the Tooling / Server API Bindings MCP (npm @vonage/vonage-mcp-server-api-bindings, configured with VONAGE_API_KEY/SECRET + application private key); GitHub org Vonage has vonage-mcp-server-documentation.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "When you create a Vonage account, an API key and secret will be created for you."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "these are generated using the SIGNATURE_SECRET rather than the API_SECRET"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/account/guides/dashboard-management",
+      "quote": "When you create your Vonage account you are given €2 free test credit and your account is set in DEMO mode."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "A number of newer Vonage APIs require authentication to be done using an API key and secret sent Base64 encoded in the"
+    },
+    {
+      "field": "api_style",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "All Vonage APIs have OpenAPI descriptions that you can take advantage of in your own development process."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.vonage.com/en/mcp-server/conceptual-guides/introduction-to-vonage-mcp",
+      "quote": "Also known as our Tooling MCP Server, it provides tools for managing Vonage applications, numbers, and reports programmatically."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "This will give you an API key and secret that you can use to access our APIs."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

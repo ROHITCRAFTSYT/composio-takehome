@@ -1,0 +1,6 @@
+{"t": 1795529981.0, "tool": "fetch_page", "input": {"url": "https://docs.devin.ai/api-reference/overview", "find": ["api", "key", "service", "token", "access", "authenticate"]}}
+{"t": 1795530051.4, "tool": "composio_search", "input": {"query": "Devin API service user credentials docs", "domains": ["docs.devin.ai"]}}
+{"t": 1795530127.6, "tool": "composio_search", "input": {"query": "Devin MCP server official docs", "domains": []}}
+{"t": 1795530217.5, "tool": "fetch_page", "input": {"url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart", "find": ["service", "plan", "trial", "free", "Member", "cog_"]}}
+{"t": 1795530332.4, "tool": "fetch_page", "input": {"url": "https://devin.ai/pricing", "find": ["API", "trial", "free", "Team", "Enterprise", "plan"]}}
+{"t": 1795530410.2, "tool": "fetch_page", "input": {"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "find": ["official", "Streamable", "api_key", "Bearer"]}}

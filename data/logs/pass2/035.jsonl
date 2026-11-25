@@ -1,0 +1,4 @@
+{"t": 1795577186.5, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server", "find": ["MCP", "account", "docs"]}}
+{"t": 1795577301.6, "tool": "composio_search", "input": {"query": "Mailchimp Free plan API access API keys included", "domains": ["mailchimp.com"]}}
+{"t": 1795577691.8, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/help/about-mailchimp-pricing-plans", "find": ["Free plan", "API"]}}
+{"t": 1795577759.2, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key", "find": ["API key", "Free", "paid"]}}

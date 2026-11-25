@@ -1,0 +1,131 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "one_liner": "Smartsheet is a work management and project tracking platform with a REST API and an official MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API access tokens are generated in the Smartsheet UI and sent as a Bearer header. OAuth 2.0 is also offered, but it is a 3-legged user-consent flow. Smartsheet Gov and Smartsheet Regions Europe use separate tokens.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: access paid_plan -> self_serve_trial. The getting-started guide says API tokens need a Business, Enterprise, or Advanced Work Management plan, and the legacy Free plan is closed to new signups (only users who had it before 2024-08-28). But new signups get a 30-day free trial (no credit card) that gives access to a Business plan, so a developer can generate a working token inside the trial.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Fetched docs show a Bearer-token HTTP API with a sheet and column data model. Breadth is a judgement call and was not verified object by object.",
+  "docs_url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+  "mcp": "official",
+  "mcp_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict blocked -> ready, blocker paid_plan -> none. A 30-day Business-plan trial is self-serve, so there is a credential path without sales; long-term production use needs a paid plan, which is an ordinary subscription not a gate.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "The API authenticates using access tokens (API keys). You can generate access tokens in the Smartsheet UI."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "Note that the Smartsheet implementation of OAuth 2.0 is a 3-legged process, which requires human intervention."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+   },
+   {
+    "field": "access",
+    "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+    "quote": "Navigate to the API Access tab and select Generate new access token."
+   },
+   {
+    "field": "access",
+    "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs",
+    "quote": "The trial gives you access to a Business plan."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "Authorization: Bearer JKlMNOpQ12RStUVwxYZAbcde3F5g6hijklM789"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+    "quote": "You can connect various AI assistants to the Smartsheet Model Context Protocol (MCP) server."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.smartsheet.com/pricing",
+    "quote": "30 days free, no credit card required"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+     "find": [
+      "plan",
+      "free",
+      "trial",
+      "Business",
+      "Pro",
+      "available"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Smartsheet API access free plan or trial developer account API token plan requirements",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.smartsheet.com/pricing",
+     "find": [
+      "API",
+      "Free",
+      "trial",
+      "Business"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+     "find": [
+      "plan",
+      "trial",
+      "free",
+      "developer",
+      "account"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Smartsheet free trial 30 days Business plan API access",
+     "domains": [
+      "smartsheet.com",
+      "help.smartsheet.com",
+      "developers.smartsheet.com"
+     ]
+    }
+   }
+  ]
+ }
+}

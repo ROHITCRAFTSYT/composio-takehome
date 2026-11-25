@@ -1,0 +1,55 @@
+{
+  "n": 3,
+  "app": "Pipedrive",
+  "one_liner": "Sales CRM with a broad REST API (v1/v2) using an API token or OAuth 2.0; free self-serve developer sandbox; official hosted Pipedrive MCP server.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://www.pipedrive.com/en/features/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "auth: personal API token (x-api-token header) for single-account integrations, and OAuth 2.0 for apps. access: no free Pipedrive plan, but the Developers' Corner offers a self-serve developer sandbox (email + first-name sign-up form; 'like a regular Pipedrive company account', 5 seats). That is a free developer account -> self_serve_free; a 14-day product trial also exists. Marketplace listing of a public app needs Pipedrive review, but private apps and API tokens do not, so it is not gating. Sandbox accounts are deleted if there is no app activity within about 6 months (minor). api_style: REST only (no public GraphQL). mcp: Pipedrive's own hosted MCP server (OAuth; listed in Claude/ChatGPT connector directories), described on pipedrive.com as built and maintained by Pipedrive and available on all plans.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "The API token must be provided in the x-api-token header for all requests, for example:"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "You can find our step-by-step guide to getting OAuth 2.0 implemented in your app in"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pipedrive.com/",
+      "quote": "Sign up for a Sandbox Account today to begin experimenting and developing in a risk free environment"
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+      "quote": "Our developer sandbox account is essentially like a regular Pipedrive company account."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developers.pipedrive.com/docs/api/v1/",
+      "quote": "This reference helps you implement the RESTful Pipedrive API."
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.pipedrive.com/docs/api/v1/",
+      "quote": "The API token can be obtained manually from the Pipedrive app."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

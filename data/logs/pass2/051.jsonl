@@ -1,0 +1,2 @@
+{"t": 1795578687.5, "tool": "fetch_page", "input": {"url": "https://dataforseo.com/pricing", "find": ["minimum", "free", "trial", "deposit", "sandbox"]}}
+{"t": 1795578760.7, "tool": "fetch_page", "input": {"url": "https://docs.dataforseo.com/v3/appendix/sandbox/", "find": ["free", "sandbox", "balance", "account"]}}

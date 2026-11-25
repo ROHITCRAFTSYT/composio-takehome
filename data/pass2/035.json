@@ -1,0 +1,120 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 35,
+  "app": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Email and SMS marketing platform (audiences, campaigns, automations, reports) with a Marketing API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key authenticates against own account; OAuth 2 for accounts belonging to others. Basic with token as password is not username+password so basic not listed. critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access confirmed self_serve_free. Free plan exists (250 contacts, 500 sends/month) and the developer docs say to create an API key from the account's API Keys section with no paid-plan or approval gate; no page says API needs a paid tier (pricing page re-fetch failed on network, free plan quote is from search snippet). Keys created from June 22, 2026 expire after 1 year.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Marketing API endpoints under /developer/marketing/api/... with bearer auth, path and query params; rest inferred from endpoint structure. Breadth not verified against full list.",
+  "docs_url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready confirmed. The official MCP server is a docs-search server only; it does not access the user's account. Account actions go through the API directly. No approval step documented.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "An API key authenticates against the account that created it."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "OAuth 2 authenticates against an account belonging to someone else."
+   },
+   {
+    "field": "access",
+    "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+    "quote": "An API key authenticates requests against your own Mailchimp account."
+   },
+   {
+    "field": "access",
+    "url": "https://mailchimp.com/help/about-api-keys/",
+    "quote": "Users with Manager permissions can generate their own API keys."
+   },
+   {
+    "field": "access",
+    "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans",
+    "quote": "The Free plan includes up to 250 contacts and 500 sends per month, with a daily send limit of 250."
+   },
+   {
+    "field": "api_style",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication",
+    "quote": "Every request to the Marketing API carries a credential."
+   },
+   {
+    "field": "mcp",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+    "quote": "This documentation site is itself an MCP server."
+   },
+   {
+    "field": "mcp",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+    "quote": "This searches documentation, not your Mailchimp account."
+   },
+   {
+    "field": "verdict",
+    "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+    "quote": "Copy the generated key immediately and store it in a secure location."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "find": [
+      "MCP",
+      "account",
+      "docs"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Mailchimp Free plan API access API keys included",
+     "domains": [
+      "mailchimp.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans",
+     "find": [
+      "Free plan",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+     "find": [
+      "API key",
+      "Free",
+      "paid"
+     ]
+    }
+   }
+  ]
+ }
+}

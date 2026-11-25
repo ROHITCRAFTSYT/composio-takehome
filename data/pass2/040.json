@@ -1,0 +1,98 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 40,
+  "app": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Twilio SendGrid: email API and SMTP service for transactional and marketing email",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Bearer API key per the v3 API docs; Basic auth with username 'apikey' also uses the API key, so it counts as api_key. No OAuth flow documented in the pages fetched.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: access self_serve_free -> self_serve_trial. Twilio retired the SendGrid Free plan (May 27, 2025); the vendor pricing page now lists only 'Free Trial $0/mo for 60 days' (100 emails/day per secondary sources) before paid Essentials at $19.95/mo. API keys are created in the console Settings.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST v3 at api.sendgrid.com covering mail send, marketing contacts, templates, stats, suppressions.",
+  "docs_url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+  "mcp": "community",
+  "mcp_url": "https://github.com/Garoth/sendgrid-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: mcp official -> community. Twilio's hosted mcp.twilio.com/docs is a docs-only server and its Twilio MCP targets Twilio's API, not SendGrid v3; no vendor action server found. Community servers (Garoth/sendgrid-mcp) exist. Trial lets developers get working keys, so verdict stays ready.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+    "quote": "Twilio SendGrid supports API keys delivered via Bearer token or Basic authentication, depending on the Twilio SendGrid functionality you are using."
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+    "quote": "Free Trial $0/mo for 60 days"
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+    "quote": "Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console."
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request"
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+    "quote": "Authenticate to the Twilio SendGrid API by creating an API Key in the Settings section of the Twilio SendGrid console."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/Garoth/sendgrid-mcp",
+    "quote": "This server exclusively supports SendGrid's v3 APIs and does not provide support for legacy functionality."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "SendGrid free plan retired 60-day trial pricing",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "SendGrid MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+     "find": [
+      "60 days",
+      "free trial",
+      "credit card"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/Garoth/sendgrid-mcp",
+     "find": [
+      "Allows AI Agents",
+      "v3 API"
+     ]
+    }
+   }
+  ]
+ }
+}

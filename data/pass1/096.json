@@ -1,0 +1,138 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Devin, Cognition's AI software engineering agent, with a v3 REST API for sessions, knowledge, playbooks and secrets plus an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Service user API keys (prefix cog_) or personal access tokens sent as the Bearer credential. No OAuth flow documented in the pages read. Keys expire after 7, 30 (default) or 90 days, or never where the account allows it.",
+  "access": "paid_plan",
+  "access_notes": "Setup docs target teams and standard organizations, where an admin provisions a service user under Settings > Devin API. Pricing page lists a Teams tier at $80 per month. Whether the Free plan includes Devin API access was not confirmed in the pages read.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Organization API at https://api.devin.ai/v3/organizations/* covers sessions, knowledge, playbooks, secrets and more. Enterprise API covers cross-org analytics, audit logs, users, billing.",
+  "docs_url": "https://docs.devin.ai/api-reference/overview",
+  "mcp": "official",
+  "mcp_url": "https://mcp.devin.ai/mcp",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "API keys come from a provisioned service user on a paid Teams or Enterprise org. If the Free plan turns out to include service users, the verdict would move to ready. Not verified.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+    "quote": "After the expiration date the service user’s API key stops working"
+   },
+   {
+    "field": "access",
+    "url": "https://devin.ai/pricing",
+    "quote": "Shared on-demand credits for up to 100 members"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Base URL:https://api.devin.ai/v3/organizations/*"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "The Devin MCP server supports Streamable HTTP:"
+   },
+   {
+    "field": "verdict",
+    "url": "https://devin.ai/pricing",
+    "quote": "Shared on-demand credits for up to 100 members"
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://devin.ai/pricing",
+    "quote": "Shared on-demand credits for up to 100 members"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "find": [
+      "api",
+      "key",
+      "service",
+      "token",
+      "access",
+      "authenticate"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Devin API service user credentials docs",
+     "domains": [
+      "docs.devin.ai"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Devin MCP server official docs",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+     "find": [
+      "service",
+      "plan",
+      "trial",
+      "free",
+      "Member",
+      "cog_"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://devin.ai/pricing",
+     "find": [
+      "API",
+      "trial",
+      "free",
+      "Team",
+      "Enterprise",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "find": [
+      "official",
+      "Streamable",
+      "api_key",
+      "Bearer"
+     ]
+    }
+   }
+  ]
+ }
+}

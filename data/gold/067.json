@@ -1,0 +1,25 @@
+{
+  "n": 67,
+  "app": "Snowflake",
+  "one_liner": "Cloud data warehouse with a REST SQL API and Snowflake REST APIs for managing resources; you sign up yourself for a 30-day free trial.",
+  "auth_methods": ["oauth2", "api_key", "other"],
+  "access": "self_serve_trial",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "Auth for the Snowflake REST APIs: key pair authentication (signed JWT, so other), OAuth (Snowflake OAuth / External OAuth authorization flows, so oauth2), programmatic access token (PAT, a static token created by the user, so api_key), and workload identity federation (other). The SQL API page lists OAuth, key pair and workload identity federation, and also accepts PROGRAMMATIC_ACCESS_TOKEN as a token type. Password/Basic is not offered for these HTTP APIs. Access: self-service sign-up needs only an email, with no payment information, and gives a 30-day trial with free credits. After that the account is suspended unless you upgrade, so access=self_serve_trial. I labelled the verdict ready (you get self-serve credentials and the API is documented) with main_blocker none. The ambiguity is that lasting use needs a paid account, so someone could argue for paid_plan as the blocker. MCP is official: the Snowflake-managed MCP server is documented on docs.snowflake.com (CREATE MCP SERVER object), and Snowflake-Labs/mcp also exists on GitHub. Breadth is broad: you can run any SQL through the SQL API plus CRUD on databases, warehouses, users, roles, tasks and more through the REST APIs.",
+  "evidence": [
+    {"field": "auth_methods", "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication", "quote": "Using key pair authentication"},
+    {"field": "auth_methods", "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication", "quote": "Using a programmatic access token (PAT)"},
+    {"field": "auth_methods", "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication", "quote": "Using OAuth"},
+    {"field": "access", "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "quote": "The trial continues for 30 days (from the sign-up date)"},
+    {"field": "access", "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "quote": "At the end of the trial, the account is suspended."},
+    {"field": "api_style", "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index", "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database."},
+    {"field": "mcp", "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp", "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure."},
+    {"field": "verdict", "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "quote": "no payment information or other qualifying information is required"}
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

@@ -1,0 +1,87 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Command-line tool that renders Mermaid diagram definitions to SVG, PNG or PDF.",
+  "auth_methods": [
+   "other"
+  ],
+  "auth_notes": "Local CLI/library with no account or API key; the docs describe only installing the package and running mmdc or calling a Node.js function.",
+  "access": "self_serve_free",
+  "access_notes": "Installed from npm with no sign-up; no credentials needed.",
+  "api_style": "sdk_or_cli_only",
+  "api_breadth": "narrow",
+  "api_notes": "Documented surface is the mmdc CLI and a Node.js run() function; the Node.js API is explicitly not covered by semver. No HTTP API.",
+  "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+  "mcp": "official",
+  "mcp_url": "https://mermaid.ai/docs/ai/mcp-server",
+  "verdict": "blocked",
+  "main_blocker": "not_a_saas",
+  "blocker_notes": "critic: verdict ready -> blocked; main_blocker not_a_saas contradicted verdict ready. Local CLI/library with no hosted HTTP API to authorise. critic: mcp community -> official; Mermaid's own site (mermaid.ai) documents a vendor-hosted Mermaid MCP Server at mcp.mermaid.ai (requires a free Mermaid account), though it targets the Mermaid hosted product rather than the CLI itself.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "api_style",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "This is a command-line interface (CLI) for mermaid."
+   },
+   {
+    "field": "access",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "npm install -g @mermaid-js/mermaid-cli"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "This is a command-line interface (CLI) for mermaid."
+   },
+   {
+    "field": "verdict",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "Please be aware that the NodeJS API is not covered by semver, as mermaid-cli follows"
+   },
+   {
+    "field": "mcp",
+    "url": "https://mermaid.ai/docs/ai/mcp-server",
+    "quote": "The Mermaid MCP Server enables AI assistants to create, validate, and render Mermaid diagrams seamlessly"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Mermaid MCP server official mermaid-js",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "find": [
+      "mcp",
+      "Node.JS",
+      "semver"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mermaid.ai/docs/ai/mcp-server",
+     "find": [
+      "MCP server",
+      "mermaid-js",
+      "Mermaid Chart"
+     ]
+    }
+   }
+  ]
+ }
+}

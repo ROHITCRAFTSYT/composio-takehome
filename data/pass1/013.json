@@ -1,0 +1,148 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Freshdesk is a cloud helpdesk and customer support ticketing product from Freshworks.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Docs say the personal API key is sent as the Basic-auth username (curl -u apikey:X) with any dummy password. API key is found under Profile settings in the Support Portal.",
+  "access": "self_serve_trial",
+  "access_notes": "Every new account starts with a 14-day trial with full access to all product features. The free Sprout plan has no API access; API access is available from the Blossom plan onwards, so ongoing use needs a paid plan.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API v2 with Basic-auth API key; examples use endpoints such as /api/v2/tickets. Rate limits vary by plan.",
+  "docs_url": "https://developers.freshdesk.com/api",
+  "mcp": "official",
+  "mcp_url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Trial path gives API access for building and testing. Production use needs a paid plan (Blossom or higher) after the trial. The official MCP article is labelled EAP and uses an API-key-only endpoint at https://<subdomain>.freshdesk.com/mcp.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.freshdesk.com/api",
+    "quote": "You can use your personal API key to authenticate the request."
+   },
+   {
+    "field": "access",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans",
+    "quote": "you start with a 14-day trial that provides full access to all product features"
+   },
+   {
+    "field": "access",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000001047-do-we-have-api-and-integration-capabilities-in-the-free-sprout-plan-",
+    "quote": "the access to Freshdesk APIs and the integration capabilities is not available in the free Sprout plan"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.freshdesk.com/api",
+    "quote": "curl -v -u apikey:X"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+    "quote": "The Freshworks Model Context Protocol (MCP) server enables AI tools like Cursor and Claude to securely connect and interact with Freshdesk."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.freshdesk.com/api",
+    "quote": "You can use your personal API key to authenticate the request."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Freshdesk API authentication API key OAuth developer docs",
+     "domains": [
+      "freshdesk.com",
+      "developers.freshdesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Freshdesk MCP server official",
+     "domains": [
+      "freshdesk.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.freshdesk.com/api/",
+     "find": [
+      "authentication",
+      "API",
+      "Basic",
+      "password"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+     "find": [
+      "Model Context Protocol",
+      "API key",
+      "OAuth",
+      "early access"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Freshdesk plans pricing API access free trial",
+     "domains": [
+      "freshdesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.freshdesk.com/api",
+     "find": [
+      "API key",
+      "password",
+      "Basic"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000001047-do-we-have-api-and-integration-capabilities-in-the-free-sprout-plan-",
+     "find": [
+      "No",
+      " the access",
+      "Blossom"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans",
+     "find": [
+      "14-day trial",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

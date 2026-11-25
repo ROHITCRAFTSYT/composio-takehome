@@ -1,0 +1,3 @@
+{"t": 1795576772.2, "tool": "composio_search", "input": {"query": "Telegram official MCP server", "domains": []}}
+{"t": 1795576797.0, "tool": "composio_search", "input": {"query": "Telegram MCP server", "domains": ["core.telegram.org", "github.com"]}}
+{"t": 1795576863.1, "tool": "fetch_page", "input": {"url": "https://core.telegram.org/bots/faq", "find": ["free", "paid", "limits"]}}

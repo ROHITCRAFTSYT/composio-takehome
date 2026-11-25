@@ -1,0 +1,157 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "one_liner": "E-commerce platform (Magento, sold as Adobe Commerce) with REST and GraphQL APIs.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Cloud Service (SaaS) REST uses Adobe IMS OAuth 2 (server-to-server or user flow); the docs say token generation is not supported in SaaS. PaaS/on-prem uses integration tokens (api_key). Third-party apps on the REST API use OAuth 1.0a, which is classed as other.",
+  "access": "paid_plan",
+  "access_notes": "Unverified. The fetched getting-started page shows sandbox instances for development and testing, but it does not say whether sandboxes are free or whether API credentials need a paid Cloud Service licence. A search snippet listed a licence as a prerequisite, but I did not open that page. Set to paid_plan with low confidence because no free API path was verified, pending a check of licensing.",
+  "api_style": "rest+graphql",
+  "api_breadth": "moderate",
+  "api_notes": "Cloud Service REST endpoints differ significantly from PaaS/on-prem, and the docs point to GraphQL for similar functionality. Breadth was not measured against an endpoint list.",
+  "docs_url": "https://developer.adobe.com/commerce/webapi/rest/",
+  "mcp": "official",
+  "mcp_url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "The fetched docs show a token-free SaaS path is not available and point to Adobe IMS credentials. Whether a free developer path exists depends on licensing, which I did not verify. The official MCP is a developer-tooling server for building apps, not a store-data API server. Community MCP servers for store data exist (for example github.com/magendooro/magemcp).",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+    "quote": "Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management System (IMS) through standardized OAuth 2 protocols."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "In previous versions of Adobe Commerce, you would use authentication tokens to authorize your requests to the REST API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "Third-party applications authenticate with OAuth 1.0a."
+   },
+   {
+    "field": "access",
+    "url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started",
+    "quote": "Sandbox instances are for design and testing purposes only."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "access to similar functionality remains available with the GraphQL APIs."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+    "quote": "Commerce Developer MCP Server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+    "quote": "Instead, you must obtain an IMS admin token through OAuth authentication."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Adobe Commerce developer API authentication access token",
+     "domains": [
+      "developer.adobe.com",
+      "experienceleague.adobe.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Adobe Commerce MCP server official GitHub",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.adobe.com/commerce/webapi/rest/authentication",
+     "find": [
+      "OAuth",
+      "bearer",
+      "Integration",
+      "access token",
+      "scope"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.adobe.com/commerce/webapi/rest",
+     "find": [
+      "OAuth 1.0a",
+      "tokens",
+      "Cloud Service",
+      "Authentication",
+      "trial",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Adobe Commerce free trial developer sandbox account access API credentials",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started",
+     "find": [
+      "license",
+      "trial",
+      "Sandbox",
+      "purchase",
+      "Commerce Cloud Manager"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Adobe Commerce official MCP server Adobe developer documentation",
+     "domains": [
+      "developer.adobe.com",
+      "experienceleague.adobe.com",
+      "github.com/adobe",
+      "github.com/magento"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+     "find": [
+      "Commerce Developer MCP Server",
+      "MCP",
+      "Skills"
+     ]
+    }
+   }
+  ]
+ }
+}

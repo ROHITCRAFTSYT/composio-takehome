@@ -1,0 +1,154 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "SEO and SERP data API (SERP, keywords, backlinks, on-page and content analysis) for developers and AI agents.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Login plus a generated API password, sent as HTTP Basic auth. The API password is issued in the dashboard and is not the account password. OAuth 2.0 is used only by the hosted MCP server, not the REST API.",
+  "access": "self_serve_free",
+  "access_notes": "A free account gives access to the API Access tab for credentials. Live calls are billed against account balance, and the Sandbox is the only free route with dummy data.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API at api.dataforseo.com/v3 with many API families; breadth judged from the docs index, not counted endpoint by endpoint.",
+  "docs_url": "https://docs.dataforseo.com/v3/",
+  "mcp": "official",
+  "mcp_url": "https://mcp.dataforseo.com/v3/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials are self-serve, but live data use spends prepaid balance; this is not a paid-plan gate on the API itself.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Basic authentication is the only way to access DataForSEO API; credentials should always be passed in the header of the request."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Note that the API password is generated automatically by DataForSEO and is different from your account password."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard"
+   },
+   {
+    "field": "access",
+    "url": "https://dataforseo.com/dev-starter-kit",
+    "quote": "The API Playground requires sign-in and spends real balance."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/dataforseo/mcp-server-typescript",
+    "quote": "Public remote MCP server URL: https://mcp.dataforseo.com/v3/mcp"
+   },
+   {
+    "field": "mcp",
+    "url": "https://dataforseo.com/dev-starter-kit",
+    "quote": "Point your client at the hosted server and authorise it over OAuth"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DataForSEO API authentication basic auth docs",
+     "domains": [
+      "docs.dataforseo.com",
+      "dataforseo.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.dataforseo.com/v3/appendix/authentication/",
+     "find": [
+      "authentication",
+      "Basic",
+      "login",
+      "password"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.dataforseo.com/v3/auth",
+     "find": [
+      "Basic",
+      "login",
+      "password",
+      "API token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dataforseo.com/dev-starter-kit",
+     "find": [
+      "credentials",
+      "free",
+      "trial",
+      "dashboard",
+      "API password"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DataForSEO MCP server GitHub official",
+     "domains": [
+      "github.com",
+      "dataforseo.com",
+      "docs.dataforseo.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/dataforseo/mcp-server-typescript",
+     "find": [
+      "official",
+      "OAuth",
+      "mcp.dataforseo.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.dataforseo.com/v3",
+     "find": [
+      "Free",
+      "Trial",
+      "Sandbox",
+      "Sign Up"
+     ]
+    }
+   }
+  ]
+ }
+}

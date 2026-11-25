@@ -1,0 +1,6 @@
+{"t": 1795527370.9, "tool": "composio_search", "input": {"query": "Discord developer documentation authentication OAuth2 bot token", "domains": ["discord.com", "discord.dev"]}}
+{"t": 1795527419.2, "tool": "composio_search", "input": {"query": "Discord MCP server official", "domains": []}}
+{"t": 1795527518.8, "tool": "fetch_page", "input": {"url": "https://docs.discord.com/developers/platform/oauth2-and-permissions", "find": ["Bot Token", "OAuth2", "bearer"]}}
+{"t": 1795527566.0, "tool": "fetch_page", "input": {"url": "https://docs.discord.com/developers/reference", "find": ["Authorization", "bot token", "Basic"]}}
+{"t": 1795527613.2, "tool": "fetch_page", "input": {"url": "https://github.com/SaseQ/discord-mcp", "find": ["official", "MCP"]}}
+{"t": 1795527708.0, "tool": "fetch_page", "input": {"url": "https://docs.discord.com/developers/bots/overview", "find": ["Developer Portal", "token"]}}

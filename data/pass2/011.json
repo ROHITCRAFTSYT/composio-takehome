@@ -1,0 +1,114 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer support and helpdesk platform (ticketing, users, organizations, help center) with a public REST API under /api/v2.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth access tokens are the primary method. API tokens are used with Basic auth in the form {email_address}/token:{api_token}. Global OAuth tokens are required for apps distributed to multiple Zendesk customers.",
+  "access": "self_serve_trial",
+  "access_notes": "A free 14-day trial account gives API access; no permanent free plan. Sponsored developer-partner accounts exist for Marketplace partners. Production distribution to other customers needs global OAuth.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Paths such as /api/v2/users.json. Docs are organized by product capability (ticketing, help center, chat, voice, sales CRM).",
+  "docs_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+  "mcp": "official",
+  "mcp_url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve trial credentials and a documented public API. critic: Zendesk hosts its own per-tenant MCP server (https://<subdomain>.zendesk.com/mcp, early access via Admin Center > AI > External AI). Global OAuth is required only when distributing to other customers.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "Basic authentication is used for API tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development",
+    "quote": "You can try out the Zendesk platform with a free, 14-day trial account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "curl https://obscura.zendesk.com/api/v2/users.json"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+    "quote": "To use tools, connect to the Zendesk MCP server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "If you plan on making an app, integration, or bot available to multiple Zendesk customers, you must use global OAuth access tokens to authenticate Zendesk API requests."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk developer free trial sponsored account API token",
+     "domains": [
+      "zendesk.com",
+      "developer.zendesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk MCP server remote Admin Center AI agents connect",
+     "domains": [
+      "zendesk.com",
+      "developer.zendesk.com",
+      "support.zendesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development",
+     "find": [
+      "free",
+      "trial",
+      "sponsored"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+     "find": [
+      "MCP server",
+      "early access",
+      "EAP"
+     ]
+    }
+   }
+  ]
+ }
+}

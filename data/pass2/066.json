@@ -1,0 +1,85 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Graph database platform queried with Cypher, offered self-managed and as the AuraDB cloud service, with HTTP Query and Aura management APIs.",
+  "auth_methods": [
+   "basic",
+   "oauth2"
+  ],
+  "auth_notes": "critic: removed api_key and other, added oauth2. Aura API docs state it uses OAuth 2.0 (client_credentials grant; Client ID/Secret exchanged at /oauth/token via HTTP Basic for a Bearer token). Query API accepts HTTP Basic or Bearer tokens.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed. Aura API credentials can be created on every tier including Free. Aura Free and trial accounts without billing are limited to 25 requests per minute. Self-managed Community Edition is also free.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Hinted neo4j.com/docs/api returned 404, so Query API and Aura API docs were used. Primary data access is Bolt drivers. HTTP Query API runs Cypher; Aura API covers instance management.",
+  "docs_url": "https://neo4j.com/docs/aura/api/overview",
+  "mcp": "official",
+  "mcp_url": "https://github.com/neo4j/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://neo4j.com/docs/query-api/2/authentication-authorization/",
+    "quote": "Both basic and bearer authentication are supported."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "The Aura API uses OAuth 2.0 for API authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "All tiers can create Aura API credentials."
+   },
+   {
+    "field": "api_style",
+    "url": "https://neo4j.com/docs/aura/api/overview",
+    "quote": "A complete list of the available endpoints can be seen and tested in the API Specification."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/neo4j/mcp",
+    "quote": "Documentation: The official Neo4j MCP documentation."
+   },
+   {
+    "field": "verdict",
+    "url": "https://neo4j.com/docs/aura/api/authentication/",
+    "quote": "All tiers can create Aura API credentials."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "find": [
+      "All tiers",
+      "Client ID",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Neo4j MCP server official",
+     "domains": [
+      "neo4j.com",
+      "github.com"
+     ]
+    }
+   }
+  ]
+ }
+}

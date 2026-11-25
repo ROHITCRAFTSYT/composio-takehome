@@ -1,0 +1,7 @@
+{"t": 1795527570.6, "tool": "composio_search", "input": {"query": "GoHighLevel API authentication docs", "domains": ["highlevel.stoplight.io", "marketplace.gohighlevel.com", "gohighlevel.com"]}}
+{"t": 1795527615.5, "tool": "composio_search", "input": {"query": "GoHighLevel MCP server official", "domains": []}}
+{"t": 1795527655.6, "tool": "composio_search", "input": {"query": "GoHighLevel API pricing plan API access", "domains": []}}
+{"t": 1795527727.3, "tool": "fetch_page", "input": {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation", "find": ["Private Integration", "OAuth", "Starter", "Founder", "API access"]}}
+{"t": 1795527798.2, "tool": "fetch_page", "input": {"url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server", "find": ["MCP", "official", "sub-account"]}}
+{"t": 1795527885.5, "tool": "fetch_page", "input": {"url": "https://marketplace.gohighlevel.com/docs/oauth/ExternalAuthentication", "find": ["OAuth", "API key"]}}
+{"t": 1795527966.2, "tool": "fetch_page", "input": {"url": "https://marketplace.gohighlevel.com/docs/ghl/users/users-api-v-3", "find": ["Bearer", "Private Integration", "REST"]}}

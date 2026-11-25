@@ -1,0 +1,179 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "one_liner": "Podio is a no-code work management and CRM platform for building custom apps, items, workflows and client workspaces.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Docs describe four OAuth2-based flows: server-side, client-side, username and password, and app authentication. The app authentication flow uses app-level credentials, but I did not see the exact app token field in fetched text, so the api_key classification is unconfirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Progress pricing page lists API Integrations at 1000 calls per hour on the Free plan. Developer app registration is described in the auth docs, but I did not fetch the registration page itself.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Fetched docs cover items and files endpoints plus OAuth token endpoints under api.podio.com. Full object coverage was not verified.",
+  "docs_url": "https://developers.podio.com/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.podio.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No app review or paid plan requirement was seen in the fetched pages. Official MCP server is in beta.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "The Podio API uses the OAuth2 protocol for authentication."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Use app authentication if you only need to interact with a single Podio app and do not need to authenticate as a specific user."
+   },
+   {
+    "field": "access",
+    "url": "https://www.progress.com/podio/pricing",
+    "quote": "API Integrations | 1000 calls per hour"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "HTTP METHOD: POST"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide",
+    "quote": "The server is live at https://mcp.podio.com"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Before you can use the Podio API you must register your application."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio API authentication OAuth API key developer docs",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio developers API reference",
+     "domains": [
+      "podio.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.podio.com/authentication",
+     "find": [
+      "api key",
+      "oauth",
+      "api_key",
+      "personal",
+      "client"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://podio.com/pricing",
+     "find": [
+      "API",
+      "api",
+      "developer",
+      "plan",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.podio.com/authentication",
+     "find": [
+      "Authentication flows",
+      "app authentication",
+      "username",
+      "password",
+      "app token",
+      "API key",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio pricing plans API access free trial",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.progress.com/podio/pricing",
+     "find": [
+      "API Integrations",
+      "Free",
+      "Premium"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio MCP server official Progress github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.podio.com/authentication",
+     "find": [
+      "app_token",
+      "app token",
+      "generated",
+      "settings",
+      "grant_type"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide",
+     "find": [
+      "Podio MCP Server",
+      "plan",
+      "free",
+      "license",
+      "requires",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

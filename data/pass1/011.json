@@ -1,0 +1,169 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer support and helpdesk platform (ticketing, users, organizations, help center) with a public REST API under /api/v2.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth access tokens are the primary method. API tokens (deprecated) are used with Basic auth in the form {email_address}/token:{api_token}. Global OAuth tokens are required for apps distributed to multiple Zendesk customers.",
+  "access": "self_serve_trial",
+  "access_notes": "A free 14-day trial account gives API access. Sponsored developer-partner accounts are also available through Zendesk. Production distribution to other customers needs global OAuth.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Paths such as /api/v2/users.json. Docs are organized by product capability (ticketing, help center, chat, voice, sales CRM).",
+  "docs_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+  "mcp": "community",
+  "mcp_url": "https://github.com/nealrichardson/zendesk-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve trial credentials and a documented public API. No official Zendesk-hosted MCP server was found; only community servers. Global OAuth is required only when distributing to other customers.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "Basic authentication is used for API tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development",
+    "quote": "You can try out the Zendesk platform with a free, 14-day trial account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "curl https://obscura.zendesk.com/api/v2/users.json"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/nealrichardson/zendesk-mcp-server",
+    "quote": "A Model Context Protocol (MCP) server for interacting with the Zendesk API."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "If you plan on making an app, integration, or bot available to multiple Zendesk customers, you must use global OAuth access tokens to authenticate Zendesk API requests."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk MCP server official",
+     "domains": [
+      "zendesk.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk API authentication developer docs",
+     "domains": [
+      "zendesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "find": [
+      "API token",
+      "OAuth",
+      "password",
+      "basic"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "find": [
+      "Developer Terms",
+      "internal use",
+      "basic"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zendesk API access which plans include API trial free",
+     "domains": [
+      "zendesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "zendesk official MCP server github zendesk org",
+     "domains": [
+      "github.com",
+      "zendesk.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/documentation/api-basics/authentication/using-the-api-with-2-factor-authentication-enabled",
+     "find": [
+      "API token",
+      "OAuth",
+      "Admin Center"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development",
+     "find": [
+      "14-day",
+      "trial",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.zendesk.com/api-reference/",
+     "find": [
+      "REST",
+      "API reference",
+      "JSON"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/nealrichardson/zendesk-mcp-server",
+     "find": [
+      "Model Context Protocol",
+      "Zendesk API",
+      "OAuth"
+     ]
+    }
+   }
+  ]
+ }
+}

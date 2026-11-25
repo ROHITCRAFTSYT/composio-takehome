@@ -1,0 +1,4 @@
+{"t": 1795530695.4, "tool": "fetch_page", "input": {"url": "https://www.plain.com/pricing", "find": ["free", "trial", "API", "plan"]}}
+{"t": 1795530780.8, "tool": "composio_search", "input": {"query": "Plain support MCP server", "domains": ["plain.com"]}}
+{"t": 1795530869.7, "tool": "fetch_page", "input": {"url": "https://www.plain.com/pricing", "find": ["before paying", "free trial", "Foundation", "Horizon", "Frontier"]}}
+{"t": 1795530901.2, "tool": "fetch_page", "input": {"url": "https://www.plain.com/blog/startups-customer-support-tools", "find": ["Full API access"]}}

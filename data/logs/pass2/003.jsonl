@@ -1,0 +1,6 @@
+{"t": 1795530384.0, "tool": "fetch_page", "input": {"url": "https://developers.pipedrive.com/docs/api/v1", "find": ["sandbox", "free", "trial", "API token", "developer"]}}
+{"t": 1795530409.6, "tool": "composio_search", "input": {"query": "Pipedrive developer sandbox account free", "domains": []}}
+{"t": 1795530482.0, "tool": "composio_search", "input": {"query": "Pipedrive MCP server", "domains": []}}
+{"t": 1795530519.3, "tool": "fetch_page", "input": {"url": "https://www.pipedrive.com/en/features/mcp-server", "find": ["official", "OAuth", "plan"]}}
+{"t": 1795530600.4, "tool": "fetch_page", "input": {"url": "https://pipedrive.readme.io/docs/developer-sandbox-account", "find": ["free", "sandbox", "seats", "API"]}}
+{"t": 1795530624.4, "tool": "fetch_page", "input": {"url": "https://developers.pipedrive.com", "find": ["sandbox", "free"]}}

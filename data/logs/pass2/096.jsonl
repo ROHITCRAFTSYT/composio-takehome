@@ -1,0 +1,5 @@
+{"t": 1795591673.9, "tool": "fetch_page", "input": {"url": "https://devin.ai/pricing", "find": ["Free", "API", "service user"]}}
+{"t": 1795591701.1, "tool": "composio_search", "input": {"query": "Devin free plan API access service user API key", "domains": []}}
+{"t": 1795591756.8, "tool": "fetch_page", "input": {"url": "https://docs.devin.ai/api-reference/authentication", "find": ["plan", "Free", "Pro", "Teams", "Enterprise", "available"]}}
+{"t": 1795591809.8, "tool": "composio_search", "input": {"query": "Devin API available on which plans Free Pro Max Teams Enterprise", "domains": ["docs.devin.ai", "devin.ai", "cognition.ai"]}}
+{"t": 1795591860.8, "tool": "fetch_page", "input": {"url": "https://docs.devin.ai/admin/billing/self-serve?full=1", "find": ["API", "Free", "Pro", "Max"]}}

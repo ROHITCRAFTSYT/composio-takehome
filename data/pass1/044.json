@@ -1,0 +1,157 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "one_liner": "Salesforce's commerce platform (B2C Commerce) with headless Commerce API (SCAPI) for storefront and admin integrations.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "SCAPI Admin and Shopper APIs use OAuth-style client credentials: an Account Manager API client for Admin APIs and a SLAS client for Shopper APIs, both issuing JWT bearer tokens.",
+  "access": "paid_plan",
+  "access_notes": "Own-instance access needs a B2C Commerce instance or on-demand sandbox credits. A shared demo sandbox exists for trying SCAPI, but it is not a developer's own credential path.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Two API families (Admin and Shopper) plus SDKs and CLI. Breadth not graded; judgement based on the docs overview.",
+  "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+  "mcp": "official",
+  "mcp_url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Production API use needs a B2C Commerce instance or purchased sandbox credits. The official MCP shopper service is a pilot that requires contacting an account executive.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+    "quote": "Create an API client in Account Manager (guide), then POST to oauth2/access_token."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html",
+    "quote": "To access an on-demand sandbox, you must purchase sandbox credits, enable appropriate permissions and users, and configure a client API ID."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+    "quote": "SCAPI consists of two API types, plus open-source SDKs and a developer tooling ecosystem."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+    "quote": "The B2C Commerce MCP Service is a fully-hosted service for linking an AI agent to real-time B2C Commerce data access."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+    "quote": "Contact your Salesforce account executive."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce Commerce Cloud developer docs authentication OAuth API access",
+     "domains": [
+      "developer.salesforce.com",
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/commerce",
+     "find": [
+      "authentication",
+      "API",
+      "OAuth",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+     "find": [
+      "client credentials",
+      "API client",
+      "Account Manager",
+      "sandbox",
+      "OAuth",
+      "access token"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce Commerce Cloud MCP server official",
+     "domains": [
+      "developer.salesforce.com",
+      "github.com",
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce B2C Commerce sandbox free developer access Account Manager API client",
+     "domains": [
+      "developer.salesforce.com",
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html",
+     "find": [
+      "Account Manager",
+      "permission",
+      "license",
+      "trial",
+      "contract",
+      "Sandbox"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+     "find": [
+      "pilot",
+      "MCP",
+      "access",
+      "request",
+      "contact",
+      "pricing"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+     "find": [
+      "SLAS private client",
+      "free",
+      "trial",
+      "sandbox",
+      "sign up",
+      "access_token"
+     ]
+    }
+   }
+  ]
+ }
+}

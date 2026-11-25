@@ -1,0 +1,10 @@
+{"t": 1795528204.6, "tool": "composio_search", "input": {"query": "Squarespace Developer API authentication OAuth API key", "domains": ["developers.squarespace.com"]}}
+{"t": 1795528241.8, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/", "find": ["API key", "OAuth", "authentication", "Commerce", "API"]}}
+{"t": 1795528352.8, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions", "find": ["Custom applications", "Commerce Advanced", "API key", "OAuth", "trial", "Extensions", "approval", "review"]}}
+{"t": 1795528386.0, "tool": "composio_search", "input": {"query": "Squarespace MCP server github", "domains": ["github.com", "squarespace.com"]}}
+{"t": 1795528420.8, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/commerce-apis/websites", "find": ["Reseller", "MCP", "Claude", "ChatGPT"]}}
+{"t": 1795528499.3, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions", "find": ["Commerce Advanced", "generate", "OAuth client", "register", "Extensions require", "approval", "review"]}}
+{"t": 1795528519.2, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/commerce-apis/changelog", "find": ["MCP", "mcp", "Claude", "AI"]}}
+{"t": 1795528544.9, "tool": "composio_search", "input": {"query": "developers.squarespace.com MCP server Squarespace official", "domains": ["developers.squarespace.com", "squarespace.com"]}}
+{"t": 1795528630.0, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/mcp/overview", "find": ["remote server", "Sign-in", "sign in", "OAuth", "API key", "plan"]}}
+{"t": 1795528657.1, "tool": "fetch_page", "input": {"url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions", "find": ["Commercial development", "Extensions allow", "review", "approval", "partner"]}}

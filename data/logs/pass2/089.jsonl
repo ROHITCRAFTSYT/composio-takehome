@@ -1,0 +1,5 @@
+{"t": 1795591388.3, "tool": "composio_search", "input": {"query": "Ramp MCP server official developer API", "domains": ["ramp.com", "docs.ramp.com", "github.com"]}}
+{"t": 1795591473.9, "tool": "fetch_page", "input": {"url": "https://support.ramp.com/ramp-mcp", "find": ["MCP", "server", "connect"]}}
+{"t": 1795591504.6, "tool": "fetch_page", "input": {"url": "https://docs.ramp.com/llms-guides/getting-started.txt", "find": ["sandbox", "approval", "plan", "Admin"]}}
+{"t": 1795591556.1, "tool": "fetch_page", "input": {"url": "https://ramp.com/pricing", "find": ["API", "Free", "Plus", "developer"]}}
+{"t": 1795591583.7, "tool": "fetch_page", "input": {"url": "https://docs.ramp.com/developer-api/v1/sandbox-access", "find": ["sandbox", "request", "approve"]}}

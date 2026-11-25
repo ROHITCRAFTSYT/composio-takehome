@@ -1,0 +1,55 @@
+{
+  "n": 44,
+  "app": "Salesforce Commerce Cloud",
+  "one_liner": "Salesforce B2C Commerce API (SCAPI): REST shopper and admin APIs for enterprise storefronts, reachable only through a licensed B2C Commerce realm; official B2C DX MCP server.",
+  "auth_methods": [
+    "oauth2",
+    "other"
+  ],
+  "access": "contact_sales",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp/",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "notes": "Scoped to B2C Commerce (the product the developer.salesforce.com/docs/commerce hint points at); B2B/D2C Commerce on Salesforce core is a different product. auth: Shopper APIs via SLAS, built on OAuth 2.1 grant types incl. authorization_code_pkce with shopper login (user grant) = oauth2; Admin APIs via an Account Manager API client (client id + password/secret -> client_credentials token, no user grant) = other; SLAS trusted-system/agent tokens are also client_credentials. Excluded peripheral credentials: Managed Runtime MRT_API_KEY (deploy API), WebDAV access keys, legacy OCAPI Business Manager user grant (BM username+password in Basic) - a maximal reading could add api_key/basic. access: needs a B2C Commerce realm; the API is 'available at no extra cost' to B2C Commerce customers, on-demand sandboxes require purchased sandbox credits; no free/trial signup -> contact_sales. Salesforce exposes a shared public demo sandbox for Shopper API examples, but that is not working credentials for your own instance. mcp: official B2C MCP / B2C DX MCP Server (npm @salesforce/b2c-dx-mcp, GitHub SalesforceCommerceCloud/b2c-developer-tooling) documented on developer.salesforce.com; some doc versions still flag it Developer Preview. A separate 'Agentic MCP Shopper Tools' pilot requires an account executive.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/slas.html",
+      "quote": "The SLAS API is based on grant types defined by the OAuth 2.1 standard."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+      "quote": "Learn how to create an API client in Account Manager and use the API client’s credentials to request an access token for the SCAPI Admin APIs."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/b2c-developer-sandboxes.html",
+      "quote": "To access an on-demand sandbox, you must purchase sandbox credits, enable appropriate permissions and users, and configure a client API ID."
+    },
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+      "quote": "For B2C Commerce customers, the API is available at no extra cost."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html",
+      "quote": "The B2C Commerce API (SCAPI) is a set of RESTful APIs for building storefronts, merchant tools, and integrations on the B2C Commerce platform."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/b2c-developer-tooling.html",
+      "quote": "The MCP provides official B2C Commerce documentation search, live cartridge debugging, log investigation, deployment tools, and general-purpose SCAPI Admin API access."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/b2c-developer-sandboxes.html",
+      "quote": "The credit system provides flexibility so you can use the credits that you purchase the way you want."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

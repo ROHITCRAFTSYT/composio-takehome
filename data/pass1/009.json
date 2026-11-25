@@ -1,0 +1,144 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "one_liner": "Copper is a CRM for contacts, companies, opportunities, pipelines and activities, with a REST Developer API for building custom integrations.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API keys are generated in the Copper web app under System settings > API Keys and sent as a token header with the token owner's email. OAuth2.0 is offered but requires registering the app with Copper first, and Copper describes it as the preferred approach for partner integrations.",
+  "access": "self_serve_free",
+  "access_notes": "API keys are self-serve from the web app. The fetched docs and pricing page did not state whether API access needs a specific paid plan, so the free-plan classification is not confirmed. OAuth registration requires contacting Copper.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs say the Dev API gives access to most Copper resources with read and write requests. Breadth is a judgement call based on that wording; object-level coverage was not checked endpoint by endpoint.",
+  "docs_url": "https://developer.copper.com",
+  "mcp": "official",
+  "mcp_url": "https://www.copper.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials and a documented REST API are available self-serve. Open item: the plan tier needed for API access is unconfirmed. The official Copper MCP server is announced as a beta launching November 2026 with a waitlist, so it is not yet usable.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "The Dev API uses token based authentication."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "OAuth2.0 is the preferred approach for partner integrations."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "To generate an API token, in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY' button."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "To register your application, contact us."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.copper.com",
+    "quote": "provides a RESTful interface with JSON-formatted responses to access most Copper resources"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.copper.com/mcp",
+    "quote": "Yes. Copper is launching an official MCP server, built and hosted by Copper."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "To generate an API token, in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY' button."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Copper CRM API authentication developer docs",
+     "domains": [
+      "copper.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Copper CRM MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "find": [
+      "API Key",
+      "OAuth",
+      "approval",
+      "token",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.copper.com/mcp",
+     "find": [
+      "official",
+      "beta",
+      "waitlist",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.copper.com/introduction/oauth/index.html",
+     "find": [
+      "register",
+      "approv",
+      "review",
+      "partner"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.copper.com/pricing",
+     "find": [
+      "API",
+      "integration",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.copper.com",
+     "find": [
+      "RESTful",
+      "JSON",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer messaging, helpdesk and support platform with a REST API for contacts, conversations and tickets.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Private apps use an Access Token from the developer hub; public apps use OAuth.",
+  "access": "self_serve_free",
+  "access_notes": "Developer workspaces are free and intended for development purposes only; they issue access tokens for apps.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs cover managing contacts, conversations and tickets; API version 2.18 per FAQ.",
+  "docs_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.intercom.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Official MCP server is US and EU only; AU hosted workspaces not yet supported. Public apps need OAuth; publishing to the app store is optional.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "quote": "you have two authentication options depending on whether you app is public or private."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data."
+   },
+   {
+    "field": "access",
+    "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+    "quote": "Developer workspaces are free and intended for development purposes only."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "quote": "simply provide it as an Authorization:Bearer header in your requests"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+    "quote": "manage contacts, conversations, and tickets via the Intercom API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "quote": "Intercom hosts a remote MCP server that follows the authenticated remote MCP specification"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "quote": "The Intercom MCP server is available for US and EU hosted workspaces. AU hosted workspaces are not yet supported."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+    "quote": "Developer workspaces are free and intended for development purposes only."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+     "find": [
+      "private",
+      "public",
+      "OAuth",
+      "Access Token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "find": [
+      "remote MCP",
+      "hosts",
+      "US",
+      "region"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+     "find": [
+      "free",
+      "development",
+      "review",
+      "approval",
+      "contacts"
+     ]
+    }
+   }
+  ]
+ }
+}

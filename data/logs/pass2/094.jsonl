@@ -1,0 +1,2 @@
+{"t": 1795591675.0, "tool": "fetch_page", "input": {"url": "https://docs.consensus.app/api-plans-and-access", "find": ["free", "x-api-key", "trial", "approval", "Free plans"]}}
+{"t": 1795591715.6, "tool": "fetch_page", "input": {"url": "https://docs.consensus.app/consensus-mcp", "find": ["official", "OAuth", "Bearer", "plan", "free"]}}

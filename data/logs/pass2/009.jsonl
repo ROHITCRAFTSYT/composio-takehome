@@ -1,0 +1,7 @@
+{"t": 1795530477.3, "tool": "fetch_page", "input": {"url": "https://www.copper.com/mcp", "find": ["waitlist", "beta", "launch", "November", "Yes"]}}
+{"t": 1795530505.6, "tool": "composio_search", "input": {"query": "Copper CRM Dev API access plan API key requirements pricing", "domains": ["copper.com", "developer.copper.com", "help.copper.com"]}}
+{"t": 1795530590.4, "tool": "fetch_page", "input": {"url": "https://www.copper.com/pricing", "find": ["API", "trial", "free"]}}
+{"t": 1795530612.0, "tool": "composio_search", "input": {"query": "Copper API key which plans include API access help center", "domains": ["help.copper.com", "developer.copper.com", "copper.com"]}}
+{"t": 1795530698.0, "tool": "fetch_page", "input": {"url": "https://developer.copper.com/introduction/authentication.html", "find": ["API", "plan", "admin"]}}
+{"t": 1795530770.4, "tool": "fetch_page", "input": {"url": "https://www.copper.com/resources/choosing-between-streak-vs-copper-crm", "find": ["free plan"]}}
+{"t": 1795530809.2, "tool": "fetch_page", "input": {"url": "https://support.copper.com/en/articles/8823347-generating-an-api-key", "find": ["Admin"]}}

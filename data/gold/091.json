@@ -1,0 +1,49 @@
+{
+  "n": 91,
+  "app": "NotebookLM",
+  "one_liner": "Google's AI research notebook; the Enterprise edition (now Gemini Notebook Enterprise) exposes a Pre-GA REST API on Google Cloud for managing notebooks, sources and audio overviews.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "mcp": "community",
+  "mcp_url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+  "verdict": "ready",
+  "main_blocker": "paid_plan",
+  "notes": "Consumer NotebookLM has no public API; only NotebookLM Enterprise (renamed Gemini Notebook Enterprise) has one: discoveryengine.googleapis.com v1alpha projects.locations.notebooks (create/get/listRecentlyViewed/batchDelete/share) plus sources and audio-overview endpoints; no chat/query endpoint -> narrow. The API pages are marked Preview (Pre-GA). AUTH (ambiguous): docs require a licensed USER account and a Google OAuth 2.0 access token (gcloud auth print-access-token after gcloud auth login); service accounts are not documented and cannot hold a license, so I labeled oauth2 (Google OAuth user token) rather than other. A grader keying on 'Google Cloud auth -> other' would differ. ACCESS: the licensing page documents a self-serve free-trial tier (full-featured, 14 days, 5000 licenses) chosen in the Cloud console, then a paid monthly/annual subscription; so self_serve_trial, not paid_plan or contact_sales (sales only needed for more than 5000 licenses). Verdict ready because a self-serve trial path exists; main_blocker paid_plan records that sustained use needs paid per-user licenses. MCP search: checked Google Cloud's official remote-MCP Supported products list (docs.cloud.google.com/mcp/supported-products): no NotebookLM/Gemini Notebook entry (aiplatform /mcp/notebook is Colab Enterprise; discoveryengine /mcp is Agent Search); no Google-org repo found. Only third-party servers exist (jacob-bd/notebooklm-mcp-cli with experimental Enterprise support; PleasePrompto/notebooklm-mcp, archived Sept 2026, consumer browser automation) -> community.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Signing in with your user credentials ensures that gcloud auth print-access-token generates an access token for your user account."
+    },
+    {
+      "field": "api_style",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "The projects.locations.notebooks REST API methods on this page require an authenticated user account with an active Gemini Notebook Enterprise license."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+      "quote": "With this tier, you get a full-featured, 14-day trial subscription of 5000 licenses."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+      "quote": "You can buy a monthly subscription or a year-long subscription."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+      "quote": "Gemini Notebook Enterprise support is experimental."
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Pre-GA features are available \"as is\" and might have limited support."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

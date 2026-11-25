@@ -1,0 +1,130 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "one_liner": "Podio is a no-code work management and CRM platform for building custom apps, items, workflows and client workspaces.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Docs describe four OAuth2-based flows (server-side, client-side, username and password, app authentication) all yielding an access token via api.podio.com/oauth/token/v2 using Client ID/Secret. critic: kept oauth2 only; app flow is documented as an OAuth2 flow, not a separately issued API key.",
+  "access": "self_serve_free",
+  "access_notes": "Progress pricing page has a Free plan with API Integrations at 1000 calls per hour; developers register an application to get a Client ID and Client Secret. critic: access confirmed self_serve_free; no approval step found in docs.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API at api.podio.com covering items, files, apps, workspaces, tasks etc. critic: breadth raised from moderate to broad (Podio API reference covers core objects with read/write); not graded.",
+  "docs_url": "https://developers.podio.com/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.podio.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No app review or paid plan requirement found. Official MCP server (hosted by Progress/Podio) is in beta. critic: verdict confirmed.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "The Podio API uses the OAuth2 protocol for authentication."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Use app authentication if you only need to interact with a single Podio app and do not need to authenticate as a specific user."
+   },
+   {
+    "field": "access",
+    "url": "https://www.progress.com/podio/pricing",
+    "quote": "API Integrations | 1000 calls per hour"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Before you can use the Podio API you must register your application."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "HTTP METHOD: POST"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide",
+    "quote": "The server is live at https://mcp.podio.com"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Your application is assigned a unique identifier, called \"Client ID\", together with a \"Client Secret\"."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.podio.com/authentication",
+     "find": [
+      "register",
+      "app authentication",
+      "client_id",
+      "app_id"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Podio MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.progress.com/podio/pricing",
+     "find": [
+      "Free",
+      "API",
+      "calls per hour"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide",
+     "find": [
+      "live at",
+      "beta",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.podio.com/api.php",
+     "find": [
+      "api key",
+      "API key",
+      "reference"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.progress.com/podio/pricing",
+     "find": [
+      "API Integrations",
+      "Rate limit"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "one_liner": "Ecommerce website builder whose Commerce APIs let developers read and write orders, products, inventory and transactions for a merchant site.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key generated in the site's Developer API Keys settings (Commerce Advanced plan). OAuth 2.0 requires registering an OAuth client, which is reviewed and approved.",
+  "access": "paid_plan",
+  "access_notes": "Custom-app API keys require the Commerce Advanced plan. OAuth client registration also needs review and approval, so there is no free self-serve path to the API.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Commerce APIs cover orders, products, inventory, transactions, forms, store pages, webhooks and more; Read Only or Read and Write permission levels per API.",
+  "docs_url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+  "mcp": "official",
+  "mcp_url": "https://developers.squarespace.com/mcp/overview",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Direct API use needs the Commerce Advanced plan (or OAuth review). The official remote MCP server exists, but its Commerce tools require signing in with a Squarespace account.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Depending on your development needs, you can use a generated API key or start the OAuth process with Squarespace to become a registered OAuth client."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Registering an OAuth client, and having it reviewed and approved, only allows OAuth connections with Squarespace."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.squarespace.com/",
+    "quote": "Read and write orders, products, inventory, and transactions. REST endpoints, webhooks for order events, and signed payloads for safe server-to-server delivery."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Squarespace MCP server is a remote server. There's nothing to install."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Commerce tools read and change a website, so they need you to sign in with your Squarespace account."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Squarespace Developer API authentication OAuth API key",
+     "domains": [
+      "developers.squarespace.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/",
+     "find": [
+      "API key",
+      "OAuth",
+      "authentication",
+      "Commerce",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "find": [
+      "Custom applications",
+      "Commerce Advanced",
+      "API key",
+      "OAuth",
+      "trial",
+      "Extensions",
+      "approval",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Squarespace MCP server github",
+     "domains": [
+      "github.com",
+      "squarespace.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/websites",
+     "find": [
+      "Reseller",
+      "MCP",
+      "Claude",
+      "ChatGPT"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "find": [
+      "Commerce Advanced",
+      "generate",
+      "OAuth client",
+      "register",
+      "Extensions require",
+      "approval",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/changelog",
+     "find": [
+      "MCP",
+      "mcp",
+      "Claude",
+      "AI"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "developers.squarespace.com MCP server Squarespace official",
+     "domains": [
+      "developers.squarespace.com",
+      "squarespace.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "find": [
+      "remote server",
+      "Sign-in",
+      "sign in",
+      "OAuth",
+      "API key",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "find": [
+      "Commercial development",
+      "Extensions allow",
+      "review",
+      "approval",
+      "partner"
+     ]
+    }
+   }
+  ]
+ }
+}

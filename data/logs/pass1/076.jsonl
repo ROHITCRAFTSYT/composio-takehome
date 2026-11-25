@@ -1,0 +1,8 @@
+{"t": 1795529317.4, "tool": "composio_search", "input": {"query": "monday.com API authentication OAuth API token developer", "domains": ["developer.monday.com"]}}
+{"t": 1795529355.0, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs/authentication", "find": ["OAuth", "token", "API"]}}
+{"t": 1795529440.6, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs", "find": ["GraphQL", "REST", "API"]}}
+{"t": 1795529475.1, "tool": "composio_search", "input": {"query": "monday.com MCP server official", "domains": ["github.com", "monday.com", "developer.monday.com"]}}
+{"t": 1795529568.5, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/apps/docs/oauth", "find": ["OAuth", "authorization", "client", "scope"]}}
+{"t": 1795529603.9, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai", "find": ["MCP", "OAuth", "official", "hosted"]}}
+{"t": 1795529680.1, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/apps/docs/manage-user-tokens-and-credentials", "find": ["API", "token", "review"]}}
+{"t": 1795529712.7, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs/basics", "find": ["free", "developer", "account"]}}

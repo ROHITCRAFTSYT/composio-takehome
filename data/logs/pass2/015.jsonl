@@ -1,0 +1,3 @@
+{"t": 1795530638.8, "tool": "composio_search", "input": {"query": "Pylon pricing free plan API access", "domains": ["usepylon.com", "docs.usepylon.com"]}}
+{"t": 1795530684.1, "tool": "fetch_page", "input": {"url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication", "find": ["plan", "Admin", "token"]}}
+{"t": 1795530751.0, "tool": "fetch_page", "input": {"url": "https://www.usepylon.com/pricing", "find": ["free", "trial", "API", "contact"]}}

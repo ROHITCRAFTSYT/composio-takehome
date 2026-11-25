@@ -1,0 +1,3 @@
+{"t": 1795591740.5, "tool": "fetch_page", "input": {"url": "https://support.grain.com/en/articles/15507288-grain-api", "find": ["Free", "Business", "OAuth", "Personal"]}}
+{"t": 1795591757.9, "tool": "fetch_page", "input": {"url": "https://developers.grain.com/mcp", "find": ["MCP", "Claude"]}}
+{"t": 1795591805.9, "tool": "fetch_page", "input": {"url": "https://developers.grain.com", "find": ["approval", "review", "OAuth", "GraphQL", "REST", "partner"]}}

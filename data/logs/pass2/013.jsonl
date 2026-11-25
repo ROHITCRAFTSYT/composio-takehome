@@ -1,0 +1,8 @@
+{"t": 1795530594.3, "tool": "composio_search", "input": {"query": "Freshdesk MCP server", "domains": []}}
+{"t": 1795530627.3, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans", "find": ["trial", "API", "Sprout"]}}
+{"t": 1795530699.4, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans", "find": ["Free Program", "API"]}}
+{"t": 1795530726.3, "tool": "composio_search", "input": {"query": "Freshdesk Free Program API access", "domains": ["freshdesk.com"]}}
+{"t": 1795530814.2, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-program-freshdesk-only-", "find": ["API", "integration", "Marketplace"]}}
+{"t": 1795530850.7, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-", "find": ["generally available", "Free", "plans"]}}
+{"t": 1795530925.0, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000001047-do-we-have-api-and-integration-capabilities-in-the-free-sprout-plan-", "find": []}}
+{"t": 1795530961.9, "tool": "fetch_page", "input": {"url": "https://freshdesk.com/pricing", "find": ["API", "Free"]}}

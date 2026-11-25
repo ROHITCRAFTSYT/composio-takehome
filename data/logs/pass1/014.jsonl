@@ -1,0 +1,10 @@
+{"t": 1795526857.7, "tool": "composio_search", "input": {"query": "Front helpdesk API developer docs authentication", "domains": ["front.com"]}}
+{"t": 1795526898.9, "tool": "composio_search", "input": {"query": "Front app API pricing plan API access", "domains": ["front.com"]}}
+{"t": 1795526936.4, "tool": "composio_search", "input": {"query": "Front MCP server official", "domains": []}}
+{"t": 1795526997.5, "tool": "fetch_page", "input": {"url": "https://help.front.com/en/articles/2331", "find": ["token", "OAuth", "plan", "Admin"]}}
+{"t": 1795527044.5, "tool": "fetch_page", "input": {"url": "https://help.front.com/en/articles/2178", "find": ["Trial", "API", "Starter", "Professional", "Enterprise"]}}
+{"t": 1795527077.8, "tool": "fetch_page", "input": {"url": "https://help.front.com/en/articles/2482", "find": ["Core API", "OAuth", "token", "plan"]}}
+{"t": 1795527125.0, "tool": "fetch_page", "input": {"url": "https://help.front.com/en/articles/4883136", "find": ["MCP", "access", "beta", "official", "Front"]}}
+{"t": 1795527154.3, "tool": "fetch_page", "input": {"url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712", "find": ["official", "beta", "Core API tokens", "access"]}}
+{"t": 1795527157.7, "tool": "fetch_page", "input": {"url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712", "find": ["How to get access", "form", "beta", "API tokens"]}}
+{"t": 1795527183.9, "tool": "fetch_page", "input": {"url": "https://dev.frontapp.com/docs/authentication", "find": ["OAuth", "token", "authenticate"]}}

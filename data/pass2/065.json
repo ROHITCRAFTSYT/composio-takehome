@@ -1,0 +1,114 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Open-source Postgres development platform with auto-generated REST Data API, Auth, Storage, Realtime and Edge Functions.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Data API uses publishable and secret API keys (sb_publishable_ / sb_secret_) on the apikey header. critic: oauth2 confirmed - Management API supports OAuth2 apps (org settings > OAuth Apps) for third-party integrations; hosted MCP uses OAuth dynamic client registration with PAT as manual alternative.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan ($0) gives unlimited API requests with no paid plan or sales contact; limited to 2 active projects and pause after 1 week of inactivity. critic: confirmed.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Data API is PostgREST auto-generated from the database schema at /rest/v1/; Management API covers orgs and projects.",
+  "docs_url": "https://supabase.com/docs/guides/api",
+  "mcp": "official",
+  "mcp_url": "https://supabase.com/docs/guides/ai-tools/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed; no review or paid gate for credentials.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+    "quote": "Supabase supports four types of API keys:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration",
+    "quote": "Using OAuth2.0 you can retrieve an access and refresh token that grant your application full access to the Management API on behalf of the user."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+    "quote": "This means that you don't need to manually create a personal access token (PAT) or OAuth app to use the server."
+   },
+   {
+    "field": "access",
+    "url": "https://supabase.com/pricing",
+    "quote": "Unlimited API requests"
+   },
+   {
+    "field": "access",
+    "url": "https://supabase.com/pricing",
+    "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects."
+   },
+   {
+    "field": "api_style",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres."
+   },
+   {
+    "field": "mcp",
+    "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+    "quote": "The Supabase MCP server provides tools organized into feature groups."
+   },
+   {
+    "field": "verdict",
+    "url": "https://supabase.com/pricing",
+    "quote": "Unlimited API requests"
+   },
+   {
+    "field": "verdict",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+     "find": [
+      "official",
+      "hosted",
+      "mcp.supabase.com",
+      "OAuth",
+      "personal access token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/pricing",
+     "find": [
+      "Free",
+      "Unlimited API requests",
+      "Limit of 2"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-integration",
+     "find": [
+      "OAuth",
+      "access token",
+      "authorization"
+     ]
+    }
+   }
+  ]
+ }
+}

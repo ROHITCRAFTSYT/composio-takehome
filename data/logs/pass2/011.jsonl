@@ -1,0 +1,5 @@
+{"t": 1795530520.9, "tool": "composio_search", "input": {"query": "Zendesk MCP server official", "domains": []}}
+{"t": 1795530567.5, "tool": "composio_search", "input": {"query": "Zendesk developer free trial sponsored account API token", "domains": ["zendesk.com", "developer.zendesk.com"]}}
+{"t": 1795530653.8, "tool": "composio_search", "input": {"query": "Zendesk MCP server remote Admin Center AI agents connect", "domains": ["zendesk.com", "developer.zendesk.com", "support.zendesk.com"]}}
+{"t": 1795530695.6, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development", "find": ["free", "trial", "sponsored"]}}
+{"t": 1795530765.2, "tool": "fetch_page", "input": {"url": "https://support.zendesk.com/hc/en-us/articles/11400026079130", "find": ["MCP server", "early access", "EAP"]}}

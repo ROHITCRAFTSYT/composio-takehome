@@ -1,0 +1,117 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "one_liner": "Cloud communications platform with REST APIs for SMS, voice, email, WhatsApp, verification and more.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "REST calls use HTTP Basic with an API key SID as username and API key secret as password (or Account SID and Auth Token). These are static dashboard/API-created secrets, not OAuth.",
+  "access": "self_serve_trial",
+  "access_notes": "Free trial sign-up with no credit card; trial accounts have limits and pay-as-you-go applies after. Exact trial limits were not checked.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs describe many product APIs (Messaging, Voice, Verify, Lookup, Conversations). The hosted docs MCP is read-only and does not execute API calls.",
+  "docs_url": "https://www.twilio.com/docs/iam/api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.twilio.com/docs",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve trial sign-up and a documented public REST API. Production use of paid products will be usage-billed.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.twilio.com/docs/iam/api",
+    "quote": "To authenticate requests to the Twilio APIs, Twilio supports HTTP Basic authentication. Use your API key SID as the username and your API key secret as the password."
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.twilio.com/docs/iam/api",
+    "quote": "The Twilio REST API is served over HTTPS."
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/en-us/pricing",
+    "quote": "Sign up for a free trial—no credit card required"
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.twilio.com/en-us/pricing",
+    "quote": "Sign up for a free trial—no credit card required"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.twilio.com/docs/ai/mcp",
+    "quote": "No authentication required: The MCP server indexes public API specifications only."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Twilio API authentication docs",
+     "domains": [
+      "twilio.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Twilio MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twilio.com/docs/usage/api",
+     "find": [
+      "authentication",
+      "API",
+      "credentials"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twilio.com/docs/iam/api",
+     "find": [
+      "HTTP Basic authentication",
+      "API key SID"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twilio.com/docs/ai/mcp",
+     "find": [
+      "No authentication required",
+      "Hosted MCP server"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twilio.com/en-us/pricing",
+     "find": [
+      "free trial",
+      "Free",
+      "trial",
+      "sign up"
+     ]
+    }
+   }
+  ]
+ }
+}

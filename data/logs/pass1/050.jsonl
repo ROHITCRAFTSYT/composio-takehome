@@ -1,0 +1,15 @@
+{"t": 1795528277.6, "tool": "composio_search", "input": {"query": "fanbasis developer API documentation authentication", "domains": ["fanbasis.com"]}}
+{"t": 1795528310.0, "tool": "composio_search", "input": {"query": "fanbasis API key developers", "domains": ["fanbasis.com"]}}
+{"t": 1795528345.7, "tool": "composio_search", "input": {"query": "fanbasis MCP server github", "domains": []}}
+{"t": 1795528452.6, "tool": "fetch_page", "input": {"url": "https://autodiscover.fanbasis.com", "find": ["API", "MCP", "API key", "OAuth", "free", "sales", "trial", "Enterprise", "developer"]}}
+{"t": 1795528479.3, "tool": "fetch_page", "input": {"url": "https://www.fanbasis.com", "find": ["API", "MCP", "API key", "OAuth", "developer", "free", "pricing", "sales"]}}
+{"t": 1795528506.3, "tool": "composio_search", "input": {"query": "Commas developer API docs api key create", "domains": ["docs.fanbasis.com", "developers.fanbasis.com", "fanbasis.com", "commas.com"]}}
+{"t": 1795528588.1, "tool": "composio_search", "input": {"query": "Commas API authentication bearer secret key developer reference", "domains": ["commas.com", "docs.commas.com", "support.commas.com", "fanbasis.com"]}}
+{"t": 1795528615.4, "tool": "fetch_page", "input": {"url": "https://www.commas.com/fanbasis-is-now-commas", "find": ["API", "MCP", "developer", "key", "access"]}}
+{"t": 1795528646.7, "tool": "fetch_page", "input": {"url": "https://commas.com/mcp", "find": ["MCP", "API key", "OAuth", "token", "connect", "plan", "beta"]}}
+{"t": 1795528767.9, "tool": "fetch_page", "input": {"url": "https://commas.com/api", "find": ["API key", "OAuth", "api", "free", "trial", "sales", "contact", "plan", "token", "developer", "MCP"]}}
+{"t": 1795528829.2, "tool": "fetch_page", "input": {"url": "https://commas.com/developers", "find": ["API key", "OAuth", "api", "free", "trial", "sales", "contact", "plan", "token", "developer", "MCP"]}}
+{"t": 1795528892.0, "tool": "fetch_page", "input": {"url": "https://commas.com/pricing", "find": ["API key", "OAuth", "api", "free", "trial", "sales", "contact", "plan", "token", "developer", "MCP"]}}
+{"t": 1795528953.0, "tool": "fetch_page", "input": {"url": "https://commas.com/enterprise", "find": ["API key", "OAuth", "api", "free", "trial", "sales", "contact", "plan", "token", "developer", "MCP"]}}
+{"t": 1795528969.8, "tool": "composio_search", "input": {"query": "Commas pricing plans API access enterprise contact sales", "domains": ["commas.com", "fanbasis.com"]}}
+{"t": 1795529070.0, "tool": "fetch_page", "input": {"url": "https://commas.com/enterprises", "find": ["API", "sales", "contact", "SDK", "key", "sandbox", "developer"]}}

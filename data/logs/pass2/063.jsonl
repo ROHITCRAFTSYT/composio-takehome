@@ -1,0 +1,2 @@
+{"t": 1795579270.9, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api", "find": ["OAuth2", "Personal access", "rate limit", "approval"]}}
+{"t": 1795579293.5, "tool": "fetch_page", "input": {"url": "https://www.netlify.com/pricing", "find": ["free forever", "API", "Free"]}}

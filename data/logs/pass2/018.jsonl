@@ -1,0 +1,5 @@
+{"t": 1795530696.7, "tool": "fetch_page", "input": {"url": "https://www.helpscout.com/pricing", "find": ["API", "Free", "free plan", "trial"]}}
+{"t": 1795530768.6, "tool": "composio_search", "input": {"query": "Help Scout MCP server", "domains": ["helpscout.com", "developer.helpscout.com", "docs.helpscout.com"]}}
+{"t": 1795530852.0, "tool": "fetch_page", "input": {"url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports", "find": ["plans", "API access", "mcp.helpscout.net", "official"]}}
+{"t": 1795530922.2, "tool": "composio_search", "input": {"query": "Help Scout API access which plans Free plan API OAuth app create", "domains": ["docs.helpscout.com", "developer.helpscout.com"]}}
+{"t": 1795531014.7, "tool": "fetch_page", "input": {"url": "https://docs.helpscout.com/article/1140-mailbox-api", "find": ["Free plan", "API Access"]}}

@@ -1,0 +1,23 @@
+{
+  "n": 58,
+  "app": "Sherlock",
+  "one_liner": "Open-source (MIT) Python CLI that searches for a username across hundreds of social networks; there is no hosted service or API.",
+  "auth_methods": ["other"],
+  "access": "self_serve_free",
+  "api_style": "sdk_or_cli_only",
+  "api_breadth": "narrow",
+  "mcp": "community",
+  "mcp_url": "https://github.com/Burnsedia/sherlock-mcp",
+  "verdict": "blocked",
+  "main_blocker": "not_a_saas",
+  "notes": "Sherlock is a local CLI (pipx/pip/uv/docker/dnf) with no accounts, keys or hosted endpoint, so auth_methods=other (local tool with no auth, as the rubric says) and access=self_serve_free (MIT, free to install; there are no credentials to gate). api_style=sdk_or_cli_only: the README only documents the CLI. The org does have a repo 'sherlock-project/api', which is a self-hosted Django REST Framework wrapper that you run yourself on 127.0.0.1:8000. It is not a hosted public API, so I did not count it as rest. MCP: I checked the sherlock-project org repos (sherlock, sherlockproject.xyz, .github, build, api) and the README: there is no official MCP server. A web search for 'sherlock username search MCP server' found third-party ones: Burnsedia/sherlock-mcp (GitHub, PyPI sherlock-mcp, glama), OSINT bundles (frishtik/osint-tools-mcp-server, OpenOSINT) and Apify actors exposed over Apify's MCP. So mcp=community. Verdict=blocked with main_blocker=not_a_saas because there is no public hosted API, as the task's edge-case guidance says. An agent could still shell out to the CLI or run a community MCP server locally, so this verdict is the field most open to argument.",
+  "evidence": [
+    {"field": "auth_methods", "url": "https://github.com/sherlock-project/sherlock", "quote": "pipx install sherlock-project"},
+    {"field": "access", "url": "https://github.com/sherlock-project/sherlock", "quote": "docker run -it --rm sherlock/sherlock"},
+    {"field": "api_style", "url": "https://github.com/sherlock-project/sherlock", "quote": "sherlock user123"},
+    {"field": "api_style", "url": "https://github.com/sherlock-project/api", "quote": "This REST API is built on top of Django REST Framework"},
+    {"field": "mcp", "url": "https://github.com/Burnsedia/sherlock-mcp", "quote": "FastMCP server integration for the Sherlock OSINT tool"},
+    {"field": "verdict", "url": "https://github.com/sherlock-project/sherlock", "quote": "Hunt down social media accounts by username across social networks"}
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

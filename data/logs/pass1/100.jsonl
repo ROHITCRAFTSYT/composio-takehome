@@ -1,0 +1,6 @@
+{"t": 1795530158.3, "tool": "composio_search", "input": {"query": "Grain meeting recorder API developer docs authentication", "domains": ["grain.com"]}}
+{"t": 1795530193.3, "tool": "composio_search", "input": {"query": "Grain API MCP server", "domains": ["grain.com", "github.com"]}}
+{"t": 1795530261.6, "tool": "fetch_page", "input": {"url": "https://support.grain.com/en/articles/15507288-grain-api", "find": ["Authentication", "OAuth", "Personal Access Token", "plan", "Business", "Enterprise", "webhook", "API key"]}}
+{"t": 1795530294.2, "tool": "fetch_page", "input": {"url": "https://developers.grain.com", "find": ["Personal Access Token", "OAuth", "Authentication", "plan", "Enterprise", "Business"]}}
+{"t": 1795530354.3, "tool": "fetch_page", "input": {"url": "https://developers.grain.com/mcp", "find": ["OAuth", "Claude", "Enterprise", "plan", "free", "Business"]}}
+{"t": 1795530386.0, "tool": "fetch_page", "input": {"url": "https://support.grain.com/en/articles/15297887-export-meetings", "find": ["workspace API token", "Business", "Enterprise", "Generate"]}}

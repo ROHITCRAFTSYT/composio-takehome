@@ -1,0 +1,10 @@
+{"t": 1795528181.9, "tool": "composio_search", "input": {"query": "BigCommerce API authentication developer docs", "domains": ["developer.bigcommerce.com"]}}
+{"t": 1795528217.6, "tool": "composio_search", "input": {"query": "BigCommerce MCP server official", "domains": ["developer.bigcommerce.com", "github.com"]}}
+{"t": 1795528334.3, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/docs/rest-authentication", "find": ["API account", "OAuth", "X-Auth-Token", "app"]}}
+{"t": 1795528362.5, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/docs/rest-authentication/api-accounts", "find": ["API account", "access token", "OAuth"]}}
+{"t": 1795528429.5, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/docs/rest-authentication/oauth", "find": ["OAuth", "approved", "app"]}}
+{"t": 1795528490.1, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/llms.txt", "find": ["MCP", "mcp"]}}
+{"t": 1795528495.3, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/docs/rest-authentication/current-customer", "find": ["API account", "client secret", "X-Auth-Token"]}}
+{"t": 1795528520.5, "tool": "composio_search", "input": {"query": "BigCommerce official MCP server store API developer", "domains": ["developer.bigcommerce.com", "bigcommerce.com"]}}
+{"t": 1795528600.9, "tool": "fetch_page", "input": {"url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview", "find": ["Enablement", "permissions", "Store Management MCP"]}}
+{"t": 1795528631.7, "tool": "fetch_page", "input": {"url": "https://developer.bigcommerce.com/developer/learn/courses/b2b-core/rest/authentication", "find": ["X-Auth-Token", "X-Store-Hash", "API account"]}}

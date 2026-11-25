@@ -1,0 +1,3 @@
+{"t": 1795577323.7, "tool": "fetch_page", "input": {"url": "https://developers.klaviyo.com/en/docs/set_up_oauth", "find": ["app review", "marketplace", "Pass your app review", "approved", "private"]}}
+{"t": 1795577447.6, "tool": "fetch_page", "input": {"url": "https://www.klaviyo.com/pricing", "find": ["Free", "free plan", "API", "250 contacts"]}}
+{"t": 1795577463.4, "tool": "composio_search", "input": {"query": "Klaviyo MCP server", "domains": ["klaviyo.com", "github.com"]}}

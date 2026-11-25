@@ -1,0 +1,112 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "one_liner": "Gumroad is a platform for selling digital products, with a REST OAuth API for managing products, sales and buyers.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 applications are registered in account advanced settings and issue an application id and secret. A personal access token can be generated on the application page for use on your own account.",
+  "access": "self_serve_free",
+  "access_notes": "Applications are created from the account's advanced settings page. No paid plan or approval step was seen in the pages fetched; pricing page was not checked.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented scopes include write access for marking sales as shipped and editing sales (refunds, access revocation, receipts). Full endpoint coverage was not verified.",
+  "docs_url": "https://gumroad.com/api",
+  "mcp": "official",
+  "mcp_url": "https://gumroad.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "api_style",
+    "url": "https://gumroad.com/api",
+    "quote": "The Gumroad OAuth API is based around REST."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://gumroad.com/api",
+    "quote": "After creating an application, you'll be given a unique application id and application secret."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://gumroad.com/api",
+    "quote": "On the application page, click Generate access token to get the token you will use with the API."
+   },
+   {
+    "field": "access",
+    "url": "https://gumroad.com/help/article/280-create-application-api",
+    "quote": "Here, you'll see a form to create a new application."
+   },
+   {
+    "field": "verdict",
+    "url": "https://gumroad.com/api",
+    "quote": "To start using the API, you'll need to register your OAuth application."
+   },
+   {
+    "field": "mcp",
+    "url": "https://gumroad.com/mcp",
+    "quote": "An MCP server for selling digital products"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Gumroad API authentication OAuth access token developer docs",
+     "domains": [
+      "gumroad.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://gumroad.com/api",
+     "find": [
+      "oauth",
+      "access_token",
+      "api",
+      "token",
+      "application"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://gumroad.com/help/article/280-create-application-api",
+     "find": [
+      "register",
+      "application",
+      "access",
+      "free",
+      "Generate",
+      "redirect"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://gumroad.com/mcp",
+     "find": [
+      "official",
+      "Gumroad",
+      "OAuth",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

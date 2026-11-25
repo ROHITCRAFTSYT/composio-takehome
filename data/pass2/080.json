@@ -1,0 +1,103 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "one_liner": "Time tracking, expenses, invoicing and project management SaaS with a REST API v2.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal Access Tokens (sent in Authorization header with Harvest-Account-Id) plus OAuth2 applications registered in the Harvest ID Developers section.",
+  "access": "self_serve_free",
+  "access_notes": "Harvest support says API access is included for all accounts, including free and trial accounts. critic: confirmed.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API v2 with GET, POST, PATCH and DELETE across time, expenses, projects and related objects.",
+  "docs_url": "https://help.getharvest.com/api-v2/introduction/overview/general",
+  "mcp": "official",
+  "mcp_url": "https://api.harvestapp.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: mcp community -> official, Harvest Help Center documents a vendor-hosted remote MCP server at api.harvestapp.com/mcp.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "A Personal Access Token which is tied directly to you and is the quickest way to start playing around with the API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "Implementing a full OAuth2 Authentication flow which allows other people to use your Harvest integrations."
+   },
+   {
+    "field": "access",
+    "url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+    "quote": "Your Harvest subscription includes API access for all accounts (including free and trial accounts) which can be used to manage your Harvest account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general",
+    "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically."
+   },
+   {
+    "field": "verdict",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general",
+    "quote": "Harvest requires applications to authenticate all requests with OAuth2 or Personal Access Tokens."
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+    "quote": "Set the Remote MCP server URL to: https://api.harvestapp.com/mcp"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Harvest time tracking official MCP server getharvest",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+     "find": [
+      "API",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "find": [
+      "MCP",
+      "server",
+      "url",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "find": [
+      "api.harvestapp.com",
+      "https"
+     ]
+    }
+   }
+  ]
+ }
+}

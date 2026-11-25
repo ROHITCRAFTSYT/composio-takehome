@@ -1,0 +1,84 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 99,
+  "app": "YouTube Transcript",
+  "category": "AI, Research and Media-native",
+  "one_liner": "YouTube transcript, search, channel and playlist data via a REST API and an MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "API key sent as Bearer token. OAuth is offered only for some MCP clients (Claude, ChatGPT) connecting to the vendor's own MCP server, not a third-party OAuth grant for the REST API. critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Free account with 100 credits and no card required; paid plan is $5/month for 1,000 credits. critic: confirmed.",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "api_notes": "Read-only YouTube data endpoints: transcripts, search, channel uploads, playlists, handle resolution.",
+  "docs_url": "https://transcriptapi.com/docs/api",
+  "mcp": "official",
+  "mcp_url": "https://transcriptapi.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed, no review or paid gate for first use.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://transcriptapi.com",
+    "quote": "You sign in with your own TranscriptAPI credentials: an API key, or OAuth for some MCP clients."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://transcriptapi.com",
+    "quote": "Get a free API key at transcriptapi.com/signup"
+   },
+   {
+    "field": "access",
+    "url": "https://transcriptapi.com",
+    "quote": "You can start for free: new accounts get 100 free credits, no card required, and one transcript costs one credit."
+   },
+   {
+    "field": "api_style",
+    "url": "https://transcriptapi.com",
+    "quote": "Get transcripts, search videos, browse channels, and extract playlists via REST API or YouTube MCP"
+   },
+   {
+    "field": "mcp",
+    "url": "https://transcriptapi.com",
+    "quote": "Yes. TranscriptAPI runs an MCP server at https://transcriptapi.com/mcp."
+   },
+   {
+    "field": "verdict",
+    "url": "https://transcriptapi.com/blog/youtube-transcript-api-complete-developer-guide",
+    "quote": "Sign up at transcriptapi.com and get 100 free credits. No credit card required."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://transcriptapi.com",
+     "find": [
+      "100 free credits",
+      "MCP server",
+      "API key",
+      "OAuth",
+      "per month",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "TranscriptAPI YouTube MCP server pricing free credits",
+     "domains": []
+    }
+   }
+  ]
+ }
+}

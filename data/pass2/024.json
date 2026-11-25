@@ -1,0 +1,107 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "one_liner": "Lark (Larksuite) enterprise collaboration suite exposing Open Platform server APIs for messaging, docs, calendar, base and more",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "App ID and App Secret from the Developer Console are used as credentials (api_key). Tokens are tenant_access_token (app acts as itself), app_access_token, and user_access_token obtained through an OAuth 2.0 user authorization flow (oauth2). No basic username/password path documented.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access approval_required -> self_serve_free. Any developer can create a custom app in the Developer Console and get App ID/Secret; the only review is by the app's own tenant administrator (the developer's own org, not the vendor), so no vendor approval gates credentials. Free-plan tenant not independently confirmed on a pricing page, hence medium confidence.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Server API docs cover many product areas (Contacts, Messaging, Docs, Calendar, Base, Approval, Tasks, Email, Admin and others). REST inferred from Server API structure.",
+  "docs_url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+  "mcp": "official",
+  "mcp_url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: ready_with_review/app_review -> ready/none. Tenant admin review of custom app scopes is internal to the developer's own tenant; only publishing a store app to other tenants requires Lark review.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+    "quote": "With this token, the app will perform actions on behalf of the user, such as creating a Docs or an Event through API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "Obtain the App ID and App Secret, which will be used for API authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+    "quote": "Custom apps: The permissions applied for by the app developer need to be reviewed by the tenant administrator."
+   },
+   {
+    "field": "api_style",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/terminology",
+    "quote": "To meet diverse application scenarios, Lark Open Platform provides a rich set of APIs and events for developers to call or subscribe to."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool"
+   },
+   {
+    "field": "mcp",
+    "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+    "quote": "OpenAPI MCP overview"
+   },
+   {
+    "field": "verdict",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+    "quote": "Custom apps: The permissions applied for by the app developer need to be reviewed by the tenant administrator."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Lark Larksuite MCP server official open platform",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+     "find": [
+      "user_access_token",
+      "OAuth",
+      "app_secret"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+     "find": [
+      "MCP",
+      "Features"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+     "find": [
+      "reviewed",
+      "Custom"
+     ]
+    }
+   }
+  ]
+ }
+}

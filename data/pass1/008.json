@@ -1,0 +1,173 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "one_liner": "Close is a sales CRM with calling, SMS, workflows and a REST API for leads, contacts and activities.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API keys are created under Settings → Developer → API Keys and use HTTP Basic with the key as username and an empty password. OAuth 2.0 is documented for user-facing integrations.",
+  "access": "self_serve_trial",
+  "access_notes": "No free plan. Sign-up starts a 14-day trial with no credit card, and paid plans start at $9/month Solo billed annually. API keys are self-serve. Public OAuth apps need Close approval before any Close user can authorize them.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Breadth beyond the overview page was not verified. Docs say base URL is api.close.com/api/v1. Solo plan lacks high-volume API access.",
+  "docs_url": "https://developer.close.com/api/overview",
+  "mcp": "official",
+  "mcp_url": "https://close.com/pricing",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Build now with API keys. Distributing an OAuth app to other Close customers needs Close's public-app review and an Integrations Directory listing is a separate application.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "API keys are best used for scripts and simple integrations that are internal to your organization."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.close.com/api/overview/oauth-authentication",
+    "quote": "To implement authentication with OAuth 2.0, you need to create an OAuth app to get your Client ID and Client Secret."
+   },
+   {
+    "field": "access",
+    "url": "https://close.com/pricing",
+    "quote": "Close doesn’t have a free plan, but you can try it free for 14 days with no credit card."
+   },
+   {
+    "field": "access",
+    "url": "https://close.com/pricing",
+    "quote": "No. You can sign up, start a trial, pick a plan, and set up your team without talking to sales."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies."
+   },
+   {
+    "field": "mcp",
+    "url": "https://close.com/pricing",
+    "quote": "AI connections via MCP Connect ChatGPT, Claude, and other compatible AI tools to your CRM."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.close.com/integrations/publish",
+    "quote": "Once approved, your app will be marked as Public and any Close user will be able to authorize it."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Close CRM API authentication API key OAuth developer docs",
+     "domains": [
+      "close.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Close CRM pricing plans API access",
+     "domains": [
+      "close.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Close CRM official MCP server github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com/api/overview",
+     "find": [
+      "API Keys",
+      "OAuth 2.0",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com/integrations/publish",
+     "find": [
+      "Requirements",
+      "OAuth 2.0",
+      "apply"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://close.com/pricing",
+     "find": [
+      "API access",
+      "trial",
+      "14"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com",
+     "find": [
+      "MCP",
+      "Authentication",
+      "Open in Claude"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com/api/overview/api-key-authentication",
+     "find": [
+      "Settings",
+      "scripts"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com/api/overview/api-key-authentication",
+     "find": [
+      "Settings",
+      "Basic"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.close.com/api/overview/oauth-authentication",
+     "find": [
+      "OAuth 2.0",
+      "Access Token"
+     ]
+    }
+   }
+  ]
+ }
+}

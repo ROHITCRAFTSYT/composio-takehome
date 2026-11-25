@@ -1,0 +1,5 @@
+{"t": 1795528801.9, "tool": "composio_search", "input": {"query": "Waterfall.io API developer documentation authentication", "domains": []}}
+{"t": 1795528902.2, "tool": "composio_search", "input": {"query": "Waterfall.io MCP server", "domains": ["waterfall.io", "github.com"]}}
+{"t": 1795529000.2, "tool": "fetch_page", "input": {"url": "https://docs.waterfall.io/v1/authentication", "find": ["x-api-key", "api", "key", "OAuth", "Bearer"]}}
+{"t": 1795529084.7, "tool": "fetch_page", "input": {"url": "https://docs.waterfall.io/v1/faq", "find": ["approval", "access", "pricing", "trial", "free", "plan"]}}
+{"t": 1795529157.8, "tool": "fetch_page", "input": {"url": "https://docs.waterfall.io/v1/introduction", "find": ["REST", "endpoint", "Search", "Prospector", "API", "enrich"]}}

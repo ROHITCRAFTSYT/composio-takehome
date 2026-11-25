@@ -1,0 +1,8 @@
+{"t": 1795530390.0, "tool": "fetch_page", "input": {"url": "https://attio.com/pricing", "find": ["API", "Free", "MCP"]}}
+{"t": 1795530459.8, "tool": "fetch_page", "input": {"url": "https://docs.attio.com/rest-api/guides/authentication", "find": ["API key", "OAuth", "workspace", "review", "publish"]}}
+{"t": 1795530540.4, "tool": "composio_search", "input": {"query": "Attio MCP server", "domains": []}}
+{"t": 1795530629.4, "tool": "fetch_page", "input": {"url": "https://docs.attio.com/mcp/overview", "find": ["hosted", "plan", "Free", "workspace"]}}
+{"t": 1795530666.6, "tool": "fetch_page", "input": {"url": "https://attio.com/pricing", "find": ["Every plan", "Free plan", "API"]}}
+{"t": 1795530699.7, "tool": "composio_search", "input": {"query": "Attio developer API free plan API key create app developer settings", "domains": ["docs.attio.com", "attio.com"]}}
+{"t": 1795530772.7, "tool": "fetch_page", "input": {"url": "https://attio.com/help/reference/apps/generating-an-api-key", "find": ["plan", "Free", "admin", "Developers"]}}
+{"t": 1795530809.8, "tool": "composio_search", "input": {"query": "Attio API available on all plans free plan API access", "domains": ["attio.com", "docs.attio.com"]}}

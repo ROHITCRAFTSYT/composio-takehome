@@ -1,0 +1,5 @@
+{"t": 1795526868.2, "tool": "composio_search", "input": {"query": "Intercom developer API authentication access token", "domains": ["intercom.com", "developers.intercom.com"]}}
+{"t": 1795526905.3, "tool": "composio_search", "input": {"query": "Intercom MCP server official", "domains": ["intercom.com", "github.com"]}}
+{"t": 1795527003.7, "tool": "fetch_page", "input": {"url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication", "find": ["oauth", "access", "token", "Bearer"]}}
+{"t": 1795527060.3, "tool": "fetch_page", "input": {"url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs", "find": ["access", "token", "free", "plan", "trial"]}}
+{"t": 1795527129.8, "tool": "fetch_page", "input": {"url": "https://developers.intercom.com/docs/guides/mcp", "find": ["MCP", "official", "Streamable", "OAuth"]}}

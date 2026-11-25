@@ -1,0 +1,6 @@
+{"t": 1795530437.6, "tool": "fetch_page", "input": {"url": "https://developers.podio.com/authentication", "find": ["register", "app authentication", "client_id", "app_id"]}}
+{"t": 1795530462.0, "tool": "composio_search", "input": {"query": "Podio MCP server", "domains": []}}
+{"t": 1795530548.6, "tool": "fetch_page", "input": {"url": "https://www.progress.com/podio/pricing", "find": ["Free", "API", "calls per hour"]}}
+{"t": 1795530582.2, "tool": "fetch_page", "input": {"url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide", "find": ["live at", "beta", "OAuth"]}}
+{"t": 1795530608.0, "tool": "fetch_page", "input": {"url": "https://developers.podio.com/api.php", "find": ["api key", "API key", "reference"]}}
+{"t": 1795530710.3, "tool": "fetch_page", "input": {"url": "https://www.progress.com/podio/pricing", "find": ["API Integrations", "Rate limit"]}}

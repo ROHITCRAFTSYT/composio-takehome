@@ -1,0 +1,127 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "one_liner": "Gladly is a customer service platform (agent desk, chat, customer profiles) with a REST API for customer data and timelines.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Basic Auth where the username is the agent's Gladly email and the password is an API token generated in the Gladly UI. Per the rubric, a token sent as the Basic-auth password is api_key.",
+  "access": "contact_sales",
+  "access_notes": "API tokens require an existing Gladly organization account in which an admin grants the API User permission to a user. No free developer signup, sandbox-only signup or public pricing for API access was found in the pages fetched. Treated as contact_sales by inference, so confidence is medium.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Docs describe customer profile data, customer timeline interaction and order information, plus a separate Lookup API that the vendor calls. Full object coverage was not verified.",
+  "docs_url": "https://developer.gladly.com/rest",
+  "mcp": "official",
+  "mcp_url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "A developer needs a Gladly customer org with an admin-granted API User permission before any API token exists. The official MCP is Gladly-hosted for Gladly org users, needs an eligible Gladly role, and is not a self-serve developer path. A community MCP also exists (Cotlet on Glama).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.gladly.com/rest",
+    "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.gladly.com/rest",
+    "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Resources follow REST semantics and utilize industry-standard HTTP verbs, response codes, and authentication schemes."
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude",
+    "quote": "Connect Claude to your Gladly organization so you can investigate sessions, improve Guides and Workflows, and test changes in plain English."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.gladly.com/rest",
+    "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Gladly API authentication developer docs",
+     "domains": [
+      "gladly.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Gladly MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.gladly.com/rest",
+     "find": [
+      "API token",
+      "Basic",
+      "sandbox",
+      "permission"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude",
+     "find": [
+      "MCP",
+      "connector",
+      "Gladly MCP"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Gladly API access pricing plan developer token",
+     "domains": [
+      "gladly.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Gladly sandbox free trial sign up developer account",
+     "domains": [
+      "gladly.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.gladly.com/rest/",
+     "find": [
+      "REST",
+      "endpoint",
+      "sandbox",
+      "JSON"
+     ]
+    }
+   }
+  ]
+ }
+}

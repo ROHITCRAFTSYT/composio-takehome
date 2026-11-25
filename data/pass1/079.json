@@ -1,0 +1,156 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "one_liner": "Smartsheet is a work management and project tracking platform with a REST API and an official MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API access tokens are generated in the Smartsheet UI and sent as a Bearer header. OAuth 2.0 is also offered, but it is a 3-legged user-consent flow. Smartsheet Gov and Smartsheet Regions Europe use separate tokens.",
+  "access": "paid_plan",
+  "access_notes": "Low confidence. The fetched token help page did not render its plan list, so I could not confirm whether API tokens work on a free or trial plan. The MCP server page states a Business, Enterprise, or Advanced Work Management plan is required.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Fetched docs show a Bearer-token HTTP API with a sheet and column data model. Breadth is a judgement call and was not verified object by object.",
+  "docs_url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+  "mcp": "official",
+  "mcp_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "The MCP server and the related AI tooling require a paid Business or Enterprise plan. Whether the core API token works on a free plan is unconfirmed.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "The API authenticates using access tokens (API keys). You can generate access tokens in the Smartsheet UI."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "Note that the Smartsheet implementation of OAuth 2.0 is a 3-legged process, which requires human intervention."
+   },
+   {
+    "field": "access",
+    "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+    "quote": "Navigate to the API Access tab and select Generate new access token."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "Authorization: Bearer JKlMNOpQ12RStUVwxYZAbcde3F5g6hijklM789"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+    "quote": "You can connect various AI assistants to the Smartsheet Model Context Protocol (MCP) server."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+    "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Smartsheet API authentication access token developer docs",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Smartsheet MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://smartsheet.com/developers",
+     "find": [
+      "API",
+      "developer",
+      "free",
+      "trial",
+      "OAuth",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+     "find": [
+      "Plans",
+      "plan",
+      "Free",
+      "Trial",
+      "Pro",
+      "Business",
+      "Enterprise"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "find": [
+      "OAuth",
+      "access token",
+      "Bearer",
+      "app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.smartsheet.com/articles/2483670-smartsheet-mcp-server",
+     "find": [
+      "plan",
+      "Business",
+      "Enterprise",
+      "Pro"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+     "find": [
+      "free",
+      "trial",
+      "plan",
+      "Business",
+      "Pro"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+     "find": [
+      "Get started",
+      "token",
+      "plan",
+      "Business"
+     ]
+    }
+   }
+  ]
+ }
+}

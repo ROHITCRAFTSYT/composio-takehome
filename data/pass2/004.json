@@ -1,0 +1,155 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "one_liner": "AI-native CRM with a REST API, workspace API keys and a hosted MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Docs: OAuth 2.0 Authorization Code flow for apps across multiple workspaces; workspace API key (access token from workspace settings Developers tab / app developer settings) for a single workspace. Hosted MCP uses OAuth.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free; help center says API key generation is 'Available on all plans', and the Free plan costs nothing for up to three users. Only SQL access via API/MCP is Ultra-only.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "critic: breadth moderate -> broad; public REST API covering records, lists, notes, tasks, webhooks etc. Rest-only per docs overview.",
+  "docs_url": "https://docs.attio.com/rest-api/overview",
+  "mcp": "official",
+  "mcp_url": "https://docs.attio.com/mcp/overview",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Free plan admins can create workspace API keys immediately. Marketplace publication of multi-workspace OAuth apps goes through release approval, but that is not required to use the API.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.attio.com/rest-api/guides/authentication",
+    "quote": "By generating an API key for your workspace"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.attio.com/rest-api/guides/authentication",
+    "quote": "Attio implements the standard OAuth 2.0 specification, using the Authorization Code Grant Flow"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Attio provides a public REST API which exchanges JSON over HTTPS."
+   },
+   {
+    "field": "access",
+    "url": "https://attio.com/help/reference/apps/generating-an-api-key",
+    "quote": "Available on all plans."
+   },
+   {
+    "field": "access",
+    "url": "https://attio.com/pricing",
+    "quote": "The Free plan costs nothing for up to three users."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.attio.com/mcp/overview",
+    "quote": "Attio MCP is Attio’s hosted MCP server that gives AI tools secure access to your Attio workspace."
+   },
+   {
+    "field": "verdict",
+    "url": "https://attio.com/pricing",
+    "quote": "Every plan includes the Attio MCP server"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://attio.com/pricing",
+     "find": [
+      "API",
+      "Free",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.attio.com/rest-api/guides/authentication",
+     "find": [
+      "API key",
+      "OAuth",
+      "workspace",
+      "review",
+      "publish"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Attio MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.attio.com/mcp/overview",
+     "find": [
+      "hosted",
+      "plan",
+      "Free",
+      "workspace"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://attio.com/pricing",
+     "find": [
+      "Every plan",
+      "Free plan",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Attio developer API free plan API key create app developer settings",
+     "domains": [
+      "docs.attio.com",
+      "attio.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://attio.com/help/reference/apps/generating-an-api-key",
+     "find": [
+      "plan",
+      "Free",
+      "admin",
+      "Developers"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Attio API available on all plans free plan API access",
+     "domains": [
+      "attio.com",
+      "docs.attio.com"
+     ]
+    }
+   }
+  ]
+ }
+}

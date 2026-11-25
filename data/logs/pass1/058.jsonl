@@ -1,0 +1,5 @@
+{"t": 1795528795.8, "tool": "composio_search", "input": {"query": "Sherlock username search OSINT github sherlock-project API", "domains": ["github.com"]}}
+{"t": 1795528830.6, "tool": "fetch_page", "input": {"url": "https://github.com/sherlock-project/sherlock", "find": ["install", "usage", "API", "MCP", "python", "username"]}}
+{"t": 1795528907.8, "tool": "composio_search", "input": {"query": "sherlock username MCP server model context protocol", "domains": []}}
+{"t": 1795528938.6, "tool": "fetch_page", "input": {"url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md", "find": ["API", "official", "local"]}}
+{"t": 1795529071.0, "tool": "fetch_page", "input": {"url": "https://github.com/Burnsedia/sherlock-mcp", "find": ["MCP", "Sherlock", "install"]}}

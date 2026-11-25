@@ -1,0 +1,98 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "one_liner": "Commas (formerly FanBasis) is a creator/seller platform for checkouts, courses, communities, webinars, affiliates and payments.",
+  "auth_methods": [],
+  "auth_notes": "No public API auth documentation found; vendor pages mention APIs and SDKs for enterprise sellers only. Left empty rather than guessed.",
+  "access": "contact_sales",
+  "access_notes": "APIs and SDKs are marketed under an Enterprise tier with a dedicated implementation engineer. No self-serve key page or public developer docs found (commas.com/api, /developers 404; docs subdomain unreachable). critic: kept contact_sales.",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "api_notes": "critic: api_style none -> rest (unverified guess): the vendor says APIs and SDKs exist and a customer calls the API clean, but no reference is public. Breadth unknown.",
+  "docs_url": "",
+  "mcp": "official",
+  "mcp_url": "https://commas.com",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "Enterprise APIs are gated behind sales/implementation; no public docs. critic: kept. MCP is vendor-announced (beta) on commas.com; mcp_url set to the vendor homepage where it is announced.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "mcp",
+    "url": "https://commas.com",
+    "quote": "Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English."
+   },
+   {
+    "field": "access",
+    "url": "https://commas.com/enterprises",
+    "quote": "Embedded checkout, smart routing, B2B financing and a dedicated implementation engineer behind your volume."
+   },
+   {
+    "field": "verdict",
+    "url": "https://commas.com/enterprises",
+    "quote": "APIs and embeddable components, live in days not quarters."
+   },
+   {
+    "field": "api_style",
+    "url": "https://commas.com",
+    "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://commas.com",
+    "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Commas fanbasis API developer docs API key MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com",
+     "find": [
+      "MCP",
+      "API",
+      "Claude",
+      "developer",
+      "connect"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/enterprises",
+     "find": [
+      "API",
+      "SDK",
+      "key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.commas.com",
+     "find": [
+      "API",
+      "key",
+      "MCP"
+     ]
+    }
+   }
+  ]
+ }
+}

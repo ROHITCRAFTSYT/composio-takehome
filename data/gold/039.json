@@ -1,0 +1,55 @@
+{
+  "n": 39,
+  "app": "Threads (Meta)",
+  "one_liner": "Meta's Threads REST API (graph.threads.com) for publishing posts, reading replies/mentions and insights; OAuth user tokens, testers work immediately but public users need App Review.",
+  "auth_methods": [
+    "oauth2",
+    "other"
+  ],
+  "access": "approval_required",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "mcp": "community",
+  "mcp_url": "https://github.com/MetaThreads/meta-threads-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "notes": "auth: Threads user access tokens via the Authorization Window (OAuth 2.0 authorization code -> short-lived -> 60-day long-lived token) = oauth2. The docs also document app access tokens (client_credentials with Threads app ID + app secret, or passing TH|app_id|app_secret directly), required e.g. for the oEmbed API; that is an app-level key+secret credential with no user grant, labeled other. This 'other' is the ambiguous part: a labeler focused on the main user-data flow would give only [oauth2]. access: self-serve Meta developer app; Threads Testers can grant permissions at any time, but any user without an app role requires each permission to pass App Review and the app to be published -> approval_required / ready_with_review / app_review. mcp: Meta's official MCP servers (Ads, Social Technologies a.k.a. devtools, WhatsApp Business Tools; developers.facebook.com/documentation/mcp) do not mention Threads - devtools manages developer apps/webhooks/doc search, not Threads content - so not counted as an official Threads MCP. Searched developers.facebook.com MCP docs, the Threads docs, fbsamples/threads_api, and the web for 'Threads MCP'; only third-party servers exist (github MetaThreads/meta-threads-mcp, also on PyPI, self-described 'Unofficial'; github baguskto/threads-mcp, pegasusheavy/threads-mcp) -> community. Fetch note: developers.facebook.com TLS-blocks direct curl from this machine; pages were read via a reader proxy and the docs URL now redirects /docs/threads/* -> /documentation/threads/*. breadth moderate: posts/replies/reposts/quotes/insights/profiles/keyword search, no DMs or follow graph.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/documentation/threads/get-started",
+      "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/documentation/threads/get-started/app-access-tokens",
+      "quote": "Use an app access token to make requests to the Threads API on behalf of an app rather than a user."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/threads/get-started",
+      "quote": "For app users without a role on your app to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developers.facebook.com/documentation/threads/overview",
+      "quote": "The Threads API can be accessed by either graph.threads.com or graph.threads.net."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/MetaThreads/meta-threads-mcp",
+      "quote": "Unofficial MCP server for Meta's Threads API. Enables LLMs like Claude to publish posts, manage replies, and track insights through the Model Context Protocol."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.facebook.com/documentation/mcp",
+      "quote": "Meta runs official remote Model Context Protocol (MCP) servers that bring Facebook, Instagram, WhatsApp, and Meta Ads capabilities to your agentic workflows."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/documentation/threads/get-started",
+      "quote": "Threads testers can grant your app these permissions at any time."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

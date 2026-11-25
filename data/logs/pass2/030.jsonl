@@ -1,0 +1,4 @@
+{"t": 1795576923.9, "tool": "composio_search", "input": {"query": "Vonage MCP server", "domains": []}}
+{"t": 1795577031.1, "tool": "fetch_page", "input": {"url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account", "find": ["trial", "upgrade", "free"]}}
+{"t": 1795577151.5, "tool": "composio_search", "input": {"query": "Vonage free trial credit developer account expires", "domains": ["vonage.com"]}}
+{"t": 1795577250.2, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/mcp-server/conceptual-guides/introduction-to-vonage-mcp", "find": ["Server API Bindings", "official", "Tooling"]}}

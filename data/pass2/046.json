@@ -1,0 +1,112 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "one_liner": "Ecommerce website builder whose Commerce APIs let developers read and write orders, products, inventory and transactions for a merchant site.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key generated in the site's Developer API Keys settings (Commerce Advanced plan, own-site custom apps). OAuth 2.0 for third-party apps requires registering an OAuth client, which is reviewed and approved.",
+  "access": "approval_required",
+  "access_notes": "critic: access paid_plan -> approval_required. API keys only work for a merchant's own site on Commerce Advanced, but the third-party developer path is OAuth: register an OAuth client (no plan fee, works with customers on any plan) which Squarespace reviews and approves.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Commerce APIs cover orders, products, inventory, transactions, forms, store pages, webhooks and more; Read Only or Read and Write permission levels per API.",
+  "docs_url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+  "mcp": "official",
+  "mcp_url": "https://developers.squarespace.com/mcp/overview",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "critic: verdict blocked -> ready_with_review, blocker paid_plan -> app_review. Direct API keys need Commerce Advanced; OAuth client needs review and approval before use. Official remote MCP exists; Commerce tools need Squarespace sign-in (Domains tools need none).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Depending on your development needs, you can use a generated API key or start the OAuth process with Squarespace to become a registered OAuth client."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Registering an OAuth client, and having it reviewed and approved, only allows OAuth connections with Squarespace."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Squarespace Extensions allow customers on any plan to optimize and expand their site in a few clicks."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.squarespace.com/",
+    "quote": "Read and write orders, products, inventory, and transactions. REST endpoints, webhooks for order events, and signed payloads for safe server-to-server delivery."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Squarespace MCP server is a remote server. There's nothing to install."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Domains tools work for anyone, with no Squarespace account required."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+    "quote": "Registering an OAuth client, and having it reviewed and approved, only allows OAuth connections with Squarespace."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "find": [
+      "Advanced",
+      "trial",
+      "free",
+      "approved",
+      "OAuth client"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "find": [
+      "sign in",
+      "Commerce",
+      "docs",
+      "free",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.squarespace.com/mcp/overview",
+     "find": [
+      "sign in",
+      "plan",
+      "trial",
+      "Commerce"
+     ]
+    }
+   }
+  ]
+ }
+}

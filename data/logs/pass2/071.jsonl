@@ -1,0 +1,3 @@
+{"t": 1795590829.6, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/notion-api/quick-start", "find": ["free", "Free", "PAT creation", "personal access token"]}}
+{"t": 1795590854.2, "tool": "composio_search", "input": {"query": "Notion MCP server official", "domains": ["developers.notion.com", "github.com"]}}
+{"t": 1795590900.4, "tool": "fetch_page", "input": {"url": "https://www.notion.com/pricing", "find": ["API", "Free", "integrations"]}}

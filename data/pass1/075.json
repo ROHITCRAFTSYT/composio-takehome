@@ -1,0 +1,154 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "one_liner": "Work management platform for tasks, projects and teams, with a REST API and an official MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for apps acting on behalf of users. Personal access tokens (PAT) generated in the developer console for personal or single-workspace use. The MCP server uses OAuth only.",
+  "access": "self_serve_free",
+  "access_notes": "PAT generation and OAuth app creation are in the developer console. The fetched pages do not state a plan requirement; the claim that the API is free rests on an Asana API Terms search snippet that was not opened, so confidence is medium.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Breadth not verified: only the REST reference landing page was fetched, which does not list objects or endpoints.",
+  "docs_url": "https://developers.asana.com/docs/oauth",
+  "mcp": "official",
+  "mcp_url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials are self-serve. Whether production use of a public OAuth app needs Asana review was not checked.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "Asana supports the authorization code grant flow"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.asana.com/docs/personal-access-token",
+    "quote": "A personal access token (PAT) contains your security credentials for the Asana platform."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.asana.com/docs/personal-access-token",
+    "quote": "You can generate a personal access token from the Asana developer console."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.asana.com/reference/rest-api-reference",
+    "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+    "quote": "The Asana V2 MCP server is generally available and uses OAuth for authorization."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+    "quote": "You'll pre-register your MCP app in the developer console, where you can create both standard API apps and MCP apps."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Asana API authentication personal access token OAuth developers",
+     "domains": [
+      "developers.asana.com",
+      "asana.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Asana MCP server official",
+     "domains": [
+      "developers.asana.com",
+      "github.com",
+      "asana.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/personal-access-token",
+     "find": [
+      "PAT or OAuth",
+      "Generating a PAT",
+      "personal access token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+     "find": [
+      "OAuth",
+      "generally available",
+      "pre-register"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/oauth",
+     "find": [
+      "OAuth",
+      "authorization",
+      "app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/oauth",
+     "find": [
+      "Bearer",
+      "Personal Access Token",
+      "API key",
+      "mcp",
+      "app review",
+      "verified"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/reference/rest-api-reference",
+     "find": [
+      "REST",
+      "endpoints",
+      "tasks",
+      "projects"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Asana API access free plan developer personal access token pricing",
+     "domains": [
+      "asana.com",
+      "developers.asana.com"
+     ]
+    }
+   }
+  ]
+ }
+}

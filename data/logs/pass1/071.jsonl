@@ -1,0 +1,8 @@
+{"t": 1795529150.5, "tool": "composio_search", "input": {"query": "Notion API authentication developers", "domains": ["developers.notion.com"]}}
+{"t": 1795529191.1, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/reference/authentication", "find": ["oauth", "token", "integration"]}}
+{"t": 1795529268.6, "tool": "composio_search", "input": {"query": "Notion official MCP server", "domains": ["developers.notion.com", "github.com", "notion.com"]}}
+{"t": 1795529307.3, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens", "find": ["free", "plan", "workspace", "available"]}}
+{"t": 1795529341.7, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/get-started/authorization", "find": ["public", "review", "internal", "free", "plan"]}}
+{"t": 1795529434.3, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/mcp/overview", "find": ["hosted", "OAuth", "Notion MCP"]}}
+{"t": 1795529470.7, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/get-started/quick-start", "find": ["free", "plan", "Plan", "paid", "cost"]}}
+{"t": 1795529505.2, "tool": "fetch_page", "input": {"url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens", "find": ["Workers", "PAT creation policy", "plan"]}}

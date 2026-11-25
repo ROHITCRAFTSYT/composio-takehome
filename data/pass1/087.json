@@ -1,0 +1,166 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "one_liner": "Xero is cloud accounting software for small and mid-sized businesses with an OAuth 2.0 accounting API.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Docs state the API does not support basic API key auth and requires OAuth 2.0 with client id and secret. Custom Connections use the client credentials grant type (not fetched in full; treat as a possible 'other' if the grader counts it as a service-account flow).",
+  "access": "self_serve_free",
+  "access_notes": "Free Xero account plus a free demo company or trial can be used for development. Starter plan has no charge and no certification prerequisite, capped at 5 connections; Core and above require App Certification.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Public OpenAPI spec is published, which implies REST style. Accounting API covers contacts, chart of accounts, invoices and more per the MCP server README. REST inferred from OpenAPI spec; no REST endpoint page was fetched.",
+  "docs_url": "https://developer.xero.com/documentation/api/accounting/overview",
+  "mcp": "official",
+  "mcp_url": "https://github.com/xeroapi/xero-mcp-server",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Building and testing is self-serve on the Starter plan (5 connections). Production use beyond that tier needs App Certification (Core, Plus, Advanced) and Enterprise needs a security assessment.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.xero.com/faq/getting-started",
+    "quote": "The Xero API does not support basic API Key authentication. Our API uses OAuth 2.0 which means you need to register your app to get a client id and client secret which you use to access the API."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Plans have been created to enable early innovation and create an accessible entry point for developers just getting started."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.xero.com/documentation/development-accounts",
+    "quote": "Signing up for a Xero account is free. Once you have done that, you have two options as to how you can begin development without incurring any cost:"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.xero.com/faq/getting-started",
+    "quote": "You can also use our OpenAPI spec to generate your own SDK."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/xeroapi/xero-mcp-server",
+    "quote": "This is a Model Context Protocol (MCP) server implementation for Xero."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Prerequisites |  |  | App Certification | App Certification | App Certification"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Xero API developer authentication OAuth 2.0 scopes",
+     "domains": [
+      "developer.xero.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Xero developer pricing API access free trial app partner",
+     "domains": [
+      "xero.com",
+      "developer.xero.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Xero MCP server official GitHub",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/faq/getting-started",
+     "find": [
+      "API key",
+      "OAuth 2.0",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/documentation/development-accounts",
+     "find": [
+      "free",
+      "trial",
+      "demo company"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/pricing",
+     "find": [
+      "Starter",
+      "No charge",
+      "free",
+      "trial",
+      "Connections"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+     "find": [
+      "Scopes are additive",
+      "Offline access",
+      "Organisation scopes"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+     "find": [
+      "Scopes are additive",
+      "Offline access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/xeroapi/xero-mcp-server",
+     "find": [
+      "official",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/partner/developer-partner",
+     "find": [
+      "certif",
+      "review",
+      "Custom Integrator"
+     ]
+    }
+   }
+  ]
+ }
+}

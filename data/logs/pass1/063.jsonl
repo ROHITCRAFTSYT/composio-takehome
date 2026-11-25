@@ -1,0 +1,10 @@
+{"t": 1795528938.9, "tool": "composio_search", "input": {"query": "Netlify API authentication personal access token OAuth", "domains": []}}
+{"t": 1795528979.0, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/api/get-started/", "find": ["authentication", "access", "token", "OAuth"]}}
+{"t": 1795529080.7, "tool": "composio_search", "input": {"query": "Netlify MCP server official", "domains": []}}
+{"t": 1795529117.2, "tool": "composio_search", "input": {"query": "Netlify pricing plans API access free plan", "domains": []}}
+{"t": 1795529154.6, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/manage/accounts-and-billing/user-settings", "find": ["Personal access tokens", "OAuth applications"]}}
+{"t": 1795529233.8, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api", "find": ["Personal access tokens", "rate limit"]}}
+{"t": 1795529262.6, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/build/mcp", "find": ["MCP", "official"]}}
+{"t": 1795529389.9, "tool": "fetch_page", "input": {"url": "https://www.netlify.com/pricing", "find": ["Free", "forever", "API"]}}
+{"t": 1795529426.9, "tool": "fetch_page", "input": {"url": "https://github.com/netlify/netlify-mcp", "find": ["official", "OAuth", "MCP"]}}
+{"t": 1795529463.4, "tool": "fetch_page", "input": {"url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview", "find": ["MCP server", "remote"]}}

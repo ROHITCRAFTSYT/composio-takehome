@@ -1,0 +1,161 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "one_liner": "Linear is a project management and issue tracking tool for software teams, with a GraphQL API, a TypeScript SDK and an official hosted MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Personal API keys for scripts; OAuth2 (authorization code, PKCE supported) for apps built for other users.",
+  "access": "self_serve_free",
+  "access_notes": "API and webhook access is listed as included on the Free plan; personal API keys are created in Linear settings.",
+  "api_style": "graphql",
+  "api_breadth": "broad",
+  "api_notes": "Single GraphQL endpoint at api.linear.app/graphql with introspection; TypeScript SDK wraps it. Breadth not fully audited.",
+  "docs_url": "https://linear.app/developers/graphql",
+  "mcp": "official",
+  "mcp_url": "https://mcp.linear.app/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "For personal scripts API keys are the easiest way to access the API."
+   },
+   {
+    "field": "access",
+    "url": "https://linear.app/pricing",
+    "quote": "Free for everyone"
+   },
+   {
+    "field": "access",
+    "url": "https://linear.app/pricing",
+    "quote": "API and webhook access"
+   },
+   {
+    "field": "api_style",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "It supports introspection so you can query the whole schema."
+   },
+   {
+    "field": "mcp",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "so the server is centrally hosted and managed."
+   },
+   {
+    "field": "mcp",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "npx mcp-remote https://mcp.linear.app/mcp"
+   },
+   {
+    "field": "verdict",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "For personal scripts API keys are the easiest way to access the API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Linear developers API authentication OAuth API key",
+     "domains": [
+      "developers.linear.app",
+      "linear.app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api",
+     "find": [
+      "API key",
+      "OAuth",
+      "GraphQL",
+      "personal"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://linear.app/developers/graphql",
+     "find": [
+      "Personal API Keys",
+      "OAuth",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://linear.app/developers/oauth-2-0-authentication",
+     "find": [
+      "client_id",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Linear MCP server official",
+     "domains": [
+      "linear.app",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://linear.app/docs/mcp",
+     "find": [
+      "official",
+      "remote",
+      "mcp.linear.app"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://linear.app/pricing",
+     "find": [
+      "API",
+      "free",
+      "Free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://linear.app/developers/oauth-2-0-authentication",
+     "find": [
+      "PKCE",
+      "actor",
+      "review",
+      "publish"
+     ]
+    }
+   }
+  ]
+ }
+}

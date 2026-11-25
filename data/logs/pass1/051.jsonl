@@ -1,0 +1,7 @@
+{"t": 1795528302.7, "tool": "composio_search", "input": {"query": "DataForSEO API authentication basic auth docs", "domains": ["docs.dataforseo.com", "dataforseo.com"]}}
+{"t": 1795528391.5, "tool": "fetch_page", "input": {"url": "https://docs.dataforseo.com/v3/appendix/authentication/", "find": ["authentication", "Basic", "login", "password"]}}
+{"t": 1795528511.2, "tool": "fetch_page", "input": {"url": "https://docs.dataforseo.com/v3/auth", "find": ["Basic", "login", "password", "API token"]}}
+{"t": 1795528588.4, "tool": "fetch_page", "input": {"url": "https://dataforseo.com/dev-starter-kit", "find": ["credentials", "free", "trial", "dashboard", "API password"]}}
+{"t": 1795528666.4, "tool": "composio_search", "input": {"query": "DataForSEO MCP server GitHub official", "domains": ["github.com", "dataforseo.com", "docs.dataforseo.com"]}}
+{"t": 1795528759.8, "tool": "fetch_page", "input": {"url": "https://github.com/dataforseo/mcp-server-typescript", "find": ["official", "OAuth", "mcp.dataforseo.com"]}}
+{"t": 1795528836.4, "tool": "fetch_page", "input": {"url": "https://docs.dataforseo.com/v3", "find": ["Free", "Trial", "Sandbox", "Sign Up"]}}

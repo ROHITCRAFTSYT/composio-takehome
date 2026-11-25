@@ -1,0 +1,140 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "one_liner": "Private-markets and capital-markets data platform; API access is arranged through its Direct Data team.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Official help page says the API connection is set up through an API key or authentication token, arranged with the Direct Data team. The Premium Connector for Claude uses SSO for licensed users (connector path, not the public API).",
+  "access": "contact_sales",
+  "access_notes": "Developers must send a request to the Direct Data team to start an API connection; no self-serve free or trial path is shown on the API help page.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Help page says data is packaged across several endpoints per entity type and that endpoints can be tested inside the platform. The HTTP style (REST) is inferred from 'endpoints' and was not stated explicitly.",
+  "docs_url": "https://pitchbook.com/help/PitchBook-api",
+  "mcp": "official",
+  "mcp_url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "The API needs a request to the Direct Data team. The vendor Claude connector needs a licensed PitchBook seat with SSO and a Pro, Max, Teams or Enterprise Claude subscription. Neither gives a self-serve developer key.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://pitchbook.com/help/PitchBook-api",
+    "quote": "To start your API connection, you will need to send a request directly to our Direct Data team through this link."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://pitchbook.com/help/PitchBook-api",
+    "quote": "help you establish the API connection through an API key or authentication token."
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://pitchbook.com/help/PitchBook-api",
+    "quote": "Available data for each entity type is packaged across several endpoints so you can map the data to your desired format and structure."
+   },
+   {
+    "field": "mcp",
+    "url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+    "quote": "From the Connectors window, find and select PitchBook Premium and click Connect."
+   },
+   {
+    "field": "verdict",
+    "url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+    "quote": "You will need a Pro, Max, Teams, or Enterprise subscription to Claude."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "PitchBook API documentation authentication",
+     "domains": [
+      "pitchbook.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "PitchBook research API access pricing",
+     "domains": [
+      "pitchbook.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "find": [
+      "API key",
+      "request access",
+      "authentication",
+      "token",
+      "Direct Data",
+      "trial",
+      "endpoint",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic",
+     "find": [
+      "MCP",
+      "SSO",
+      "licensed",
+      "subscription"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "PitchBook MCP server github official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pitchbook.com/help/PitchBook-api",
+     "find": [
+      "API key",
+      "request access",
+      "authentication",
+      "token",
+      "Direct Data",
+      "trial",
+      "endpoint"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pitchbook.com/products/direct-access-data",
+     "find": [
+      "API",
+      "contact",
+      "request",
+      "sales",
+      "license",
+      "subscription"
+     ]
+    }
+   }
+  ]
+ }
+}

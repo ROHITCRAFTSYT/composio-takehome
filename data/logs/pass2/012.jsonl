@@ -1,0 +1,3 @@
+{"t": 1795530563.5, "tool": "fetch_page", "input": {"url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication", "find": ["private", "public", "OAuth", "Access Token"]}}
+{"t": 1795530593.2, "tool": "fetch_page", "input": {"url": "https://developers.intercom.com/docs/guides/mcp", "find": ["remote MCP", "hosts", "US", "region"]}}
+{"t": 1795530669.0, "tool": "fetch_page", "input": {"url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs", "find": ["free", "development", "review", "approval", "contacts"]}}

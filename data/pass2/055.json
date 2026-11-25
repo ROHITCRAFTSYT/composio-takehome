@@ -1,0 +1,101 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Apify is a cloud platform for running web scraping and automation tools (Actors) with a REST API and an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API token created in Apify Console (Integrations page), sent as Bearer token in the Authorization header (recommended) or as a URL token parameter. OAuth is offered only for the hosted MCP server, not for the REST API. critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan with no credit card required; the free plan includes usage credits and API tokens. Free-plan users are blocked from platform services when prepaid usage runs out until the next billing cycle. critic: confirmed self_serve_free.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API at api.apify.com/v2 covering Actors runs, datasets, key-value stores, and more. Official JS and Python API clients also exist.",
+  "docs_url": "https://docs.apify.com/api/v2",
+  "mcp": "official",
+  "mcp_url": "https://mcp.apify.com",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed; official hosted MCP at mcp.apify.com on vendor docs and github.com/apify/apify-mcp-server.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Bearer token provided in the Authorization header"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Use your API token to authenticate requests."
+   },
+   {
+    "field": "access",
+    "url": "https://apify.com/pricing",
+    "quote": "We offer a free plan that lets you use most of the features of the Apify platform, but with certain limits. No credit card is required."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.apify.com/mcp",
+    "quote": "Create an API token in Apify Console."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "To run an Actor, send a POST request to the Run Actor endpoint"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.apify.com/mcp",
+    "quote": "Add https://mcp.apify.com to your MCP client."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.apify.com/mcp",
+    "quote": "The recommended remote connection signs you in with OAuth instead."
+   },
+   {
+    "field": "verdict",
+    "url": "https://apify.com/pricing",
+    "quote": "No credit card is required."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Apify MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.apify.com/mcp",
+     "find": [
+      "OAuth",
+      "mcp.apify.com",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://apify.com/pricing",
+     "find": [
+      "free plan",
+      "credit"
+     ]
+    }
+   }
+  ]
+ }
+}

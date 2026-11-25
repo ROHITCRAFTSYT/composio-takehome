@@ -1,0 +1,8 @@
+{"t": 1795528184.0, "tool": "composio_search", "input": {"query": "Salesforce Commerce Cloud developer docs authentication OAuth API access", "domains": ["developer.salesforce.com", "salesforce.com"]}}
+{"t": 1795528220.5, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce", "find": ["authentication", "API", "OAuth", "access"]}}
+{"t": 1795528357.6, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html", "find": ["client credentials", "API client", "Account Manager", "sandbox", "OAuth", "access token"]}}
+{"t": 1795528405.7, "tool": "composio_search", "input": {"query": "Salesforce Commerce Cloud MCP server official", "domains": ["developer.salesforce.com", "github.com", "salesforce.com"]}}
+{"t": 1795528437.1, "tool": "composio_search", "input": {"query": "Salesforce B2C Commerce sandbox free developer access Account Manager API client", "domains": ["developer.salesforce.com", "salesforce.com"]}}
+{"t": 1795528533.3, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html", "find": ["Account Manager", "permission", "license", "trial", "contract", "Sandbox"]}}
+{"t": 1795528578.1, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html", "find": ["pilot", "MCP", "access", "request", "contact", "pricing"]}}
+{"t": 1795528626.0, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html", "find": ["SLAS private client", "free", "trial", "sandbox", "sign up", "access_token"]}}

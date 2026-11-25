@@ -1,0 +1,24 @@
+{
+  "n": 68,
+  "app": "MongoDB Atlas",
+  "one_liner": "Managed MongoDB cloud whose Atlas Administration API (REST) manages orgs, projects, clusters, database users and more, and works on the free M0 tier.",
+  "auth_methods": ["api_key", "other"],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "The Atlas Administration API takes two credential types. (1) Service accounts, the recommended option: OAuth 2.0 Client Credentials, which is machine-to-machine with no user granting access to a third-party app. The rubric puts service accounts under other, not oauth2. (2) Programmatic API keys, the legacy option: a public+private key pair created in org settings and sent with HTTP Digest. I labelled these api_key because they are static, user-created 'API keys'. They could also be read as other, since Digest hashes the key pair with a nonce, which is close to the rubric's 'signed requests with key+secret pairs'. This is the main ambiguity. Access: Atlas has a 'free-forever' M0 tier, and org API keys and service accounts are org-level settings that can be created on a free org without a card, so access=self_serve_free. Scope: the Admin API manages control-plane objects (projects, clusters, database users, backups, alerts and more) but not the data in your clusters. The old Atlas Data API is deprecated, and reading data needs the driver or the MCP server. MCP is official: the MongoDB MCP Server is in the mongodb-js org, documented at mongodb.com/docs/mcp-server, and also offered as 'Atlas Managed MCP'. Its Atlas tools need service-account credentials. Evidence quotes on mongodb.com pages are verbatim in the rendered text, but the raw HTML has inline tags inside some sentences.",
+  "evidence": [
+    {"field": "auth_methods", "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/", "quote": "API keys are a legacy method of authenticating to the Atlas Administration API that uses HTTP Digest Authentication."},
+    {"field": "auth_methods", "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/", "quote": "Service accounts provide improved security over API keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow."},
+    {"field": "access", "url": "https://www.mongodb.com/pricing", "quote": "Yes, MongoDB Atlas offers a free-forever tier, the M0."},
+    {"field": "api_style", "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/", "quote": "The MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas."},
+    {"field": "api_style", "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/", "quote": "MongoDB REST APIs hub"},
+    {"field": "mcp", "url": "https://www.mongodb.com/docs/mcp-server/", "quote": "The MongoDB MCP Server lets you connect to MongoDB from your agentic AI tools, assistants, and platforms."},
+    {"field": "verdict", "url": "https://www.mongodb.com/docs/atlas/api/atlas-admin-api/", "quote": "The Atlas Administration API doesn't provide access to the data stored in your clusters."}
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

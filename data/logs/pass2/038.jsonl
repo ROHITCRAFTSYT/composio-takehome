@@ -1,0 +1,3 @@
+{"t": 1795577413.4, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/", "find": ["Trial", "Standard", "approved"]}}
+{"t": 1795577684.8, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/about-pinterest-mcp", "find": ["launch", "MCP"]}}
+{"t": 1795577700.2, "tool": "composio_search", "input": {"query": "Pinterest MCP server", "domains": []}}

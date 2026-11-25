@@ -1,0 +1,7 @@
+{"t": 1795529846.8, "tool": "composio_search", "input": {"query": "Otter.ai API developer documentation authentication", "domains": ["help.otter.ai"]}}
+{"t": 1795529879.6, "tool": "composio_search", "input": {"query": "Otter.ai MCP server", "domains": ["help.otter.ai", "otter.ai", "github.com"]}}
+{"t": 1795529956.3, "tool": "fetch_page", "input": {"url": "https://help.otter.ai/hc/en-us/articles/38028555452819-Otter-MCP-Server", "find": ["MCP", "API", "plan", "Business", "Enterprise", "OAuth"]}}
+{"t": 1795530068.8, "tool": "fetch_page", "input": {"url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API", "find": ["Bearer", "Integrations", "Business", "Enterprise", "plan", "access", "beta", "request", "Developer"]}}
+{"t": 1795530182.2, "tool": "fetch_page", "input": {"url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server", "find": ["OAuth", "plan", "Business", "Enterprise", "Pro", "available", "MCP"]}}
+{"t": 1795530287.1, "tool": "fetch_page", "input": {"url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API", "find": ["Enterprise plans", "Enterprise p", "requests per", "API access", "plan includes", "Pro plan", "Business plan"]}}
+{"t": 1795530311.7, "tool": "composio_search", "input": {"query": "Otter.ai pricing plans API access Enterprise Business", "domains": ["otter.ai", "help.otter.ai"]}}

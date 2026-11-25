@@ -1,0 +1,8 @@
+{"t": 1795526780.8, "tool": "composio_search", "input": {"query": "Attio API authentication docs", "domains": ["attio.com"]}}
+{"t": 1795526815.5, "tool": "composio_search", "input": {"query": "Attio MCP server", "domains": ["attio.com", "github.com"]}}
+{"t": 1795526850.0, "tool": "composio_search", "input": {"query": "Attio pricing API access plan", "domains": []}}
+{"t": 1795526903.9, "tool": "fetch_page", "input": {"url": "https://docs.attio.com/rest-api/guides/authentication", "find": ["OAuth 2.0", "API key", "access token", "workspace"]}}
+{"t": 1795526940.7, "tool": "fetch_page", "input": {"url": "https://docs.attio.com/mcp/overview", "find": ["hosted MCP", "OAuth", "MCP server"]}}
+{"t": 1795526979.1, "tool": "fetch_page", "input": {"url": "https://attio.com/pricing", "find": ["API", "Free", "Plus", "Pro", "Ultra", "trial"]}}
+{"t": 1795527046.9, "tool": "fetch_page", "input": {"url": "https://attio.com/pricing", "find": ["API and webhooks", "MCP server", "Free plan", "free plan"]}}
+{"t": 1795527068.9, "tool": "fetch_page", "input": {"url": "https://docs.attio.com/rest-api/guides/configuring-oauth", "find": ["developer settings", "API key"]}}

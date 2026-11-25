@@ -1,0 +1,55 @@
+{
+  "n": 28,
+  "app": "WhatsApp Business",
+  "one_liner": "Meta's WhatsApp Cloud API (Graph API over HTTP) for business messaging, templates and phone numbers; free to test, but apps serving other businesses need App Review for Advanced access; official Meta MCP in beta.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "access": "approval_required",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "notes": "auth: System User access tokens are generated in Business settings and pasted in (static, long-lived) -> api_key. Business Integration System User tokens come from Embedded Signup (Facebook Login for Business) with a code exchange, and User access tokens come from Facebook Login -> oauth2. Meta's overview oddly says 'OAuth (not 2.0) access tokens', but Facebook Login / Embedded Signup is a user-grants-third-party-app code flow, which matches the rubric's oauth2. access: Business apps are auto-approved for Standard Access, so a developer can test with a test number for free, and a Direct Developer using only its own business does not need App Review. An agent toolkit serves other businesses, which per Meta requires Advanced access via App Review (plus business verification / Tech Provider onboarding) -> approval_required, ready_with_review, main_blocker app_review. Ambiguity: if each end user brings their own System User token as a direct developer, no review is needed and it would be self_serve_free/ready. api_style: Graph API over HTTP, REST-style (not GraphQL despite the 'Graph' name). mcp: Meta launched 'WhatsApp Business Tools MCP' (beta, endpoint https://mcp.facebook.com/whatsapp_business_tools, OAuth) on 2026-09-15; it is rolling out gradually and aimed at dev/test workflows, but it is vendor-built and vendor-hosted -> official. developers.facebook.com was unreachable directly from this machine (TLS failure), so pages were read through a reader proxy (r.jina.ai); the URLs below are the canonical post-redirect Meta doc URLs.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+      "quote": "Click the Generate token button and copy the token when it appears."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+      "quote": "To generate a Business Integration System User access token, you must implement Embedded Signup (configured with Facebook Login for Businesses) and exchange the code returned to you when a customer completes the flow."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/app-review",
+      "quote": "If you are building an app that other businesses will be using, you must request Advanced access for any permissions your app needs."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/app-review",
+      "quote": "This means that if you are using the API for yourself as a Direct Developer, you do not need Advanced access or app review."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+      "quote": "The WhatsApp Business Platform is built on Graph API and uses HTTP protocol."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+      "quote": "Use WhatsApp Business Tools MCP for WhatsApp accounts, phone numbers, templates, webhooks, and test messages."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/app-review",
+      "quote": "Business apps are automatically approved for Standard Access for all Permissions and Features available to the Business app type, so you can test your app while you are in this access level."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

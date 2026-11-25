@@ -1,0 +1,3 @@
+{"t": 1795591401.2, "tool": "composio_search", "input": {"query": "PitchBook MCP server", "domains": ["pitchbook.com", "github.com"]}}
+{"t": 1795591473.4, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/help/PitchBook-api", "find": ["REST", "JSON", "endpoint", "Direct"]}}
+{"t": 1795591516.6, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/media/press-releases/pitchbook-launches-an-agentic-platform-assistant-and-new-pitchbook-data-mcp-to-meet-investors-rapidly-evolving-workflow-needs", "find": ["MCP", "client"]}}

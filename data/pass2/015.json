@@ -1,0 +1,96 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer support platform (helpdesk, issues, accounts, knowledge base) for B2B teams, with a REST API and an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public REST API uses a Bearer API token created by an Admin in Settings > Integrations & dev > API. The official MCP server also accepts OAuth 2.0, but that is for MCP clients, not the public REST API.",
+  "access": "paid_plan",
+  "access_notes": "critic: access self_serve_free -> paid_plan. Pricing page lists API under the paid Professional plan ($89/seat, annual); the pricing FAQ says free trials are only arranged through a sales representative and pylon-facts says there is no free plan. No self-serve free or trial path to the API.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Regional base URLs (US api.usepylon.com, EU api.eu.usepylon.com). Reference covers accounts, knowledge bases, custom fields, tags, me and other objects with read and write endpoints.",
+  "docs_url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.usepylon.com",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "critic: verdict ready -> blocked. API tokens need a paid Pylon workspace (Professional and up); no free plan, trials are sales-led demo orgs.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "The Pylon API uses Bearer authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://www.usepylon.com/pricing",
+    "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization."
+   },
+   {
+    "field": "access",
+    "url": "https://www.usepylon.com/pylon-facts",
+    "quote": "There is no free plan."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "Programmatic access to read and write data in Pylon"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+    "quote": "Server URL (US): https://mcp.usepylon.com"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Only Admins can create and manage API tokens."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pylon pricing free plan API access",
+     "domains": [
+      "usepylon.com",
+      "docs.usepylon.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "find": [
+      "plan",
+      "Admin",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.usepylon.com/pricing",
+     "find": [
+      "free",
+      "trial",
+      "API",
+      "contact"
+     ]
+    }
+   }
+  ]
+ }
+}

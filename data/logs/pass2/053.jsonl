@@ -1,0 +1,4 @@
+{"t": 1795578730.8, "tool": "fetch_page", "input": {"url": "https://docs.ahrefs.com/en/api/docs/limits-consumption", "find": ["free test", "paid plans", "eligible"]}}
+{"t": 1795578768.2, "tool": "fetch_page", "input": {"url": "https://ahrefs.com/pricing", "find": ["API and MCP", "MCP"]}}
+{"t": 1795578904.9, "tool": "composio_search", "input": {"query": "Ahrefs MCP server", "domains": ["ahrefs.com", "docs.ahrefs.com", "github.com"]}}
+{"t": 1795579006.7, "tool": "fetch_page", "input": {"url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio", "find": ["trial", "paid", "Free", "Lite", "Server URL", "Generate MCP key"]}}

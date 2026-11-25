@@ -1,0 +1,92 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "one_liner": "Telegram messaging platform with an HTTP Bot API for building bots, plus MTProto user API and Telegram Login.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Bot API uses a bot token from @BotFather as part of the request URL. Telegram Login (bots/telegram-login) is an OIDC/OAuth 2.0 authorization code flow with PKCE, client credentials from BotFather. MTProto user logins use api_id/api_hash from my.telegram.org (not graded as a separate method here). critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "A bot token is obtained by messaging @BotFather and issuing /newbot; no paid plan or approval step. critic: access confirmed self_serve_free (bot tokens free; only optional paid broadcast above 30 msg/s costs Stars).",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Official HTTP Bot API with many methods. Also an MTProto API for user and bot logins.",
+  "docs_url": "https://core.telegram.org/bots/api",
+  "mcp": "community",
+  "mcp_url": "https://github.com/guangxiangdebizi/telegram-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Bot tokens are free and self-serve. critic: re-searched for an official MCP, only community servers (chigwell, sparfenyuk, dryeab etc.) and third-party hosted ones; Telegram publishes none. MTProto userbot automation carries ban risk.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "All queries to the Telegram Bot API must be served over HTTPS and need to be presented in this form"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://core.telegram.org/bots/telegram-login",
+    "quote": "Direct the user to the authorization endpoint with the following parameters."
+   },
+   {
+    "field": "access",
+    "url": "https://core.telegram.org/bots/tutorial",
+    "quote": "Obtaining a token is as simple as contacting @BotFather, issuing the /newbot command and following the steps until you're given a new token."
+   },
+   {
+    "field": "api_style",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.usecarly.com/blog/telegram-mcp/",
+    "quote": "No. Telegram hasn’t published one. What exists are community projects"
+   },
+   {
+    "field": "verdict",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Telegram official MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Telegram MCP server",
+     "domains": [
+      "core.telegram.org",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://core.telegram.org/bots/faq",
+     "find": [
+      "free",
+      "paid",
+      "limits"
+     ]
+    }
+   }
+  ]
+ }
+}

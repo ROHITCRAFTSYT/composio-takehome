@@ -1,0 +1,169 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Ahrefs SEO platform: keyword, backlink, rank and site data via REST API v3 and a hosted MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "API v3 uses a Bearer API key created in Account settings / API keys; MCP uses a separate generated MCP key. Keys are created by workspace owners and admins.",
+  "access": "paid_plan",
+  "access_notes": "API v3 is for Lite and higher plans. Free and other plans only get a limited set of free test queries. Free and trial accounts cannot use the MCP server.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API v3 with many Site Explorer, Keywords Explorer and other endpoints; API units are consumed per row and field. Custom endpoints are Enterprise only. Public and some other endpoints are free.",
+  "docs_url": "https://docs.ahrefs.com/en/api/docs/introduction",
+  "mcp": "official",
+  "mcp_url": "https://api.ahrefs.com/mcp/mcp",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Real API and MCP use needs a Lite or higher paid subscription. Free and trial accounts only get free test queries.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+    "quote": "Ahrefs API is available on eligible paid plans."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+    "quote": "On all other plans, you'll still have access to a limited set of free test queries."
+   },
+   {
+    "field": "access",
+    "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3",
+    "quote": "Using API v3 from any of the above methods is possible for Lite and higher subscription plans"
+   },
+   {
+    "field": "access",
+    "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3",
+    "quote": "all new applications require a Lite or higher subscription for activation"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+    "quote": "Provide it in the Authorization header when making requests: Authorization: Bearer YOUR_API_KEY."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+    "quote": "Create and manage existing API keys in Account settings / API keys."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+    "quote": "All requests besides free test queries and the Rank Tracker, Management, Public and some other endpoints consume API units."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio",
+    "quote": "Server URL: https://api.ahrefs.com/mcp/mcp"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio",
+    "quote": "click \"Generate MCP key\" to create a new key."
+   },
+   {
+    "field": "verdict",
+    "url": "https://ahrefs.com/pricing",
+    "quote": "API and MCP access"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ahrefs API authentication API key developer docs",
+     "domains": [
+      "ahrefs.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ahrefs API v3 pricing API access plan",
+     "domains": [
+      "ahrefs.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ahrefs MCP server official github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+     "find": [
+      "Bearer",
+      "Create",
+      "owner"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+     "find": [
+      "eligible paid plans",
+      "free test queries"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://ahrefs.com/pricing",
+     "find": [
+      "API and MCP access",
+      "Lite"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://lemonado.io/integrations/ahrefs",
+     "find": [
+      "official MCP server",
+      "Free and trial"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio",
+     "find": [
+      "MCP key",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3",
+     "find": [
+      "Enterprise plan",
+      "API v3"
+     ]
+    }
+   }
+  ]
+ }
+}

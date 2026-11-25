@@ -1,0 +1,5 @@
+{"t": 1795530127.3, "tool": "composio_search", "input": {"query": "mermaid-cli official documentation API", "domains": ["github.com", "mermaid.js.org"]}}
+{"t": 1795530168.6, "tool": "composio_search", "input": {"query": "mermaid cli MCP server official", "domains": ["github.com", "mermaid.js.org"]}}
+{"t": 1795530243.3, "tool": "fetch_page", "input": {"url": "https://github.com/mermaid-js/mermaid-cli", "find": ["license", "install", "npm", "usage", "Docker", "API"]}}
+{"t": 1795530324.2, "tool": "fetch_page", "input": {"url": "https://github.com/andrewginns/mermaid-mcp-server", "find": ["Mermaid CLI", "MCP"]}}
+{"t": 1795530390.3, "tool": "fetch_page", "input": {"url": "https://github.com/mermaid-js/mermaid-cli", "find": ["Node.JS API", "Node.JS", "semver"]}}

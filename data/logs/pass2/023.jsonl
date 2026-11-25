@@ -1,0 +1,4 @@
+{"t": 1795576732.3, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/pricing.html", "find": ["API", "Free", "REST"]}}
+{"t": 1795576766.7, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/restapi/v2/", "find": ["Register", "scope", "OAuth", "Free", "plan"]}}
+{"t": 1795576797.7, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html", "find": ["Zoho", "MCP", "server"]}}
+{"t": 1795576841.8, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/pricing.html", "find": ["REST API", "Platform", "Webhook", "Bots", "Incoming"]}}

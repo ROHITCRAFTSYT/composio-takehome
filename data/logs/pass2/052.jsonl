@@ -1,0 +1,3 @@
+{"t": 1795578677.8, "tool": "fetch_page", "input": {"url": "https://seranking.com/api.html", "find": ["trial", "free", "plan", "Core", "API"]}}
+{"t": 1795578696.3, "tool": "fetch_page", "input": {"url": "https://seranking.com/api/data/getting-started/", "find": ["trial", "free", "credit", "plan", "key"]}}
+{"t": 1795578755.9, "tool": "fetch_page", "input": {"url": "https://seranking.com/mcp.html", "find": ["free credits", "free", "trial", "plan", "API"]}}

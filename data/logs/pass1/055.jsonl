@@ -1,0 +1,6 @@
+{"t": 1795528677.8, "tool": "composio_search", "input": {"query": "Apify API authentication token docs", "domains": ["docs.apify.com"]}}
+{"t": 1795528711.7, "tool": "composio_search", "input": {"query": "Apify pricing plans free API access", "domains": ["apify.com"]}}
+{"t": 1795528745.5, "tool": "composio_search", "input": {"query": "Apify MCP server official", "domains": []}}
+{"t": 1795528823.9, "tool": "fetch_page", "input": {"url": "https://docs.apify.com/api/v2", "find": ["Bearer", "Authorization", "token"]}}
+{"t": 1795528852.5, "tool": "fetch_page", "input": {"url": "https://apify.com/pricing", "find": ["free plan", "API"]}}
+{"t": 1795528876.4, "tool": "fetch_page", "input": {"url": "https://docs.apify.com/mcp", "find": ["official", "OAuth", "Apify API token"]}}

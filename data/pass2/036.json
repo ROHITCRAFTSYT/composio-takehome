@@ -1,0 +1,104 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Marketing automation and customer data platform for email, SMS, flows and campaigns, with a REST-style /api.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Private API keys (Authorization: Klaviyo-API-Key) for /api endpoints; OAuth for apps acting on behalf of other accounts. Public site-ID key is for client-side /client endpoints only and is counted as api_key.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free; vendor pricing page lists a free plan (up to 250 active profiles, 500 emails per month) and private keys are created in account Settings by any user who can open it, with no paid-plan gate.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Official docs describe JSON:API-style endpoints with per-endpoint rate limits. Breadth judged from the remote MCP exposing 260+ tools across campaigns, flows, profiles, segments, reporting, catalogs and events.",
+  "docs_url": "https://developers.klaviyo.com/en/reference",
+  "mcp": "official",
+  "mcp_url": "https://mcp.klaviyo.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready_with_review -> ready, main_blocker app_review -> none. Private keys and self-built OAuth apps work immediately on a free account; app review is only required to list in Klaviyo's App Marketplace (plus 5 active installs), not to use the API.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "quote": "All /api endpoints use API private keys to authenticate requests."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "they grant your app permission to use Klaviyo’s APIs on their behalf"
+   },
+   {
+    "field": "access",
+    "url": "https://www.klaviyo.com/pricing",
+    "quote": "Up to 250 active profiles and 500 emails per month"
+   },
+   {
+    "field": "access",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/7423954176283",
+    "quote": "Click Create Private API Key."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.klaviyo.com/en/reference",
+    "quote": "JSON:API feature guides"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+    "quote": "URL: https://mcp.klaviyo.com/mcp"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Doing so will help you meet our requirement of 5 active installs if you plan to submit your app to Klaviyo's App Marketplace."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+     "find": [
+      "app review",
+      "marketplace",
+      "Pass your app review",
+      "approved",
+      "private"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.klaviyo.com/pricing",
+     "find": [
+      "Free",
+      "free plan",
+      "API",
+      "250 contacts"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Klaviyo MCP server",
+     "domains": [
+      "klaviyo.com",
+      "github.com"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "one_liner": "Cloud web-based help desk and shared inbox for support teams, with AI agents and a built-in MCP server",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API v3 and legacy v1 each use a separate API key, created under Configuration > System > API (v3) or the API v1 settings section. The MCP server uses OAuth 2.1 for AI clients, but that is not the public REST API auth path.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: confirmed self_serve_trial. Pricing page FAQ says every plan starts with a 30-day free trial, no credit card required; no free plan (plans from $15 per agent per month).",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Two API versions: v1 is deprecated but functional and v3 is current. Endpoint-level breadth not verified on a fetched API reference page.",
+  "docs_url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+  "mcp": "official",
+  "mcp_url": "https://support.liveagent.com/150554-AI-features",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: trial length now confirmed (30 days, no card). Credentials are self-serve and the API is documented; a paid plan is needed after the trial but does not block building.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+    "quote": "Both versions can be used simultaneously, but they require separate API keys."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+    "quote": "Generate or manage your API v3 key here."
+   },
+   {
+    "field": "api_style",
+    "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+    "quote": "using an API v3 key to authenticate against API v1 endpoints"
+   },
+   {
+    "field": "access",
+    "url": "https://www.liveagent.com/pricing/",
+    "quote": "Every plan starts with a 30-day free trial, and no credit card is required."
+   },
+   {
+    "field": "access",
+    "url": "https://www.liveagent.com/help-desk-software/",
+    "quote": "Plans start at $15 per agent per month billed annually"
+   },
+   {
+    "field": "access",
+    "url": "https://www.liveagent.com/help-desk-software/",
+    "quote": "LiveAgent has none"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.liveagent.com/150554-AI-features",
+    "quote": "LiveAgent exposes a built-in MCP server (Model Context Protocol)"
+   },
+   {
+    "field": "verdict",
+    "url": "https://support.liveagent.com/150554-AI-features",
+    "quote": "There are two ways to authenticate your MCP client - OAuth 2.1 (recommended)"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.liveagent.com/pricing/",
+     "find": [
+      "free trial",
+      "trial",
+      "Free",
+      "no credit card"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "LiveAgent MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.liveagent.com/061754-How-to-make-REST-calls-in-LiveAgent",
+     "find": [
+      "API key",
+      "Configuration",
+      "v3"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.liveagent.com/pricing/",
+     "find": [
+      "free plan",
+      "Free plan",
+      "Free"
+     ]
+    }
+   }
+  ]
+ }
+}

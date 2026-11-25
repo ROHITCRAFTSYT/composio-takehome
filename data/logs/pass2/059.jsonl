@@ -1,0 +1,4 @@
+{"t": 1795578991.6, "tool": "composio_search", "input": {"query": "Waterfall.io MCP server", "domains": []}}
+{"t": 1795579046.5, "tool": "fetch_page", "input": {"url": "https://docs.waterfall.io/v1/authentication", "find": ["access", "key", "pricing", "free", "trial", "sign"]}}
+{"t": 1795579243.2, "tool": "fetch_page", "input": {"url": "https://www.waterfall.io/pricing", "find": ["free", "trial", "credits", "book", "demo", "sign", "MCP"]}}
+{"t": 1795579274.6, "tool": "fetch_page", "input": {"url": "https://docs.waterfall.io/v1/faq", "find": ["approval", "MCP", "free", "trial"]}}

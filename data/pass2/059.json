@@ -1,0 +1,121 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "B2B data API for go-to-market workflows: find people, enrich contact and company records, match emails, find phone numbers",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API key sent in the x-api-key header. Keys are issued after the team approves an access request. Sub-keys can be created from the master key.",
+  "access": "contact_sales",
+  "access_notes": "critic: access confirmed contact_sales. No self-serve signup or free/trial plan; API keys are issued only after team review of a request or a booked call, and per-credit pricing is quoted after a no-cost benchmark on sample data with commitments set at contract.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Endpoint groups: people search and contact details, company find/enrich, verification, employment checks. Full endpoint list not verified.",
+  "docs_url": "https://docs.waterfall.io/v1/introduction",
+  "mcp": "none",
+  "mcp_url": "",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "critic: confirmed. Credentials only via team-reviewed request / booked call; pricing negotiated. critic: mcp re-checked, search found only third-party waterfall-enrichment MCP articles (pipe0, Floqer, Explorium), no Waterfall.io-owned MCP server, so none.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "Send your API key in the x-api-key header."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Contact the team for API access and pricing."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.waterfall.io/v1/faq",
+    "quote": "API access is available by approval."
+   },
+   {
+    "field": "access",
+    "url": "https://www.waterfall.io/pricing",
+    "quote": "Is there a free trial, and is there a minimum?"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Data endpoints use /v1/; Account Reporter V2 uses /v2/account."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.waterfall.io/v1/faq",
+    "quote": "API access is available by approval."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Contact the team for API access and pricing."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Authenticate data and account API requests with your Waterfall API key in the"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Waterfall.io MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "find": [
+      "access",
+      "key",
+      "pricing",
+      "free",
+      "trial",
+      "sign"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.waterfall.io/pricing",
+     "find": [
+      "free",
+      "trial",
+      "credits",
+      "book",
+      "demo",
+      "sign",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.waterfall.io/v1/faq",
+     "find": [
+      "approval",
+      "MCP",
+      "free",
+      "trial"
+     ]
+    }
+   }
+  ]
+ }
+}

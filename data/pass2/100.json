@@ -1,0 +1,105 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 100,
+  "app": "Grain",
+  "category": "AI, Research and Media-native",
+  "one_liner": "AI notetaker that records, transcribes and writes notes for meetings, with a public API and an official MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal Access Token (PAT) and workspace API token are static keys (api_key). OAuth2 is offered for building integrations distributed to other Grain users.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access confirmed. Personal API tokens are available on every plan including Free. Workspace-wide tokens need an admin on a Business or Enterprise plan.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Docs describe endpoints for recordings, highlights, uploads and token info, with Authorization header and Public-Api-Version header. No sandbox is available, so tests run against a live workspace. critic: no change.",
+  "docs_url": "https://developers.grain.com",
+  "mcp": "official",
+  "mcp_url": "https://developers.grain.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: no change; no app-review requirement found on the vendor pages.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Personal Access Token (PAT): grants access on behalf of a single user."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "OAuth2: the standard flow for building integrations to be used by any Grain user."
+   },
+   {
+    "field": "access",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Available on every plan, including Free."
+   },
+   {
+    "field": "access",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.grain.com",
+    "quote": "Every request needs a token in the Authorization header and a Public-Api-Version"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.grain.com/mcp",
+    "quote": "The Grain MCP (Model Context Protocol) connects Claude.ai (and other AI chat clients) directly to your meeting data in Grain"
+   },
+   {
+    "field": "verdict",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Available on every plan, including Free."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "find": [
+      "Free",
+      "Business",
+      "OAuth",
+      "Personal"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.grain.com/mcp",
+     "find": [
+      "MCP",
+      "Claude"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.grain.com",
+     "find": [
+      "approval",
+      "review",
+      "OAuth",
+      "GraphQL",
+      "REST",
+      "partner"
+     ]
+    }
+   }
+  ]
+ }
+}

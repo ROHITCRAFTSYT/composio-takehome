@@ -1,0 +1,6 @@
+{"t": 1795530142.8, "tool": "composio_search", "input": {"query": "transcriptapi.com YouTube transcript API documentation authentication", "domains": ["transcriptapi.com"]}}
+{"t": 1795530227.0, "tool": "fetch_page", "input": {"url": "https://transcriptapi.com", "find": ["api", "key", "pricing", "free", "mcp"]}}
+{"t": 1795530301.2, "tool": "fetch_page", "input": {"url": "https://transcriptapi.com/docs/getting-started", "find": ["free", "credit", "signup", "MCP", "mcp", "Bearer"]}}
+{"t": 1795530375.4, "tool": "composio_search", "input": {"query": "transcriptapi MCP server github", "domains": ["transcriptapi.com", "github.com"]}}
+{"t": 1795530449.7, "tool": "fetch_page", "input": {"url": "https://transcriptapi.com", "find": ["MCP server", "free credit", "OAuth"]}}
+{"t": 1795530474.3, "tool": "fetch_page", "input": {"url": "https://transcriptapi.com/blog/youtube-transcript-api-complete-developer-guide", "find": ["free credits", "credit card", "API key"]}}

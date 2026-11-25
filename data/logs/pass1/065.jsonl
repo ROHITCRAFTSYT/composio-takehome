@@ -1,0 +1,7 @@
+{"t": 1795528987.4, "tool": "composio_search", "input": {"query": "Supabase API keys authentication docs", "domains": ["supabase.com"]}}
+{"t": 1795529023.1, "tool": "composio_search", "input": {"query": "Supabase MCP server official", "domains": ["supabase.com", "github.com"]}}
+{"t": 1795529155.8, "tool": "fetch_page", "input": {"url": "https://supabase.com/pricing", "find": ["free", "pro", "API", "5"]}}
+{"t": 1795529244.2, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/api/api-keys", "find": ["publishable", "secret", "service_role", "personal access token"]}}
+{"t": 1795529331.2, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/platform/oauth-apps", "find": ["OAuth", "authorize", "app review", "approval"]}}
+{"t": 1795529439.5, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/ai-tools/mcp", "find": ["Supabase MCP", "claude mcp add", "official"]}}
+{"t": 1795529523.6, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/api", "find": ["REST", "Data API", "GraphQL", "PostgREST"]}}

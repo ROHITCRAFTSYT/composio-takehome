@@ -1,0 +1,9 @@
+{"t": 1795528274.1, "tool": "composio_search", "input": {"query": "Amazon Selling Partner API authorization developer docs", "domains": ["developer-docs.amazon.com"]}}
+{"t": 1795528306.0, "tool": "fetch_page", "input": {"url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api", "find": ["authorize", "LWA", "application", "self-authorization", "developer"]}}
+{"t": 1795528337.4, "tool": "composio_search", "input": {"query": "Amazon Selling Partner API MCP server github", "domains": []}}
+{"t": 1795528370.7, "tool": "composio_search", "input": {"query": "Selling Partner API register developer account app registration fees", "domains": []}}
+{"t": 1795528456.1, "tool": "fetch_page", "input": {"url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview", "find": ["LWA", "refresh token", "Public applications", "private"]}}
+{"t": 1795528528.5, "tool": "fetch_page", "input": {"url": "https://developer.amazonservices.com/start/getting-started-for-private-developers", "find": ["Professional", "Individual", "private application", "self-authorize"]}}
+{"t": 1795528603.2, "tool": "fetch_page", "input": {"url": "https://github.com/amzn/selling-partner-api-samples/discussions/382", "find": ["Local MCP", "official", "npm", "sp-api-dev-mcp"]}}
+{"t": 1795528693.1, "tool": "fetch_page", "input": {"url": "https://sell.amazon.com/developers", "find": ["Professional", "39.99", "Create developer profile"]}}
+{"t": 1795528787.5, "tool": "fetch_page", "input": {"url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api", "find": ["REST", "HTTP", "endpoint", "JSON"]}}

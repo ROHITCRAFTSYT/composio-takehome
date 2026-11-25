@@ -1,0 +1,77 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 91,
+  "app": "NotebookLM",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Google's AI research notebook (NotebookLM, renamed Gemini Notebook); the documented API is the Enterprise notebook-management API.",
+  "auth_methods": [
+   "other"
+  ],
+  "auth_notes": "Enterprise API uses an access token for an authenticated user account (gcloud user credentials), not an OAuth consent flow for third-party apps and not a static API key. critic: confirmed.",
+  "access": "paid_plan",
+  "access_notes": "API methods require an active Gemini Notebook Enterprise license assigned to the user; no free or trial path to the API seen. critic: confirmed on re-fetch.",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "api_notes": "Fetched page covers notebook management (projects.locations.notebooks REST methods) only; chat, source and studio endpoints not verified.",
+  "docs_url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+  "mcp": "community",
+  "mcp_url": "https://github.com/PleasePrompto/notebooklm-mcp",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Official API needs a paid Enterprise license. The consumer product has no official API; community MCP servers drive a browser. critic: search found no official Google NotebookLM MCP (google/mcp issue #19 requests one), so mcp stays community.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "gcloud auth print-access-token generates an access token for your user"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "Get licenses for Gemini Notebook Enterprise and assign a license to your user account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "This page describes the APIs that let you perform the following notebook management tasks programmatically:"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "require an authenticated user account with an active"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/PleasePrompto/notebooklm-mcp",
+    "quote": "MCP server for Google NotebookLM."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "NotebookLM MCP server official Google",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "find": [
+      "license",
+      "trial",
+      "free",
+      "Notebook"
+     ]
+    }
+   }
+  ]
+ }
+}

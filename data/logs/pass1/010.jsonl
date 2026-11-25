@@ -1,0 +1,7 @@
+{"t": 1795526828.6, "tool": "composio_search", "input": {"query": "DealCloud API documentation authentication", "domains": ["api.docs.dealcloud.com", "dealcloud.com"]}}
+{"t": 1795526864.5, "tool": "composio_search", "input": {"query": "DealCloud API pricing access developer", "domains": ["dealcloud.com"]}}
+{"t": 1795526909.3, "tool": "fetch_page", "input": {"url": "https://api.docs.dealcloud.com/docs/apikeys", "find": ["API key", "OAuth", "Basic", "Bearer", "Authorization", "capability", "admin", "support"]}}
+{"t": 1795526950.8, "tool": "fetch_page", "input": {"url": "https://api.docs.dealcloud.com/mcp/authentication", "find": ["OAuth", "MCP", "sign in", "authorize", "approv", "admin"]}}
+{"t": 1795526993.7, "tool": "fetch_page", "input": {"url": "https://api.docs.dealcloud.com", "find": ["MCP", "Swagger", "OAuth", "API key", "Basic", "trial", "pricing", "contact"]}}
+{"t": 1795527061.0, "tool": "fetch_page", "input": {"url": "https://api.docs.dealcloud.com/docs/data", "find": ["REST", "rest/v4", "Bearer", "Write", "Insert", "Update", "Delete"]}}
+{"t": 1795527102.5, "tool": "fetch_page", "input": {"url": "https://api.docs.dealcloud.com/sdk/python/authentication", "find": ["client_id", "client_secret", "OAuth", "API key"]}}

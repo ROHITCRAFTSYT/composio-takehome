@@ -1,0 +1,54 @@
+{
+  "n": 82,
+  "app": "Plaid",
+  "one_liner": "Financial data network API for linking bank accounts and pulling transactions, balances, identity and auth data.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "approval_required",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://api.dashboard.plaid.com/mcp/",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "notes": "Auth: static client_id + secret copied from the Dashboard, sent in the body or PLAID-CLIENT-ID/PLAID-SECRET headers (not signed/HMAC) -> api_key. Plaid Link's public_token/access_token is a per-Item end-user token obtained with those keys, not a separate developer auth method; Plaid's OAuth docs are about bank (institution) OAuth inside Link, not OAuth into Plaid's API. Access: Sandbox is free and self-serve, but real data needs an application for Production (Trial plan application, then full Production with company info and a security questionnaire that Plaid reviews); Limited Production was replaced by Trial plans for teams created on/after 2026-04-15. Hence approval_required + ready_with_review. main_blocker app_review chosen over partner_program because it is a production-access/compliance review, not a partnership. API is JSON-over-HTTP POST (RPC-ish) with no GraphQL -> rest. Official MCP: Plaid-hosted Dashboard MCP server (Production-approved teams only) plus a local MCP server in Plaid's AI coding toolkit.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "Almost all Plaid API endpoints require a client_id and secret."
+    },
+    {
+      "field": "api_style",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "The Plaid API is JSON over HTTP."
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/sandbox/",
+      "quote": "The Plaid Sandbox is a free and fully-featured environment for application development and testing."
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/account/billing/",
+      "quote": "To view pricing, apply for Production access."
+    },
+    {
+      "field": "mcp",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "quote": "The Dashboard MCP server is a remote MCP server hosted by Plaid."
+    },
+    {
+      "field": "verdict",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "quote": "Your team must be approved for Production access with at least one Plaid product to use the MCP server."
+    },
+    {
+      "field": "verdict",
+      "url": "https://plaid.com/docs/link/oauth/",
+      "quote": "You must complete a questionnaire about your company's risk and security practices before accessing certain bank APIs."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

@@ -1,0 +1,134 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "one_liner": "Help Scout is a customer support helpdesk (shared inbox, conversations, Docs knowledge base) with a public REST API.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Inbox API uses OAuth 2.0 (Authorization Code and Client Credentials flows). Docs API uses an API key passed via HTTP Basic auth in the username field.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: confirmed self_serve_trial. Help Scout docs state the Free plan does not include API access; API is on paid Standard/Plus/Pro, and the pricing page offers a 15-day no-card trial of Standard or Plus. OAuth apps are created self-serve under Your Profile > My apps; no review step documented.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Base URL https://api.helpscout.net/v2. Inbox API 2.0 plus Docs API; Standard plan lacks reporting endpoints.",
+  "docs_url": "https://developer.helpscout.com/mailbox-api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.helpscout.net/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: main_blocker paid_plan -> none, since a self-serve trial gives working credentials (verdict ready). Production use after the 15-day trial needs a paid plan. Official MCP is read-only for new connections, so writes need the Inbox API.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.helpscout.com/docs-api",
+    "quote": "Authentication is based on API keys."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+    "quote": "The Free plan does not include access to the API or integrations."
+   },
+   {
+    "field": "access",
+    "url": "https://www.helpscout.com/pricing",
+    "quote": "When you sign up for a free trial of the Standard or Plus plan, you’ll get 15 days to take all of the plan’s features for a test drive — no credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "https://api.helpscout.net/v2/users/me"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "Help Scout MCP gives AI assistants secure, official access to Help Scout data."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "Set the remote MCP server URL to https://mcp.helpscout.net/mcp"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "The Client Credentials flow is meant for internal integrations."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "Your Help Scout account must have API access, which is included on the Standard, Plus, and Pro plans."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.helpscout.com/pricing",
+     "find": [
+      "API",
+      "Free",
+      "free plan",
+      "trial"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Help Scout MCP server",
+     "domains": [
+      "helpscout.com",
+      "developer.helpscout.com",
+      "docs.helpscout.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "find": [
+      "plans",
+      "API access",
+      "mcp.helpscout.net",
+      "official"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Help Scout API access which plans Free plan API OAuth app create",
+     "domains": [
+      "docs.helpscout.com",
+      "developer.helpscout.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+     "find": [
+      "Free plan",
+      "API Access"
+     ]
+    }
+   }
+  ]
+ }
+}

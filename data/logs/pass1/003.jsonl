@@ -1,0 +1,6 @@
+{"t": 1795526552.2, "tool": "composio_search", "input": {"query": "Pipedrive API authentication developer docs", "domains": ["pipedrive.com", "developers.pipedrive.com"]}}
+{"t": 1795526564.1, "tool": "composio_search", "input": {"query": "Pipedrive MCP server official", "domains": ["pipedrive.com", "github.com"]}}
+{"t": 1795526583.1, "tool": "fetch_page", "input": {"url": "https://pipedrive.com/en/pricing", "find": ["API", "trial", "free"]}}
+{"t": 1795526614.6, "tool": "fetch_page", "input": {"url": "https://developers.pipedrive.com/docs/api/v1", "find": ["API token", "OAuth", "authorization"]}}
+{"t": 1795526620.2, "tool": "fetch_page", "input": {"url": "https://developers.pipedrive.com/docs/api/v1/Oauth", "find": ["authorization_code", "access_token", "Marketplace", "app review"]}}
+{"t": 1795526628.1, "tool": "fetch_page", "input": {"url": "https://www.pipedrive.com/en/features/mcp-server", "find": ["official", "OAuth", "plan", "free"]}}

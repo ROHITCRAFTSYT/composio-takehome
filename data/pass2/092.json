@@ -1,0 +1,103 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 92,
+  "app": "Otter AI",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Otter.ai is a meeting transcription and conversation intelligence app; its Public API exposes channels, conversations, transcripts and workspace data.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API uses a Bearer API key created under Integrations > Developer (max 2 keys per user). The MCP server separately uses OAuth to connect AI clients; that is not the public API auth.",
+  "access": "contact_sales",
+  "access_notes": "critic: access paid_plan -> contact_sales. Public API is only for Enterprise workspaces; Enterprise has no public price (demo-only) and the docs tell you to contact your Otter account manager if the feature is missing. No free, trial, Pro or Business path to the API.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented endpoints under https://api.otter.ai/v1 cover channels, conversations, workspace, transcripts, audio, action items, insights and outlines. Enterprise plan rate limit is 10 requests per second.",
+  "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+  "mcp": "official",
+  "mcp_url": "https://mcp.otter.ai/mcp",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "critic: main_blocker paid_plan -> contact_sales. API keys are gated to the Enterprise plan, obtained via an account manager rather than self-serve checkout. The official MCP server exists but needs OAuth sign-in to an Otter account, not a developer credential path.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "quote": "All API requests require authentication using Bearer token authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "quote": "This content is available for the Otter Enterprise plan and may require admin permissions."
+   },
+   {
+    "field": "access",
+    "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "quote": "contact your Otter account manager."
+   },
+   {
+    "field": "api_style",
+    "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "quote": "List endpoints use cursor-based pagination for efficient data retrieval."
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "quote": "OAuth authentication is still required to connect"
+   },
+   {
+    "field": "verdict",
+    "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "quote": "This content is available for the Otter Enterprise plan and may require admin permissions."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Otter.ai API access plan Business Pro developer API key pricing",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://otter.ai/pricing",
+     "find": [
+      "Schedule a demo",
+      "Enterprise",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+     "find": [
+      "Enterprise",
+      "Developer",
+      "Integrations"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://otter.ai/pricing",
+     "find": [
+      "Schedule",
+      "demo",
+      "Contact"
+     ]
+    }
+   }
+  ]
+ }
+}

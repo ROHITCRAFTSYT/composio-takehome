@@ -1,0 +1,104 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Web scraping, search, crawl and structured-data API for AI agents that returns clean Markdown or JSON.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key sent as Bearer token from the dashboard; OAuth 2.1 for apps that let users connect their own Firecrawl account. Some endpoints (scrape, search, parse) also work keyless with limits.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan, no card: 500 searches or 1,000 pages scraped, 2 concurrent requests. API key comes from a free account. critic: confirmed self_serve_free; corrected free-tier limits wording from pricing page.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Endpoints include scrape, search, map, crawl, interact, monitor, agent, parse and browser sandbox.",
+  "docs_url": "https://docs.firecrawl.dev/introduction",
+  "mcp": "official",
+  "mcp_url": "https://docs.firecrawl.dev/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed ready; free self-serve key plus documented REST API and vendor-hosted MCP.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "quote": "Requests need anAuthorization header with your API key, except on the keyless endpoints described below:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.firecrawl.dev/oauth",
+    "quote": "Firecrawl runs an OAuth 2.1 authorization server."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.firecrawl.dev/introduction",
+    "quote": "Create a free account for direct API access and higher limits"
+   },
+   {
+    "field": "access",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "A lightweight way to get started. No cost, no card, no hassle."
+   },
+   {
+    "field": "access",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "500 searches or 1,000 pages scraped"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "quote": "/v2/scrape, /v2/search and /v2/parse, also work without a key, with limits."
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.firecrawl.dev/introduction",
+    "quote": "Recursively gather content from entire sites"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.firecrawl.dev/mcp-server",
+    "quote": "Point your client at the OAuth server URL."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.firecrawl.dev/oauth",
+    "quote": "your app gets an access token it can use on the Firecrawl REST API in place of an API key"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.firecrawl.dev/mcp-server",
+     "find": [
+      "official",
+      "firecrawl-mcp",
+      "OAuth",
+      "npx"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.firecrawl.dev/pricing",
+     "find": [
+      "No cost",
+      "1",
+      "000",
+      "free",
+      "credits"
+     ]
+    }
+   }
+  ]
+ }
+}

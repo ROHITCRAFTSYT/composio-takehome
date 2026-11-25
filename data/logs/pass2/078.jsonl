@@ -1,0 +1,3 @@
+{"t": 1795591066.0, "tool": "fetch_page", "input": {"url": "https://docs.superhuman.com/developers/apis/v1", "find": ["free of charge", "Bearer", "API token", "rate limit"]}}
+{"t": 1795591087.8, "tool": "fetch_page", "input": {"url": "https://coda.io/resources/guides/getting_started_with_coda_mcp", "find": ["MCP server", "OAuth", "free", "plan"]}}
+{"t": 1795591124.4, "tool": "composio_search", "input": {"query": "Coda Superhuman Docs MCP server", "domains": []}}

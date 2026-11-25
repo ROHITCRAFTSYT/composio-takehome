@@ -1,0 +1,3 @@
+{"t": 1795591671.8, "tool": "composio_search", "input": {"query": "Mermaid MCP server official mermaid-js", "domains": []}}
+{"t": 1795591718.3, "tool": "fetch_page", "input": {"url": "https://github.com/mermaid-js/mermaid-cli", "find": ["mcp", "Node.JS", "semver"]}}
+{"t": 1795591754.8, "tool": "fetch_page", "input": {"url": "https://mermaid.ai/docs/ai/mcp-server", "find": ["MCP server", "mermaid-js", "Mermaid Chart"]}}

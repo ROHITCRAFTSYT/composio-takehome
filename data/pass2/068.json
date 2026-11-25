@@ -1,0 +1,117 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 68,
+  "app": "MongoDB Atlas",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Managed cloud database platform for MongoDB, with an Atlas Administration API for managing clusters, projects and users.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Service account access tokens (OAuth 2.0 client credentials) are recommended. API keys use HTTP Digest auth and are the legacy method.",
+  "access": "self_serve_free",
+  "access_notes": "Free-forever M0 tier exists, and the Clusters API can create Free clusters. Creating service accounts or API keys requires Organization Owner access, which the creator of a self-serve org has. critic: free access confirmed via the free-cluster limits page (Free cluster creatable through the API); no paid-plan gate found for the Admin API.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Endpoints follow /api/atlas/<version>/groups/<GROUP-ID>/ paths. Breadth judged from the Admin API v2 reference (clusters, projects, users, etc.).",
+  "docs_url": "https://www.mongodb.com/docs/atlas/api/",
+  "mcp": "official",
+  "mcp_url": "https://www.mongodb.com/docs/mcp-server/overview",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+    "quote": "Service account access tokens (OAuth 2.0)"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+    "quote": "API keys (HTTP Digest Authentication)"
+   },
+   {
+    "field": "access",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+    "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization."
+   },
+   {
+    "field": "access",
+    "url": "https://www.mongodb.com/docs/atlas/reference/free-shared-limitations",
+    "quote": "You can create a Free cluster using the Clusters API resource."
+   },
+   {
+    "field": "access",
+    "url": "https://www.mongodb.com/pricing",
+    "quote": "Yes, MongoDB Atlas offers a free-forever tier, the M0."
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication",
+    "quote": "Many Atlas Administration API endpoint URLs follow the format of /api/atlas/<version>/groups/<GROUP-ID>/"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.mongodb.com/docs/mcp-server/overview",
+    "quote": "MongoDB Atlas Managed MCP Server, which MongoDB hosts and manages for you in Atlas."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication",
+    "quote": "Service accounts are the recommended method to manage authentication to the Atlas Administration API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.mongodb.com/docs/atlas/configure-api-access",
+     "find": [
+      "Organization Owner",
+      "free",
+      "M0",
+      "Digest"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.mongodb.com/docs/mcp-server/overview",
+     "find": [
+      "MongoDB Atlas Managed MCP Server",
+      "hosts",
+      "open source",
+      "MongoDB MCP"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "MongoDB Atlas Administration API free account create API key without paid plan M0 cluster",
+     "domains": [
+      "mongodb.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.mongodb.com/docs/atlas/reference/free-shared-limitations",
+     "find": [
+      "API Access",
+      "Clusters API"
+     ]
+    }
+   }
+  ]
+ }
+}

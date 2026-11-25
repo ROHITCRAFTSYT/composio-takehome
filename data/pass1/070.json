@@ -1,0 +1,163 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 70,
+  "app": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Application monitoring and error tracking platform with a public REST web API for orgs, teams, projects and issue data.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Internal integrations generate org-wide auth tokens with no OAuth flow. Public integrations use OAuth2 with access tokens that expire after 30 days and refresh tokens. Legacy API keys and DSN-based auth exist but are limited; DSN auth is only for some endpoints.",
+  "access": "self_serve_free",
+  "access_notes": "Docs describe one free Developer plan alongside paid Team, Business and Enterprise plans. Internal-integration tokens are created in Settings > Developer Settings. Whether every API endpoint is available on the free plan was not explicitly verified in fetched pages.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Versioned REST API at sentry.io/api/0 covering account-level resources and data export. Beta endpoints may change. Region-specific hosts are supported.",
+  "docs_url": "https://docs.sentry.io/api/",
+  "mcp": "official",
+  "mcp_url": "https://github.com/getsentry/sentry-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+    "quote": "Internal integrations automatically generate an authentication token when configured."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Access tokens expire after 30 days."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+    "quote": "Internal integrations don't require an OAuth flow."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.sentry.io/pricing/",
+    "quote": "Sentry has one free Developer plan and three paid plans"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.sentry.io/api/",
+    "quote": "The Sentry web API is used to access the Sentry platform programmatically."
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.sentry.io/api/",
+    "quote": "You can use the APIs to manage account-level resources, like organizations and teams, as well as manage and export data."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/getsentry/sentry-mcp",
+    "quote": "Sentry's MCP service is primarily designed for human-in-the-loop coding agents."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+    "quote": "Internal integrations don't require an OAuth flow."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Sentry API authentication auth tokens developer docs",
+     "domains": [
+      "docs.sentry.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.sentry.io/api/auth/",
+     "find": [
+      "Bearer",
+      "auth token",
+      "OAuth",
+      "API Key",
+      "Internal Integration"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.sentry.io/api/",
+     "find": [
+      "REST",
+      "API",
+      "Internal Integration",
+      "rate limit"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Sentry MCP server official github getsentry",
+     "domains": [
+      "github.com",
+      "docs.sentry.io",
+      "sentry.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.sentry.io/integrations/integration-platform/internal-integration",
+     "find": [
+      "Developer Settings",
+      "internal integration",
+      "plan",
+      "free",
+      "tokens"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/getsentry/sentry-mcp",
+     "find": [
+      "official",
+      "MCP",
+      "sentry-mcp",
+      "npx"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Sentry pricing plans free developer plan API access",
+     "domains": [
+      "sentry.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.sentry.io/pricing",
+     "find": [
+      "free Developer plan",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

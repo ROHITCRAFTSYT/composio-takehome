@@ -1,0 +1,3 @@
+{"t": 1795579251.8, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/accounts/access-tokens", "find": ["Hobby", "plan", "Create"]}}
+{"t": 1795579277.8, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/agent-resources/vercel-mcp", "find": ["official", "mcp.vercel.com"]}}
+{"t": 1795579346.2, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/plans/hobby", "find": ["free", "Hobby"]}}

@@ -1,0 +1,106 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "one_liner": "Accounting software for small and mid-sized businesses, with a REST API for invoices, customers, payments and reports.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 only, via Intuit Developer app credentials (Client ID and Client secret). Separate Development (sandbox) and Production key sets.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free. Intuit Developer sandbox docs say a sandbox company is connected to the developer account and Development keys are available under Keys & OAuth, no sales contact. Production use is gated by app review, see verdict.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "The docs nav also lists 'Develop with GraphQL', not checked in depth. The official MCP README describes 29 entity types with CRUD and 11 financial reports. Premium APIs (Projects, Custom Fields, Sales Tax, Payroll Compensation) are limited to Silver/Gold/Platinum partners.",
+  "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/develop",
+  "mcp": "official",
+  "mcp_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Sandbox and development testing can start now. Listing on the QuickBooks App Store and production use need Intuit's technical and security review. Intuit's security review starts after technical review.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+    "quote": "Use the OAuth 2.0 protocol to implement authentication and authorization."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+    "quote": "Sign in to your Intuit Developer account and get your app's Client ID and Client secret."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+    "quote": "If you're implementing authorization for testing with a sandbox company, go to the Development section and select Keys & OAuth to get your credentials."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes",
+    "quote": "You can start with the sandbox company connected to your Intuit Developer account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "It includes full CRUD operations for 29 entity types and 11 financial reports, giving you comprehensive access to QuickBooks Online functionality."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app/security-requirements",
+    "quote": "The security review starts once your app passes the technical review."
+   },
+   {
+    "field": "verdict",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "You must register an app on the Intuit Developer Portal and complete a one-time, browser-based OAuth handshake."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Intuit developer sandbox free developer account pricing QuickBooks API app review production keys",
+     "domains": [
+      "developer.intuit.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+     "find": [
+      "sandbox",
+      "free",
+      "Builder",
+      "Premium",
+      "Silver"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes",
+     "find": [
+      "sandbox",
+      "free",
+      "company"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "one_liner": "Cloud CRM platform for sales, service and marketing records and workflows, with REST APIs and hosted MCP servers.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 via external client app or connected app. JWT bearer is also an OAuth 2.0 flow (signed JWT, no user interaction), so it is covered by oauth2. critic: legacy username-password flow is not supported for external client apps.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed. Free Developer Edition org signup at developer.salesforce.com/signup; the REST API quick start uses it for API testing and development. Creating connected apps is restricted as of Spring '26, so external client apps are the path.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST API plus SOAP, Bulk, and other APIs covering standard and custom objects with read and write. Salesforce also has GraphQL API, but REST is the primary documented path.",
+  "docs_url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+  "mcp": "official",
+  "mcp_url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed. REST access via a free developer org is self-serve. Hosted MCP servers are gated to Enterprise Edition and above, so an MCP route needs a paid org.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "use either an external client app or a connected app and an OAuth 2.0 authorization flow."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-auth-jwt-flow.html",
+    "quote": "The JWT flow requires a digital certificate, also called a digital signature, to sign the JWT request."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html",
+    "quote": "Developer Edition provides a free and easy solution so that you can use Salesforce for testing and development."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "Creating connected apps is restricted as of Spring"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "Both external client apps and connected apps request access to REST API resources on behalf of the client application."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+    "quote": "Today, Salesforce hosted MCP servers are generally available"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+    "quote": "is now a production-ready capability for every Enterprise Edition org and above."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html",
+    "quote": "To sign up for a Developer Edition account, go to developer.salesforce.com/signup."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce free Developer Edition org API access OAuth username-password JWT bearer flow",
+     "domains": [
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "find": [
+      "Enterprise",
+      "Developer",
+      "free",
+      "generally"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce Developer Edition free org API access included",
+     "domains": [
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html",
+     "find": [
+      "free and easy"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5",
+     "find": [
+      "JSON Web Token",
+      "Client Credentials",
+      "Username-Password",
+      "Web Server Flow"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-auth-jwt-flow.html",
+     "find": [
+      "JWT flow",
+      "private key"
+     ]
+    }
+   }
+  ]
+ }
+}

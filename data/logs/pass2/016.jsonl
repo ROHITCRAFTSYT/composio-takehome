@@ -1,0 +1,4 @@
+{"t": 1795530650.6, "tool": "fetch_page", "input": {"url": "https://www.liveagent.com/pricing/", "find": ["free trial", "trial", "Free", "no credit card"]}}
+{"t": 1795530719.2, "tool": "composio_search", "input": {"query": "LiveAgent MCP server", "domains": []}}
+{"t": 1795530800.1, "tool": "fetch_page", "input": {"url": "https://support.liveagent.com/061754-How-to-make-REST-calls-in-LiveAgent", "find": ["API key", "Configuration", "v3"]}}
+{"t": 1795530838.5, "tool": "fetch_page", "input": {"url": "https://www.liveagent.com/pricing/", "find": ["free plan", "Free plan", "Free"]}}

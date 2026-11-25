@@ -1,0 +1,3 @@
+{"t": 1795579304.1, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/ai-tools/mcp", "find": ["official", "hosted", "mcp.supabase.com", "OAuth", "personal access token"]}}
+{"t": 1795579333.6, "tool": "fetch_page", "input": {"url": "https://supabase.com/pricing", "find": ["Free", "Unlimited API requests", "Limit of 2"]}}
+{"t": 1795579421.7, "tool": "fetch_page", "input": {"url": "https://supabase.com/docs/guides/integrations/build-a-supabase-integration", "find": ["OAuth", "access token", "authorization"]}}

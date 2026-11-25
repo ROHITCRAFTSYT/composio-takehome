@@ -1,0 +1,156 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 31,
+  "app": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Google's API for programmatic management, reporting and ad management of Google Ads accounts and campaigns.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "OAuth 2.0 user flow (desktop/web app) plus service account flow (graded as other); every call also needs a 22-character developer token sent in the developer-token header (api_key). login-customer-id header needed for manager accounts.",
+  "access": "approval_required",
+  "access_notes": "Test Account Access is available on a self-serve Cloud project, but production accounts need Basic or Standard access, applied for through the Google Ads API Overview page.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs describe the REST interface alongside the primary client libraries; no GraphQL. Covers campaigns, ad groups, assets, labels and GAQL reporting.",
+  "docs_url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+  "mcp": "official",
+  "mcp_url": "https://github.com/googleads/google-ads-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Test access works for test accounts immediately; production account use needs an access-level application review (Explorer/Basic/Standard).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "Both OAuth 2.0 user authentication flow and service account flow are supported."
+   },
+   {
+    "field": "api_key",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "A developer token is required in the developer-token HTTP header for every API call."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "You start with Test Account Access and can apply to increase your access level through additional steps."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "apply for Explorer access on the Google Ads API Overview page to access production accounts"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.google.com/google-ads/api/rest/auth",
+    "quote": "when using the REST interface"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+    "quote": "is a 22-character alphanumeric string obtained from the API Center page of your Google Ads manager account."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "quote": "Protocol: MCP (Model Context Protocol)"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Google Ads API developer authentication OAuth developer token",
+     "domains": [
+      "developers.google.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+     "find": [
+      "access",
+      "developer",
+      "token",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+     "find": [
+      "Test",
+      "Basic",
+      "Standard",
+      "approval",
+      "application",
+      "apply",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Google Ads API MCP server official",
+     "domains": [
+      "developers.google.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+     "find": [
+      "Test",
+      "Basic",
+      "Standard",
+      "Explorer",
+      "apply",
+      "application",
+      "review",
+      "approval"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/rest/auth",
+     "find": [
+      "OAuth 2.0",
+      "service account",
+      "developer-token",
+      "login-customer-id"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "find": [
+      "official",
+      "googleads",
+      "read-only",
+      "MCP server"
+     ]
+    }
+   }
+  ]
+ }
+}

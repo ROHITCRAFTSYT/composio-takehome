@@ -1,0 +1,168 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "one_liner": "Amazon Selling Partner API: programmatic access to seller and vendor data and operations on Amazon marketplaces.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Public apps use OAuth 2.0 via Login with Amazon (LWA) with a refresh token renewed annually. Private apps are self-authorized from the Solution Provider Portal console, which also generates an LWA refresh token (max 10 authorizations per app). No api_key or basic method was found in the fetched pages.",
+  "access": "paid_plan",
+  "access_notes": "Developer access requires a Professional selling account, which costs $39.99/month plus selling fees. Individual accounts are not eligible. Developer Central access and SP-API integration are limited to Professional accounts.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Operations are gated by roles (for example Product Listing, Pricing). Breadth was not verified against the full operation catalog; rated moderate as a guess. REST style is inferred from the HTTP host and x-amz header model in the connection docs and was not stated explicitly in the pages opened.",
+  "docs_url": "https://developer-docs.amazon.com/sp-api",
+  "mcp": "official",
+  "mcp_url": "https://github.com/amzn/selling-partner-api-samples/discussions/382",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "The API requires a Professional selling account at $39.99/month plus selling fees before any developer credentials can be created. Once that plan is in place, private-app self-authorization needs no vendor approval. The official MCP (local npm package from the Amazon org) runs against your own SP-API credentials.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+    "quote": "Public applications must use OAuth 2.0 to obtain authorization from selling partners to call the SP-API on the selling partner's behalf."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+    "quote": "The self-authorization process generates an LWA refresh token."
+   },
+   {
+    "field": "access",
+    "url": "https://sell.amazon.com/developers",
+    "quote": "Yes, only Professional selling accounts can access Developer Central and integrate with SP-API."
+   },
+   {
+    "field": "access",
+    "url": "https://sell.amazon.com/developers",
+    "quote": "A Professional selling account is $39.99/month + selling fees."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.amazonservices.com/start/getting-started-for-private-developers",
+    "quote": "Only Professional Selling Accounts can register to develop or integrate with Selling Partner API. Individual accounts are not eligible."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+    "quote": "An LWA access token must be included in calls to all operations except restricted operations, which return Personally Identifiable Information (PII)."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/amzn/selling-partner-api-samples/discussions/382",
+    "quote": "Local MCP for SP-API brings this to the SP-API ecosystem as a consolidated npm package bundling MCP servers for Amazon Selling Partner API development."
+   },
+   {
+    "field": "verdict",
+    "url": "https://sell.amazon.com/developers",
+    "quote": "You must have a Professional selling account and be the primary account user to create an SP-API developer profile."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Amazon Selling Partner API authorization developer docs",
+     "domains": [
+      "developer-docs.amazon.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api",
+     "find": [
+      "authorize",
+      "LWA",
+      "application",
+      "self-authorization",
+      "developer"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Amazon Selling Partner API MCP server github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Selling Partner API register developer account app registration fees",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
+     "find": [
+      "LWA",
+      "refresh token",
+      "Public applications",
+      "private"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.amazonservices.com/start/getting-started-for-private-developers",
+     "find": [
+      "Professional",
+      "Individual",
+      "private application",
+      "self-authorize"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/amzn/selling-partner-api-samples/discussions/382",
+     "find": [
+      "Local MCP",
+      "official",
+      "npm",
+      "sp-api-dev-mcp"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://sell.amazon.com/developers",
+     "find": [
+      "Professional",
+      "39.99",
+      "Create developer profile"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+     "find": [
+      "REST",
+      "HTTP",
+      "endpoint",
+      "JSON"
+     ]
+    }
+   }
+  ]
+ }
+}

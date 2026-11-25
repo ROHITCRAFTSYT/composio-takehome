@@ -1,0 +1,120 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "GitHub developer platform with a REST API for integrations to retrieve data and automate workflows.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Personal access tokens (api_key). OAuth tokens via OAuth apps or GitHub Apps user access tokens (oauth2). GitHub Apps also use installation tokens from a private key JWT and app client ID/secret pairs for some endpoints (other). The fetched docs say GitHub recommends GitHub Apps over OAuth apps.",
+  "access": "self_serve_free",
+  "access_notes": "Personal access tokens and app creation are self-serve. Free-plan pricing was not verified in fetched pages.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Fetched landing page describes the REST API for integrations, data retrieval and automation. Per-object coverage was not enumerated. GraphQL API existence was not verified in fetched pages.",
+  "docs_url": "https://docs.github.com/en/rest",
+  "mcp": "official",
+  "mcp_url": "https://github.com/github/github-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve PAT and GitHub App credentials with documented REST API. Production use of a GitHub App or OAuth app may involve marketplace or org admin steps not verified here.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity (limited by the scopes or permissions you selected) when you make requests to the REST API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "You can also create an OAuth token with an OAuth app to access the REST API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "You can authenticate to the REST API to access more endpoints and have a higher rate limit."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity (limited by the scopes or permissions you selected) when you make requests to the REST API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "GitHub REST API authentication personal access token OAuth apps",
+     "domains": [
+      "docs.github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.github.com/en/rest",
+     "find": [
+      "REST API",
+      "GitHub",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "find": [
+      "OAuth",
+      "personal access token",
+      "GitHub App",
+      "Basic"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "GitHub official MCP server github/github-mcp-server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/github/github-mcp-server",
+     "find": [
+      "MCP",
+      "remote",
+      "official"
+     ]
+    }
+   }
+  ]
+ }
+}

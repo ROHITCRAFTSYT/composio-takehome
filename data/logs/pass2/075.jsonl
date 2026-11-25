@@ -1,0 +1,4 @@
+{"t": 1795591014.9, "tool": "composio_search", "input": {"query": "Asana API free plan developer app review publish app directory", "domains": ["developers.asana.com", "asana.com"]}}
+{"t": 1795591056.8, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server", "find": ["pre-register", "generally available", "OAuth", "free", "plan", "mcp.asana.com"]}}
+{"t": 1795591100.0, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/publish-your-app", "find": ["not required to obtain a token", "beyond your own organization", "internal tool"]}}
+{"t": 1795591138.6, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/quick-start", "find": ["free", "account", "personal access token"]}}

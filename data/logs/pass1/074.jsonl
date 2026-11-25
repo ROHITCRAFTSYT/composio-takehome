@@ -1,0 +1,8 @@
+{"t": 1795529215.5, "tool": "composio_search", "input": {"query": "Jira Cloud REST API authentication API token OAuth 2.0 developer", "domains": ["developer.atlassian.com"]}}
+{"t": 1795529251.2, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/", "find": ["API token", "basic"]}}
+{"t": 1795529280.9, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/", "find": ["OAuth 2.0", "authorization"]}}
+{"t": 1795529354.2, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "find": ["REST API", "REST", "GraphQL"]}}
+{"t": 1795529387.9, "tool": "composio_search", "input": {"query": "Atlassian Rovo MCP server Jira official", "domains": []}}
+{"t": 1795529428.1, "tool": "fetch_page", "input": {"url": "https://www.atlassian.com/software/jira/pricing", "find": ["API", "free"]}}
+{"t": 1795529527.9, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/rovo-mcp", "find": ["cloud-hosted", "OAuth 2.1"]}}
+{"t": 1795529560.0, "tool": "fetch_page", "input": {"url": "https://www.atlassian.com/software/jira/free", "find": ["Free", "free"]}}

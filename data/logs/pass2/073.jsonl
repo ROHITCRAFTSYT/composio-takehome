@@ -1,0 +1,3 @@
+{"t": 1795590861.9, "tool": "fetch_page", "input": {"url": "https://linear.app/pricing", "find": ["API and webhook", "Free"]}}
+{"t": 1795590879.1, "tool": "fetch_page", "input": {"url": "https://linear.app/docs/mcp", "find": ["hosted", "mcp.linear.app"]}}
+{"t": 1795590902.3, "tool": "composio_search", "input": {"query": "Linear MCP server", "domains": []}}

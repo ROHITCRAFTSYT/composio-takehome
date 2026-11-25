@@ -1,0 +1,5 @@
+{"t": 1795530108.1, "tool": "composio_search", "input": {"query": "higgsfield developer API documentation authentication", "domains": ["higgsfield.ai"]}}
+{"t": 1795530144.7, "tool": "fetch_page", "input": {"url": "https://higgsfield.ai/cli", "find": ["api", "key", "auth", "login", "mcp", "pricing"]}}
+{"t": 1795530225.8, "tool": "fetch_page", "input": {"url": "https://docs.higgsfield.ai/docs/authentication", "find": ["API key", "Console", "plan", "credits", "secret", "approval", "access"]}}
+{"t": 1795530252.8, "tool": "fetch_page", "input": {"url": "https://higgsfield.ai/higgsfield-api", "find": ["plan", "subscription", "free", "access", "sign up", "pricing", "contact", "waitlist", "credits"]}}
+{"t": 1795530328.1, "tool": "fetch_page", "input": {"url": "https://docs.higgsfield.ai/docs/help/faq", "find": ["credit", "free", "plan", "billing", "balance", "account", "sign up", "pay"]}}

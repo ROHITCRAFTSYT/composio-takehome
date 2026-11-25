@@ -1,0 +1,162 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "one_liner": "Team messaging and collaboration platform with a developer platform (Web API, apps, and an official MCP server).",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Apps are installed through the v2 OAuth 2.0 flow; bot and user tokens are issued from that install. Not verified: whether a static app-level token from app settings (for Socket Mode-style use) should count as api_key, so left out.",
+  "access": "self_serve_free",
+  "access_notes": "Developer sandboxes are free but need the Slack Developer Program. Internal apps can be built and installed in a workspace without vendor approval (not fully verified on the fetched pages).",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Web API is HTTP RPC-style methods at slack.com/api/METHOD_FAMILY.method, described by Slack as not strictly REST. Mapped to rest as the closest enum value.",
+  "docs_url": "https://docs.slack.dev/apis/web-api/",
+  "mcp": "official",
+  "mcp_url": "https://slack.com/intl/en-in/help/articles/48855576908307-Guide-to-MCP-in-Slack",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Buildable now for internal testing with self-serve OAuth. Commercial distribution to other workspaces needs Slack Marketplace review and approval.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+    "quote": "Slack apps are installed with a v2 OAuth 2.0 flow."
+   },
+   {
+    "field": "access",
+    "url": "https://slack.com/intl/en-gb/help/articles/13345326945043-Build-apps-with-Slack%E2%80%99s-developer-tools",
+    "quote": "Sandboxes are Enterprise environments that you can use to build against all of Slack’s features safely and securely at no cost."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "While it's not a REST API, those familiar with REST should be at home with its foundations in HTTP."
+   },
+   {
+    "field": "mcp",
+    "url": "https://slack.com/intl/en-in/help/articles/48855576908307-Guide-to-MCP-in-Slack",
+    "quote": "The Slack MCP server provides AI agents with secure access to your Slack workspace or Enterprise organisation"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.slack.dev/app-management/distribution/",
+    "quote": "apps intended for commercial distribution should be submitted and approved for listing in the Slack Marketplace."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Slack API authentication OAuth docs",
+     "domains": [
+      "slack.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Slack MCP server official",
+     "domains": [
+      "slack.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.slack.dev/apis/web-api/",
+     "find": [
+      "rest",
+      "api",
+      "method"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.slack.com/authentication",
+     "find": [
+      "bot token",
+      "user token",
+      "app token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.slack.com/authentication/oauth-v2",
+     "find": [
+      "authorization code",
+      "client_id"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://slack.com/help/articles/48855576908307-Guide-to-MCP-in-Slack",
+     "find": [
+      "MCP server",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.slack.com/authentication/sign-in-with-slack",
+     "find": [
+      "Sign in"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Slack developer program free workspace app creation pricing API access",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Slack app directory review requirements distribution",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://slack.com/help/articles/13345326945043-Build-apps-with-Slacks-developer-tools",
+     "find": [
+      "Developer Program",
+      "no cost"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.slack.com/start/distributing",
+     "find": [
+      "review",
+      "distribute"
+     ]
+    }
+   }
+  ]
+ }
+}

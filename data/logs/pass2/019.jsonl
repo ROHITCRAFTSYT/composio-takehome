@@ -1,0 +1,3 @@
+{"t": 1795576706.7, "tool": "fetch_page", "input": {"url": "https://www.gorgias.com/pricing", "find": ["free trial", "API", "credit card"]}}
+{"t": 1795576724.5, "tool": "fetch_page", "input": {"url": "https://www.gorgias.com/blog/gorgias-mcp", "find": ["beta", "OAuth", "endpoint", "paid"]}}
+{"t": 1795576763.3, "tool": "fetch_page", "input": {"url": "https://docs.gorgias.com/en-US/rest-api-208286", "find": ["trial", "Available on all", "OAuth", "Basic"]}}

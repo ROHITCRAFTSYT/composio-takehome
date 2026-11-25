@@ -1,0 +1,5 @@
+{"t": 1795591043.6, "tool": "fetch_page", "input": {"url": "https://developer.clickup.com/docs/authentication", "find": ["personal", "OAuth", "pk_"]}}
+{"t": 1795591068.2, "tool": "fetch_page", "input": {"url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server", "find": ["all plans", "MCP server URL", "official"]}}
+{"t": 1795591104.6, "tool": "fetch_page", "input": {"url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API", "find": ["personal token", "generate"]}}
+{"t": 1795591126.8, "tool": "composio_search", "input": {"query": "ClickUp MCP server pricing free plan API access rate limits", "domains": []}}
+{"t": 1795591176.9, "tool": "fetch_page", "input": {"url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP", "find": ["Free Forever", "per token"]}}

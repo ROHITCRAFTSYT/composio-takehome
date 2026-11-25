@@ -1,0 +1,7 @@
+{"t": 1795527335.8, "tool": "composio_search", "input": {"query": "Gladly API authentication developer docs", "domains": ["gladly.com"]}}
+{"t": 1795527398.5, "tool": "composio_search", "input": {"query": "Gladly MCP server", "domains": []}}
+{"t": 1795527498.2, "tool": "fetch_page", "input": {"url": "https://developer.gladly.com/rest", "find": ["API token", "Basic", "sandbox", "permission"]}}
+{"t": 1795527621.5, "tool": "fetch_page", "input": {"url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude", "find": ["MCP", "connector", "Gladly MCP"]}}
+{"t": 1795527730.4, "tool": "composio_search", "input": {"query": "Gladly API access pricing plan developer token", "domains": ["gladly.com"]}}
+{"t": 1795527809.4, "tool": "composio_search", "input": {"query": "Gladly sandbox free trial sign up developer account", "domains": ["gladly.com"]}}
+{"t": 1795527900.9, "tool": "fetch_page", "input": {"url": "https://developer.gladly.com/rest/", "find": ["REST", "endpoint", "sandbox", "JSON"]}}

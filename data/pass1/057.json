@@ -1,0 +1,120 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Web data platform offering scrapers, proxies, SERP and browser APIs, and datasets for extracting public web data.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key sent as a Bearer token in the Authorization header. Agents using the hosted MCP or CLI also authenticate once with browser OAuth (per the web scraper product page).",
+  "access": "self_serve_free",
+  "access_notes": "Free tier with monthly credits; new accounts get 5,000 free requests per month per the MCP repo README. Paid usage is charged per successful result.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Product page cites 1,400+ scrapers plus Scraper Studio for custom collectors; REST endpoints use Bearer auth.",
+  "docs_url": "https://docs.brightdata.com/api-reference/authentication",
+  "mcp": "official",
+  "mcp_url": "https://github.com/brightdata/brightdata-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "An API key is a secure hashed token used to authenticate with Bright Data API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://brightdata.com/products/web-scraper",
+    "quote": "Agents authenticate once with browser OAuth and can run any of the 1,400+ scrapers or build new ones with Scraper Studio."
+   },
+   {
+    "field": "access",
+    "url": "https://brightdata.com/products/web-scraper",
+    "quote": "Start free with 5,000 monthly credits"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "Authorization header:"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "quote": "Two deployment options: a hosted remote server (one URL, no installation) or a local instance via npx @brightdata/mcp."
+   },
+   {
+    "field": "verdict",
+    "url": "https://brightdata.com/products/web-scraper",
+    "quote": "Connect any agent through the hosted MCP server"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Bright Data API authentication developer docs",
+     "domains": [
+      "brightdata.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Bright Data MCP server official github",
+     "domains": [
+      "brightdata.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.brightdata.com/api-reference/authentication",
+     "find": [
+      "API key",
+      "Bearer",
+      "CLI",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://brightdata.com/products/web-scraper",
+     "find": [
+      "free",
+      "OAuth",
+      "MCP",
+      "trial",
+      "pricing"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/brightdata/brightdata-mcp",
+     "find": [
+      "API_TOKEN",
+      "official",
+      "free",
+      "OAuth"
+     ]
+    }
+   }
+  ]
+ }
+}

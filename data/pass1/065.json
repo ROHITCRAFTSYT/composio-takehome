@@ -1,0 +1,152 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Open-source Postgres development platform with auto-generated REST Data API, Auth, Storage, Realtime and Edge Functions.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Data API uses publishable and secret API keys (sb_publishable_ / sb_secret_) on the apikey header. Hosted Supabase MCP uses OAuth dynamic client registration; docs also mention a personal access token (PAT) and OAuth app for manual auth. The dedicated OAuth apps docs page returned Not found, so the third-party OAuth app flow for the Management API is not verified.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan gives API access with no paid plan or sales contact; free projects are limited to 2 active projects and pause after 1 week of inactivity.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Data API is PostgREST auto-generated from the database schema at /rest/v1/. Management API and full breadth of other services were not inspected in detail.",
+  "docs_url": "https://supabase.com/docs/guides/api",
+  "mcp": "official",
+  "mcp_url": "https://supabase.com/docs/guides/ai-tools/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+    "quote": "Supabase supports four types of API keys:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+    "quote": "This means that you don't need to manually create a personal access token (PAT) or OAuth app to use the server."
+   },
+   {
+    "field": "access",
+    "url": "https://supabase.com/pricing",
+    "quote": "Unlimited API requests"
+   },
+   {
+    "field": "access",
+    "url": "https://supabase.com/pricing",
+    "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects."
+   },
+   {
+    "field": "api_style",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres."
+   },
+   {
+    "field": "mcp",
+    "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+    "quote": "The Supabase MCP server provides tools organized into feature groups."
+   },
+   {
+    "field": "verdict",
+    "url": "https://supabase.com/pricing",
+    "quote": "Unlimited API requests"
+   },
+   {
+    "field": "verdict",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Supabase API keys authentication docs",
+     "domains": [
+      "supabase.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Supabase MCP server official",
+     "domains": [
+      "supabase.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/pricing",
+     "find": [
+      "free",
+      "pro",
+      "API",
+      "5"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/api/api-keys",
+     "find": [
+      "publishable",
+      "secret",
+      "service_role",
+      "personal access token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/platform/oauth-apps",
+     "find": [
+      "OAuth",
+      "authorize",
+      "app review",
+      "approval"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+     "find": [
+      "Supabase MCP",
+      "claude mcp add",
+      "official"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://supabase.com/docs/guides/api",
+     "find": [
+      "REST",
+      "Data API",
+      "GraphQL",
+      "PostgREST"
+     ]
+    }
+   }
+  ]
+ }
+}

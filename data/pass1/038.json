@@ -1,0 +1,138 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Pinterest: visual discovery platform with a v5 REST API covering pins, boards, ads, catalogs and analytics.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code grant (and client credentials grant) against the v5 token endpoint. The token request itself uses HTTP Basic with client_id:client_secret. Trial-access apps can also generate a product-limited test token from the app dashboard, which expires after 24 hours.",
+  "access": "approval_required",
+  "access_notes": "Developers create an app in My apps, then submit a request form for Trial access. Pinterest reviews each request by email. Standard access is a further upgrade for production use.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST endpoints under https://api.pinterest.com/v5/. Trial access covers reading and writing across ads, boards, pins, catalogs and analytics; Standard access raises rate limits.",
+  "docs_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+  "mcp": "official",
+  "mcp_url": "https://developers.pinterest.com/about-pinterest-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Even Trial access needs Pinterest to approve the app request before any credentials work. The official MCP server page says it has not launched yet ('Be the first to know when it launches.'), so it cannot be used today.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+    "quote": "Use the following parameters for the Authorization Code grant:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+    "quote": "Product limited tokens: Once your app is approved for Trial access you can generate a token to test the API without setting up the Oauth flow."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+    "quote": "Application requests are reviewed by Pinterest."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+    "quote": "curl -X POST https://api.pinterest.com/v5/oauth/token"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp",
+    "quote": "Be the first to know when it launches."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pinterest API developers authentication OAuth access token",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+     "find": [
+      "oauth",
+      "access",
+      "token",
+      "api"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+     "find": [
+      "Basic",
+      "oauth",
+      "scope",
+      "client_id"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pinterest.com/docs/getting-started/access-tiers/",
+     "find": [
+      "trial",
+      "standard",
+      "approval",
+      "review",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pinterest MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pinterest MCP server Pinterest Developers",
+     "domains": [
+      "developers.pinterest.com",
+      "github.com/pinterest"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pinterest.com/about-pinterest-mcp",
+     "find": [
+      "MCP",
+      "available",
+      "on the way",
+      "coming",
+      "access"
+     ]
+    }
+   }
+  ]
+ }
+}

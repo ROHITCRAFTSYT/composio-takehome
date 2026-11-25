@@ -1,0 +1,10 @@
+{"t": 1795526848.0, "tool": "composio_search", "input": {"query": "Zendesk MCP server official", "domains": ["zendesk.com", "github.com"]}}
+{"t": 1795526848.4, "tool": "composio_search", "input": {"query": "Zendesk API authentication developer docs", "domains": ["zendesk.com"]}}
+{"t": 1795526903.0, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "find": ["API token", "OAuth", "password", "basic"]}}
+{"t": 1795526959.0, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "find": ["Developer Terms", "internal use", "basic"]}}
+{"t": 1795526961.2, "tool": "composio_search", "input": {"query": "Zendesk API access which plans include API trial free", "domains": ["zendesk.com"]}}
+{"t": 1795527000.2, "tool": "composio_search", "input": {"query": "zendesk official MCP server github zendesk org", "domains": ["github.com", "zendesk.com"]}}
+{"t": 1795527059.1, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/documentation/api-basics/authentication/using-the-api-with-2-factor-authentication-enabled", "find": ["API token", "OAuth", "Admin Center"]}}
+{"t": 1795527123.1, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development", "find": ["14-day", "trial", "free"]}}
+{"t": 1795527124.8, "tool": "fetch_page", "input": {"url": "https://developer.zendesk.com/api-reference/", "find": ["REST", "API reference", "JSON"]}}
+{"t": 1795527182.2, "tool": "fetch_page", "input": {"url": "https://github.com/nealrichardson/zendesk-mcp-server", "find": ["Model Context Protocol", "Zendesk API", "OAuth"]}}

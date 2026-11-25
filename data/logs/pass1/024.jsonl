@@ -1,0 +1,7 @@
+{"t": 1795527353.3, "tool": "composio_search", "input": {"query": "Lark open platform API authentication app access token developer docs", "domains": ["open.larksuite.com"]}}
+{"t": 1795527441.9, "tool": "composio_search", "input": {"query": "Lark larksuite official MCP server github", "domains": ["github.com", "open.larksuite.com"]}}
+{"t": 1795527519.0, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials", "find": ["app_access_token", "tenant_access_token", "user_access_token", "OAuth"]}}
+{"t": 1795527645.4, "tool": "fetch_page", "input": {"url": "https://github.com/larksuite/lark-openapi-mcp", "find": ["official", "npm", "self-built", "app", "Lark"]}}
+{"t": 1795527751.7, "tool": "composio_search", "input": {"query": "Lark open platform create custom app enterprise self-built app admin approval publish permissions", "domains": ["open.larksuite.com"]}}
+{"t": 1795527847.4, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes", "find": ["Custom apps:", "tenant administrator"]}}
+{"t": 1795527951.5, "tool": "fetch_page", "input": {"url": "https://open.larksuite.com/document/ukTMukTMukTM/uYTM5UjL2ETO14iNxkTN/terminology", "find": ["open-apis", "HTTP", "REST"]}}

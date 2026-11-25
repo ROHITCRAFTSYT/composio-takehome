@@ -1,0 +1,190 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "one_liner": "Enterprise CRM and deal-management platform for private equity, investment banking and advisory firms, with a REST Data API.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "REST calls send an API key as a Bearer token. The key is enabled per user under Profile, after an admin grants the API capability. A third-party page (Anduin) describes a client id + API key token exchange at /api/rest/v1/oauth/token, but the vendor docs fetched do not document it, so 'other' was not added. The MCP server uses OAuth 2.0, but that is the MCP layer, not the public REST API. critic: auth confirmed.",
+  "access": "contact_sales",
+  "access_notes": "No free, trial or self-serve developer sandbox seen. Keys are issued only inside a licensed DealCloud site once an admin enables the API capability; the docs direct users to their admin or Customer Success Manager. Intapp also sells sandboxes as paid add-ons via a representative. critic: access confirmed.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "The Data APIs cover create, read, update and delete on core objects such as deals, contacts and companies (entryLists), with a Cells view and a Swagger page per site. Breadth is judged from the Data API overview only.",
+  "docs_url": "https://api.docs.dealcloud.com",
+  "mcp": "official",
+  "mcp_url": "https://api.docs.dealcloud.com/mcp/authentication",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "Credentials depend on a licensed DealCloud site (enterprise contract via Intapp) and an admin granting the API capability. No self-serve developer sandbox was found. critic: verdict confirmed.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://api.docs.dealcloud.com/docs/data",
+    "quote": "Authorization: Bearer {{token}}"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "Scroll down to the API Key section and click Enable."
+   },
+   {
+    "field": "access",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions."
+   },
+   {
+    "field": "access",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "If you do not see the Admin section, contact your organization's admin or DealCloud Customer Success Manager (CSM) for assistance."
+   },
+   {
+    "field": "api_style",
+    "url": "https://api.docs.dealcloud.com/docs/data",
+    "quote": "GET {baseUrl}/api/rest/v4/data/entrydata/rows/{{entryTypeId}}"
+   },
+   {
+    "field": "api_style",
+    "url": "https://api.docs.dealcloud.com/docs/data",
+    "quote": "The Data APIs allow you to work with the core data within your DealCloud site, enabling you to create, retrieve, update, and delete records"
+   },
+   {
+    "field": "mcp",
+    "url": "https://api.docs.dealcloud.com/mcp/authentication",
+    "quote": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user."
+   },
+   {
+    "field": "verdict",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "contact your organization's admin or DealCloud Customer Success Manager (CSM) for assistance."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DealCloud API access pricing developer sandbox",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DealCloud MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "find": [
+      "api",
+      "key",
+      "client"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/docs/data",
+     "find": [
+      "oauth",
+      "token",
+      "client_id",
+      "grant_type"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/mcp",
+     "find": [
+      "license",
+      "Celeste",
+      "read"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DealCloud API authentication oauth token client_credentials",
+     "domains": [
+      "api.docs.dealcloud.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/releases",
+     "find": [
+      "Celeste",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/sdk/python/authentication",
+     "find": [
+      "client_id",
+      "client_secret",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.intapp.com/dealcloud/enterprise-offering",
+     "find": [
+      "sandbox"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/mcp/authentication",
+     "find": [
+      "OAuth",
+      "license",
+      "admin"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "DealCloud API access sandbox developer license pricing",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "find": [
+      "oauth",
+      "client_id",
+      "token",
+      "Client"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "one_liner": "Open-source CRM, available as Twenty Cloud or self-hosted, with REST and GraphQL APIs generated from each workspace schema.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API uses a workspace API key created under Settings → Developers → API (sent as a Bearer token). OAuth is offered only for MCP clients, not for the REST/GraphQL API.",
+  "access": "self_serve_free",
+  "access_notes": "Self-hosting the open-source core is free and API keys are created in-app. Cloud has a free trial without a card, then paid per-user plans ($9/user/month Pro).",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "Core API covers CRUD on records (people, companies, opportunities, custom objects); Metadata API manages objects, fields and relations. Both REST and GraphQL, batch up to 60 records per request.",
+  "docs_url": "https://docs.twenty.com/developers/extend/api",
+  "mcp": "official",
+  "mcp_url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Your workspace-specific API documentation is available under Settings → Developers → API after creating an API key."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+    "quote": "Host Twenty on your own infrastructure at no cost:"
+   },
+   {
+    "field": "access",
+    "url": "https://twenty.com/pricing",
+    "quote": "Start your free trial today without credit card."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "CRUD on records: People, Companies, Opportunities, your custom objects."
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Schema management: create/modify/delete objects, fields, and relations."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp",
+    "quote": "You have two ways to authenticate your MCP client: OAuth (recommended) or API Key."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+    "quote": "Host Twenty on your own infrastructure at no cost:"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "twenty.com developer docs API authentication API key OAuth",
+     "domains": [
+      "twenty.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "twenty CRM official MCP server github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.twenty.com/developers/extend/api",
+     "find": [
+      "Bearer",
+      "API key",
+      "REST",
+      "GraphQL",
+      "Create key",
+      "self-host",
+      "Self-Hosted",
+      "Cloud"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.twenty.com/developers/extend/mcp",
+     "find": [
+      "OAuth",
+      "API Key",
+      "official",
+      "MCP",
+      "Quick Start",
+      "Settings"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "twenty.com pricing plans Pro API access self-hosting free open source",
+     "domains": [
+      "twenty.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.twenty.com/developers/extend/api",
+     "find": [
+      "Authorization: Bearer",
+      "Create key",
+      "Settings → Developers"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.twenty.com/pricing",
+     "find": [
+      "Free",
+      "Pro",
+      "API",
+      "MCP",
+      "trial",
+      "self-hosting"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans",
+     "find": [
+      "API",
+      "Free",
+      "trial",
+      "Pro"
+     ]
+    }
+   }
+  ]
+ }
+}

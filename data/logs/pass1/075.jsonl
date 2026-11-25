@@ -1,0 +1,8 @@
+{"t": 1795529294.7, "tool": "composio_search", "input": {"query": "Asana API authentication personal access token OAuth developers", "domains": ["developers.asana.com", "asana.com"]}}
+{"t": 1795529382.7, "tool": "composio_search", "input": {"query": "Asana MCP server official", "domains": ["developers.asana.com", "github.com", "asana.com"]}}
+{"t": 1795529478.7, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/personal-access-token", "find": ["PAT or OAuth", "Generating a PAT", "personal access token"]}}
+{"t": 1795529550.1, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server", "find": ["OAuth", "generally available", "pre-register"]}}
+{"t": 1795529637.6, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/oauth", "find": ["OAuth", "authorization", "app"]}}
+{"t": 1795529716.9, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/docs/oauth", "find": ["Bearer", "Personal Access Token", "API key", "mcp", "app review", "verified"]}}
+{"t": 1795529787.6, "tool": "fetch_page", "input": {"url": "https://developers.asana.com/reference/rest-api-reference", "find": ["REST", "endpoints", "tasks", "projects"]}}
+{"t": 1795529859.3, "tool": "composio_search", "input": {"query": "Asana API access free plan developer personal access token pricing", "domains": ["asana.com", "developers.asana.com"]}}

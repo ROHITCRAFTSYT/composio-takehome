@@ -1,0 +1,155 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "one_liner": "Workspace docs, pages and databases platform with a public REST API and a hosted MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Internal connection API tokens and personal access tokens (static bearer tokens) plus OAuth 2.0 for public connections.",
+  "access": "self_serve_free",
+  "access_notes": "PATs are created in the Developer portal. On Business and Enterprise plans PAT creation is restricted by default and a workspace owner must enable it, so access there is admin-gated.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Requests go to api.notion.com/v1 with a Notion-Version header. Breadth judgement from the docs; not verified object by object.",
+  "docs_url": "https://developers.notion.com/reference/intro",
+  "mcp": "official",
+  "mcp_url": "https://developers.notion.com/guides/mcp/overview",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve PAT or internal connection gives API access. Public OAuth distribution needs no Marketplace review to start authorization. Business/Enterprise workspaces may need an admin to enable PAT creation.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.notion.com/reference/authentication",
+    "quote": "Bearer tokens are provided when you create an internal connection, create a personal access token, or complete the OAuth flow for a public connection."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+    "quote": "Create PATs in the Developer portal."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.notion.com/guides/notion-api/quick-start",
+    "quote": "On Business and Enterprise plans, PAT creation is restricted by default."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.notion.com/reference/authentication",
+    "quote": "curl 'https://api.notion.com/v1/users'"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.notion.com/guides/mcp/overview",
+    "quote": "Connect an MCP client, such as Claude, ChatGPT, and Gemini, through the Model Context Protocol (MCP)."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.notion.com/guides/authorization/overview",
+    "quote": "You can start authorization as soon as you configure the integration’s client credentials and redirect URI; Marketplace submission or review is not required."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Notion API authentication developers",
+     "domains": [
+      "developers.notion.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/reference/authentication",
+     "find": [
+      "oauth",
+      "token",
+      "integration"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Notion official MCP server",
+     "domains": [
+      "developers.notion.com",
+      "github.com",
+      "notion.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+     "find": [
+      "free",
+      "plan",
+      "workspace",
+      "available"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/guides/get-started/authorization",
+     "find": [
+      "public",
+      "review",
+      "internal",
+      "free",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/guides/mcp/overview",
+     "find": [
+      "hosted",
+      "OAuth",
+      "Notion MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/guides/get-started/quick-start",
+     "find": [
+      "free",
+      "plan",
+      "Plan",
+      "paid",
+      "cost"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+     "find": [
+      "Workers",
+      "PAT creation policy",
+      "plan"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot is a CRM and marketing/sales platform with a REST API for CRM objects and developer tooling.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Docs list two authentication methods: OAuth (public apps) and private app access tokens (sent in the Authorization header). Private app tokens are treated as api_key.",
+  "access": "self_serve_free",
+  "access_notes": "A standard HubSpot account can be free or paid and is where apps and private app tokens are created. Free-tier API limits were seen only in a search snippet, not a fetched page, so the free-tier claim is unverified. Developer test accounts are a separate 90-day trial.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs say all REST APIs are available via private app token or public app OAuth token. Breadth is a judgement call based on CRM object coverage; not separately verified.",
+  "docs_url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+  "mcp": "official",
+  "mcp_url": "https://developers.hubspot.com/ai-tools/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Remote MCP requires the new Developer Platform and a user-level OAuth app with read scopes for the CRM objects needed. Legacy private apps can no longer be created, so new builds go through the developer platform.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "There are two ways to authenticate calls to HubSpot’s APIs: OAuth, and private app access tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "It can be free or paid, and is used as your production environment."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "All REST APIs are available to query via a private app access token or public app OAuth token."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.hubspot.com/ai-tools/mcp",
+    "quote": "HubSpot MCP server supports OAuth 2.0."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "New legacy apps cannot be created."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HubSpot developer API authentication OAuth private app token",
+     "domains": [
+      "developers.hubspot.com",
+      "hubspot.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HubSpot MCP server official",
+     "domains": [
+      "hubspot.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HubSpot pricing API access free developer account",
+     "domains": [
+      "hubspot.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+     "find": [
+      "OAuth",
+      "Private app",
+      "Personal Access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+     "find": [
+      "private app access token",
+      "legacy"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/ai-tools/mcp",
+     "find": [
+      "mcp.hubspot.com",
+      "read scopes",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+     "find": [
+      "free",
+      "test accounts"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines",
+     "find": [
+      "Free and Starter",
+      "Privately distributed"
+     ]
+    }
+   }
+  ]
+ }
+}

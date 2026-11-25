@@ -1,0 +1,6 @@
+{"t": 1795591137.7, "tool": "composio_search", "input": {"query": "Plaid MCP server", "domains": ["plaid.com", "github.com"]}}
+{"t": 1795591203.0, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/resources/mcp", "find": ["remote MCP server hosted by Plaid", "mcp.plaid.com", "https://"]}}
+{"t": 1795591260.5, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/quickstart/", "find": ["Sandbox", "Production", "free", "approval"]}}
+{"t": 1795591320.7, "tool": "fetch_page", "input": {"url": "https://plaid.com/pricing/", "find": ["Free", "Limited Production", "Pay as You Go", "Sandbox", "Custom"]}}
+{"t": 1795591338.0, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/quickstart/", "find": ["production access", "Request Production", "application", "review"]}}
+{"t": 1795591393.7, "tool": "fetch_page", "input": {"url": "https://plaid.com/docs/account/", "find": ["Production", "approval", "review", "Trial", "free"]}}

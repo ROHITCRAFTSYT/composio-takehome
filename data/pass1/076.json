@@ -1,0 +1,152 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Work management platform (boards, items, columns) with a GraphQL API and hosted MCP servers.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal V2 API tokens for direct use; OAuth 2.0 (legacy flow, with a newer OAuth 2.1 flow also documented) for apps acting on behalf of users.",
+  "access": "self_serve_free",
+  "access_notes": "A free developer account gives an API token to start testing, per the authentication and basics pages.",
+  "api_style": "graphql",
+  "api_breadth": "broad",
+  "api_notes": "GraphQL API covers boards, items, column values, users, workspaces and more; Workforms not supported.",
+  "docs_url": "https://developer.monday.com/api-reference/docs/basics",
+  "mcp": "official",
+  "mcp_url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Did not verify whether production OAuth apps need a marketplace or app review; the fetched docs did not state it.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "OAuth 2.0 is a protocol that lets your app request authorization to read or modify data in a user's monday account."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "For building and testing apps or API integrations without touching production data, use a free developer account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "The monday GraphQL API is part of the monday apps framework."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+    "quote": "monday.com provides two MCP servers covering different parts of the developer lifecycle"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "monday.com API authentication OAuth API token developer",
+     "domains": [
+      "developer.monday.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs/authentication",
+     "find": [
+      "OAuth",
+      "token",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs",
+     "find": [
+      "GraphQL",
+      "REST",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "monday.com MCP server official",
+     "domains": [
+      "github.com",
+      "monday.com",
+      "developer.monday.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/apps/docs/oauth",
+     "find": [
+      "OAuth",
+      "authorization",
+      "client",
+      "scope"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+     "find": [
+      "MCP",
+      "OAuth",
+      "official",
+      "hosted"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/apps/docs/manage-user-tokens-and-credentials",
+     "find": [
+      "API",
+      "token",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "find": [
+      "free",
+      "developer",
+      "account"
+     ]
+    }
+   }
+  ]
+ }
+}

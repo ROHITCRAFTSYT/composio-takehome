@@ -1,0 +1,8 @@
+{"t": 1795526799.7, "tool": "composio_search", "input": {"query": "twenty.com developer docs API authentication API key OAuth", "domains": ["twenty.com"]}}
+{"t": 1795526833.6, "tool": "composio_search", "input": {"query": "twenty CRM official MCP server github", "domains": []}}
+{"t": 1795526888.5, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/api", "find": ["Bearer", "API key", "REST", "GraphQL", "Create key", "self-host", "Self-Hosted", "Cloud"]}}
+{"t": 1795526925.6, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/mcp", "find": ["OAuth", "API Key", "official", "MCP", "Quick Start", "Settings"]}}
+{"t": 1795526967.2, "tool": "composio_search", "input": {"query": "twenty.com pricing plans Pro API access self-hosting free open source", "domains": ["twenty.com"]}}
+{"t": 1795527037.0, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/api", "find": ["Authorization: Bearer", "Create key", "Settings → Developers"]}}
+{"t": 1795527065.4, "tool": "fetch_page", "input": {"url": "https://www.twenty.com/pricing", "find": ["Free", "Pro", "API", "MCP", "trial", "self-hosting"]}}
+{"t": 1795527103.0, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/user-guide/billing/capabilities/pricing-plans", "find": ["API", "Free", "trial", "Pro"]}}

@@ -1,0 +1,5 @@
+{"t": 1795591196.2, "tool": "composio_search", "input": {"query": "Paygent Connect payment gateway API developer documentation NMI", "domains": []}}
+{"t": 1795591222.5, "tool": "composio_search", "input": {"query": "Paygent MCP server", "domains": []}}
+{"t": 1795591286.8, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/api", "find": ["sandbox", "certification", "credentials", "approved"]}}
+{"t": 1795591340.4, "tool": "composio_search", "input": {"query": "Paya Connect sandbox account request developer credentials", "domains": ["payaconnect.com", "paya.com", "nuvei.com"]}}
+{"t": 1795591454.3, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/quick-start", "find": ["developer", "sandbox", "portal", "register"]}}

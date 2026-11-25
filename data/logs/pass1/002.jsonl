@@ -1,0 +1,8 @@
+{"t": 1795526777.8, "tool": "composio_search", "input": {"query": "HubSpot developer API authentication OAuth private app token", "domains": ["developers.hubspot.com", "hubspot.com"]}}
+{"t": 1795526812.6, "tool": "composio_search", "input": {"query": "HubSpot MCP server official", "domains": ["hubspot.com", "github.com"]}}
+{"t": 1795526873.6, "tool": "composio_search", "input": {"query": "HubSpot pricing API access free developer account", "domains": ["hubspot.com"]}}
+{"t": 1795526923.7, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth", "find": ["OAuth", "Private app", "Personal Access"]}}
+{"t": 1795526965.3, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/apps/developer-platform/overview", "find": ["private app access token", "legacy"]}}
+{"t": 1795527023.8, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/ai-tools/mcp", "find": ["mcp.hubspot.com", "read scopes", "OAuth"]}}
+{"t": 1795527060.5, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/getting-started/account-types", "find": ["free", "test accounts"]}}
+{"t": 1795527130.1, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines", "find": ["Free and Starter", "Privately distributed"]}}

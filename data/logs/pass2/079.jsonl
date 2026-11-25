@@ -1,0 +1,5 @@
+{"t": 1795591074.4, "tool": "fetch_page", "input": {"url": "https://help.smartsheet.com/articles/2482389-generate-API-key", "find": ["plan", "free", "trial", "Business", "Pro", "available"]}}
+{"t": 1795591094.3, "tool": "composio_search", "input": {"query": "Smartsheet API access free plan or trial developer account API token plan requirements", "domains": []}}
+{"t": 1795591140.9, "tool": "fetch_page", "input": {"url": "https://www.smartsheet.com/pricing", "find": ["API", "Free", "trial", "Business"]}}
+{"t": 1795591172.0, "tool": "fetch_page", "input": {"url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started", "find": ["plan", "trial", "free", "developer", "account"]}}
+{"t": 1795591215.2, "tool": "composio_search", "input": {"query": "Smartsheet free trial 30 days Business plan API access", "domains": ["smartsheet.com", "help.smartsheet.com", "developers.smartsheet.com"]}}

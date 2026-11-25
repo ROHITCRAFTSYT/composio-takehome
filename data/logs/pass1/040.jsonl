@@ -1,0 +1,8 @@
+{"t": 1795527981.7, "tool": "composio_search", "input": {"query": "SendGrid API authentication API key docs", "domains": ["sendgrid.com"]}}
+{"t": 1795528014.0, "tool": "composio_search", "input": {"query": "SendGrid MCP server official", "domains": ["sendgrid.com", "github.com"]}}
+{"t": 1795528091.4, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication", "find": ["API key", "Basic", "OAuth"]}}
+{"t": 1795528127.1, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication", "find": ["API key", "Bearer", "OAuth"]}}
+{"t": 1795528235.2, "tool": "fetch_page", "input": {"url": "https://sendgrid.com/en-us/pricing", "find": ["Free", "free", "API", "trial"]}}
+{"t": 1795528269.2, "tool": "composio_search", "input": {"query": "Twilio SendGrid official MCP server Twilio", "domains": ["twilio.com", "sendgrid.com", "github.com/twilio-labs"]}}
+{"t": 1795528365.5, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/en-us/sendgrid/pricing", "find": ["free plan", "Free", "trial", "100 emails"]}}
+{"t": 1795528468.8, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/ai/mcp", "find": ["SendGrid", "No authentication"]}}

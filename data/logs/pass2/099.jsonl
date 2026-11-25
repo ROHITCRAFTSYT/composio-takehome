@@ -1,0 +1,2 @@
+{"t": 1795591729.2, "tool": "fetch_page", "input": {"url": "https://transcriptapi.com", "find": ["100 free credits", "MCP server", "API key", "OAuth", "per month", "Bearer"]}}
+{"t": 1795591773.9, "tool": "composio_search", "input": {"query": "TranscriptAPI YouTube MCP server pricing free credits", "domains": []}}

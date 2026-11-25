@@ -1,0 +1,55 @@
+{
+  "n": 81,
+  "app": "Stripe",
+  "one_liner": "Payments and billing platform whose REST API covers payments, customers, subscriptions, invoices and more.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://mcp.stripe.com",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "Core auth is secret/restricted API keys (sent as Basic-auth username or Bearer -> api_key per rubric). OAuth 2.0 is documented for Stripe Apps (marketplace.stripe.com/oauth/v2/authorize) and as Connect OAuth for Standard accounts, so oauth2 is included. Workload Identity Federation (cloud identity-token exchange, which would be 'other') is PRIVATE PREVIEW only, so excluded. Access: free account gives sandbox keys immediately; live mode needs the account holder's own business activation/KYC, which I did not treat as vendor approval of the integration (each toolkit user brings their own activated account and restricted key). Publishing a public OAuth Stripe App requires App Review, but the API-key path needs no review, so verdict=ready. Official remote MCP at mcp.stripe.com (OAuth or agent API key).",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "The Stripe API uses API keys to authenticate requests."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth",
+      "quote": "Use the industry standard OAuth 2.0 to authenticate requests to the Stripe API on behalf of your users."
+    },
+    {
+      "field": "api_style",
+      "url": "https://docs.stripe.com/api",
+      "quote": "The Stripe API is organized around REST."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.stripe.com/api",
+      "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.stripe.com/mcp",
+      "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search the Stripe knowledge base, including documentation and support articles."
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "You can view and manage your API keys in the Stripe Dashboard."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/workload-identity-federation",
+      "quote": "Workload Identity Federation is in private preview and available to a limited number of users."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

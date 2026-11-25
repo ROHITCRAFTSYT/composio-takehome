@@ -1,0 +1,3 @@
+{"t": 1795578549.4, "tool": "composio_search", "input": {"query": "Amazon Selling Partner API MCP server", "domains": []}}
+{"t": 1795578579.6, "tool": "fetch_page", "input": {"url": "https://sell.amazon.com/developers", "find": ["Professional", "free", "trial", "9.99", "primary account"]}}
+{"t": 1795578626.9, "tool": "fetch_page", "input": {"url": "https://developer-docs.amazon.com/sp-api", "find": ["REST", "RESTful", "OpenAPI"]}}

@@ -1,0 +1,130 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "one_liner": "Zoho CRM: cloud customer relationship management (leads, contacts, deals) with public REST and GraphQL APIs.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 only (authorization code flow via a registered client, or self client); GraphQL API uses the same OAuth scopes. No API key or basic auth documented.",
+  "access": "self_serve_free",
+  "access_notes": "Zoho CRM pricing page lists a free edition including APIs with 5000 API calls/day; the API limits page lists a Free Edition row with 5000 credits. A free Developer Edition and sandbox also exist. critic: confirmed self_serve_free.",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "REST v8 API across CRM modules with read+write; a GraphQL API at {api-domain}/crm/graphql exists but is query-only. critic: api_style rest -> rest+graphql, vendor GraphQL docs found.",
+  "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Free edition credentials are self-serve. MCP calls use the same API credits and need an OAuth login on first use.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+    "quote": "Connect Zoho CRM to any app and perform actions with 5000 API calls/day."
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "Free Edition | 5000 credits | 5000 credits"
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "Each API call made will result in a reduction of 1 credit."
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.zoho.com/crm/developer/docs/api/graphql/getting-started.html",
+    "quote": "You can send your Zoho CRM GraphQL API query using the below end point."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "Zoho CRM provides these as pre-built MCP servers, so you don't need to build, host, or maintain any infrastructure."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "When you invoke an MCP tool for the first time, the server initiates an OAuth flow."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+     "find": [
+      "Free Edition",
+      "credits"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+     "find": [
+      "MCP",
+      "OAuth",
+      "API key"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zoho CRM free edition API access developer sandbox",
+     "domains": [
+      "zoho.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "find": [
+      "OAuth",
+      "self client",
+      "api key",
+      "authtoken"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zoho CRM GraphQL API",
+     "domains": [
+      "zoho.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+     "find": [
+      "Free",
+      "GraphQL",
+      "Rest APIs"
+     ]
+    }
+   }
+  ]
+ }
+}

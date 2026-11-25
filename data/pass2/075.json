@@ -1,0 +1,115 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "one_liner": "Work management platform for tasks, projects and teams, with a REST API and an official MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for apps acting on behalf of users. Personal access tokens (PAT) generated in the developer console. The MCP server uses OAuth only.",
+  "access": "self_serve_free",
+  "access_notes": "PAT and OAuth app creation are self-serve in the developer console; the quick start says to create a PAT via the developer console with no paid-plan requirement stated. Plan-tier requirement not explicitly confirmed on a pricing page (Asana has a free tier), hence medium confidence. critic: access self_serve_free confirmed; app review is not needed to obtain a token.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "RESTful API at app.asana.com/api/1.0; quick start describes a comprehensive reference for objects, schemas and endpoints. critic: breadth moderate -> broad based on that description (not graded).",
+  "docs_url": "https://developers.asana.com/docs/oauth",
+  "mcp": "official",
+  "mcp_url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: app review is only needed to distribute to workspaces beyond your own organization or to list in the app directory; internal/testing use needs no review, so verdict stays ready.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "Asana supports the authorization code grant flow"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.asana.com/docs/personal-access-token",
+    "quote": "A personal access token (PAT) contains your security credentials for the Asana platform."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.asana.com/docs/quick-start",
+    "quote": "To quickly authorize your API requests, create a personal access token via the developer console"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.asana.com/reference/rest-api-reference",
+    "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+    "quote": "The Asana V2 MCP server is generally available and uses OAuth for authorization."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.asana.com/docs/publish-your-app",
+    "quote": "Submitting your app for review is not required to obtain a token."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.asana.com/docs/publish-your-app",
+    "quote": "If you're building an internal tool or testing your integration, you can create and use an OAuth app without submitting it for review."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Asana API free plan developer app review publish app directory",
+     "domains": [
+      "developers.asana.com",
+      "asana.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+     "find": [
+      "pre-register",
+      "generally available",
+      "OAuth",
+      "free",
+      "plan",
+      "mcp.asana.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/publish-your-app",
+     "find": [
+      "not required to obtain a token",
+      "beyond your own organization",
+      "internal tool"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.asana.com/docs/quick-start",
+     "find": [
+      "free",
+      "account",
+      "personal access token"
+     ]
+    }
+   }
+  ]
+ }
+}

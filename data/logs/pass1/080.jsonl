@@ -1,0 +1,9 @@
+{"t": 1795529516.1, "tool": "composio_search", "input": {"query": "Harvest API v2 authentication personal access token OAuth 2.0", "domains": ["help.getharvest.com", "harvestapp.com"]}}
+{"t": 1795529552.5, "tool": "fetch_page", "input": {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "find": ["personal access token", "OAuth 2.0", "Basic"]}}
+{"t": 1795529642.0, "tool": "fetch_page", "input": {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "find": ["OAuth2 application", "register", "approv", "review", "trial", "free"]}}
+{"t": 1795529669.6, "tool": "composio_search", "input": {"query": "Harvest MCP server official", "domains": ["harvestapp.com", "getharvest.com", "github.com"]}}
+{"t": 1795529761.8, "tool": "fetch_page", "input": {"url": "https://www.harvestapp.com/pricing", "find": ["API", "free", "trial", "Free"]}}
+{"t": 1795529852.4, "tool": "composio_search", "input": {"query": "Harvest pricing free plan API access", "domains": ["harvestapp.com", "getharvest.com"]}}
+{"t": 1795529929.7, "tool": "fetch_page", "input": {"url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API", "find": ["API access for all accounts", "free and trial"]}}
+{"t": 1795530039.5, "tool": "fetch_page", "input": {"url": "https://help.getharvest.com/api-v2/introduction/overview/general", "find": ["HTTP methods", "PATCH", "DELETE", "OAuth2"]}}
+{"t": 1795530066.5, "tool": "fetch_page", "input": {"url": "https://github.com/ianaleck/harvest-mcp-server", "find": ["Harvest account with API access", "Personal Access Tokens"]}}

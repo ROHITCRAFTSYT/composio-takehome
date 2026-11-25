@@ -1,0 +1,9 @@
+{"t": 1795527843.4, "tool": "composio_search", "input": {"query": "Klaviyo API authentication private API key OAuth developers", "domains": ["developers.klaviyo.com", "klaviyo.com"]}}
+{"t": 1795527875.6, "tool": "composio_search", "input": {"query": "Klaviyo MCP server official", "domains": ["developers.klaviyo.com", "github.com", "klaviyo.com"]}}
+{"t": 1795527943.3, "tool": "fetch_page", "input": {"url": "https://developers.klaviyo.com/en/docs/authenticate_", "find": ["private key", "OAuth", "Private key authentication", "Klaviyo-API-Key"]}}
+{"t": 1795527977.0, "tool": "fetch_page", "input": {"url": "https://developers.klaviyo.com/en/docs/set_up_oauth", "find": ["Manage apps", "OAuth app", "approved", "review", "partner", "submit"]}}
+{"t": 1795528014.1, "tool": "fetch_page", "input": {"url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server", "find": ["OAuth", "remote", "authenticate", "MCP"]}}
+{"t": 1795528094.0, "tool": "composio_search", "input": {"query": "Klaviyo pricing free plan API access private API keys", "domains": ["klaviyo.com", "developers.klaviyo.com"]}}
+{"t": 1795528125.7, "tool": "fetch_page", "input": {"url": "https://developers.klaviyo.com/en/reference", "find": ["rate limit", "Private API key", "scopes", "REST"]}}
+{"t": 1795528254.4, "tool": "fetch_page", "input": {"url": "https://help.klaviyo.com/hc/en-us/articles/7423954176283", "find": ["Create Private API Key", "free", "plan", "Settings"]}}
+{"t": 1795528291.4, "tool": "fetch_page", "input": {"url": "https://www.klaviyo.com/solutions/ai/klaviyo-mcp-server", "find": ["free", "plan", "OAuth", "no API key"]}}

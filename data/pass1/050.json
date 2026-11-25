@@ -1,0 +1,257 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "one_liner": "Commas (formerly FanBasis) is a creator/seller platform for checkouts, courses, communities, webinars, affiliates and payments.",
+  "auth_methods": [],
+  "auth_notes": "No official API authentication page was reached. The fetched pages describe APIs and SDKs for enterprise sellers but show no auth method. Left empty rather than guessed.",
+  "access": "contact_sales",
+  "access_notes": "Enterprise API access is described as a dedicated implementation engineer tied to volume. Self-serve API keys were not found in fetched pages. Low confidence.",
+  "api_style": "none",
+  "api_breadth": "narrow",
+  "api_notes": "No API reference or developer docs page was reachable (commas.com/api and /developers returned 404). Style and breadth are unverified.",
+  "docs_url": "",
+  "mcp": "official",
+  "mcp_url": "",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "Enterprise APIs appear to be gated behind sales and implementation. Verdict rests on weak evidence.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "mcp",
+    "url": "https://commas.com",
+    "quote": "Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English."
+   },
+   {
+    "field": "access",
+    "url": "https://commas.com/enterprises",
+    "quote": "Embedded checkout, smart routing, B2B financing and a dedicated implementation engineer behind your volume."
+   },
+   {
+    "field": "verdict",
+    "url": "https://commas.com/enterprises",
+    "quote": "APIs and embeddable components, live in days not quarters."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "fanbasis developer API documentation authentication",
+     "domains": [
+      "fanbasis.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "fanbasis API key developers",
+     "domains": [
+      "fanbasis.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "fanbasis MCP server github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://autodiscover.fanbasis.com",
+     "find": [
+      "API",
+      "MCP",
+      "API key",
+      "OAuth",
+      "free",
+      "sales",
+      "trial",
+      "Enterprise",
+      "developer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.fanbasis.com",
+     "find": [
+      "API",
+      "MCP",
+      "API key",
+      "OAuth",
+      "developer",
+      "free",
+      "pricing",
+      "sales"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Commas developer API docs api key create",
+     "domains": [
+      "docs.fanbasis.com",
+      "developers.fanbasis.com",
+      "fanbasis.com",
+      "commas.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Commas API authentication bearer secret key developer reference",
+     "domains": [
+      "commas.com",
+      "docs.commas.com",
+      "support.commas.com",
+      "fanbasis.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.commas.com/fanbasis-is-now-commas",
+     "find": [
+      "API",
+      "MCP",
+      "developer",
+      "key",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/mcp",
+     "find": [
+      "MCP",
+      "API key",
+      "OAuth",
+      "token",
+      "connect",
+      "plan",
+      "beta"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/api",
+     "find": [
+      "API key",
+      "OAuth",
+      "api",
+      "free",
+      "trial",
+      "sales",
+      "contact",
+      "plan",
+      "token",
+      "developer",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/developers",
+     "find": [
+      "API key",
+      "OAuth",
+      "api",
+      "free",
+      "trial",
+      "sales",
+      "contact",
+      "plan",
+      "token",
+      "developer",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/pricing",
+     "find": [
+      "API key",
+      "OAuth",
+      "api",
+      "free",
+      "trial",
+      "sales",
+      "contact",
+      "plan",
+      "token",
+      "developer",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/enterprise",
+     "find": [
+      "API key",
+      "OAuth",
+      "api",
+      "free",
+      "trial",
+      "sales",
+      "contact",
+      "plan",
+      "token",
+      "developer",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Commas pricing plans API access enterprise contact sales",
+     "domains": [
+      "commas.com",
+      "fanbasis.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://commas.com/enterprises",
+     "find": [
+      "API",
+      "sales",
+      "contact",
+      "SDK",
+      "key",
+      "sandbox",
+      "developer"
+     ]
+    }
+   }
+  ]
+ }
+}

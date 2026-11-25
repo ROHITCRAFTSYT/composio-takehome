@@ -1,0 +1,98 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "Work management platform (boards, items, columns) with a GraphQL API and hosted MCP servers.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal V2 API tokens for direct use; OAuth 2.0 for apps acting on behalf of users; hosted MCP uses OAuth 2.1 or a personal token bearer.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed. A free developer account gives an API token to start testing, per the authentication and basics pages.",
+  "api_style": "graphql",
+  "api_breadth": "broad",
+  "api_notes": "GraphQL API covers boards, items, column values, users, workspaces and more.",
+  "docs_url": "https://developer.monday.com/api-reference/docs/basics",
+  "mcp": "official",
+  "mcp_url": "https://mcp.monday.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: no app review gate found in the OAuth docs; personal tokens work immediately from a free developer account.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "OAuth 2.0 is a protocol that lets your app request authorization to read or modify data in a user's monday account."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "For building and testing apps or API integrations without touching production data, use a free developer account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "The monday GraphQL API is part of the monday apps framework."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+    "quote": "monday.com provides two MCP servers covering different parts of the developer lifecycle"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs/authentication",
+     "find": [
+      "free developer account",
+      "OAuth",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+     "find": [
+      "MCP servers",
+      "hosted",
+      "mcp.monday.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.monday.com/apps/docs/oauth",
+     "find": [
+      "review",
+      "marketplace",
+      "approval",
+      "publish"
+     ]
+    }
+   }
+  ]
+ }
+}

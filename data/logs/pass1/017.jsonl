@@ -1,0 +1,8 @@
+{"t": 1795527326.2, "tool": "composio_search", "input": {"query": "Plain API authentication developer docs", "domains": ["plain.com"]}}
+{"t": 1795527399.0, "tool": "composio_search", "input": {"query": "Plain MCP server official", "domains": []}}
+{"t": 1795527484.3, "tool": "fetch_page", "input": {"url": "https://www.plain.com/docs/graphql/authentication", "find": ["API key", "Bearer", "permissions", "OAuth"]}}
+{"t": 1795527520.9, "tool": "fetch_page", "input": {"url": "https://help.plain.com/article/creating-api-keys", "find": ["Add API key", "free", "plan", "paid", "trial", "copy"]}}
+{"t": 1795527626.8, "tool": "fetch_page", "input": {"url": "https://www.plain.com/docs/integrations/mcp-server", "find": ["official", "OAuth", "No API keys", "Setup", "Claude"]}}
+{"t": 1795527662.3, "tool": "composio_search", "input": {"query": "Plain pricing API access plan", "domains": ["plain.com"]}}
+{"t": 1795527760.6, "tool": "fetch_page", "input": {"url": "https://www.plain.com/llms.txt", "find": ["Pricing", "Startup", "Foundation", "free", "trial", "API key", "OAuth", "GraphQL", "MCP"]}}
+{"t": 1795527798.1, "tool": "fetch_page", "input": {"url": "https://www.plain.com/blog/startups-customer-support-tools", "find": ["Startup plan", "Pricing", "free", "trial"]}}

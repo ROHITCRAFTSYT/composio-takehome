@@ -1,0 +1,104 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 19,
+  "app": "Gorgias",
+  "category": "Support and Helpdesk",
+  "one_liner": "AI-powered customer support helpdesk (ticketing, inbox, AI Agent) for ecommerce brands",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "REST API: HTTP Basic with the account email as username and a REST API key (created in helpdesk settings) as password, so it is classed as api_key. Official MCP endpoint uses OAuth. critic: confirmed.",
+  "access": "self_serve_trial",
+  "access_notes": "Pricing page offers a free trial with no credit card; plans start at $40/mo and no permanent free tier is listed. REST API is available on all Helpdesk plans; owner/admins create API keys. critic: confirmed self_serve_trial.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented REST API at a per-account base URL (https://{your-domain}.gorgias.com/api/). Rate limit 2 req/s on Starter-Advanced plans, 4 req/s on Enterprise. Breadth not fully reviewed.",
+  "docs_url": "https://docs.gorgias.com/en-US/rest-api-208286",
+  "mcp": "official",
+  "mcp_url": "https://mcp.gorgias.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Trial path exists for REST API keys. Official MCP is in open beta for paid plan customers, so production use after the trial needs a paid plan. critic: confirmed ready.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "To authenticate API requests, Gorgias uses HTTP Basic Authentication with three pieces of information: your base API URL, your email address, and an API key."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://www.gorgias.com/blog/gorgias-mcp",
+    "quote": "Authorize the connection via OAuth. You will be prompted to log into your Gorgias account."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "Available on all Helpdesk plans"
+   },
+   {
+    "field": "access",
+    "url": "https://www.gorgias.com/pricing",
+    "quote": "Start free trialNo credit card required"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "The Gorgias REST API lets you read and write data in your helpdesk programmatically."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.gorgias.com/blog/gorgias-mcp",
+    "quote": "Add a new MCP server using this endpoint: mcp.gorgias.com/mcp?gorgias_subdomain=YOUR-SUBDOMAIN."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.gorgias.com/blog/gorgias-mcp",
+    "quote": "Currently in open beta, open to all paid plan customers."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.gorgias.com/pricing",
+     "find": [
+      "free trial",
+      "API",
+      "credit card"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.gorgias.com/blog/gorgias-mcp",
+     "find": [
+      "beta",
+      "OAuth",
+      "endpoint",
+      "paid"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+     "find": [
+      "trial",
+      "Available on all",
+      "OAuth",
+      "Basic"
+     ]
+    }
+   }
+  ]
+ }
+}

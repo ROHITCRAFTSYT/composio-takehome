@@ -1,0 +1,9 @@
+{"t": 1795528507.9, "tool": "composio_search", "input": {"query": "Ahrefs API authentication API key developer docs", "domains": ["ahrefs.com"]}}
+{"t": 1795528537.7, "tool": "composio_search", "input": {"query": "Ahrefs API v3 pricing API access plan", "domains": ["ahrefs.com"]}}
+{"t": 1795528571.3, "tool": "composio_search", "input": {"query": "Ahrefs MCP server official github", "domains": []}}
+{"t": 1795528658.9, "tool": "fetch_page", "input": {"url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management", "find": ["Bearer", "Create", "owner"]}}
+{"t": 1795528683.0, "tool": "fetch_page", "input": {"url": "https://docs.ahrefs.com/en/api/docs/limits-consumption", "find": ["eligible paid plans", "free test queries"]}}
+{"t": 1795528708.4, "tool": "fetch_page", "input": {"url": "https://ahrefs.com/pricing", "find": ["API and MCP access", "Lite"]}}
+{"t": 1795528737.3, "tool": "fetch_page", "input": {"url": "https://lemonado.io/integrations/ahrefs", "find": ["official MCP server", "Free and trial"]}}
+{"t": 1795528809.9, "tool": "fetch_page", "input": {"url": "https://docs.ahrefs.com/en/mcp/docs/copilot-studio", "find": ["MCP key", "Bearer"]}}
+{"t": 1795528835.0, "tool": "fetch_page", "input": {"url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3", "find": ["Enterprise plan", "API v3"]}}

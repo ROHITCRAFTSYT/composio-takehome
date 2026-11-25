@@ -1,0 +1,184 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "one_liner": "Vonage cloud communications APIs (SMS, voice, video, messaging, verify, numbers and more) for developers.",
+  "auth_methods": [
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "API key and secret sent via HTTP Basic (Authorization header) for newer APIs; JWT signed with an application private key for others. Basic with key:secret counts as api_key. Verify supports Basic and JWT. SIP Trunking uses digest with the key/secret.",
+  "access": "self_serve_trial",
+  "access_notes": "Sign-up creates an account with an API key and secret. The account is a free trial with restrictions: SMS only to the registered number and four verified test numbers, voice only to the registered number, trial credit cannot buy virtual numbers, and SMS is tagged with a demo prefix. Removing the restrictions requires upgrading to a paid account.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Many product APIs are listed in the authentication matrix (Accounts, Application, Messages, Numbers, Media, Conversation, Verify, SIP and more). The REST style is inferred from header-based HTTP auth and product listings; no fetched page explicitly says REST, so confidence is medium.",
+  "docs_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+  "mcp": "official",
+  "mcp_url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve trial credentials and documented APIs exist. Production sending to arbitrary numbers needs a paid account, which is a commercial step rather than a review.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Authorization: Basic base64(API_KEY:API_SECRET)"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "JSON Web Token (JWT)"
+   },
+   {
+    "field": "access",
+    "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+    "quote": "After signing up for a Vonage API account, you can start to test the platform."
+   },
+   {
+    "field": "access",
+    "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+    "quote": "To remove these trial restrictions, you'll need to upgrade to a paid account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Authorization: Basic base64(API_KEY:API_SECRET)"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+    "quote": "An MCP (Model Context Protocol) server that provides AI assistants with access to Vonage API documentation, code snippets, tutorials, and troubleshooting resources."
+   },
+   {
+    "field": "verdict",
+    "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+    "quote": "After signing up for a Vonage API account, you can start to test the platform."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Vonage Video API authentication API key application ID JWT",
+     "domains": [
+      "developer.vonage.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Vonage API dashboard free trial account API credentials",
+     "domains": [
+      "developer.vonage.com",
+      "vonage.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Vonage MCP server official github",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "find": [
+      "API key",
+      "API secret",
+      "Basic",
+      "JWT",
+      "application"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.vonage.com/en/getting-started/concepts/accounts",
+     "find": [
+      "free",
+      "trial",
+      "credit",
+      "sign up",
+      "API key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.vonage.com/en/getting-started/overview",
+     "find": [
+      "sign up",
+      "API key",
+      "secret",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+     "find": [
+      "trial credit",
+      "registered number",
+      "restrictions"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.vonage.com/en/documentation",
+     "find": [
+      "API",
+      "REST",
+      "GraphQL",
+      "SDK",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+     "find": [
+      "MCP",
+      "server",
+      "documentation"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.vonage.com/en/api/video",
+     "find": [
+      "REST",
+      "API",
+      "endpoint"
+     ]
+    }
+   }
+  ]
+ }
+}

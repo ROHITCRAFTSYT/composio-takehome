@@ -1,0 +1,7 @@
+{"t": 1795526817.3, "tool": "composio_search", "input": {"query": "Zoho CRM API authentication OAuth developer docs", "domains": ["zoho.com"]}}
+{"t": 1795526879.3, "tool": "composio_search", "input": {"query": "Zoho CRM MCP server official", "domains": ["zoho.com", "github.com"]}}
+{"t": 1795526942.4, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "find": ["self client", "Self Client", "OAuth", "authorization code", "free"]}}
+{"t": 1795527005.1, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "find": ["official", "free", "trial", "plan", "Zoho CRM MCP", "OAuth", "Organization"]}}
+{"t": 1795527063.0, "tool": "composio_search", "input": {"query": "Zoho CRM API access free edition developer plan pricing API credits", "domains": ["zoho.com"]}}
+{"t": 1795527131.1, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html", "find": ["Free Edition", "REST", "RESTful", "Developer Edition", "credits"]}}
+{"t": 1795527174.6, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/api/v8/access-refresh.html", "find": ["self client", "Self Client", "grant_type", "REST"]}}

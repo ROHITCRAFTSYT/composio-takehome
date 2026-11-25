@@ -1,0 +1,8 @@
+{"t": 1795527585.3, "tool": "composio_search", "input": {"query": "LinkedIn Marketing API authentication OAuth 2.0 developer access", "domains": ["learn.microsoft.com", "linkedin.com"]}}
+{"t": 1795527660.6, "tool": "composio_search", "input": {"query": "LinkedIn Marketing API MCP server official", "domains": []}}
+{"t": 1795527759.2, "tool": "fetch_page", "input": {"url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access", "find": ["approval", "Marketing", "partner", "free", "Advertising"]}}
+{"t": 1795527796.5, "tool": "fetch_page", "input": {"url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication", "find": ["OAuth 2.0", "API key", "Basic", "Marketing"]}}
+{"t": 1795527891.3, "tool": "fetch_page", "input": {"url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started", "find": ["REST", "API", "Advertising", "approved", "Developer"]}}
+{"t": 1795527969.9, "tool": "fetch_page", "input": {"url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started", "find": ["REST", "RESTful", "endpoint", "Development Tier"]}}
+{"t": 1795528040.6, "tool": "fetch_page", "input": {"url": "https://www.markifact.com/linkedin-ads-mcp", "find": ["official MCP"]}}
+{"t": 1795528071.3, "tool": "fetch_page", "input": {"url": "https://github.com/danielpopamd/linkedin-ads-mcp", "find": ["MCP server", "LinkedIn Ads"]}}

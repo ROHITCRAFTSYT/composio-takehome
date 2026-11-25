@@ -1,0 +1,3 @@
+{"t": 1795591025.5, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs/authentication", "find": ["free developer account", "OAuth", "token"]}}
+{"t": 1795591047.2, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai", "find": ["MCP servers", "hosted", "mcp.monday.com"]}}
+{"t": 1795591089.5, "tool": "fetch_page", "input": {"url": "https://developer.monday.com/apps/docs/oauth", "find": ["review", "marketplace", "approval", "publish"]}}

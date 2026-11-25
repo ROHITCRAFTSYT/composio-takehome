@@ -1,0 +1,4 @@
+{"t": 1795590803.3, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/atlas/configure-api-access", "find": ["Organization Owner", "free", "M0", "Digest"]}}
+{"t": 1795590838.6, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/mcp-server/overview", "find": ["MongoDB Atlas Managed MCP Server", "hosts", "open source", "MongoDB MCP"]}}
+{"t": 1795590875.6, "tool": "composio_search", "input": {"query": "MongoDB Atlas Administration API free account create API key without paid plan M0 cluster", "domains": ["mongodb.com"]}}
+{"t": 1795590921.3, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/atlas/reference/free-shared-limitations", "find": ["API Access", "Clusters API"]}}

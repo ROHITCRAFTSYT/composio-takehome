@@ -1,0 +1,6 @@
+{"t": 1795530344.6, "tool": "composio_search", "input": {"query": "Salesforce free Developer Edition org API access OAuth username-password JWT bearer flow", "domains": ["salesforce.com"]}}
+{"t": 1795530421.8, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available", "find": ["Enterprise", "Developer", "free", "generally"]}}
+{"t": 1795530560.0, "tool": "composio_search", "input": {"query": "Salesforce Developer Edition free org API access included", "domains": ["salesforce.com"]}}
+{"t": 1795530646.9, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-dev-org.html", "find": ["free and easy"]}}
+{"t": 1795530716.6, "tool": "fetch_page", "input": {"url": "https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5", "find": ["JSON Web Token", "Client Credentials", "Username-Password", "Web Server Flow"]}}
+{"t": 1795530805.8, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-auth-jwt-flow.html", "find": ["JWT flow", "private key"]}}

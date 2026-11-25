@@ -1,0 +1,115 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 58,
+  "app": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Command-line tool that searches for a username across 400+ social networks.",
+  "auth_methods": [
+   "other"
+  ],
+  "auth_notes": "No credentials for the checked sites. The tool requests public profile URLs and reads the response. Local CLI with no user auth.",
+  "access": "self_serve_free",
+  "access_notes": "Open-source CLI installed locally (pipx, pip, uv or Docker). No account or key needed.",
+  "api_style": "sdk_or_cli_only",
+  "api_breadth": "narrow",
+  "api_notes": "Documented interface is the sherlock CLI. Third-party web wrappers exist (e.g. Apify actor), but no official HTTP API was found in the fetched pages.",
+  "docs_url": "https://github.com/sherlock-project/sherlock",
+  "mcp": "community",
+  "mcp_url": "https://github.com/Burnsedia/sherlock-mcp",
+  "verdict": "blocked",
+  "main_blocker": "not_a_saas",
+  "blocker_notes": "Sherlock is a local CLI, not a hosted SaaS with a public API. A community MCP wrapper shells out to the local CLI.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "one_liner",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Hunt down social media accounts by username across 400+ social networks"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+    "quote": "it does not require API keys or login credentials for the sites it checks"
+   },
+   {
+    "field": "access",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "pip or uv may be used in place of pipx"
+   },
+   {
+    "field": "api_style",
+    "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+    "quote": "In addition to the core CLI, there are third-party web-based Sherlock integrations."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/Burnsedia/sherlock-mcp",
+    "quote": "Seamlessly search social media accounts across 400+ platforms using the Model Context Protocol"
+   },
+   {
+    "field": "verdict",
+    "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+    "quote": "In addition to the core CLI, there are third-party web-based Sherlock integrations."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Sherlock username search OSINT github sherlock-project API",
+     "domains": [
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/sherlock-project/sherlock",
+     "find": [
+      "install",
+      "usage",
+      "API",
+      "MCP",
+      "python",
+      "username"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "sherlock username MCP server model context protocol",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+     "find": [
+      "API",
+      "official",
+      "local"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/Burnsedia/sherlock-mcp",
+     "find": [
+      "MCP",
+      "Sherlock",
+      "install"
+     ]
+    }
+   }
+  ]
+ }
+}

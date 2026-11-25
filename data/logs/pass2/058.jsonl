@@ -1,0 +1,2 @@
+{"t": 1795578990.2, "tool": "composio_search", "input": {"query": "Sherlock username search MCP server sherlock-project", "domains": []}}
+{"t": 1795579038.7, "tool": "fetch_page", "input": {"url": "https://github.com/sherlock-project/sherlock", "find": ["pipx", "400+", "API", "MCP", "License"]}}

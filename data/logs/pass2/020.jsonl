@@ -1,0 +1,3 @@
+{"t": 1795576710.9, "tool": "fetch_page", "input": {"url": "https://developer.gladly.com/rest", "find": ["API User", "sandbox", "token", "permission", "free"]}}
+{"t": 1795576732.4, "tool": "composio_search", "input": {"query": "Gladly MCP server", "domains": []}}
+{"t": 1795576783.9, "tool": "composio_search", "input": {"query": "Gladly pricing free trial developer sandbox demo", "domains": ["gladly.com", "gladly.ai"]}}

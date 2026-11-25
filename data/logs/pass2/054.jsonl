@@ -1,0 +1,2 @@
+{"t": 1795578845.3, "tool": "fetch_page", "input": {"url": "https://docs.mrscraper.com/docs/getting-started/billing", "find": ["Free", "100", "1", "000", "credit card"]}}
+{"t": 1795578994.2, "tool": "fetch_page", "input": {"url": "https://github.com/mrscraper-com/mrscraper-mcp", "find": ["MCP server", "seven", "hosted", "OAuth", "API token"]}}

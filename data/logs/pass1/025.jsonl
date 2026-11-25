@@ -1,0 +1,6 @@
+{"t": 1795527370.8, "tool": "composio_search", "input": {"query": "Pumble API documentation authentication", "domains": ["pumble.com"]}}
+{"t": 1795527415.9, "tool": "composio_search", "input": {"query": "Pumble MCP server", "domains": []}}
+{"t": 1795527503.4, "tool": "fetch_page", "input": {"url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration", "find": ["api", "addon", "plan", "free", "price", "key"]}}
+{"t": 1795527545.2, "tool": "fetch_page", "input": {"url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server", "find": ["mcp", "token", "official", "plan"]}}
+{"t": 1795527593.9, "tool": "fetch_page", "input": {"url": "https://pumble.com/learn/pumble/ai-automation-guide", "find": ["authentication", "scope", "plan", "free", "paid", "key"]}}
+{"t": 1795527657.6, "tool": "fetch_page", "input": {"url": "https://pumble.com/pricing", "find": ["API", "addon", "add-on", "Free", "plan"]}}

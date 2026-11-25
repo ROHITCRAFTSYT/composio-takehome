@@ -1,0 +1,7 @@
+{"t": 1795530418.8, "tool": "composio_search", "input": {"query": "Twenty CRM MCP server", "domains": []}}
+{"t": 1795530459.1, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp", "find": ["OAuth", "API Key", "MCP"]}}
+{"t": 1795530534.1, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/api", "find": ["API key", "Bearer", "OAuth", "Settings"]}}
+{"t": 1795530603.7, "tool": "fetch_page", "input": {"url": "https://twenty.com/pricing", "find": ["free trial", "credit card", "self-host", "Free"]}}
+{"t": 1795530682.2, "tool": "composio_search", "input": {"query": "Twenty API authentication OAuth application API key Bearer", "domains": ["docs.twenty.com", "twenty.com"]}}
+{"t": 1795530760.4, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/oauth", "find": ["authorization code", "PKCE", "client credentials", "dynamic client"]}}
+{"t": 1795530796.0, "tool": "fetch_page", "input": {"url": "https://docs.twenty.com/developers/extend/api", "find": ["Create an API key", "Authorization: Bearer"]}}

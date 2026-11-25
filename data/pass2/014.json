@@ -1,0 +1,149 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "one_liner": "Shared-inbox and customer communication platform for email, SMS, chat and other channels, with a Core API for messages, contacts, inboxes and analytics.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Two Bearer-token routes: API tokens created by a company admin in settings, or OAuth for public/partner integrations. OAuth is preferred for public integrations.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: access paid_plan -> self_serve_trial. No free plan, but a free 14-day trial gives Professional-plan access and an admin can create API tokens; the API is not gated to a specific tier (rate limits 50/100/200 rpm on Starter/Professional/Enterprise). Ongoing use needs a paid seat.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Core API covers messages, contacts, channels, inboxes, teammates and analytics, with webhooks. Plugin SDK and Channel API are separate. critic: api_style rest confirmed; replaced unverifiable evidence with the authentication page showing the api2.frontapp.com REST endpoint.",
+  "docs_url": "https://dev.frontapp.com/docs/authentication",
+  "mcp": "official",
+  "mcp_url": "https://help.front.com/en/articles/4883136",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict blocked -> ready, blocker paid_plan -> none. A free trial issues working API credentials and the API is available on every paid plan including Starter, so there is no approval, sales or tier gate; only a paid seat for ongoing use.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.front.com/en/articles/2331",
+    "quote": "You must be a Front company admin to manage API tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://help.front.com/en/articles/2178",
+    "quote": "When you start a free 14-day trial of Front, you'll have access to the Professional plan, which includes certain limitations."
+   },
+   {
+    "field": "access",
+    "url": "https://dev.frontapp.com/docs/rate-limiting",
+    "quote": "By default, Front's API rate limit starts at 50 requests per minute and varies depending on your plan."
+   },
+   {
+    "field": "api_style",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "The Core API uses Bearer tokens to authenticate its user."
+   },
+   {
+    "field": "api_style",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "--url https://api2.frontapp.com/conversations/cnv_123/drafts"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://help.front.com/en/articles/2482",
+    "quote": "The Core API is Front’s “backend” API that allows developers to access and update almost all elements in Front"
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.front.com/en/articles/4883136",
+    "quote": "Front's MCP server lets you and your teammates connect Front to AI assistants like Claude, ChatGPT, Gemini, and Microsoft Copilot."
+   },
+   {
+    "field": "verdict",
+    "url": "https://dev.frontapp.com/docs/rate-limiting",
+    "quote": "Rate limit increases beyond the default limits require the Professional plan or higher."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Front MCP server",
+     "domains": [
+      "front.com",
+      "dev.frontapp.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dev.frontapp.com/docs/getting-started",
+     "find": [
+      "free",
+      "trial",
+      "plan",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://front.com/pricing",
+     "find": [
+      "API",
+      "Starter",
+      "Growth",
+      "Scale",
+      "trial",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "find": [
+      "API tokens",
+      "plan",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.front.com/en/articles/4883136",
+     "find": [
+      "plan",
+      "admin",
+      "Front's MCP server"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dev.frontapp.com/docs/rate-limiting",
+     "find": [
+      "plan",
+      "Starter",
+      "Professional"
+     ]
+    }
+   }
+  ]
+ }
+}

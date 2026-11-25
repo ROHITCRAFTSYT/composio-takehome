@@ -1,0 +1,3 @@
+{"t": 1795531086.0, "tool": "composio_search", "input": {"query": "Discord official MCP server", "domains": []}}
+{"t": 1795531159.7, "tool": "composio_search", "input": {"query": "Discord developer portal create app bot token free", "domains": ["discord.com", "docs.discord.com"]}}
+{"t": 1795531345.3, "tool": "fetch_page", "input": {"url": "https://docs.discord.com/developers/bots/overview", "find": ["free", "approval", "verification", "Create an application", "intents"]}}

@@ -1,0 +1,4 @@
+{"t": 1795577193.6, "tool": "composio_search", "input": {"query": "HighLevel developer marketplace create app free developer account free trial API access", "domains": []}}
+{"t": 1795577664.9, "tool": "fetch_page", "input": {"url": "https://help.gohighlevel.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace", "find": ["account", "trial", "free", "sub-account", "review", "approval"]}}
+{"t": 1795577864.3, "tool": "fetch_page", "input": {"url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount", "find": ["developer account", "sub-account", "test", "free"]}}
+{"t": 1795577983.9, "tool": "fetch_page", "input": {"url": "https://www.gohighlevel.com/pricing", "find": ["free trial", "14-day", "day free"]}}

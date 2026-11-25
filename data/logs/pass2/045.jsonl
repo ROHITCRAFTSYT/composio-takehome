@@ -1,0 +1,4 @@
+{"t": 1795578291.7, "tool": "fetch_page", "input": {"url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started", "find": ["license", "licence", "free", "sandbox", "trial", "IMS"]}}
+{"t": 1795578460.3, "tool": "composio_search", "input": {"query": "Adobe Commerce MCP server official", "domains": []}}
+{"t": 1795578541.0, "tool": "composio_search", "input": {"query": "Magento Open Source free REST API integration token admin", "domains": []}}
+{"t": 1795578633.4, "tool": "fetch_page", "input": {"url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token", "find": ["integration", "Open Source", "token"]}}

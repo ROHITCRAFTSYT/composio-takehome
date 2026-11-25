@@ -1,0 +1,3 @@
+{"t": 1795590873.3, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/rovo-mcp", "find": ["cloud-hosted", "Model Context Protocol"]}}
+{"t": 1795590892.7, "tool": "fetch_page", "input": {"url": "https://www.atlassian.com/software/jira/pricing", "find": ["Free forever", "10 users"]}}
+{"t": 1795590917.5, "tool": "fetch_page", "input": {"url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/", "find": ["API token", "deprecated"]}}

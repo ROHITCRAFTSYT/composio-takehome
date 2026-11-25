@@ -1,0 +1,92 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "LinkedIn Ads (Advertising API) for managing ad accounts, campaigns, targeting and reporting on LinkedIn.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Member (3-legged) OAuth 2.0 is required for Marketing APIs; 2-legged application auth is not supported for them.",
+  "access": "approval_required",
+  "access_notes": "Self-serve developer app, but Advertising API permissions must be approved via the Developer Portal (Products tab, add Advertising API); Audiences needs approved Advertising API partner status. critic: access approval_required confirmed against vendor getting-access page; no free/trial path without approval.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Versioned REST endpoints under api.linkedin.com/rest covering ad accounts, campaign groups, campaigns, targeting facets/entities and audience counts. Marketing version 202601 sunsets 2027-01-15.",
+  "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+  "mcp": "community",
+  "mcp_url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Advertising API product must be approved by LinkedIn before real ad-account access. critic: no official LinkedIn MCP server found; several third-party sources (Markifact, PaidSync, AdPlug) state LinkedIn has not published one.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+    "quote": "The LinkedIn API uses OAuth 2.0 for member (user) authorization and API authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+    "quote": "Developers seeking to build a marketing related integration using Advertising API permissions must be approved."
+   },
+   {
+    "field": "api_style",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+    "quote": "POST https://api.linkedin.com/rest/adAccounts"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+    "quote": "This MCP server connects Claude Desktop (or any MCP-compatible client) to the LinkedIn Marketing API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.markifact.com/linkedin-ads-mcp",
+    "quote": "First-party building blocks, no official MCP"
+   },
+   {
+    "field": "verdict",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+    "quote": "Audiences permissions may be applied for after becoming an approved Advertising API partner."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "LinkedIn Ads MCP server official LinkedIn Marketing Solutions",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+     "find": [
+      "Advertising API",
+      "approved",
+      "Development"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+     "find": [
+      "Advertising API",
+      "approved",
+      "Development"
+     ]
+    }
+   }
+  ]
+ }
+}

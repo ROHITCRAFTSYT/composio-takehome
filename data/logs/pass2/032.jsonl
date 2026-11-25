@@ -1,0 +1,4 @@
+{"t": 1795577167.3, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization", "find": ["system user", "access token", "Standard", "Advanced", "Limited", "Full", "App Review"]}}
+{"t": 1795577378.4, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview", "find": ["hosted", "OAuth", "access token", "app review", "available"]}}
+{"t": 1795577677.7, "tool": "composio_search", "input": {"query": "Meta Marketing API system user access token generate", "domains": ["developers.facebook.com"]}}
+{"t": 1795577889.1, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview", "find": ["system user", "access token", "REST", "Graph API", "HTTP"]}}

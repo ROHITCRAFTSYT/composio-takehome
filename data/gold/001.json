@@ -1,0 +1,54 @@
+{
+  "n": 1,
+  "app": "Salesforce",
+  "one_liner": "CRM platform with very broad REST, GraphQL, Bulk and SOAP APIs; a free Developer Edition org gives OAuth API access, and Salesforce runs GA hosted MCP servers.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://github.com/forcedotcom/mcp-hosted",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "auth_methods: OAuth 2.0 flows via Connected Apps / External Client Apps (web server, JWT bearer, client credentials, etc.) are the documented method. Trailhead also mentions authenticating with a session ID from the SOAP API login() call; that path is legacy (login() is unavailable in API v65.0+ and scheduled for full retirement in Summer '27), so 'other' was not added. A strict 'list every method' reading could make this ['oauth2','other'] -- flagged as ambiguous. access: free Developer Edition org (no time limit) includes API access -> self_serve_free. api_style: REST API plus a GraphQL API (also SOAP, Bulk, Pub/Sub) -> rest+graphql. mcp: forcedotcom/mcp-hosted (Salesforce GitHub org) documents Salesforce Hosted MCP Servers, now GA; the Salesforce DX local MCP server (@salesforce/mcp) also exists but reached EOL 2026-11-02. Hosted MCP billing is tied to Flex Credits, which does not change the label. developer.salesforce.com returned HTTP 403 to automated fetches, so evidence uses Trailhead and the vendor GitHub org instead.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/api_basics/api_basics_overview",
+      "quote": "You can either use one of the supported OAuth flows or authenticate with a session ID retrieved from the SOAP API login() call."
+    },
+    {
+      "field": "access",
+      "url": "https://trailhead.salesforce.com/content/learn/projects/create-a-no-code-preference-form/sign-up-for-a-developer-edition-org-with-preference-manager",
+      "quote": "Sign up for a free Developer Edition org with Preference Manager"
+    },
+    {
+      "field": "access",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/api_basics/api_basics_overview",
+      "quote": "All you need is a Trailhead Playground or an org on one of the following editions: Enterprise Edition, Unlimited Edition, Developer Edition, Performance Edition, or Professional Edition (with an add-on)."
+    },
+    {
+      "field": "api_style",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/api_basics/api_basics_overview",
+      "quote": "REST API is a simple and powerful web service based on RESTful principles."
+    },
+    {
+      "field": "api_style",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/api_basics/api_basics_overview",
+      "quote": "GraphQL API overcomes the challenges posed by traditional REST APIs through field selection, resource aggregation, and schema introspection."
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/forcedotcom/mcp-hosted",
+      "quote": "Hosted MCP servers are now generally available (GA)."
+    },
+    {
+      "field": "verdict",
+      "url": "https://trailhead.salesforce.com/content/learn/projects/create-a-no-code-preference-form/sign-up-for-a-developer-edition-org-with-preference-manager",
+      "quote": "Sign up for a free Developer Edition org with Preference Manager"
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

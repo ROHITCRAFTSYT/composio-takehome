@@ -1,0 +1,8 @@
+{"t": 1795529160.7, "tool": "composio_search", "input": {"query": "Airtable API authentication personal access token OAuth", "domains": ["airtable.com", "support.airtable.com"]}}
+{"t": 1795529202.3, "tool": "composio_search", "input": {"query": "Airtable MCP server official", "domains": []}}
+{"t": 1795529288.9, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/api/authentication", "find": ["personal access token", "OAuth", "API key"]}}
+{"t": 1795529355.5, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/api/introduction", "find": ["REST", "rate limit", "Authorization"]}}
+{"t": 1795529422.0, "tool": "fetch_page", "input": {"url": "https://www.airtable.com/articles/mcp-server-interfaces-automations", "find": ["official", "MCP", "plan"]}}
+{"t": 1795529465.0, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/api/billing-plans", "find": ["free", "API", "plan"]}}
+{"t": 1795529585.5, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/api/oauth-reference", "find": ["OAuth", "register", "integration"]}}
+{"t": 1795529700.6, "tool": "fetch_page", "input": {"url": "https://www.airtable.com/articles/mcp-server-interfaces-automations", "find": ["official MCP server"]}}

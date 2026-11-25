@@ -1,0 +1,6 @@
+claude-agent-sdk>=0.2
+composio>=0.34
+httpx>=0.28
+playwright>=1.50
+pydantic>=2.7
+trafilatura>=2.0

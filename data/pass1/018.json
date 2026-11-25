@@ -1,0 +1,143 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "one_liner": "Help Scout is a customer support helpdesk (shared inbox, conversations, Docs knowledge base) with a public REST API.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Inbox API uses OAuth 2.0 (Authorization Code and Client Credentials flows). Docs API uses an API key passed via HTTP Basic auth in the username field.",
+  "access": "self_serve_trial",
+  "access_notes": "Self-serve sign-up. API access sits on the paid Standard, Plus and Pro plans; the pricing page offers a 15-day free trial of Standard or Plus with no credit card. Whether the Free plan includes API access is not clear from the fetched pricing table, so it is not claimed here. Client Credentials apps can be created without a review step shown in the docs.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Base URL https://api.helpscout.net/v2. Per the fetched Help Scout MCP comparison, the Inbox API carries replies, notes, tags, workflows and webhooks. Breadth is a judgement call from that source.",
+  "docs_url": "https://developer.helpscout.com/mailbox-api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.helpscout.net/mcp",
+  "verdict": "ready",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Production API use needs a paid plan after the 15-day trial. The official MCP server is read-only for new connections, so write actions need the Inbox API.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.helpscout.com/docs-api",
+    "quote": "Authentication is based on API keys."
+   },
+   {
+    "field": "access",
+    "url": "https://www.helpscout.com/pricing",
+    "quote": "When you sign up for a free trial of the Standard or Plus plan, you’ll get 15 days to take all of the plan’s features for a test drive — no credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "https://api.helpscout.net/v2/users/me"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.scalekit.com/blog/helpscout-mcp-vs-api",
+    "quote": "Help Scout hosts the server at https://mcp.helpscout.net/mcp."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "The Client Credentials flow is meant for internal integrations."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.scalekit.com/blog/helpscout-mcp-vs-api",
+    "quote": "It is on the Standard, Plus and Pro plans for any user with API access"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Help Scout API authentication OAuth API key developer docs",
+     "domains": [
+      "helpscout.com",
+      "developer.helpscout.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Help Scout MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+     "find": [
+      "OAuth 2.0",
+      "Client Credential",
+      "Authorization Code",
+      "API key",
+      "Personal"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.helpscout.com/docs-api",
+     "find": [
+      "API key",
+      "Basic Authentication",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.scalekit.com/blog/helpscout-mcp-vs-api",
+     "find": [
+      "MCP",
+      "official",
+      "write",
+      "OAuth",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Help Scout pricing plans API access Plus Standard Free trial",
+     "domains": [
+      "helpscout.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.helpscout.com/pricing",
+     "find": [
+      "API",
+      "free trial",
+      "Free plan"
+     ]
+    }
+   }
+  ]
+ }
+}

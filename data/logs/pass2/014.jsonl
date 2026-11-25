@@ -1,0 +1,6 @@
+{"t": 1795530609.0, "tool": "composio_search", "input": {"query": "Front MCP server", "domains": ["front.com", "dev.frontapp.com", "github.com"]}}
+{"t": 1795530649.6, "tool": "fetch_page", "input": {"url": "https://dev.frontapp.com/docs/getting-started", "find": ["free", "trial", "plan", "token"]}}
+{"t": 1795530727.9, "tool": "fetch_page", "input": {"url": "https://front.com/pricing", "find": ["API", "Starter", "Growth", "Scale", "trial", "free"]}}
+{"t": 1795530812.0, "tool": "fetch_page", "input": {"url": "https://dev.frontapp.com/docs/authentication", "find": ["API tokens", "plan", "Bearer"]}}
+{"t": 1795530843.6, "tool": "fetch_page", "input": {"url": "https://help.front.com/en/articles/4883136", "find": ["plan", "admin", "Front's MCP server"]}}
+{"t": 1795530873.7, "tool": "fetch_page", "input": {"url": "https://dev.frontapp.com/docs/rate-limiting", "find": ["plan", "Starter", "Professional"]}}

@@ -1,0 +1,2 @@
+{"t": 1795578235.9, "tool": "composio_search", "input": {"query": "Shopify development store free Dev Dashboard create app", "domains": ["shopify.dev"]}}
+{"t": 1795578425.2, "tool": "fetch_page", "input": {"url": "https://shopify.dev/docs/apps/build/stores/development-stores", "find": ["free", "dev store"]}}

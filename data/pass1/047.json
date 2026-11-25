@@ -1,0 +1,170 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "one_liner": "Ecommerce platform whose store data (products, orders, customers, categories) is reachable through a REST API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Custom apps use a non-expiring secret access token (api_key style Bearer token). Public/distributed apps use an OAuth-style authorization_code exchange.",
+  "access": "self_serve_free",
+  "access_notes": "API needs a paid store plan, but Ecwid offers a free upgrade to a paid plan for developers who meet listed criteria (customization project, safe-environment integration, public app development). Criteria are conditional, so confidence is medium.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Breadth judgement from the REST API overview and order endpoint listings seen in search results; the overview page itself was not fetched.",
+  "docs_url": "https://docs.ecwid.com/api-reference",
+  "mcp": "community",
+  "mcp_url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Custom app tokens are self-serve on a paid or upgraded store. Public app distribution needs a partner contract, which is outside building an agent toolkit.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ecwid.com/launch-apps/native-and-external-apps",
+    "quote": "Always authorization_code."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ecwid.com/develop-apps/app-settings",
+    "quote": "Access tokens also do not expire, so once you get them for your custom app, save and use these tokens on your side for as long as you need."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+    "quote": "Only stores on paid plans can access API."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+    "quote": "Ecwid provides a free upgrade to a paid plan if you:"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+    "quote": "Such requests require only two variables: store ID and access token."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+    "quote": "Manage your Ecwid store from Claude, Cursor, or any MCP client"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.ecwid.com/develop-apps/app-settings",
+    "quote": "Access tokens also do not expire, so once you get them for your custom app, save and use these tokens on your side for as long as you need."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ecwid REST API developers authentication OAuth token",
+     "domains": [
+      "api-docs.ecwid.com",
+      "ecwid.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://api-docs.ecwid.com/docs/authentication",
+     "find": [
+      "oauth",
+      "token",
+      "api"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+     "find": [
+      "secret token",
+      "custom app",
+      "free",
+      "sign up",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ecwid.com/develop-apps/app-settings",
+     "find": [
+      "access token",
+      "oauth",
+      "expire",
+      "store"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ecwid MCP server official",
+     "domains": [
+      "ecwid.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ecwid.com/launch-apps/native-and-external-apps",
+     "find": [
+      "authorization_code",
+      "OAuth",
+      "authorize",
+      "public app"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ecwid custom apps API access free plan pricing developer",
+     "domains": [
+      "ecwid.com",
+      "docs.ecwid.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+     "find": [
+      "paid plan",
+      "free upgrade",
+      "trial",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+     "find": [
+      "Ecwid",
+      "secret token",
+      "MCP"
+     ]
+    }
+   }
+  ]
+ }
+}

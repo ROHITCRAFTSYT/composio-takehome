@@ -1,0 +1,6 @@
+{"t": 1795527376.8, "tool": "composio_search", "input": {"query": "Telegram Bot API authentication bot token", "domains": ["core.telegram.org"]}}
+{"t": 1795527441.3, "tool": "fetch_page", "input": {"url": "https://core.telegram.org/bots/api", "find": ["bot token", "Bot API", "Authorization"]}}
+{"t": 1795527564.4, "tool": "composio_search", "input": {"query": "Telegram official MCP server bot API", "domains": []}}
+{"t": 1795527608.7, "tool": "fetch_page", "input": {"url": "https://core.telegram.org/bots/tutorial", "find": ["newbot", "token", "free"]}}
+{"t": 1795527752.7, "tool": "fetch_page", "input": {"url": "https://core.telegram.org/widgets/login", "find": ["access_token", "OAuth", "redirect_uri"]}}
+{"t": 1795527852.6, "tool": "fetch_page", "input": {"url": "https://www.usecarly.com/blog/telegram-mcp", "find": ["official MCP server", "community"]}}

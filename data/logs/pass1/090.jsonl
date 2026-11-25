@@ -1,0 +1,7 @@
+{"t": 1795529812.0, "tool": "composio_search", "input": {"query": "PitchBook API documentation authentication", "domains": ["pitchbook.com"]}}
+{"t": 1795529844.4, "tool": "composio_search", "input": {"query": "PitchBook research API access pricing", "domains": ["pitchbook.com"]}}
+{"t": 1795529922.5, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/help/PitchBook-api", "find": ["API key", "request access", "authentication", "token", "Direct Data", "trial", "endpoint", "MCP"]}}
+{"t": 1795529985.0, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/help/pitchbook-premium-connector-for-claude-by-anthropic", "find": ["MCP", "SSO", "licensed", "subscription"]}}
+{"t": 1795530046.9, "tool": "composio_search", "input": {"query": "PitchBook MCP server github official", "domains": []}}
+{"t": 1795530076.7, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/help/PitchBook-api", "find": ["API key", "request access", "authentication", "token", "Direct Data", "trial", "endpoint"]}}
+{"t": 1795530138.7, "tool": "fetch_page", "input": {"url": "https://pitchbook.com/products/direct-access-data", "find": ["API", "contact", "request", "sales", "license", "subscription"]}}

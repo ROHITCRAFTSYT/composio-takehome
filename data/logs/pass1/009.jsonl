@@ -1,0 +1,7 @@
+{"t": 1795526852.1, "tool": "composio_search", "input": {"query": "Copper CRM API authentication developer docs", "domains": ["copper.com"]}}
+{"t": 1795526890.3, "tool": "composio_search", "input": {"query": "Copper CRM MCP server", "domains": []}}
+{"t": 1795526948.0, "tool": "fetch_page", "input": {"url": "https://developer.copper.com/introduction/authentication.html", "find": ["API Key", "OAuth", "approval", "token", "free"]}}
+{"t": 1795526991.3, "tool": "fetch_page", "input": {"url": "https://www.copper.com/mcp", "find": ["official", "beta", "waitlist", "MCP"]}}
+{"t": 1795527037.5, "tool": "fetch_page", "input": {"url": "https://developer.copper.com/introduction/oauth/index.html", "find": ["register", "approv", "review", "partner"]}}
+{"t": 1795527085.8, "tool": "fetch_page", "input": {"url": "https://www.copper.com/pricing", "find": ["API", "integration", "plan"]}}
+{"t": 1795527156.3, "tool": "fetch_page", "input": {"url": "https://developer.copper.com", "find": ["RESTful", "JSON", "API"]}}

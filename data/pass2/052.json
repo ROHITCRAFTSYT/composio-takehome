@@ -1,0 +1,102 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "SE Ranking: SEO data platform (keywords, rank tracking, backlinks, site audits, domain research) with a REST Data API and an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "API key from the account's API section, sent as 'Authorization: Token <key>' (recommended) or as an apikey query parameter. Both are static keys, so both map to api_key. critic: confirmed.",
+  "access": "self_serve_trial",
+  "access_notes": "API access comes with any paid plan (Core and Growth) and can be tested in the free trial account (trial includes 100K credits). Pay-as-you-go needs a $50 minimum deposit and an API add-on starts at $149/month. No permanent free tier seen. critic: access self_serve_trial confirmed.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST endpoints under api.seranking.com/v1 with GET and POST, including backlinks, keyword research, website audit and project management. critic: confirmed.",
+  "docs_url": "https://seranking.com/api/data/getting-started/",
+  "mcp": "official",
+  "mcp_url": "https://seranking.com/mcp.html",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Trial credentials are self-serve and the documented API is public; no vendor approval step. Ongoing use needs a paid plan or add-on after the trial. critic: verdict confirmed.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://seranking.com/api/data/getting-started/",
+    "quote": "Include an Authorization header in your request, with the value Token YOUR_API_KEY."
+   },
+   {
+    "field": "access",
+    "url": "https://seranking.com/api.html",
+    "quote": "API access comes with any SE Ranking plan (Core at $129/mo and Growth at $279/mo)."
+   },
+   {
+    "field": "access",
+    "url": "https://seranking.com/api.html",
+    "quote": "You can even test it in the free trial account."
+   },
+   {
+    "field": "api_style",
+    "url": "https://seranking.com/api/data/getting-started/",
+    "quote": "Here is an example of a more complex POST request to the /backlinks/summary endpoint."
+   },
+   {
+    "field": "mcp",
+    "url": "https://seranking.com/mcp.html",
+    "quote": "The MCP server is centrally hosted and managed by SE Ranking. Connect with one URL, no manual configuration required."
+   },
+   {
+    "field": "verdict",
+    "url": "https://seranking.com/mcp.html",
+    "quote": "Create your account and get 100K free credits to run real queries from the start."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://seranking.com/api.html",
+     "find": [
+      "trial",
+      "free",
+      "plan",
+      "Core",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://seranking.com/api/data/getting-started/",
+     "find": [
+      "trial",
+      "free",
+      "credit",
+      "plan",
+      "key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://seranking.com/mcp.html",
+     "find": [
+      "free credits",
+      "free",
+      "trial",
+      "plan",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

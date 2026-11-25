@@ -1,0 +1,4 @@
+{"t": 1795578949.6, "tool": "fetch_page", "input": {"url": "https://github.com/brightdata/brightdata-mcp", "find": ["free", "5", "000", "hosted", "API_TOKEN"]}}
+{"t": 1795579001.8, "tool": "fetch_page", "input": {"url": "https://brightdata.com/products/web-scraper", "find": ["Start free", "5", "000", "OAuth", "hosted MCP"]}}
+{"t": 1795579146.7, "tool": "fetch_page", "input": {"url": "https://github.com/brightdata/brightdata-mcp", "find": ["OAuth", "authorize"]}}
+{"t": 1795579185.1, "tool": "composio_search", "input": {"query": "Bright Data API OAuth authorization third-party app", "domains": ["docs.brightdata.com"]}}

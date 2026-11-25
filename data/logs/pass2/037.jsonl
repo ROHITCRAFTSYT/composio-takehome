@@ -1,0 +1,4 @@
+{"t": 1795577386.2, "tool": "fetch_page", "input": {"url": "https://developer.systeme.io/docs/mcp-server", "find": ["MCP", "key", "expire", "OAuth"]}}
+{"t": 1795577690.0, "tool": "fetch_page", "input": {"url": "https://systeme.io/pricing", "find": ["API", "Free", "public"]}}
+{"t": 1795577883.0, "tool": "fetch_page", "input": {"url": "https://systeme.io/circle-alternative", "find": ["API access", "Free plan"]}}
+{"t": 1795578028.4, "tool": "fetch_page", "input": {"url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io", "find": ["plan", "MCP", "Settings"]}}

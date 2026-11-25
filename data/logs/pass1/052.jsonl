@@ -1,0 +1,7 @@
+{"t": 1795528315.7, "tool": "composio_search", "input": {"query": "SE Ranking API documentation authentication", "domains": ["seranking.com"]}}
+{"t": 1795528350.5, "tool": "fetch_page", "input": {"url": "https://seranking.com/api.html", "find": ["api", "key", "token", "oauth", "plan"]}}
+{"t": 1795528431.5, "tool": "composio_search", "input": {"query": "SE Ranking MCP server", "domains": []}}
+{"t": 1795528524.0, "tool": "fetch_page", "input": {"url": "https://seranking.com/api.html", "find": ["included", "subscription", "free", "trial", "contact", "pay-as-you-go"]}}
+{"t": 1795528544.1, "tool": "fetch_page", "input": {"url": "https://seranking.com/api/data/getting-started", "find": ["Authorization", "Token", "Subscription", "key"]}}
+{"t": 1795528616.3, "tool": "fetch_page", "input": {"url": "https://seranking.com/mcp.html", "find": ["Remote", "MCP", "free", "trial", "plan", "API key"]}}
+{"t": 1795528648.5, "tool": "fetch_page", "input": {"url": "https://seranking.com/api/data/reference", "find": ["Authorization", "Token", "API key", "access"]}}

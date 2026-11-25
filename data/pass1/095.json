@@ -1,0 +1,121 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Document parsing, extraction, splitting, classification and form-filling API for PDFs and office files, with an MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API key created in Studio, sent as a bearer token and read from REDUCTO_API_KEY. The MCP server's --login flow opens a browser and saves the key to a local config file; it is not a third-party OAuth grant.",
+  "access": "self_serve_free",
+  "access_notes": "Free account sign-up from the docs, then a key is created in the Studio. The docs do not state free-tier usage limits; not verified.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Document-focused endpoints: /parse, /extract, /split, /classify, /edit, /upload, plus async variants and GET /job/{job_id}. Not a general-purpose SaaS API.",
+  "docs_url": "https://docs.reducto.ai/quickstart",
+  "mcp": "official",
+  "mcp_url": "https://docs.reducto.ai/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Create a key right here."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Sign up for a free account without leaving the docs."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.reducto.ai/agent-guide",
+    "quote": "Upload a local file"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "The Reducto MCP server connects AI agents directly to Reducto."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Set your API key as an environment variable"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Reducto API authentication docs",
+     "domains": [
+      "reducto.ai"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Reducto MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.reducto.ai/api/authentication",
+     "find": [
+      "API key",
+      "Authorization",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.reducto.ai/quickstart",
+     "find": [
+      "free account",
+      "API key",
+      "Authorization",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.reducto.ai/agent-guide",
+     "find": [
+      "Authorization: Bearer",
+      "free account",
+      "Base URL",
+      "Upload"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.reducto.ai/mcp-server",
+     "find": [
+      "MCP",
+      "login",
+      "free",
+      "plan"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "one_liner": "E-commerce platform (Magento, sold as Adobe Commerce) with REST and GraphQL APIs.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Cloud Service (SaaS) REST uses Adobe IMS OAuth 2. Self-hosted Magento Open Source / Adobe Commerce PaaS issue admin and customer tokens (username+password exchanged for a bearer token, api_key-like) and integration tokens that use OAuth 1.0a (other).",
+  "access": "self_serve_free",
+  "access_notes": "critic: access paid_plan -> self_serve_free. Magento Open Source is free to install and the docs say Adobe Commerce and Magento Open Source issue admin, customer and integration access tokens, so a developer can self-host and get working API credentials without paying. Adobe Commerce as a Cloud Service has a sandbox instance for design and testing (not confirmed free), but the free Open Source path is enough.",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "critic: breadth moderate -> broad; REST covers catalog, orders, customers, carts, and GraphQL covers storefront. Cloud Service REST endpoints differ from PaaS/on-prem.",
+  "docs_url": "https://developer.adobe.com/commerce/webapi/rest/",
+  "mcp": "official",
+  "mcp_url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict blocked -> ready, main_blocker paid_plan -> none, because Magento Open Source gives a free self-hosted path to tokens. The official MCP is a developer-tooling server, not a store-data server; community MCP servers for store data exist.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+    "quote": "Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management System (IMS) through standardized OAuth 2 protocols."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "Third-party applications authenticate with OAuth 1.0a."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+    "quote": "Adobe Commerce and Magento Open Source issue the following types of access tokens:"
+   },
+   {
+    "field": "access",
+    "url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started",
+    "quote": "Sandbox instances are for design and testing purposes only."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "access to similar functionality remains available with the GraphQL APIs."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools",
+    "quote": "Commerce Developer MCP Server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+    "quote": "When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started",
+     "find": [
+      "license",
+      "licence",
+      "free",
+      "sandbox",
+      "trial",
+      "IMS"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Adobe Commerce MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Magento Open Source free REST API integration token admin",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+     "find": [
+      "integration",
+      "Open Source",
+      "token"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+{"t": 1795527918.8, "tool": "composio_search", "input": {"query": "systeme.io API developer documentation authentication", "domains": ["systeme.io"]}}
+{"t": 1795527951.9, "tool": "composio_search", "input": {"query": "systeme.io MCP server", "domains": []}}
+{"t": 1795528018.5, "tool": "fetch_page", "input": {"url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io", "find": ["API key", "plan", "free", "Public API", "available"]}}
+{"t": 1795528045.1, "tool": "fetch_page", "input": {"url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp", "find": ["MCP key", "OAuth", "plan", "free", "90 days", "official"]}}
+{"t": 1795528141.2, "tool": "fetch_page", "input": {"url": "https://developer.systeme.io/docs/mcp-server", "find": ["official", "MCP", "server", "key", "OAuth"]}}
+{"t": 1795528177.4, "tool": "composio_search", "input": {"query": "systeme.io pricing plan public API access", "domains": ["systeme.io"]}}
+{"t": 1795528217.4, "tool": "composio_search", "input": {"query": "developer.systeme.io API reference authentication Bearer", "domains": []}}
+{"t": 1795528331.3, "tool": "fetch_page", "input": {"url": "https://systeme.io/circle-alternative", "find": ["API access", "Free plan"]}}
+{"t": 1795528357.2, "tool": "fetch_page", "input": {"url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io", "find": ["REST", "GraphQL", "header", "endpoint", "documentation", "Authorization"]}}
+{"t": 1795528461.4, "tool": "fetch_page", "input": {"url": "https://developer.systeme.io/docs/mcp-server", "find": ["REST", "GraphQL", "endpoint", "API key", "Bearer"]}}
+{"t": 1795528482.2, "tool": "fetch_page", "input": {"url": "https://developer.systeme.io", "find": ["REST", "GraphQL", "endpoint", "Bearer", "API reference"]}}

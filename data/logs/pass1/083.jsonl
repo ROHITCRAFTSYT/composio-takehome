@@ -1,0 +1,8 @@
+{"t": 1795529615.5, "tool": "composio_search", "input": {"query": "Binance API authentication API key docs", "domains": ["binance-docs.github.io", "binance.com"]}}
+{"t": 1795529650.4, "tool": "composio_search", "input": {"query": "Binance MCP server official", "domains": []}}
+{"t": 1795529733.8, "tool": "fetch_page", "input": {"url": "https://developers.binance.com/en/docs/products/spot/faqs/api_key_types", "find": ["API key", "Ed25519", "HMAC", "create"]}}
+{"t": 1795529855.2, "tool": "fetch_page", "input": {"url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic", "find": ["MCP", "official", "OAuth", "API key", "Connect"]}}
+{"t": 1795529922.4, "tool": "fetch_page", "input": {"url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic", "find": ["MCP server", "official", "API key", "Connect your AI agent"]}}
+{"t": 1795529958.6, "tool": "fetch_page", "input": {"url": "https://developers.binance.com/en/docs/products/spot/rest-api", "find": ["X-MBX-APIKEY", "api key", "Endpoint", "REST"]}}
+{"t": 1795530059.6, "tool": "fetch_page", "input": {"url": "https://www.binance.com/en/support/faq/detail/360002502072", "find": ["create API key", "API Key", "Secret Key", "Verify", "account"]}}
+{"t": 1795530226.6, "tool": "fetch_page", "input": {"url": "https://developers.binance.com/en/docs/products/spot/rest-api", "find": ["X-MBX-APIKEY", "REST API", "endpoints"]}}

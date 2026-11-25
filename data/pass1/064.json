@@ -1,0 +1,130 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 64,
+  "app": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Global network and developer platform (CDN, DNS, security, Workers, storage) managed through a public REST API.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Documented credentials are API tokens (user or account-owned) and the legacy Global API Key. No OAuth flow for third-party apps was seen in the fetched docs. Origin CA keys are also listed but are not a third-party API credential.",
+  "access": "self_serve_free",
+  "access_notes": "Tokens are created by the account holder in the dashboard. The fetched pages show no paid or trial gate on token creation, but I did not fetch a pricing page to confirm free-plan availability.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Official MCP README claims the API covers about 2,500 endpoints. Endpoints are described with path, query and body parameters, which is consistent with a REST-style API. The docs page did not use the word REST, so api_style is inferred.",
+  "docs_url": "https://developers.cloudflare.com/api/overview",
+  "mcp": "official",
+  "mcp_url": "https://github.com/cloudflare/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.cloudflare.com/api/overview",
+    "quote": "Create an API token to grant access to the API to perform actions."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+    "quote": "Get Global API key (legacy)"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.cloudflare.com/api/overview",
+    "quote": "To create an API token, from the Cloudflare dashboard, go to My Profile → API Tokens and select Create Token."
+   },
+   {
+    "field": "api_style",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "Each API endpoint is registered as its own tool"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "A token-efficient MCP server for the entire Cloudflare API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "MCP URL: https://mcp.cloudflare.com/mcp"
+   },
+   {
+    "field": "verdict",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "Create a Cloudflare API token with the permissions you need."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Cloudflare API authentication API token developers",
+     "domains": [
+      "developers.cloudflare.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Cloudflare MCP server official",
+     "domains": [
+      "developers.cloudflare.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+     "find": [
+      "API token",
+      "Global API Key",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+     "find": [
+      "API token",
+      "Global API Key",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.cloudflare.com/api/overview",
+     "find": [
+      "REST",
+      "API token",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/cloudflare/mcp",
+     "find": [
+      "MCP server for the Cloudflare API",
+      "Supported Products"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "one_liner": "Spend management platform (corporate cards, expenses, reimbursements, travel, bill pay) with a REST API for internal tools.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "User tokens (Bearer, created in the Brex dashboard) authenticate your own account. OAuth 2.0 is for partner apps acting on other Brex accounts; the onboarding API uses client credentials.",
+  "access": "self_serve_free",
+  "access_notes": "Token creation is done in the dashboard, and most APIs require an account admin to authorize. The Developer API agreement must be accepted by an admin. No pricing or plan page was fetched, so whether a paid Brex account is required is unverified.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented API groups include Accounting, Budgets, Expenses, Fields and Onboarding, plus others. Breadth judged from the landing page list only.",
+  "docs_url": "https://developer.brex.com",
+  "mcp": "official",
+  "mcp_url": "https://developer.brex.com/docs/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Admin role needed for most APIs. Plan requirement not verified.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "one_liner",
+    "url": "https://developer.brex.com",
+    "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.brex.com/guides/authentication",
+    "quote": "To pass your user token to Brex APIs, add it as a header to your API calls in the following format:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.brex.com/docs/faq",
+    "quote": "The OAuth token is used when building partner applications to authenticate other Brex accounts."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "An account admin or card admin must accept the Developer API agreement in Settings"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+    "quote": "Most Brex APIs require a Brex admin to grant access."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.brex.com",
+    "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "The server is hosted at https://api.brex.com/mcp and supports any MCP-compatible client."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.brex.com/guides/authentication",
+    "quote": "User tokens will expire if they are not used to make an API call for 90 days"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Brex developer API authentication",
+     "domains": [
+      "developer.brex.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com",
+     "find": [
+      "api",
+      "oauth",
+      "token",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/guides/authentication",
+     "find": [
+      "user token",
+      "OAuth",
+      "Settings",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/docs/mcp",
+     "find": [
+      "MCP",
+      "OAuth",
+      "API key",
+      "official"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/docs/faq",
+     "find": [
+      "user token",
+      "OAuth",
+      "partner",
+      "approval",
+      "free",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+     "find": [
+      "admin",
+      "agreement",
+      "approv",
+      "Developer API"
+     ]
+    }
+   }
+  ]
+ }
+}

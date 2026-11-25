@@ -1,0 +1,7 @@
+{"t": 1795528686.3, "tool": "composio_search", "input": {"query": "Firecrawl API authentication docs", "domains": ["firecrawl.dev"]}}
+{"t": 1795528719.9, "tool": "composio_search", "input": {"query": "Firecrawl MCP server official", "domains": ["firecrawl.dev", "github.com"]}}
+{"t": 1795528801.6, "tool": "fetch_page", "input": {"url": "https://docs.firecrawl.dev/introduction", "find": ["api", "key", "authentication", "Bearer"]}}
+{"t": 1795528888.3, "tool": "fetch_page", "input": {"url": "https://docs.firecrawl.dev/oauth", "find": ["OAuth", "PKCE", "approv", "review", "client", "register"]}}
+{"t": 1795528978.1, "tool": "fetch_page", "input": {"url": "https://www.firecrawl.dev/pricing", "find": ["free", "plan", "API", "month"]}}
+{"t": 1795529071.0, "tool": "fetch_page", "input": {"url": "https://docs.firecrawl.dev/api-reference/v2-introduction", "find": ["key", "keyless", "Bearer", "endpoints"]}}
+{"t": 1795529231.1, "tool": "fetch_page", "input": {"url": "https://docs.firecrawl.dev/mcp-server", "find": ["MCP", "official", "API"]}}

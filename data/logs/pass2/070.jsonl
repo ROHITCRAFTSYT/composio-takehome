@@ -1,0 +1,3 @@
+{"t": 1795590847.2, "tool": "composio_search", "input": {"query": "Sentry MCP server", "domains": ["docs.sentry.io", "github.com", "mcp.sentry.dev"]}}
+{"t": 1795590872.6, "tool": "fetch_page", "input": {"url": "https://docs.sentry.io/pricing/", "find": ["Developer", "API"]}}
+{"t": 1795590922.4, "tool": "fetch_page", "input": {"url": "https://mcp.sentry.dev", "find": ["remote", "mcp.sentry.dev", "OAuth"]}}

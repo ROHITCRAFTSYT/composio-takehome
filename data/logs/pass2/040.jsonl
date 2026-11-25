@@ -1,0 +1,4 @@
+{"t": 1795578034.3, "tool": "composio_search", "input": {"query": "SendGrid free plan retired 60-day trial pricing", "domains": []}}
+{"t": 1795578150.2, "tool": "composio_search", "input": {"query": "SendGrid MCP server", "domains": []}}
+{"t": 1795578262.9, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/en-us/products/email-api/pricing", "find": ["60 days", "free trial", "credit card"]}}
+{"t": 1795578495.0, "tool": "fetch_page", "input": {"url": "https://github.com/Garoth/sendgrid-mcp", "find": ["Allows AI Agents", "v3 API"]}}

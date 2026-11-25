@@ -1,0 +1,4 @@
+{"t": 1795576779.9, "tool": "fetch_page", "input": {"url": "https://developer.aircall.io/docs/sms", "find": ["Professional", "plan", "Direct API"]}}
+{"t": 1795576794.0, "tool": "composio_search", "input": {"query": "Aircall public API access plans API key pricing which plan includes API", "domains": []}}
+{"t": 1795576855.6, "tool": "fetch_page", "input": {"url": "https://aircall.io/pricing", "find": ["API access", "free trial", "trial", "Free"]}}
+{"t": 1795576876.4, "tool": "composio_search", "input": {"query": "Aircall MCP server official", "domains": ["aircall.io", "github.com"]}}

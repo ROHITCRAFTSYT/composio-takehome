@@ -1,0 +1,6 @@
+{"t": 1795529961.5, "tool": "composio_search", "input": {"query": "Reducto API authentication docs", "domains": ["reducto.ai"]}}
+{"t": 1795530001.4, "tool": "composio_search", "input": {"query": "Reducto MCP server", "domains": []}}
+{"t": 1795530083.9, "tool": "fetch_page", "input": {"url": "https://docs.reducto.ai/api/authentication", "find": ["API key", "Authorization", "Bearer"]}}
+{"t": 1795530207.7, "tool": "fetch_page", "input": {"url": "https://docs.reducto.ai/quickstart", "find": ["free account", "API key", "Authorization", "MCP"]}}
+{"t": 1795530283.8, "tool": "fetch_page", "input": {"url": "https://docs.reducto.ai/agent-guide", "find": ["Authorization: Bearer", "free account", "Base URL", "Upload"]}}
+{"t": 1795530352.7, "tool": "fetch_page", "input": {"url": "https://docs.reducto.ai/mcp-server", "find": ["MCP", "login", "free", "plan"]}}

@@ -1,0 +1,142 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "one_liner": "Spend management platform (corporate cards, expenses, reimbursements, travel, bill pay) with a REST API for internal tools.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "User tokens (Bearer, created in the Brex dashboard by an account or card admin) authenticate your own account. OAuth 2.0 is for partner apps acting on other Brex accounts; the onboarding API uses client credentials. The hosted MCP server also supports OAuth for any employee.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access kept self_serve_free. Pricing page says plans start at $0 per user per month, and an account or card admin generates a token in Settings > Developer after accepting the Developer API agreement. Caveat: you need a Brex business account (company onboarding/underwriting), not a standalone developer sandbox.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented API groups include Accounting, Budgets, Expenses, Fields and Onboarding, plus others. Breadth judged from the landing page list and support page.",
+  "docs_url": "https://developer.brex.com",
+  "mcp": "official",
+  "mcp_url": "https://developer.brex.com/docs/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed. Admin role needed to create tokens; free-tier plan exists so no paid blocker; requires an approved Brex business account.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "one_liner",
+    "url": "https://developer.brex.com",
+    "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.brex.com/guides/authentication",
+    "quote": "To pass your user token to Brex APIs, add it as a header to your API calls in the following format:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.brex.com/docs/faq",
+    "quote": "The OAuth token is used when building partner applications to authenticate other Brex accounts."
+   },
+   {
+    "field": "access",
+    "url": "https://www.brex.com/pricing",
+    "quote": "Plans start at $0 per user, per month, and more advanced features are available for $12 per user, per month."
+   },
+   {
+    "field": "access",
+    "url": "https://www.brex.com/support/brex-api",
+    "quote": "Only account or card admins can create API tokens in the dashboard."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "An account admin or card admin must accept the Developer API agreement in Settings"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+    "quote": "Most Brex APIs require a Brex admin to grant access."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.brex.com",
+    "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "The server is hosted at https://api.brex.com/mcp and supports any MCP-compatible client."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.brex.com/guides/authentication",
+    "quote": "User tokens will expire if they are not used to make an API call for 90 days"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/docs/mcp",
+     "find": [
+      "admin",
+      "agreement",
+      "plan",
+      "free",
+      "Settings"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.brex.com/guides/authentication",
+     "find": [
+      "token",
+      "create",
+      "Settings",
+      "account"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Brex API access pricing plan developer token who can create",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.brex.com/support/brex-api",
+     "find": [
+      "customer",
+      "admin",
+      "token",
+      "plan",
+      "sandbox",
+      "staging"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.brex.com/pricing",
+     "find": [
+      "Essentials",
+      "API",
+      "free",
+      "\\"
+     ]
+    }
+   }
+  ]
+ }
+}

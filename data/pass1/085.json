@@ -1,0 +1,152 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "one_liner": "FX audit layer that compares the rate a bank or card applied against the mid-market rate and quantifies hidden FX spreads.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Vendor docs pages (ipayx.ai/docs, /docs/api, /developers) fetched only as the landing page, with no authentication section. The only auth evidence is a third-party MCP listing describing an optional IPAYX_API_KEY environment variable.",
+  "access": "self_serve_free",
+  "access_notes": "Third-party MCP listing says a free key from ipayx.ai is needed for live provider comparisons. Not confirmed on any vendor page; low confidence.",
+  "api_style": "none",
+  "api_breadth": "narrow",
+  "api_notes": "No public HTTP API documented on the vendor pages fetched. The product is exposed via an MCP server package (npm @ipayx/mcp-fx-audit) listed by a third party.",
+  "docs_url": "https://www.ipayx.ai/docs",
+  "mcp": "community",
+  "mcp_url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+  "verdict": "blocked",
+  "main_blocker": "unclear_docs",
+  "blocker_notes": "Vendor docs did not render API or auth content, so no documented public API could be verified. A search result pointed to ipayx.ai/docs/mcp-server, but fetching it returned the same landing page, so it is not confirmed as an official MCP server.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "one_liner",
+    "url": "https://www.ipayx.ai/docs",
+    "quote": "iPayX Protocol is the neutral FX verification layer for fintech sales teams and FX brokers."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+    "quote": "with an optional IPAYX_API_KEY environment variable for live provider quotes."
+   },
+   {
+    "field": "access",
+    "url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+    "quote": "A free API key from ipayx.ai is required for live provider comparisons."
+   },
+   {
+    "field": "mcp",
+    "url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+    "quote": "Install the server via npx -y @ipayx/mcp-fx-audit and configure it in your MCP client"
+   },
+   {
+    "field": "verdict",
+    "url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+    "quote": "A free API key from ipayx.ai is required for live provider comparisons."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://ipayx.ai/docs",
+     "find": [
+      "api",
+      "key",
+      "auth",
+      "oauth",
+      "mcp",
+      "pricing",
+      "plan",
+      "sandbox",
+      "token",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "iPayX API documentation authentication API key",
+     "domains": [
+      "ipayx.ai"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "iPayX MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.ipayx.ai/docs/api",
+     "find": [
+      "api",
+      "key",
+      "auth",
+      "bearer",
+      "oauth",
+      "header",
+      "sandbox",
+      "plan",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.ipayx.ai/docs/mcp-server",
+     "find": [
+      "mcp",
+      "key",
+      "api",
+      "free",
+      "plan",
+      "install",
+      "npx"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.ipayx.ai/developers?lang=en",
+     "find": [
+      "api",
+      "key",
+      "auth",
+      "free",
+      "plan",
+      "trial",
+      "sandbox",
+      "mcp"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar",
+     "find": [
+      "IPAYX_API_KEY",
+      "npx",
+      "free",
+      "key"
+     ]
+    }
+   }
+  ]
+ }
+}

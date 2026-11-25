@@ -1,0 +1,102 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Hosting and deploy platform for web sites and apps, with a REST API for managing sites and deploys.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens sent as a Bearer header; OAuth2 required for public integrations acting on a user's behalf.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan is listed as free forever and PATs are generated from the user's account settings. The docs do not state a plan gate on API use. critic: access confirmed.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Breadth is a judgement call. Rate limit is 500 requests per minute for most requests, with stricter limits for deploys.",
+  "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+  "mcp": "official",
+  "mcp_url": "https://github.com/netlify/netlify-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No review or sales step in the docs; OAuth app registration is self-serve in user settings. critic: verdict confirmed.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+    "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+    "quote": "The OAuth2 end-user authorization endpoint is https://app.netlify.com/authorize."
+   },
+   {
+    "field": "access",
+    "url": "https://www.netlify.com/pricing",
+    "quote": "Build and deploy free forever."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.netlify.com/manage/accounts-and-billing/user-settings",
+    "quote": "You can generate these for manual authentication in shell scripts or commands that use the Netlify CLI or API."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+    "quote": "https://api.netlify.com/api/v1/sites"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview",
+    "quote": "Netlify offers an MCP server, which you can connect to through a connector, plugin, or your agent."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/netlify/netlify-mcp",
+    "quote": "Netlify MCP Server follows the Model Context Protocol (MCP) to enable code agents to use the Netlify API and CLI"
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.netlify.com/pricing",
+    "quote": "Build and deploy free forever."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.netlify.com/manage/accounts-and-billing/user-settings",
+    "quote": "You can generate these for manual authentication in shell scripts or commands that use the Netlify CLI or API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+     "find": [
+      "OAuth2",
+      "Personal access",
+      "rate limit",
+      "approval"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.netlify.com/pricing",
+     "find": [
+      "free forever",
+      "API",
+      "Free"
+     ]
+    }
+   }
+  ]
+ }
+}

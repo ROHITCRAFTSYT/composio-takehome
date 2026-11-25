@@ -1,0 +1,128 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Devin, Cognition's AI software engineering agent, with a v3 REST API for sessions, knowledge, playbooks and secrets plus an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Service user API keys (prefix cog_) or personal access tokens sent in the Authorization header. No OAuth flow documented. Keys expire after 7, 30 (default) or 90 days, or never where the account allows it. critic: confirmed against docs.devin.ai/api-reference/authentication.",
+  "access": "paid_plan",
+  "access_notes": "critic: access paid_plan kept. Service users are provisioned in Settings > Devin API of a Teams/Enterprise org. The self-serve docs describe the Free plan as limited Devin usage, Devin Review and DeepWiki only, with no API or cloud agents listed; the pricing page lists Devin Cloud and Devin API under paid tiers. No free or trial API path found, but the pricing table does not show per-plan cells, so this is inferred.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Organization API at https://api.devin.ai/v3/organizations/* covers sessions, knowledge, playbooks, secrets and more. Enterprise API covers cross-org analytics, audit logs, users, billing.",
+  "docs_url": "https://docs.devin.ai/api-reference/overview",
+  "mcp": "official",
+  "mcp_url": "https://mcp.devin.ai/mcp",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "critic: verdict blocked kept. API keys come from a service user on a paid Teams or Enterprise org; Free plan lists no API access. Would become ready if the Free plan were shown to include service users.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+    "quote": "After the expiration date the service user?s API key stops working"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.devin.ai/admin/billing/self-serve?full=1",
+    "quote": "The Free plan lets you try Devin with limited usage."
+   },
+   {
+    "field": "access",
+    "url": "https://devin.ai/pricing",
+    "quote": "Shared on-demand credits for up to 100 members"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Base URL:https://api.devin.ai/v3/organizations/*"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For managing resources within a single organization ? sessions, knowledge, playbooks, secrets, and more."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "The Devin MCP server supports Streamable HTTP:"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.devin.ai/admin/billing/self-serve?full=1",
+    "quote": "The Free plan lets you try Devin with limited usage."
+   },
+   {
+    "field": "main_blocker",
+    "url": "https://devin.ai/pricing",
+    "quote": "Shared on-demand credits for up to 100 members"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://devin.ai/pricing",
+     "find": [
+      "Free",
+      "API",
+      "service user"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Devin free plan API access service user API key",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.devin.ai/api-reference/authentication",
+     "find": [
+      "plan",
+      "Free",
+      "Pro",
+      "Teams",
+      "Enterprise",
+      "available"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Devin API available on which plans Free Pro Max Teams Enterprise",
+     "domains": [
+      "docs.devin.ai",
+      "devin.ai",
+      "cognition.ai"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.devin.ai/admin/billing/self-serve?full=1",
+     "find": [
+      "API",
+      "Free",
+      "Pro",
+      "Max"
+     ]
+    }
+   }
+  ]
+ }
+}

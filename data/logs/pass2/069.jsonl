@@ -1,0 +1,5 @@
+{"t": 1795590807.8, "tool": "fetch_page", "input": {"url": "https://www.datadoghq.com/pricing/", "find": ["Free", "free trial", "Free plan", "API"]}}
+{"t": 1795590844.4, "tool": "composio_search", "input": {"query": "Datadog free plan API keys developer sandbox free tier", "domains": ["datadoghq.com", "docs.datadoghq.com"]}}
+{"t": 1795590884.7, "tool": "fetch_page", "input": {"url": "https://www.datadoghq.com/pricing/", "find": ["Free tier", "five Basic hosts"]}}
+{"t": 1795590923.6, "tool": "fetch_page", "input": {"url": "https://www.datadoghq.com/pricing/", "find": ["move to the Free tier", "1-day metric retention"]}}
+{"t": 1795590959.0, "tool": "fetch_page", "input": {"url": "https://www.datadoghq.com/pricing", "find": ["Free tier", "five Basic hosts"]}}

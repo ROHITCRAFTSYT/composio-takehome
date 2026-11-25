@@ -1,0 +1,5 @@
+{"t": 1795530489.2, "tool": "composio_search", "input": {"query": "Close CRM MCP server", "domains": ["close.com", "developer.close.com", "github.com"]}}
+{"t": 1795530570.8, "tool": "fetch_page", "input": {"url": "https://close.com/pricing", "find": ["MCP", "free", "trial", "API"]}}
+{"t": 1795530645.0, "tool": "fetch_page", "input": {"url": "https://close.com/integrations/close-mcp", "find": ["MCP", "documentation", "mcp.close.com"]}}
+{"t": 1795530684.3, "tool": "fetch_page", "input": {"url": "https://developer.close.com/api/overview", "find": ["API", "plan", "rate"]}}
+{"t": 1795530741.8, "tool": "fetch_page", "input": {"url": "https://developer.close.com/", "find": ["Leads", "Opportunities", "Activities", "Tasks", "Webhooks"]}}

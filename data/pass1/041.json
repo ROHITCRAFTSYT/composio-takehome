@@ -1,0 +1,141 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "one_liner": "Commerce platform for online stores, POS and retail; exposes Admin GraphQL, Storefront, Partner and Customer Account APIs.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Admin API is called with an access token in X-Shopify-Access-Token, obtained usually via OAuth token exchange. Client ID and secret come from the app's Settings page in the Dev Dashboard; a client_credentials grant also exists for same-organization stores (tokens expire, no refresh token). Storefront API uses its own public/private tokens.",
+  "access": "self_serve_free",
+  "access_notes": "Custom apps are created in the Dev Dashboard and tested on development stores before live deployment. The fetched pages did not state the development store price, so the 'free' classification is medium confidence.",
+  "api_style": "graphql",
+  "api_breadth": "broad",
+  "api_notes": "Admin GraphQL API plus Storefront, Partner and Customer Account APIs are documented. REST Admin API and full object coverage were not verified in fetched pages.",
+  "docs_url": "https://shopify.dev/docs/api/usage/authentication",
+  "mcp": "official",
+  "mcp_url": "https://shopify.dev/docs/api/ai-toolkit",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Public-app distribution across many merchants goes through Shopify's app review; custom apps per store do not, so a multi-merchant toolkit would need review.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens",
+    "quote": "Your app obtains a token through an authorization flow called a grant, such as token exchange, then includes it in a request header on each call."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "GraphQL Admin API | Your app, on behalf of a merchant | OAuth, usually token exchange | X-Shopify-Access-Token"
+   },
+   {
+    "field": "access",
+    "url": "https://help.shopify.com/en/manual/apps/about-apps",
+    "quote": "You create and manage custom apps using the Dev Dashboard."
+   },
+   {
+    "field": "access",
+    "url": "https://help.shopify.com/en/manual/apps/about-apps",
+    "quote": "test with development stores before deploying to your live store"
+   },
+   {
+    "field": "api_style",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "GraphQL Admin API | Your app, on behalf of a merchant"
+   },
+   {
+    "field": "mcp",
+    "url": "https://shopify.dev/docs/api/ai-toolkit",
+    "quote": "The server runs locally and doesn't require authentication."
+   },
+   {
+    "field": "verdict",
+    "url": "https://shopify.dev/docs/api/ai-toolkit",
+    "quote": "If you prefer MCP, you can connect to Shopify's developer resources through the Dev MCP server."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Shopify Admin API authentication access token developer docs",
+     "domains": [
+      "shopify.dev"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Shopify official MCP server dev-mcp",
+     "domains": [
+      "shopify.dev",
+      "github.com/Shopify"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "find": [
+      "OAuth",
+      "token",
+      "header",
+      "API",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://shopify.dev/docs/api/ai-toolkit",
+     "find": [
+      "MCP",
+      "authentication",
+      "Dev"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Shopify development store free Partner account create custom app API credentials without paid plan",
+     "domains": [
+      "shopify.dev",
+      "help.shopify.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens",
+     "find": [
+      "client_credentials",
+      "Dev",
+      "expire"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.shopify.com/en/manual/apps/about-apps",
+     "find": [
+      "custom"
+     ]
+    }
+   }
+  ]
+ }
+}

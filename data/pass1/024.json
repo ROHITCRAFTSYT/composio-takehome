@@ -1,0 +1,138 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "one_liner": "Lark (Larksuite) enterprise collaboration suite exposing Open Platform server APIs for messaging, docs, calendar, base and more",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "App ID and App Secret from the Developer Console are used as credentials (api_key). Tokens are tenant_access_token (app acts as itself), app_access_token, and user_access_token obtained through an OAuth 2.0 user authorization flow (oauth2). Lark does not document a basic username/password path.",
+  "access": "approval_required",
+  "access_notes": "Developers can create a custom app themselves, but the permissions the app requests must be reviewed by the tenant administrator for custom apps. Store apps need a Lark launch review plus tenant installation review. Free-plan status of the developer account was not verified.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Server API docs cover many product areas (Contacts, Messaging, Docs, Calendar, Base, Approval, Tasks, Email, Admin and others). The fetched pages describe the APIs as a rich set but did not explicitly state the HTTP style, so REST is inferred from the Server API structure and sets confidence to medium.",
+  "docs_url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+  "mcp": "official",
+  "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Custom app permissions need tenant administrator approval, and production distribution to other tenants would need Lark store app review. Building and testing inside one's own tenant is possible now.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+    "quote": "With this token, the app will perform actions on behalf of the user, such as creating a Docs or an Event through API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "Obtain the App ID and App Secret, which will be used for API authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+    "quote": "Custom apps: The permissions applied for by the app developer need to be reviewed by the tenant administrator."
+   },
+   {
+    "field": "api_style",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/terminology",
+    "quote": "To meet diverse application scenarios, Lark Open Platform provides a rich set of APIs and events for developers to call or subscribe to."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool"
+   },
+   {
+    "field": "verdict",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+    "quote": "Custom apps: The permissions applied for by the app developer need to be reviewed by the tenant administrator."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Lark open platform API authentication app access token developer docs",
+     "domains": [
+      "open.larksuite.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Lark larksuite official MCP server github",
+     "domains": [
+      "github.com",
+      "open.larksuite.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+     "find": [
+      "app_access_token",
+      "tenant_access_token",
+      "user_access_token",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/larksuite/lark-openapi-mcp",
+     "find": [
+      "official",
+      "npm",
+      "self-built",
+      "app",
+      "Lark"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Lark open platform create custom app enterprise self-built app admin approval publish permissions",
+     "domains": [
+      "open.larksuite.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes",
+     "find": [
+      "Custom apps:",
+      "tenant administrator"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://open.larksuite.com/document/ukTMukTMukTM/uYTM5UjL2ETO14iNxkTN/terminology",
+     "find": [
+      "open-apis",
+      "HTTP",
+      "REST"
+     ]
+    }
+   }
+  ]
+ }
+}

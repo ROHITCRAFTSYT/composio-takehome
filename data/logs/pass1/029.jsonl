@@ -1,0 +1,11 @@
+{"t": 1795527373.7, "tool": "composio_search", "input": {"query": "Aircall API authentication docs", "domains": ["aircall.io"]}}
+{"t": 1795527416.1, "tool": "composio_search", "input": {"query": "Aircall API pricing plan API access", "domains": ["aircall.io"]}}
+{"t": 1795527454.8, "tool": "composio_search", "input": {"query": "Aircall MCP server", "domains": []}}
+{"t": 1795527523.6, "tool": "fetch_page", "input": {"url": "https://developer.aircall.io/docs/authentication", "find": ["Basic Authentication", "OAuth", "API key"]}}
+{"t": 1795527569.2, "tool": "fetch_page", "input": {"url": "https://developer.aircall.io/docs/basic-authentication", "find": ["API key", "Generate", "api_token"]}}
+{"t": 1795527616.0, "tool": "fetch_page", "input": {"url": "https://aircall.io/pricing", "find": ["API", "license", "trial"]}}
+{"t": 1795527657.8, "tool": "composio_search", "input": {"query": "Aircall official MCP server developer docs", "domains": ["aircall.io", "developer.aircall.io", "github.com/aircall"]}}
+{"t": 1795527709.2, "tool": "composio_search", "input": {"query": "Aircall official MCP server developer docs", "domains": ["aircall.io", "developer.aircall.io"]}}
+{"t": 1795527794.8, "tool": "fetch_page", "input": {"url": "https://developer.aircall.io/docs/sms", "find": ["Professional plan", "Direct API access"]}}
+{"t": 1795527834.7, "tool": "fetch_page", "input": {"url": "https://support.aircall.io/en-gb/articles/39677926959517", "find": ["MCP", "beta", "Authenticate"]}}
+{"t": 1795527920.9, "tool": "fetch_page", "input": {"url": "https://developer.aircall.io/docs/oauth", "find": ["authorization code", "access_token", "install"]}}

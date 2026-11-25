@@ -1,0 +1,55 @@
+{
+  "n": 93,
+  "app": "Fathom",
+  "one_liner": "AI meeting recorder and notetaker with a REST API for meetings, transcripts, summaries, teams and webhooks.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "mcp": "official",
+  "mcp_url": "https://api.fathom.ai/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "API keys generated in User Settings (X-Api-Key) plus OAuth 2.0 apps registered self-serve at fathom.video/marketplace_applications/new (Bearer). FAQ: API keys and webhooks are included on all plans; pricing shows a Free-forever plan -> self_serve_free. OAuth apps are 'subject to review', but the docs tie review to marketplace promotion/listing and registration yields credentials in minutes, so ready rather than ready_with_review. API is mostly read (meetings, transcripts, summaries, downloads, teams, users) plus webhook create/delete -> narrow. Official MCP documented at developers.fathom.ai/mcp-docs (pricing page lists MCP integrations under paid tiers; that does not change the mcp label).",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.fathom.ai/api-overview",
+      "quote": "All REST API resources are authenticated with API keys generated via the Fathom website's settings area."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.fathom.ai/sdks/oauth",
+      "quote": "Both TypeScript and Python SDKs support OAuth 2.0 authentication for building integrations that can be installed by multiple Fathom accounts."
+    },
+    {
+      "field": "api_style",
+      "url": "https://developers.fathom.ai/api-overview",
+      "quote": "This documentation describes Fathom's REST API."
+    },
+    {
+      "field": "access",
+      "url": "https://developers.fathom.ai/faq",
+      "quote": "API access—keys and webhooks— are included on all plans."
+    },
+    {
+      "field": "access",
+      "url": "https://www.fathom.ai/pricing",
+      "quote": "Free forever."
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.fathom.ai/mcp-docs",
+      "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more."
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.fathom.ai/quickstart",
+      "quote": "Head to the API Access section of your User Settings and generate an API key."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

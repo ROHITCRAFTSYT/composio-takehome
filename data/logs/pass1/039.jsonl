@@ -1,0 +1,5 @@
+{"t": 1795527939.3, "tool": "composio_search", "input": {"query": "Threads API Meta developers docs authentication", "domains": ["developers.facebook.com"]}}
+{"t": 1795528079.1, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/threads/get-started", "find": ["OAuth", "access", "permission", "test", "review", "free"]}}
+{"t": 1795528107.8, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/threads", "find": ["OAuth", "endpoint", "MCP", "review", "free"]}}
+{"t": 1795528145.0, "tool": "composio_search", "input": {"query": "Threads API MCP server official Meta", "domains": ["github.com", "developers.facebook.com"]}}
+{"t": 1795528329.7, "tool": "fetch_page", "input": {"url": "https://github.com/griffinwork40/threads-mcp", "find": ["Meta", "official", "review", "Threads"]}}

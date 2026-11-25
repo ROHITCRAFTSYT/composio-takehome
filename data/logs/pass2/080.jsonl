@@ -1,0 +1,4 @@
+{"t": 1795591107.3, "tool": "composio_search", "input": {"query": "Harvest time tracking official MCP server getharvest", "domains": []}}
+{"t": 1795591134.6, "tool": "fetch_page", "input": {"url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API", "find": ["API", "free"]}}
+{"t": 1795591191.2, "tool": "fetch_page", "input": {"url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP", "find": ["MCP", "server", "url", "plan"]}}
+{"t": 1795591278.1, "tool": "fetch_page", "input": {"url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP", "find": ["api.harvestapp.com", "https"]}}

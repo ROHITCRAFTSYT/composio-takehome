@@ -1,0 +1,180 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "one_liner": "Cloud phone system (calls, SMS, contact center) with an API and webhooks for business integrations",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Basic auth with an API ID and API token generated under Integrations > API keys in the Aircall dashboard (for own/private integrations). OAuth 2.0 install flow for apps acting on behalf of other customers; the install must be completed by an Aircall Admin and yields a permanent access_token.",
+  "access": "paid_plan",
+  "access_notes": "Dashboard API keys are generated in-app, but the docs say direct Messaging API use needs the Professional plan; integrations can call it on any plan. The pricing page did not clearly show which tier includes the general API, so plan-level detail is unconfirmed.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST style inferred from the Public API docs with HTTP auth; breadth not fully verified. Webhooks are documented separately. Messaging API documented; access gated by plan.",
+  "docs_url": "https://developer.aircall.io/docs/authentication",
+  "mcp": "official",
+  "mcp_url": "https://support.aircall.io/en-gb/articles/39677926959517",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Direct API access (including Messaging API) requires the Professional plan, and the Aircall MCP is a read-only beta available by contacting an Account Manager.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "API key authentication works by sending your credentials in the Authorization header of each request, encoded in Base64."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.aircall.io/docs/oauth",
+    "quote": "Send a POST request to the Aircall API with your credentials and the authorization code."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.aircall.io/docs/sms",
+    "quote": "Direct API access requires the Professional plan."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "All requests to the Aircall Public API must use"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+    "quote": "Aircall MCP is currently in beta."
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+    "quote": "Aircall MCP gives an AI assistant, like Claude or ChatGPT, read-only access to your company's calls and conversation intelligence data."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.aircall.io/docs/sms",
+    "quote": "Direct API access requires the Professional plan."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall API authentication docs",
+     "domains": [
+      "aircall.io"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall API pricing plan API access",
+     "domains": [
+      "aircall.io"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.aircall.io/docs/authentication",
+     "find": [
+      "Basic Authentication",
+      "OAuth",
+      "API key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.aircall.io/docs/basic-authentication",
+     "find": [
+      "API key",
+      "Generate",
+      "api_token"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://aircall.io/pricing",
+     "find": [
+      "API",
+      "license",
+      "trial"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall official MCP server developer docs",
+     "domains": [
+      "aircall.io",
+      "developer.aircall.io",
+      "github.com/aircall"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall official MCP server developer docs",
+     "domains": [
+      "aircall.io",
+      "developer.aircall.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.aircall.io/docs/sms",
+     "find": [
+      "Professional plan",
+      "Direct API access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+     "find": [
+      "MCP",
+      "beta",
+      "Authenticate"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.aircall.io/docs/oauth",
+     "find": [
+      "authorization code",
+      "access_token",
+      "install"
+     ]
+    }
+   }
+  ]
+ }
+}

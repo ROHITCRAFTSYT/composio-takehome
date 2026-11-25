@@ -1,0 +1,5 @@
+{"t": 1795529948.2, "tool": "composio_search", "input": {"query": "Consensus app API developer documentation authentication", "domains": ["consensus.app"]}}
+{"t": 1795529983.9, "tool": "composio_search", "input": {"query": "Consensus app MCP server", "domains": ["consensus.app", "github.com"]}}
+{"t": 1795530074.0, "tool": "fetch_page", "input": {"url": "https://docs.consensus.app/api-plans-and-access", "find": ["free", "trial", "plan", "paid", "approval", "sales", "API"]}}
+{"t": 1795530128.7, "tool": "fetch_page", "input": {"url": "https://docs.consensus.app/consensus-mcp", "find": ["official", "hosted", "OAuth", "Bearer", "Claude"]}}
+{"t": 1795530271.4, "tool": "fetch_page", "input": {"url": "https://docs.consensus.app/enterprise/connection-reference", "find": ["OAuth", "bearer"]}}

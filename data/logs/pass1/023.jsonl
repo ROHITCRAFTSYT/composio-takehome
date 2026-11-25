@@ -1,0 +1,7 @@
+{"t": 1795527346.1, "tool": "composio_search", "input": {"query": "Zoho Cliq API authentication OAuth developer docs", "domains": ["zoho.com"]}}
+{"t": 1795527395.2, "tool": "composio_search", "input": {"query": "Zoho Cliq MCP server", "domains": []}}
+{"t": 1795527440.6, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/restapi/v2/", "find": ["OAuth", "API", "token", "pricing"]}}
+{"t": 1795527501.0, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html", "find": ["MCP", "official", "Zoho"]}}
+{"t": 1795527543.7, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/restapi/v2/", "find": ["OAuth", "token", "scope"]}}
+{"t": 1795527638.6, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/pricing.html", "find": ["Free", "API", "Developer"]}}
+{"t": 1795527672.3, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/cliq/help/restapi/v2/", "find": ["Generate Access Token", "Client Secret", "Free"]}}

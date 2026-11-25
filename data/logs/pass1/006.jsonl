@@ -1,0 +1,11 @@
+{"t": 1795526852.6, "tool": "composio_search", "input": {"query": "Podio API authentication OAuth API key developer docs", "domains": []}}
+{"t": 1795526889.6, "tool": "composio_search", "input": {"query": "Podio developers API reference", "domains": ["podio.com"]}}
+{"t": 1795526931.4, "tool": "composio_search", "input": {"query": "Podio MCP server", "domains": []}}
+{"t": 1795526996.8, "tool": "fetch_page", "input": {"url": "https://developers.podio.com/authentication", "find": ["api key", "oauth", "api_key", "personal", "client"]}}
+{"t": 1795527062.1, "tool": "fetch_page", "input": {"url": "https://podio.com/pricing", "find": ["API", "api", "developer", "plan", "free"]}}
+{"t": 1795527138.4, "tool": "fetch_page", "input": {"url": "https://developers.podio.com/authentication", "find": ["Authentication flows", "app authentication", "username", "password", "app token", "API key", "free"]}}
+{"t": 1795527186.8, "tool": "composio_search", "input": {"query": "Podio pricing plans API access free trial", "domains": []}}
+{"t": 1795527249.9, "tool": "fetch_page", "input": {"url": "https://www.progress.com/podio/pricing", "find": ["API Integrations", "Free", "Premium"]}}
+{"t": 1795527318.8, "tool": "composio_search", "input": {"query": "Podio MCP server official Progress github", "domains": []}}
+{"t": 1795527398.5, "tool": "fetch_page", "input": {"url": "https://developers.podio.com/authentication", "find": ["app_token", "app token", "generated", "settings", "grant_type"]}}
+{"t": 1795527480.2, "tool": "fetch_page", "input": {"url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide", "find": ["Podio MCP Server", "plan", "free", "license", "requires", "API"]}}

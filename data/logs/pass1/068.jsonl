@@ -1,0 +1,7 @@
+{"t": 1795529050.5, "tool": "composio_search", "input": {"query": "MongoDB Atlas Administration API authentication digest API key", "domains": ["mongodb.com"]}}
+{"t": 1795529086.4, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/atlas/api/", "find": ["API key", "Digest", "OAuth", "Service Account", "rate"]}}
+{"t": 1795529174.6, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/atlas/configure-api-access", "find": ["service account", "API key", "free", "Organization"]}}
+{"t": 1795529207.1, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/atlas/api/api-authentication", "find": ["service account", "OAuth", "Digest"]}}
+{"t": 1795529236.7, "tool": "composio_search", "input": {"query": "MongoDB Atlas official MCP server", "domains": ["mongodb.com", "github.com"]}}
+{"t": 1795529327.5, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/docs/mcp-server/overview", "find": ["Atlas Managed", "official", "MCP configuration service account"]}}
+{"t": 1795529357.3, "tool": "fetch_page", "input": {"url": "https://www.mongodb.com/pricing", "find": ["Free", "M0", "API"]}}

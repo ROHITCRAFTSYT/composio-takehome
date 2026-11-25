@@ -1,0 +1,3 @@
+{"t": 1795578480.6, "tool": "fetch_page", "input": {"url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid", "find": ["free upgrade", "paid plan", "criteria", "developer", "request"]}}
+{"t": 1795578527.9, "tool": "composio_search", "input": {"query": "Ecwid MCP server official", "domains": []}}
+{"t": 1795578587.1, "tool": "composio_search", "input": {"query": "Ecwid MCP server", "domains": []}}

@@ -1,0 +1,139 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "one_liner": "Zoho CRM: cloud customer relationship management (leads, contacts, deals) with a public REST API.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow via a connected app (client ID and secret) and the Zoho accounts /oauth/v2/token endpoint. No API key or basic auth documented in the pages read.",
+  "access": "self_serve_free",
+  "access_notes": "The API limits page lists a Free Edition with a 5000 credit daily allowance. The Free Edition row was read from the official API limits page.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Official v8 API docs cover OAuth, tokens and per-call credit usage. Breadth was not verified object by object; the rating is a judgement from the docs index only.",
+  "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Free Edition credentials are self-serve. MCP calls use the same API credits and need an OAuth login on first use.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "Free Edition | 5000 credits | 5000 credits"
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "Each API call made will result in a reduction of 1 credit."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "Zoho CRM MCP servers connect your AI tools to Zoho CRM using the Model Context Protocol (MCP)"
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "When you invoke an MCP tool for the first time, the server initiates an OAuth flow."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zoho CRM API authentication OAuth developer docs",
+     "domains": [
+      "zoho.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zoho CRM MCP server official",
+     "domains": [
+      "zoho.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "find": [
+      "self client",
+      "Self Client",
+      "OAuth",
+      "authorization code",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+     "find": [
+      "official",
+      "free",
+      "trial",
+      "plan",
+      "Zoho CRM MCP",
+      "OAuth",
+      "Organization"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Zoho CRM API access free edition developer plan pricing API credits",
+     "domains": [
+      "zoho.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+     "find": [
+      "Free Edition",
+      "REST",
+      "RESTful",
+      "Developer Edition",
+      "credits"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/access-refresh.html",
+     "find": [
+      "self client",
+      "Self Client",
+      "grant_type",
+      "REST"
+     ]
+    }
+   }
+  ]
+ }
+}

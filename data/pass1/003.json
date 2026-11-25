@@ -1,0 +1,130 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "one_liner": "Sales CRM for small and medium-sized businesses covering leads, deals, contacts and pipeline management",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "API token obtained manually from the Pipedrive app (api_key); OAuth 2.0 authorization_code flow for apps installed by customers (oauth2).",
+  "access": "self_serve_trial",
+  "access_notes": "Pricing page offers a free 14-day trial with full access and no credit card. No free permanent plan was seen on the fetched pages, so API access appears to be trial or paid.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "RESTful v1 API with OpenAPI reference. Object-level coverage was not checked endpoint by endpoint.",
+  "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "mcp": "official",
+  "mcp_url": "https://www.pipedrive.com/en/features/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve token available during trial and a documented REST API. Production distribution of an OAuth app may need a review step that was not verified.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API token can be obtained manually from the Pipedrive app."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+    "quote": "After the customer has confirmed the app installation, you will need to exchange the authorization_code to a pair of access and refresh tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://www.pipedrive.com/en/pricing",
+    "quote": "Free 14-day trial. Full access. No credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "This reference helps you implement the RESTful Pipedrive API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Connect in minutes through secure OAuth. No coding, no API development, no developer required."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pipedrive API authentication developer docs",
+     "domains": [
+      "pipedrive.com",
+      "developers.pipedrive.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pipedrive MCP server official",
+     "domains": [
+      "pipedrive.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pipedrive.com/en/pricing",
+     "find": [
+      "API",
+      "trial",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "find": [
+      "API token",
+      "OAuth",
+      "authorization"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+     "find": [
+      "authorization_code",
+      "access_token",
+      "Marketplace",
+      "app review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.pipedrive.com/en/features/mcp-server",
+     "find": [
+      "official",
+      "OAuth",
+      "plan",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "n": 50,
+  "app": "fanbasis",
+  "one_liner": "FanBasis (rebranded Commas) creator payments / merchant-of-record platform with a REST Public API for checkout sessions, products, customers, subscriptions, refunds and webhooks; x-api-key auth, free sandbox, vendor MCP.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://apidocs.fan/",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "fanbasis.com now redirects to commas.com ('FanBasis is now Commas!'). commas.com has no developer link and docs.*/developers.* hosts do not exist; the API docs live at apidocs.fan ('Commas API Reference'), found via third-party integrations (laravel-payments, a WooCommerce plugin) and then confirmed as the vendor's own: it documents production base URL https://www.fanbasis.com/public-api, support@fanbasis.com, and the exact live 401 body returned by https://www.fanbasis.com/public-api/products ('Authentication required. Please provide X-API-KEY or Bearer token.'). Residual ambiguity: the docs domain is not linked from the marketing site. auth: API key from the dashboard (Account -> API Keys) in the x-api-key header; some Seller v1 endpoints take the same static key as 'Authorization: Bearer' -> api_key only. The MCP's 'OAuth login flow' is for the MCP connector, not the REST API. access: sandbox.commas.net has self-serve signup and sandbox keys, no account verification needed to build; going live needs identity verification / account approval (merchant KYC; docs show 403 'Your account is not approved by the Commas admin'), comparable to Stripe test vs live keys -> self_serve_free. mcp: vendor docs ship an MCP section (44 tools, Claude Desktop .mcpb download, Cursor one-click via mcp-remote to a railway.app endpoint; the ChatGPT remote endpoint www.fanbasis.com/mcp is marked 'Coming Soon' and currently answers 405) -> official per 'vendor docs page'.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://apidocs.fan/",
+      "quote": "Every API request must include your API key in the x-api-key header."
+    },
+    {
+      "field": "access",
+      "url": "https://apidocs.fan/",
+      "quote": "No — you can start building right away using a sandbox API key from the sandbox dashboard"
+    },
+    {
+      "field": "api_style",
+      "url": "https://apidocs.fan/",
+      "quote": "Configure products in the Commas dashboard or via the REST API."
+    },
+    {
+      "field": "mcp",
+      "url": "https://apidocs.fan/",
+      "quote": "Connect Claude, ChatGPT, or Grok directly to your Commas account via MCP."
+    },
+    {
+      "field": "verdict",
+      "url": "https://apidocs.fan/",
+      "quote": "Log into your Commas dashboard and go to Account"
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

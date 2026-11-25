@@ -1,0 +1,6 @@
+{"t": 1795529807.2, "tool": "composio_search", "input": {"query": "NotebookLM API developer access", "domains": ["cloud.google.com", "developers.google.com", "support.google.com", "github.com"]}}
+{"t": 1795529886.6, "tool": "composio_search", "input": {"query": "NotebookLM MCP server official", "domains": ["github.com", "cloud.google.com", "developers.google.com"]}}
+{"t": 1795529966.0, "tool": "fetch_page", "input": {"url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks", "find": ["API", "enable", "authentication", "pricing", "free", "trial", "contact", "access"]}}
+{"t": 1795529993.3, "tool": "fetch_page", "input": {"url": "https://cloud.google.com/gemini/docs/notebooklm/overview", "find": ["API", "enable", "authentication", "pricing", "trial", "contact", "access"]}}
+{"t": 1795530140.6, "tool": "fetch_page", "input": {"url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/get-subscription", "find": ["license", "trial", "contact", "subscription", "sales", "pricing", "purchase"]}}
+{"t": 1795530242.8, "tool": "fetch_page", "input": {"url": "https://github.com/PleasePrompto/notebooklm-mcp", "find": ["MCP server", "NotebookLM", "unofficial", "Google"]}}

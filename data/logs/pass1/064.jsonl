@@ -1,0 +1,6 @@
+{"t": 1795528952.7, "tool": "composio_search", "input": {"query": "Cloudflare API authentication API token developers", "domains": ["developers.cloudflare.com"]}}
+{"t": 1795528996.3, "tool": "composio_search", "input": {"query": "Cloudflare MCP server official", "domains": ["developers.cloudflare.com", "github.com"]}}
+{"t": 1795529084.3, "tool": "fetch_page", "input": {"url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/", "find": ["API token", "Global API Key", "free"]}}
+{"t": 1795529116.6, "tool": "fetch_page", "input": {"url": "https://developers.cloudflare.com/fundamentals/api/get-started/", "find": ["API token", "Global API Key", "OAuth"]}}
+{"t": 1795529197.1, "tool": "fetch_page", "input": {"url": "https://developers.cloudflare.com/api/overview", "find": ["REST", "API token", "free"]}}
+{"t": 1795529228.9, "tool": "fetch_page", "input": {"url": "https://github.com/cloudflare/mcp", "find": ["MCP server for the Cloudflare API", "Supported Products"]}}

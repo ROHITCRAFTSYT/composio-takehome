@@ -1,0 +1,112 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 93,
+  "app": "Fathom",
+  "category": "AI, Research and Media-native",
+  "one_liner": "AI meeting recorder and notetaker that records, transcribes and summarizes calls",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API keys are generated in the Fathom settings area and sent in the X-Api-Key header; OAuth (Bearer) is for apps other Fathom users install. critic: confirmed via API overview and FAQ.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free and resolved the open question. The vendor FAQ states API keys and webhooks are included on all plans, which includes the Free plan, and keys are generated in User Settings. No approval is needed for API-key use.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented REST API at api.fathom.ai with API keys or OAuth; meetings, recordings, teams, webhooks, pagination via cursor. Global rate limit plus a separate recording-download limit.",
+  "docs_url": "https://developers.fathom.ai",
+  "mcp": "official",
+  "mcp_url": "https://developers.fathom.ai/mcp-docs",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve API key on all plans gives a documented REST API for own or team meetings. Only OAuth apps distributed to other users need vendor review for marketplace promotion.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.fathom.ai/api-overview",
+    "quote": "All REST API resources are authenticated with API keys generated via the Fathom website’s settings area."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developers.fathom.ai/faq",
+    "quote": "Use OAuth if you’re building an app that other Fathom users will install so they can connect their own accounts."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.fathom.ai/faq",
+    "quote": "Yes. API access—keys and webhooks— are included on all plans. Generate a key in User Settings → API Access."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.fathom.ai",
+    "quote": "Generate an API key and make your first call in minutes."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.fathom.ai/api-overview",
+    "quote": "This documentation describes Fathom’s REST API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.fathom.ai/mcp-docs",
+    "quote": "Fathom now offers an official MCP (Model Context Protocol) server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.fathom.ai/faq",
+    "quote": "Yes. API access—keys and webhooks— are included on all plans. Generate a key in User Settings → API Access."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.fathom.ai/pricing",
+     "find": [
+      "API",
+      "Public API",
+      "Free",
+      "MCP"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.fathom.ai/api-overview",
+     "find": [
+      "key",
+      "OAuth",
+      "plan",
+      "rate"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Fathom API access free plan API key public API which plans",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.fathom.ai/faq",
+     "find": [
+      "all plans",
+      "review",
+      "approval",
+      "OAuth"
+     ]
+    }
+   }
+  ]
+ }
+}

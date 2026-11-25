@@ -1,0 +1,5 @@
+{"t": 1795591335.3, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/docs/mcp", "find": ["admin", "agreement", "plan", "free", "Settings"]}}
+{"t": 1795591363.9, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/guides/authentication", "find": ["token", "create", "Settings", "account"]}}
+{"t": 1795591420.8, "tool": "composio_search", "input": {"query": "Brex API access pricing plan developer token who can create", "domains": []}}
+{"t": 1795591484.4, "tool": "fetch_page", "input": {"url": "https://www.brex.com/support/brex-api", "find": ["customer", "admin", "token", "plan", "sandbox", "staging"]}}
+{"t": 1795591546.8, "tool": "fetch_page", "input": {"url": "https://www.brex.com/pricing", "find": ["Essentials", "API", "free", "\\"]}}

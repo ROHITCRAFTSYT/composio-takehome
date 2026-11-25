@@ -1,0 +1,4 @@
+{"t": 1795591595.6, "tool": "fetch_page", "input": {"url": "https://www.fathom.ai/pricing", "find": ["API", "Public API", "Free", "MCP"]}}
+{"t": 1795591654.0, "tool": "fetch_page", "input": {"url": "https://developers.fathom.ai/api-overview", "find": ["key", "OAuth", "plan", "rate"]}}
+{"t": 1795591713.1, "tool": "composio_search", "input": {"query": "Fathom API access free plan API key public API which plans", "domains": []}}
+{"t": 1795591766.5, "tool": "fetch_page", "input": {"url": "https://developers.fathom.ai/faq", "find": ["all plans", "review", "approval", "OAuth"]}}

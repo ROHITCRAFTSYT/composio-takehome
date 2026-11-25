@@ -1,0 +1,7 @@
+{"t": 1795527930.9, "tool": "composio_search", "input": {"query": "Pinterest API developers authentication OAuth access token", "domains": []}}
+{"t": 1795528007.1, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/docs/getting-started/authentication/", "find": ["oauth", "access", "token", "api"]}}
+{"t": 1795528095.3, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/", "find": ["Basic", "oauth", "scope", "client_id"]}}
+{"t": 1795528196.4, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/docs/getting-started/access-tiers/", "find": ["trial", "standard", "approval", "review", "access"]}}
+{"t": 1795528310.6, "tool": "composio_search", "input": {"query": "Pinterest MCP server official", "domains": []}}
+{"t": 1795528416.5, "tool": "composio_search", "input": {"query": "Pinterest MCP server Pinterest Developers", "domains": ["developers.pinterest.com", "github.com/pinterest"]}}
+{"t": 1795528503.5, "tool": "fetch_page", "input": {"url": "https://developers.pinterest.com/about-pinterest-mcp", "find": ["MCP", "available", "on the way", "coming", "access"]}}

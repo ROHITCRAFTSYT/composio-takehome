@@ -1,0 +1,102 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "All-in-one marketing platform for funnels, email, courses, and contacts for online businesses",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API keys and MCP keys are created in Settings > MCP & API keys; no OAuth flow is documented. MCP keys expire after 90 days and OAuth is only planned.",
+  "access": "self_serve_free",
+  "access_notes": "Vendor marketing page states full API access is included on the Free plan; keys are self-created in the dashboard (max 3 public API keys per account). critic: re-checked, confirmed self_serve_free.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Public API covers contacts, tags, custom fields, price plans, coupons, courses and more, with cursor-based pagination. The REST claim comes from the API reference intro; endpoint-level detail was not fully reviewed.",
+  "docs_url": "https://developer.systeme.io/reference/api",
+  "mcp": "official",
+  "mcp_url": "https://developer.systeme.io/docs/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "MCP server is in initial release with key-based auth only; production stability is noted as a caveat, not a blocker. critic: confirmed on vendor developer docs.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "API keys are unique identifiers that authenticate requests to our public API."
+   },
+   {
+    "field": "access",
+    "url": "https://systeme.io/circle-alternative",
+    "quote": "Systeme.io grants full API access on the Free plan"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.systeme.io/reference/api",
+    "quote": "Adhering to RESTful conventions, our API ensures an intuitive and consistent interaction pattern for all users."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.systeme.io/docs/mcp-server",
+    "quote": "The Systeme.io MCP server is in its initial release."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.systeme.io/reference/api",
+    "quote": "To begin using the Systeme.io Public API, you must first obtain an authentication key."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.systeme.io/docs/mcp-server",
+     "find": [
+      "MCP",
+      "key",
+      "expire",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://systeme.io/pricing",
+     "find": [
+      "API",
+      "Free",
+      "public"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://systeme.io/circle-alternative",
+     "find": [
+      "API access",
+      "Free plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+     "find": [
+      "plan",
+      "MCP",
+      "Settings"
+     ]
+    }
+   }
+  ]
+ }
+}

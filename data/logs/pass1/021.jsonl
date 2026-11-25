@@ -1,0 +1,11 @@
+{"t": 1795527334.7, "tool": "composio_search", "input": {"query": "Slack API authentication OAuth docs", "domains": ["slack.com"]}}
+{"t": 1795527377.1, "tool": "composio_search", "input": {"query": "Slack MCP server official", "domains": ["slack.com", "github.com"]}}
+{"t": 1795527478.4, "tool": "fetch_page", "input": {"url": "https://docs.slack.dev/apis/web-api/", "find": ["rest", "api", "method"]}}
+{"t": 1795527564.5, "tool": "fetch_page", "input": {"url": "https://api.slack.com/authentication", "find": ["bot token", "user token", "app token"]}}
+{"t": 1795527609.2, "tool": "fetch_page", "input": {"url": "https://api.slack.com/authentication/oauth-v2", "find": ["authorization code", "client_id"]}}
+{"t": 1795527650.6, "tool": "fetch_page", "input": {"url": "https://slack.com/help/articles/48855576908307-Guide-to-MCP-in-Slack", "find": ["MCP server", "OAuth"]}}
+{"t": 1795527712.5, "tool": "fetch_page", "input": {"url": "https://api.slack.com/authentication/sign-in-with-slack", "find": ["Sign in"]}}
+{"t": 1795527760.4, "tool": "composio_search", "input": {"query": "Slack developer program free workspace app creation pricing API access", "domains": []}}
+{"t": 1795527797.4, "tool": "composio_search", "input": {"query": "Slack app directory review requirements distribution", "domains": []}}
+{"t": 1795527885.4, "tool": "fetch_page", "input": {"url": "https://slack.com/help/articles/13345326945043-Build-apps-with-Slacks-developer-tools", "find": ["Developer Program", "no cost"]}}
+{"t": 1795527918.4, "tool": "fetch_page", "input": {"url": "https://api.slack.com/start/distributing", "find": ["review", "distribute"]}}

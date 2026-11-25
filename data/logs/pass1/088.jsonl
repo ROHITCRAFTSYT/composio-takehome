@@ -1,0 +1,6 @@
+{"t": 1795529786.0, "tool": "composio_search", "input": {"query": "Brex developer API authentication", "domains": ["developer.brex.com"]}}
+{"t": 1795529861.4, "tool": "fetch_page", "input": {"url": "https://developer.brex.com", "find": ["api", "oauth", "token", "access"]}}
+{"t": 1795529943.9, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/guides/authentication", "find": ["user token", "OAuth", "Settings", "Bearer"]}}
+{"t": 1795530018.0, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/docs/mcp", "find": ["MCP", "OAuth", "API key", "official"]}}
+{"t": 1795530109.4, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/docs/faq", "find": ["user token", "OAuth", "partner", "approval", "free", "plan"]}}
+{"t": 1795530193.1, "tool": "fetch_page", "input": {"url": "https://developer.brex.com/guides/roles_permissions_scopes", "find": ["admin", "agreement", "approv", "Developer API"]}}

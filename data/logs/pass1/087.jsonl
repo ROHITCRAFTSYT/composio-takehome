@@ -1,0 +1,10 @@
+{"t": 1795529765.7, "tool": "composio_search", "input": {"query": "Xero API developer authentication OAuth 2.0 scopes", "domains": ["developer.xero.com"]}}
+{"t": 1795529808.7, "tool": "composio_search", "input": {"query": "Xero developer pricing API access free trial app partner", "domains": ["xero.com", "developer.xero.com"]}}
+{"t": 1795529841.3, "tool": "composio_search", "input": {"query": "Xero MCP server official GitHub", "domains": []}}
+{"t": 1795529923.2, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/faq/getting-started", "find": ["API key", "OAuth 2.0", "free"]}}
+{"t": 1795529955.7, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/documentation/development-accounts", "find": ["free", "trial", "demo company"]}}
+{"t": 1795530021.4, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/pricing", "find": ["Starter", "No charge", "free", "trial", "Connections"]}}
+{"t": 1795530050.1, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/documentation/guides/oauth2/scopes", "find": ["Scopes are additive", "Offline access", "Organisation scopes"]}}
+{"t": 1795530116.1, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/documentation/guides/oauth2/scopes", "find": ["Scopes are additive", "Offline access"]}}
+{"t": 1795530174.6, "tool": "fetch_page", "input": {"url": "https://github.com/xeroapi/xero-mcp-server", "find": ["official", "MCP"]}}
+{"t": 1795530202.4, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/partner/developer-partner", "find": ["certif", "review", "Custom Integrator"]}}

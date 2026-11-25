@@ -1,0 +1,7 @@
+{"t": 1795527399.4, "tool": "composio_search", "input": {"query": "Google Ads API developer authentication OAuth developer token", "domains": ["developers.google.com"]}}
+{"t": 1795527503.3, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/get-started/introduction", "find": ["access", "developer", "token", "MCP"]}}
+{"t": 1795527615.8, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token", "find": ["Test", "Basic", "Standard", "approval", "application", "apply", "review"]}}
+{"t": 1795527727.8, "tool": "composio_search", "input": {"query": "Google Ads API MCP server official", "domains": ["developers.google.com", "github.com"]}}
+{"t": 1795527798.1, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/access-levels", "find": ["Test", "Basic", "Standard", "Explorer", "apply", "application", "review", "approval"]}}
+{"t": 1795527894.4, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/rest/auth", "find": ["OAuth 2.0", "service account", "developer-token", "login-customer-id"]}}
+{"t": 1795527980.6, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "find": ["official", "googleads", "read-only", "MCP server"]}}

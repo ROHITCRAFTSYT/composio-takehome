@@ -1,0 +1,8 @@
+{"t": 1795529185.4, "tool": "composio_search", "input": {"query": "Linear developers API authentication OAuth API key", "domains": ["developers.linear.app", "linear.app"]}}
+{"t": 1795529222.2, "tool": "fetch_page", "input": {"url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api", "find": ["API key", "OAuth", "GraphQL", "personal"]}}
+{"t": 1795529311.8, "tool": "fetch_page", "input": {"url": "https://linear.app/developers/graphql", "find": ["Personal API Keys", "OAuth", "Bearer"]}}
+{"t": 1795529339.1, "tool": "fetch_page", "input": {"url": "https://linear.app/developers/oauth-2-0-authentication", "find": ["client_id", "OAuth"]}}
+{"t": 1795529369.4, "tool": "composio_search", "input": {"query": "Linear MCP server official", "domains": ["linear.app", "github.com"]}}
+{"t": 1795529459.7, "tool": "fetch_page", "input": {"url": "https://linear.app/docs/mcp", "find": ["official", "remote", "mcp.linear.app"]}}
+{"t": 1795529488.0, "tool": "fetch_page", "input": {"url": "https://linear.app/pricing", "find": ["API", "free", "Free"]}}
+{"t": 1795529515.4, "tool": "fetch_page", "input": {"url": "https://linear.app/developers/oauth-2-0-authentication", "find": ["PKCE", "actor", "review", "publish"]}}

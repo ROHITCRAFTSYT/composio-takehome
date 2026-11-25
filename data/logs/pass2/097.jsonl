@@ -1,0 +1,5 @@
+{"t": 1795591647.8, "tool": "fetch_page", "input": {"url": "https://higgsfield.ai/cli", "find": ["MCP", "API", "free", "credits", "key"]}}
+{"t": 1795591668.2, "tool": "fetch_page", "input": {"url": "https://docs.higgsfield.ai/docs/help/faq", "find": ["free", "credit", "account", "pricing", "plan"]}}
+{"t": 1795591716.0, "tool": "composio_search", "input": {"query": "Higgsfield API console pricing free credits top up billing", "domains": ["higgsfield.ai", "docs.higgsfield.ai"]}}
+{"t": 1795591756.6, "tool": "fetch_page", "input": {"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "find": ["minimum top-up", "free", "trial", "balance", "credentials"]}}
+{"t": 1795591784.9, "tool": "fetch_page", "input": {"url": "https://higgsfield.ai/blog/higgsfield-api", "find": ["Access does not require", "free", "trial", "top up", "MCP"]}}

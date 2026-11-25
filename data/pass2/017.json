@@ -1,0 +1,112 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "one_liner": "Per-seat B2B customer support platform (shared inbox, threads, help center) with GraphQL and REST APIs and an official MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Machine-user API keys with fine-grained permissions, created in Settings > Machine users & agents. OAuth app for calling the API as a workspace user. Official MCP server uses OAuth.",
+  "access": "self_serve_trial",
+  "access_notes": "7-day free trial with no credit card required; API listed in the Developer platform row of every pricing tier (Foundation $45/user/mo, Horizon $99, Frontier custom) and blog says full API access on all plans. No free plan on pricing page. critic: confirmed self_serve_trial; no free plan found.",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "Vendor says UI/API parity with no restrictive rate limits.",
+  "docs_url": "https://www.plain.com/docs/graphql/authentication",
+  "mcp": "official",
+  "mcp_url": "https://www.plain.com/docs/integrations/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "A machine user can have several API keys, so you can rotate them without downtime."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "To call the API as a user in your workspace, use an OAuth app."
+   },
+   {
+    "field": "access",
+    "url": "https://www.plain.com/llms.txt",
+    "quote": "7-day free trial, no credit card required."
+   },
+   {
+    "field": "access",
+    "url": "https://www.plain.com/blog/startups-customer-support-tools",
+    "quote": "Full API access and AI included on all plans."
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.plain.com/llms.txt",
+    "quote": "GraphQL and REST APIs with full UI/API parity and no restrictive rate limits."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.plain.com/docs/integrations/mcp-server",
+    "quote": "Plain MCP uses OAuth to allow your MCP server connection to share the same context as your normal web app user."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "A machine user can have several API keys, so you can rotate them without downtime."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.plain.com/pricing",
+     "find": [
+      "free",
+      "trial",
+      "API",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Plain support MCP server",
+     "domains": [
+      "plain.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.plain.com/pricing",
+     "find": [
+      "before paying",
+      "free trial",
+      "Foundation",
+      "Horizon",
+      "Frontier"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.plain.com/blog/startups-customer-support-tools",
+     "find": [
+      "Full API access"
+     ]
+    }
+   }
+  ]
+ }
+}

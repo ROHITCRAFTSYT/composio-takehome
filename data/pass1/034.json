@@ -1,0 +1,134 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "All-in-one marketing, CRM and agency platform (GoHighLevel / HighLevel) with a documented public API and an official MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 and Private Integration Tokens (PIT). PIT is a bearer token, counted as api_key per the rubric. Legacy API key generation is being phased out per the official docs.",
+  "access": "paid_plan",
+  "access_notes": "Official docs list API access on Starter ($97/month), Unlimited ($297/month) and Founder ($497/month). No free or trial path to API credentials was seen on the fetched pages.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Versioned REST-style API with bearer auth (v2 and v3 routes). Some higher-tier endpoints are restricted by plan, scope or eligibility. api_style is inferred from the v3 bearer-auth reference; the page does not use the word REST.",
+  "docs_url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+  "mcp": "official",
+  "mcp_url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Real API access needs a paid HighLevel subscription (Starter minimum). The official MCP server connects through OAuth to a sub-account, so it also needs a paid account.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "access",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "HighLevel offers API access across its subscription plans, including Starter, Unlimited, and Founder."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "Private Integration Tokens allow developers to securely connect internal applications to HighLevel."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "Both OAuth 2.0 and Private Integration Tokens (PIT) are available across plans."
+   },
+   {
+    "field": "api_style",
+    "url": "https://marketplace.gohighlevel.com/docs/ghl/users/users-api-v-3",
+    "quote": "All APIs available via /v3 route prefix with AIP-compliant responses."
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+    "quote": "The HighLevel MCP Server, also called the LeadConnector MCP Server, connects through OAuth"
+   },
+   {
+    "field": "verdict",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "quote": "HighLevel offers API access across its subscription plans, including Starter, Unlimited, and Founder."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "GoHighLevel API authentication docs",
+     "domains": [
+      "highlevel.stoplight.io",
+      "marketplace.gohighlevel.com",
+      "gohighlevel.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "GoHighLevel MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "GoHighLevel API pricing plan API access",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+     "find": [
+      "Private Integration",
+      "OAuth",
+      "Starter",
+      "Founder",
+      "API access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server",
+     "find": [
+      "MCP",
+      "official",
+      "sub-account"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/ExternalAuthentication",
+     "find": [
+      "OAuth",
+      "API key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://marketplace.gohighlevel.com/docs/ghl/users/users-api-v-3",
+     "find": [
+      "Bearer",
+      "Private Integration",
+      "REST"
+     ]
+    }
+   }
+  ]
+ }
+}

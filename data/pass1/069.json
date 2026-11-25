@@ -1,0 +1,173 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Cloud observability and security platform for metrics, logs, APM traces, dashboards and monitors, with a public REST API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Requests use an API key (DD-API-KEY header) and, for read endpoints, an application key (DD-APPLICATION-KEY). Personal access tokens are recommended for new integrations and MCP clients. OAuth2 authorization code flow with PKCE exists for partner integrations published through the Datadog partner program.",
+  "access": "self_serve_trial",
+  "access_notes": "API and application keys are created in the org's settings. The pricing page offers 'Start Free Trial' on products; I did not find a free ongoing plan with API access documented in the pages I read.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Documented REST API reference at docs.datadoghq.com/api/latest covering most product objects (per the API reference and MCP docs). Regional sites use different hostnames.",
+  "docs_url": "https://docs.datadoghq.com/api/latest/authentication/",
+  "mcp": "official",
+  "mcp_url": "https://docs.datadoghq.com/mcp_server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials are self-serve in the product. Using OAuth for third-party distribution would need partner publication review, but API key and PAT access does not.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "quote": "Requests that read data require full access and also require an application key."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+    "quote": "For new integrations, including AI agents and MCP clients, use a Personal Access Token or Service Access Token instead of an application key."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+    "quote": "Once a user signs in, redirect them to the OAuth2 Authorization endpoint"
+   },
+   {
+    "field": "access",
+    "url": "https://www.datadoghq.com/pricing/",
+    "quote": "Start Free Trial"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "quote": "Validate API key"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.datadoghq.com/mcp_server",
+    "quote": "This is the main Datadog MCP Server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+    "quote": "API keys are unique to your organization."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Datadog API authentication API keys application keys docs",
+     "domains": [
+      "docs.datadoghq.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.datadoghq.com/api/latest/authentication/",
+     "find": [
+      "API key",
+      "Application key",
+      "OAuth",
+      "pricing",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Datadog OAuth apps third-party developer authorization",
+     "domains": [
+      "docs.datadoghq.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Datadog MCP server official",
+     "domains": [
+      "docs.datadoghq.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
+     "find": [
+      "OAuth",
+      "authorization",
+      "app review",
+      "publish",
+      "Marketplace"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+     "find": [
+      "Application key",
+      "create",
+      "Organization Settings",
+      "trial",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.datadoghq.com/mcp_server",
+     "find": [
+      "official",
+      "Datadog MCP Server",
+      "plan",
+      "free",
+      "setup"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.datadoghq.com/extend/integrations/api_integration",
+     "find": [
+      "published",
+      "partner",
+      "approval",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.datadoghq.com/pricing/",
+     "find": [
+      "free trial",
+      "14-day",
+      "Free",
+      "API key"
+     ]
+    }
+   }
+  ]
+ }
+}

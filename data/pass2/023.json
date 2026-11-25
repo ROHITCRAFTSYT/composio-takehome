@@ -1,0 +1,111 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "one_liner": "Team chat and messaging platform (channels, direct chats, bots and integrations) from Zoho.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "REST API uses OAuth 2.0 only: client ID/secret registered in the Zoho developer console, grant code, then access and refresh tokens. critic: confirmed, no API-key option found.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access confirmed self_serve_free. Developer console client registration is self-serve; a Free plan exists and trial accounts downgrade to free. No page found restricting REST API to paid plans, but docs do not explicitly say API is included on Free, so medium confidence.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Versioned REST API v2 with resource endpoints for channels, messages, bots and more, scoped via ZohoCliq.* OAuth scopes.",
+  "docs_url": "https://www.zoho.com/cliq/help/restapi/v2/",
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready confirmed. No blocker seen; marketplace review for public distribution not checked.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "quote": "Zoho Cliq's Rest API's follows the OAuth 2.0 protocol to authorize and authenticate requests."
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "quote": "Register your application as a new client by accessing this website:"
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/cliq/pricing.html",
+    "quote": "Free | Free | Free"
+   },
+   {
+    "field": "api_style",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "quote": "This API follows HTTP rules, identifies Cliq users using OAuth and provides response as a JSON Object."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html",
+    "quote": "The Zoho MCP server provides various tools for interacting with Zoho Cliq."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "quote": "Register your application as a new client by accessing this website:"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/cliq/pricing.html",
+     "find": [
+      "API",
+      "Free",
+      "REST"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "find": [
+      "Register",
+      "scope",
+      "OAuth",
+      "Free",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html",
+     "find": [
+      "Zoho",
+      "MCP",
+      "server"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.zoho.com/cliq/pricing.html",
+     "find": [
+      "REST API",
+      "Platform",
+      "Webhook",
+      "Bots",
+      "Incoming"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,184 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "one_liner": "Shared-inbox and customer communication platform for email, SMS, chat and other channels, with a Core API for messages, contacts, inboxes and analytics.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Two Bearer-token routes: API tokens created by a company admin in settings, or OAuth for public/partner integrations. OAuth is preferred for public integrations.",
+  "access": "paid_plan",
+  "access_notes": "API tokens are created by a company admin. A 14-day free trial gives Professional-plan access, but ongoing API use needs a paid plan. Rate limits vary by plan.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Core API covers messages, contacts, channels, inboxes, teammates and analytics, with webhooks. Plugin SDK and Channel API are separate.",
+  "docs_url": "https://dev.frontapp.com/docs/authentication",
+  "mcp": "official",
+  "mcp_url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "The API is documented and OAuth is supported, but production API use needs a paid plan. The trial only supports testing.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://help.front.com/en/articles/2331",
+    "quote": "Front's API settings give you the controls you need to manage active API tokens and what resources they can access."
+   },
+   {
+    "field": "access",
+    "url": "https://help.front.com/en/articles/2331",
+    "quote": "You must be a Front company admin to manage API tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://help.front.com/en/articles/2178",
+    "quote": "When you start a free 14-day trial of Front, you'll have access to the Professional plan, which includes certain limitations."
+   },
+   {
+    "field": "api_style",
+    "url": "https://help.front.com/en/articles/2482",
+    "quote": "--url https://api2.frontapp.com/conversations/cnv_123/drafts"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://help.front.com/en/articles/2482",
+    "quote": "The Core API is Front’s “backend” API that allows developers to access and update almost all elements in Front"
+   },
+   {
+    "field": "mcp",
+    "url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712",
+    "quote": "We're excited to announce the beta release of the Front MCP server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://help.front.com/en/articles/2178",
+    "quote": "When you start a free 14-day trial of Front, you'll have access to the Professional plan, which includes certain limitations."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Front helpdesk API developer docs authentication",
+     "domains": [
+      "front.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Front app API pricing plan API access",
+     "domains": [
+      "front.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Front MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.front.com/en/articles/2331",
+     "find": [
+      "token",
+      "OAuth",
+      "plan",
+      "Admin"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.front.com/en/articles/2178",
+     "find": [
+      "Trial",
+      "API",
+      "Starter",
+      "Professional",
+      "Enterprise"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.front.com/en/articles/2482",
+     "find": [
+      "Core API",
+      "OAuth",
+      "token",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.front.com/en/articles/4883136",
+     "find": [
+      "MCP",
+      "access",
+      "beta",
+      "official",
+      "Front"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712",
+     "find": [
+      "official",
+      "beta",
+      "Core API tokens",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712",
+     "find": [
+      "How to get access",
+      "form",
+      "beta",
+      "API tokens"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "find": [
+      "OAuth",
+      "token",
+      "authenticate"
+     ]
+    }
+   }
+  ]
+ }
+}

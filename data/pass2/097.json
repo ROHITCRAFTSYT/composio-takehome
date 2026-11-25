@@ -1,0 +1,135 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Generative image and video model platform (Higgsfield) exposing 50+ image/video models via a pay-as-you-go REST API and an MCP server",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Credentials are a key ID and secret created in Higgsfield Console, sent in the Authorization header as Key ID:SECRET. No OAuth documented for the API (the MCP server authenticates via the user's Higgsfield account).",
+  "access": "paid_plan",
+  "access_notes": "critic: access self_serve_free -> paid_plan. Account and key creation are self-serve, but the API is prepaid only: you must add a payment method and top up a balance (min $5) before generating. Separate from website plans; no free tier or trial credits for the API found.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Async REST generation endpoints per model (request_id, status_url, cancel_url), plus Python/TS SDKs. Coverage is limited to generation models.",
+  "docs_url": "https://docs.higgsfield.ai",
+  "mcp": "official",
+  "mcp_url": "https://higgsfield.ai/cli",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "critic: verdict ready -> blocked. Needs prepaid funds (min $5 top-up) with no free/trial path to working API use; no subscription though, so a low-cost barrier. Note mcp uses account auth and website credits.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.higgsfield.ai/docs/authentication",
+    "quote": "Each credential consists of a key ID and a secret."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://higgsfield.ai/higgsfield-api",
+    "quote": "Authorization: `Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}`"
+   },
+   {
+    "field": "access",
+    "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+    "quote": "Billing is pay-as-you-go from a US dollar balance, and the minimum top-up is $5."
+   },
+   {
+    "field": "access",
+    "url": "https://higgsfield.ai/blog/higgsfield-api",
+    "quote": "Add a payment method and top up your balance."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.higgsfield.ai/docs/help/faq",
+    "quote": "Create an account at console.higgsfield.ai"
+   },
+   {
+    "field": "api_style",
+    "url": "https://higgsfield.ai/higgsfield-api",
+    "quote": "https://api.higgsfield.ai/bytedance/seedance-2.0/text-to-video"
+   },
+   {
+    "field": "mcp",
+    "url": "https://higgsfield.ai/cli",
+    "quote": "Add the Higgsfield MCP server URL in your agent's settings and authenticate through your Higgsfield account."
+   },
+   {
+    "field": "verdict",
+    "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+    "quote": "No plan or subscription is involved: fund the balance, send requests at the rates listed in the catalog, and new requests simply wait once the balance hits zero."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://higgsfield.ai/cli",
+     "find": [
+      "MCP",
+      "API",
+      "free",
+      "credits",
+      "key"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.higgsfield.ai/docs/help/faq",
+     "find": [
+      "free",
+      "credit",
+      "account",
+      "pricing",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Higgsfield API console pricing free credits top up billing",
+     "domains": [
+      "higgsfield.ai",
+      "docs.higgsfield.ai"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "find": [
+      "minimum top-up",
+      "free",
+      "trial",
+      "balance",
+      "credentials"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://higgsfield.ai/blog/higgsfield-api",
+     "find": [
+      "Access does not require",
+      "free",
+      "trial",
+      "top up",
+      "MCP"
+     ]
+    }
+   }
+  ]
+ }
+}

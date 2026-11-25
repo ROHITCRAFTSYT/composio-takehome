@@ -1,0 +1,116 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot is a CRM and marketing/sales platform with a REST API for CRM objects and developer tooling.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth for public apps; private app / static auth access tokens for single-account use (api_key). critic: confirmed; new developer-platform apps use static auth token or OAuth.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access confirmed self_serve_free. Standard HubSpot accounts can be free, and developer test accounts are free accounts (up to 10) that can host apps/tokens, with a 90-day trial of enterprise features on top. Free-portal private-app visibility reports on community forums are mixed, so some risk.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "All REST APIs available via private app access token or public app OAuth token; broad CRM object coverage.",
+  "docs_url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+  "mcp": "official",
+  "mcp_url": "https://developers.hubspot.com/ai-tools/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict confirmed. Remote MCP requires new Developer Platform and a user-level OAuth app; legacy apps can no longer be created, so new builds use the developer platform (CLI-based).",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "There are two ways to authenticate calls to HubSpot’s APIs: OAuth, and private app access tokens."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "It can be free or paid, and is used as your production environment."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "Developer test accounts are free HubSpot accounts with access to a 90-day trial of many enterprise features, with the following limitations:"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "All REST APIs are available to query via a private app access token or public app OAuth token."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.hubspot.com/ai-tools/mcp",
+    "quote": "HubSpot MCP server supports OAuth 2.0."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "New legacy apps cannot be created."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HubSpot free developer account API access private app free",
+     "domains": [
+      "developers.hubspot.com",
+      "hubspot.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/ai-tools/mcp",
+     "find": [
+      "official",
+      "OAuth",
+      "server"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+     "find": [
+      "free",
+      "Developer",
+      "test"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+     "find": [
+      "cannot be created",
+      "REST",
+      "private"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "HubSpot developer platform app static auth access token authentication",
+     "domains": [
+      "developers.hubspot.com"
+     ]
+    }
+   }
+  ]
+ }
+}

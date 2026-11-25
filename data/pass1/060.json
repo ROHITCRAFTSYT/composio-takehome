@@ -1,0 +1,161 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "Clay is a GTM data enrichment and workflow platform that combines data providers, AI research and CRM/outbound automation.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API requests send a Clay API key in the clay-api-key header. Keys are created under API and CLI > API keys (or clay api-keys create). The legacy account API key does not work with the Public API. Not OAuth.",
+  "access": "contact_sales",
+  "access_notes": "Clay API access is listed only on the Enterprise tier, which is custom-priced with an annual commitment and handled by an account team. Launch and Growth plans do not list Public API access (Growth lists HTTP API integrations, which is a different feature). Not verified whether any trial path reaches the Public API.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Public API base is https://api.clay.com/public/v0 with a documented /me endpoint. Breadth of endpoints not fully surveyed in this pass. Tables also accept per-table webhook ingestion on lower tiers, which is not the public REST API.",
+  "docs_url": "https://developers.clay.com/quickstart",
+  "mcp": "official",
+  "mcp_url": "https://www.clay.com/guides/clay-mcp",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "Self-serve credentials for the Public API appear to require the Enterprise plan, which is sold through sales. The official MCP server (Claude, ChatGPT, Codex) is a workspace connector governed by admin settings, not a developer-issued API credential. Enterprise pricing is custom and not public.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.clay.com/public-api/authentication",
+    "quote": "Every request to the Clay Public API must include a Clay API key in the clay-api-key header."
+   },
+   {
+    "field": "access",
+    "url": "https://www.clay.com/pricing",
+    "quote": "Includes everything in Growth, plus unlimited Audiences across sources, unlimited row bulk enrichment, Clay API access"
+   },
+   {
+    "field": "access",
+    "url": "https://university.clay.com/docs/plans-and-billing",
+    "quote": "On the Enterprise plan, your account team handles plan changes directly."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.clay.com/public-api/authentication",
+    "quote": "curl https://api.clay.com/public/v0/me"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.clay.com/guides/clay-mcp",
+    "quote": "Clay's MCP server uses it to expose 150+ data providers, AI research agents, and your team's prebuilt workflows inside ChatGPT, Claude, and Codex."
+   },
+   {
+    "field": "verdict",
+    "url": "https://www.clay.com/pricing",
+    "quote": "Enterprise (custom pricing with annual commitment)"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Clay API documentation authentication API key",
+     "domains": [
+      "clay.com",
+      "docs.clay.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Clay MCP server official",
+     "domains": [
+      "clay.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Clay pricing plans API access",
+     "domains": [
+      "clay.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.clay.com/public-api/authentication",
+     "find": [
+      "clay-api-key",
+      "API key",
+      "sign"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.clay.com/pricing",
+     "find": [
+      "API access",
+      "Clay API",
+      "Growth",
+      "Enterprise",
+      "contact"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://university.clay.com/docs/plans-and-billing",
+     "find": [
+      "API",
+      "Enterprise",
+      "Growth",
+      "Launch"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Clay official MCP server claude.ai connector docs",
+     "domains": [
+      "university.clay.com",
+      "clay.com",
+      "developers.clay.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.clay.com/guides/clay-mcp",
+     "find": [
+      "official",
+      "Claude",
+      "connector",
+      "ChatGPT"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Clay Public API key which plans include API access enterprise",
+     "domains": [
+      "university.clay.com",
+      "developers.clay.com"
+     ]
+    }
+   }
+  ]
+ }
+}

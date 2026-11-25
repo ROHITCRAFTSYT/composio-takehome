@@ -1,0 +1,24 @@
+{
+  "n": 53,
+  "app": "Ahrefs",
+  "one_liner": "SEO and marketing data platform (backlinks, keywords, SERPs, rank tracking, site audit) with a REST API v3 that only works on paid plans.",
+  "auth_methods": ["api_key", "oauth2"],
+  "access": "paid_plan",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "mcp": "official",
+  "mcp_url": "https://api.ahrefs.com/mcp/mcp",
+  "verdict": "blocked",
+  "main_blocker": "paid_plan",
+  "notes": "Direct API v3 uses a Bearer API key created in Account settings (owners/admins only). OAuth 2.0 (authorization code + PKCE) is also documented, but only for apps in the Ahrefs Connect partner program, which needs an application and an approval review; it is listed in auth_methods because the official docs offer it. Access: the docs say the API is on 'eligible paid plans' and free test queries are for 'users on any paid plan'; the help center says all new applications need a Lite or higher subscription. There is no free or trial path to API credentials (the free 'Public' endpoints only return crawler IP ranges), so access=paid_plan and verdict=blocked. The hosted MCP server (api.ahrefs.com/mcp/mcp) is official but also needs Lite or higher, and the terms forbid calling it from custom scripts. Breadth is moderate: many read-only report endpoints (all data endpoints are GET), plus some writes through the Management endpoints for Rank Tracker projects and keyword lists. The docs HTML pages are a single-page app and return 404 to some fetchers (WebFetch), so evidence uses the .md/llms.txt versions the site publishes; the help-center quote has <b> markup inside the sentence, so the quote is cut before it.",
+  "evidence": [
+    {"field": "auth_methods", "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management.md", "quote": "You'll need an API key to send requests via Ahrefs API v3."},
+    {"field": "auth_methods", "url": "https://docs.ahrefs.com/ahrefs-connect/docs/introduction.md", "quote": "Users connect their Ahrefs account via OAuth, and your app can fetch data using their API units."},
+    {"field": "access", "url": "https://docs.ahrefs.com/api/docs/free-test-queries.md", "quote": "Users on any paid plan can test Ahrefs API by running a limited set of free test queries."},
+    {"field": "access", "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3", "quote": "Yes, all new applications require a Lite or higher"},
+    {"field": "api_style", "url": "https://docs.ahrefs.com/llms.txt", "quote": "each a self-contained group of REST endpoints"},
+    {"field": "mcp", "url": "https://docs.ahrefs.com/mcp/docs/introduction.md", "quote": "Ahrefs provides a hosted MCP server that allows users with a Lite plan or higher to connect their Ahrefs account to supported AI tools."},
+    {"field": "verdict", "url": "https://docs.ahrefs.com/api/docs/introduction.md", "quote": "On all other plans, you'll still have access to a"}
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

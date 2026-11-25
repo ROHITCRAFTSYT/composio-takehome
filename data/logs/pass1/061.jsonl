@@ -1,0 +1,5 @@
+{"t": 1795528838.8, "tool": "composio_search", "input": {"query": "GitHub REST API authentication personal access token OAuth apps", "domains": ["docs.github.com"]}}
+{"t": 1795528870.6, "tool": "fetch_page", "input": {"url": "https://docs.github.com/en/rest", "find": ["REST API", "GitHub", "free"]}}
+{"t": 1795528897.7, "tool": "fetch_page", "input": {"url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api", "find": ["OAuth", "personal access token", "GitHub App", "Basic"]}}
+{"t": 1795528989.0, "tool": "composio_search", "input": {"query": "GitHub official MCP server github/github-mcp-server", "domains": []}}
+{"t": 1795529022.5, "tool": "fetch_page", "input": {"url": "https://github.com/github/github-mcp-server", "find": ["MCP", "remote", "official"]}}

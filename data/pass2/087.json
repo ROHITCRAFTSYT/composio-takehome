@@ -1,0 +1,107 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "one_liner": "Xero is cloud accounting software for small and mid-sized businesses with an OAuth 2.0 accounting API.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Docs state the API does not support basic API key auth and requires OAuth 2.0 with client id and secret. Custom Connections use client credentials grant (a paid Xero product, not the standard flow); critic: kept oauth2 only.",
+  "access": "self_serve_free",
+  "access_notes": "Free Xero account plus free demo company for development. Starter plan has no monthly fee, no payment method and no certification prerequisite, capped at 5 connections; Core (50 connections) needs a card; Plus and above require App Certification. critic: access confirmed from pricing and development-accounts pages.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Public OpenAPI spec is published, implying REST style. Accounting API covers contacts, chart of accounts, invoices and more.",
+  "docs_url": "https://developer.xero.com/documentation/api/accounting/overview",
+  "mcp": "official",
+  "mcp_url": "https://developer.xero.com/documentation/guides/remote-mcp/overview",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Building and testing is self-serve on the Starter plan (5 connections). Scaling to Plus and above requires App Certification; Advanced and Enterprise need a security assessment. critic: mcp stays official, and a vendor-hosted remote MCP at api.xero.com/mcp/v1 was found in addition to the xeroapi GitHub server.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.xero.com/faq/getting-started",
+    "quote": "The Xero API does not support basic API Key authentication. Our API uses OAuth 2.0 which means you need to register your app to get a client id and client secret which you use to access the API."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Plans have been created to enable early innovation and create an accessible entry point for developers just getting started."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.xero.com/documentation/development-accounts",
+    "quote": "Signing up for a Xero account is free. Once you have done that, you have two options as to how you can begin development without incurring any cost:"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.xero.com/faq/getting-started",
+    "quote": "You can also use our OpenAPI spec to generate your own SDK."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.xero.com/documentation/guides/remote-mcp/overview",
+    "quote": "The Developer Remote MCP Server is a hosted Model Context Protocol (MCP) server run by Xero."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/xeroapi/xero-mcp-server",
+    "quote": "This is a Model Context Protocol (MCP) server implementation for Xero."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Prerequisites |  |  | App Certification | App Certification | App Certification"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/pricing",
+     "find": [
+      "Starter",
+      "certification",
+      "connections",
+      "Free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Xero MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/documentation/guides/remote-mcp/overview",
+     "find": [
+      "hosted",
+      "Nothing"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.xero.com/documentation/development-accounts",
+     "find": [
+      "free",
+      "demo"
+     ]
+    }
+   }
+  ]
+ }
+}

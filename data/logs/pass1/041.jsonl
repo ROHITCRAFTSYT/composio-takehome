@@ -1,0 +1,7 @@
+{"t": 1795527992.8, "tool": "composio_search", "input": {"query": "Shopify Admin API authentication access token developer docs", "domains": ["shopify.dev"]}}
+{"t": 1795528057.0, "tool": "composio_search", "input": {"query": "Shopify official MCP server dev-mcp", "domains": ["shopify.dev", "github.com/Shopify"]}}
+{"t": 1795528162.8, "tool": "fetch_page", "input": {"url": "https://shopify.dev/docs/api/usage/authentication", "find": ["OAuth", "token", "header", "API", "access"]}}
+{"t": 1795528285.5, "tool": "fetch_page", "input": {"url": "https://shopify.dev/docs/api/ai-toolkit", "find": ["MCP", "authentication", "Dev"]}}
+{"t": 1795528489.2, "tool": "composio_search", "input": {"query": "Shopify development store free Partner account create custom app API credentials without paid plan", "domains": ["shopify.dev", "help.shopify.com"]}}
+{"t": 1795528639.3, "tool": "fetch_page", "input": {"url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens", "find": ["client_credentials", "Dev", "expire"]}}
+{"t": 1795528728.3, "tool": "fetch_page", "input": {"url": "https://help.shopify.com/en/manual/apps/about-apps", "find": ["custom"]}}

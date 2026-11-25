@@ -1,0 +1,89 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "one_liner": "Open-source ecommerce plugin that adds a store, products, orders and customers to WordPress.",
+  "auth_methods": [
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Keys (Consumer Key/Secret) are generated per WordPress user in WooCommerce settings and sent as HTTP Basic auth over HTTPS. Over plain HTTP, docs require OAuth 1.0a one-legged signing (HMAC key+secret), classed as other. No OAuth 2.0. critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Free open-source plugin; store admin generates REST API keys in WordPress admin, no paywall. critic: access confirmed.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Versioned REST namespace wc/v3.",
+  "docs_url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+  "mcp": "official",
+  "mcp_url": "https://woocommerce.com/document/woocommerce-ai/mcp-server/",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+    "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+    "quote": "You must use OAuth 1.0a \"one-legged\" authentication to ensure REST API credentials cannot be intercepted by an attacker."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+    "quote": "Now that keys have been generated, you should see two new keys, a QRCode, and a Revoke API Key button."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+    "quote": "curl https://www.example.com/wp-json/wc/v3/orders"
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+    "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password."
+   },
+   {
+    "field": "mcp",
+    "url": "https://woocommerce.com/document/woocommerce-ai/mcp-server/",
+    "quote": "Connect an external Model Context Protocol (MCP) client to your store’s WooCommerce AI server."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://woocommerce.com/document/woocommerce-ai/mcp-server/",
+     "find": [
+      "MCP",
+      "Automattic",
+      "enable",
+      "experimental"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication",
+     "find": [
+      "Generate API",
+      "Basic Auth",
+      "OAuth",
+      "permissions",
+      "HTTPS"
+     ]
+    }
+   }
+  ]
+ }
+}

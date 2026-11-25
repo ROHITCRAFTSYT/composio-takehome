@@ -1,0 +1,160 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "one_liner": "Collaborative docs and tables platform (formerly Coda, now Superhuman Docs) with a REST API and an MCP server",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public API uses a personal API token sent as a Bearer token in the Authorization header. OAuth is documented only for connecting to the Docs MCP server, not for the public REST API.",
+  "access": "self_serve_free",
+  "access_notes": "The API is free for all users in free and paid workspaces. Tokens are generated in the account settings (docs.superhuman.com/account), with API usage limited by the token owner's workspace role.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST endpoints under coda.io/apis/v1 for folders, docs and other objects, with read and write methods shown in the official reference. Full endpoint coverage not verified in this pass.",
+  "docs_url": "https://docs.superhuman.com/developers/apis/v1",
+  "mcp": "official",
+  "mcp_url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "headers = {'Authorization': 'Bearer <your API token>'}"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "uri = 'https://coda.io/apis/v1/folders'"
+   },
+   {
+    "field": "mcp",
+    "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+    "quote": "Under the hood, Superhuman Docs runs an MCP server built on the open Model Context Protocol standard"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Coda developers API authentication",
+     "domains": [
+      "coda.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://coda.io/developers/apis/v1",
+     "find": [
+      "API token",
+      "OAuth",
+      "Authentication",
+      "API key",
+      "Coda API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://coda.io/developers/apis/v1/authentication",
+     "find": [
+      "OAuth",
+      "API token",
+      "bearer",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Coda MCP server official",
+     "domains": [
+      "coda.io",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "find": [
+      "OAuth",
+      "API token",
+      "free of charge",
+      "Authentication",
+      "token"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Superhuman Docs official MCP server",
+     "domains": [
+      "docs.superhuman.com",
+      "superhuman.com",
+      "coda.io"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+     "find": [
+      "Docs MCP",
+      "Superhuman Docs' MCP server",
+      "OAuth",
+      "sign in",
+      "connect"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Superhuman Docs API OAuth token generate API settings",
+     "domains": [
+      "docs.superhuman.com",
+      "coda.io",
+      "help.superhuman.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://help.superhuman.com/hc/en-us/articles/46702031846029-Manage-AI-and-MCP-controls-for-your-Docs-org",
+     "find": [
+      "OAuth",
+      "Personal access tokens"
+     ]
+    }
+   }
+  ]
+ }
+}

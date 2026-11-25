@@ -1,0 +1,3 @@
+{"t": 1795577025.3, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels", "find": ["Explorer", "Test", "Basic", "approval", "review"]}}
+{"t": 1795577147.5, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "find": ["official", "Google", "read-only", "github"]}}
+{"t": 1795577311.3, "tool": "fetch_page", "input": {"url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels", "find": ["The Explorer access level allows", "Basic access level", "Standard access level", "review"]}}

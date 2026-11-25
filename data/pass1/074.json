@@ -1,0 +1,141 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "one_liner": "Jira is Atlassian's issue tracking and project management product, with a public REST API for Jira Cloud.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 (3LO) apps are created in the developer console. Basic auth uses an Atlassian account email plus an API token (not a password); password basic auth is deprecated. Cookie auth is deprecated.",
+  "access": "self_serve_free",
+  "access_notes": "Jira Cloud has a free tier, and API tokens are generated from the user's Atlassian account. No sales or approval step is shown for basic API token use.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Jira Cloud REST API v3 documents the platform's REST resources; the research did not enumerate every object for breadth.",
+  "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+  "mcp": "official",
+  "mcp_url": "https://developer.atlassian.com/cloud/rovo-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Build and test now with API tokens or a 3LO dev app. Atlassian's guidance asks for a single distributable 3LO app for production integrations; that step was not verified as a gate.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "OAuth 2.0 (3LO) allows external applications and services to access Atlassian product APIs on a user's behalf."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Basic auth requires API tokens. You generate an API token for your Atlassian account and use it to authenticate anywhere where you would have used a password."
+   },
+   {
+    "field": "access",
+    "url": "https://www.atlassian.com/software/jira/pricing",
+    "quote": "Free forever for 10 users"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "quote": "The Jira REST API enables you to interact with Jira programmatically."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.atlassian.com/cloud/rovo-mcp",
+    "quote": "The Atlassian Rovo MCP Server is a cloud-hosted Model Context Protocol (MCP) server that connects AI-powered clients to your Atlassian Cloud apps."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Basic auth requires API tokens. You generate an API token for your Atlassian account and use it to authenticate anywhere where you would have used a password."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Jira Cloud REST API authentication API token OAuth 2.0 developer",
+     "domains": [
+      "developer.atlassian.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "find": [
+      "API token",
+      "basic"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+     "find": [
+      "OAuth 2.0",
+      "authorization"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "find": [
+      "REST API",
+      "REST",
+      "GraphQL"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Atlassian Rovo MCP server Jira official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.atlassian.com/software/jira/pricing",
+     "find": [
+      "API",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.atlassian.com/cloud/rovo-mcp",
+     "find": [
+      "cloud-hosted",
+      "OAuth 2.1"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.atlassian.com/software/jira/free",
+     "find": [
+      "Free",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

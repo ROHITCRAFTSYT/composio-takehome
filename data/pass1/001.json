@@ -1,0 +1,132 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "one_liner": "Cloud CRM platform for sales, service and marketing records and workflows, with REST APIs and hosted MCP servers.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Verified from the fetched REST API OAuth page: access requires an external client app or connected app with an OAuth 2.0 authorization flow. Other flows (JWT, username-password) were not verified on a fetched page, so they are not listed.",
+  "access": "self_serve_free",
+  "access_notes": "Free Developer Edition signup page exists (fetched title only; the page body was cookie-consent text). Creating connected apps is restricted as of Spring '26, so external client apps are the path. Hosted MCP needs Enterprise Edition or above.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Breadth not verified from a fetched page; the REST API guide was only partly read.",
+  "docs_url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+  "mcp": "official",
+  "mcp_url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "REST access via a free developer org is self-serve. Hosted MCP servers are gated to Enterprise Edition and above, so an MCP route needs a paid org.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "use either an external client app or a connected app and an OAuth 2.0 authorization flow."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.salesforce.com/signup",
+    "quote": "Developer Edition with Agentforce and Data 360"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "Creating connected apps is restricted as of Spring"
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "Both external client apps and connected apps request access to REST API resources on behalf of the client application."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+    "quote": "Today, Salesforce hosted MCP servers are generally available"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+    "quote": "is now a production-ready capability for every Enterprise Edition org and above."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+    "quote": "use either an external client app or a connected app and an OAuth 2.0 authorization flow."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce REST API authentication OAuth connected app developer docs",
+     "domains": [
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce official MCP server",
+     "domains": [
+      "salesforce.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+     "find": [
+      "OAuth",
+      "connected app",
+      "access token",
+      "username-password",
+      "JWT"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "find": [
+      "generally available",
+      "hosted MCP",
+      "External Client App",
+      "Setup"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Salesforce Developer Edition free org sign up API access",
+     "domains": [
+      "salesforce.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.salesforce.com/signup",
+     "find": [
+      "Developer Edition",
+      "free",
+      "Enterprise"
+     ]
+    }
+   }
+  ]
+ }
+}

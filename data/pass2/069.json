@@ -1,0 +1,121 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Cloud observability and security platform for metrics, logs, APM traces, dashboards and monitors, with a public REST API.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Requests use an API key (DD-API-KEY header) and, for read endpoints, an application key (DD-APPLICATION-KEY). Personal access tokens are recommended for new integrations and MCP clients. OAuth2 authorization code flow with PKCE exists for partner integrations published through the Datadog partner program.",
+  "access": "self_serve_free",
+  "access_notes": "critic: access self_serve_trial -> self_serve_free. Pricing/FAQ (search snippet from datadoghq.com/pricing) says after the trial you can 'move to the Free tier' with up to five Basic hosts and 1-day metric retention at no cost; the pricing page also lists free tiers (LLM Observability Free tier, no credit card required). API and application keys are created in org settings and work on any org. Also a 14-day trial with no card required.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Documented REST API reference at docs.datadoghq.com/api/latest covering most product objects (per the API reference and MCP docs). Regional sites use different hostnames.",
+  "docs_url": "https://docs.datadoghq.com/api/latest/authentication/",
+  "mcp": "official",
+  "mcp_url": "https://docs.datadoghq.com/mcp_server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Credentials are self-serve in the product. Using OAuth for third-party distribution would need partner publication review, but API key and PAT access does not.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "quote": "Requests that read data require full access and also require an application key."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+    "quote": "For new integrations, including AI agents and MCP clients, use a Personal Access Token or Service Access Token instead of an application key."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+    "quote": "Once a user signs in, redirect them to the OAuth2 Authorization endpoint"
+   },
+   {
+    "field": "access",
+    "url": "https://www.datadoghq.com/pricing/",
+    "quote": "The Free tier includes up to 40K LLM spans per month with 15-day retention, unlimited context, and unlimited evaluations — no credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "quote": "Validate API key"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.datadoghq.com/mcp_server",
+    "quote": "This is the main Datadog MCP Server"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.datadoghq.com/account_management/api-app-keys",
+    "quote": "API keys are unique to your organization."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.datadoghq.com/pricing/",
+     "find": [
+      "Free",
+      "free trial",
+      "Free plan",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Datadog free plan API keys developer sandbox free tier",
+     "domains": [
+      "datadoghq.com",
+      "docs.datadoghq.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.datadoghq.com/pricing/",
+     "find": [
+      "Free tier",
+      "five Basic hosts"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.datadoghq.com/pricing/",
+     "find": [
+      "move to the Free tier",
+      "1-day metric retention"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://www.datadoghq.com/pricing",
+     "find": [
+      "Free tier",
+      "five Basic hosts"
+     ]
+    }
+   }
+  ]
+ }
+}

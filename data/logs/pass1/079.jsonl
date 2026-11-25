@@ -1,0 +1,8 @@
+{"t": 1795529437.4, "tool": "composio_search", "input": {"query": "Smartsheet API authentication access token developer docs", "domains": []}}
+{"t": 1795529479.3, "tool": "composio_search", "input": {"query": "Smartsheet MCP server official", "domains": []}}
+{"t": 1795529514.1, "tool": "fetch_page", "input": {"url": "https://smartsheet.com/developers", "find": ["API", "developer", "free", "trial", "OAuth", "token"]}}
+{"t": 1795529606.6, "tool": "fetch_page", "input": {"url": "https://help.smartsheet.com/articles/2482389-generate-API-key", "find": ["Plans", "plan", "Free", "Trial", "Pro", "Business", "Enterprise"]}}
+{"t": 1795529641.2, "tool": "fetch_page", "input": {"url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication", "find": ["OAuth", "access token", "Bearer", "app"]}}
+{"t": 1795529671.6, "tool": "fetch_page", "input": {"url": "https://help.smartsheet.com/articles/2483670-smartsheet-mcp-server", "find": ["plan", "Business", "Enterprise", "Pro"]}}
+{"t": 1795529764.5, "tool": "fetch_page", "input": {"url": "https://developers.smartsheet.com/api/smartsheet/openapi", "find": ["free", "trial", "plan", "Business", "Pro"]}}
+{"t": 1795529819.0, "tool": "fetch_page", "input": {"url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server", "find": ["Get started", "token", "plan", "Business"]}}

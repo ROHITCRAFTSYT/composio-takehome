@@ -1,0 +1,120 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "one_liner": "Developer API that connects apps to users' bank accounts and financial data.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Every request uses a client_id plus secret pair from the Dashboard. The OAuth endpoints are for Plaid's own token grants (client_credentials, refresh_token, token-exchange), not a third-party user-consent flow for developers.",
+  "access": "self_serve_free",
+  "access_notes": "Sign up in the Dashboard to get Sandbox API keys for free. Production access and pricing were not verified in fetched pages; the pricing page lists a Pay as You Go tier with self-service support.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Documented HTTP API with per-product endpoints; the pricing page lists core products plus all products including beta on custom plans.",
+  "docs_url": "https://plaid.com/docs/",
+  "mcp": "official",
+  "mcp_url": "",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Sandbox credentials are self-serve. Production approval steps were not checked, so treat production readiness as unverified.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "Your Plaid API client_id. The client_id is required and may be provided either in the PLAID-CLIENT-ID header or as part of a request body."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/docs/quickstart/",
+    "quote": "You'll need API keys, which you can receive by signing up in the Dashboard."
+   },
+   {
+    "field": "access",
+    "url": "https://plaid.com/pricing/",
+    "quote": "Products | Pay as You GoCore products"
+   },
+   {
+    "field": "api_style",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "may be provided either in the PLAID-CLIENT-ID header or as part of a request body."
+   },
+   {
+    "field": "mcp",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "allows access to the MCP dashboard server."
+   },
+   {
+    "field": "verdict",
+    "url": "https://plaid.com/docs/quickstart/",
+    "quote": "You'll need API keys, which you can receive by signing up in the Dashboard."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Plaid API authentication client_id secret access token docs",
+     "domains": [
+      "plaid.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Plaid MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/quickstart/",
+     "find": [
+      "sandbox",
+      "free",
+      "client_id",
+      "secret",
+      "Production",
+      "Limited"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/pricing/",
+     "find": [
+      "free",
+      "sandbox",
+      "Production",
+      "contact",
+      "trial",
+      "pay"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://plaid.com/docs/api/oauth/",
+     "find": [
+      "client_id",
+      "secret",
+      "access_token",
+      "OAuth",
+      "Basic"
+     ]
+    }
+   }
+  ]
+ }
+}

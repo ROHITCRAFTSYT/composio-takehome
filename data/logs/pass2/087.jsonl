@@ -1,0 +1,4 @@
+{"t": 1795591291.5, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/pricing", "find": ["Starter", "certification", "connections", "Free"]}}
+{"t": 1795591320.2, "tool": "composio_search", "input": {"query": "Xero MCP server", "domains": []}}
+{"t": 1795591438.0, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/documentation/guides/remote-mcp/overview", "find": ["hosted", "Nothing"]}}
+{"t": 1795591486.5, "tool": "fetch_page", "input": {"url": "https://developer.xero.com/documentation/development-accounts", "find": ["free", "demo"]}}

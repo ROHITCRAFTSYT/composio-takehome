@@ -1,0 +1,23 @@
+{
+  "n": 71,
+  "app": "Notion",
+  "one_liner": "Workspace for docs and databases with a public REST API (pages, databases, blocks, comments, users, files) on the free plan, using tokens or OAuth.",
+  "auth_methods": ["api_key", "oauth2"],
+  "access": "self_serve_free",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://mcp.notion.com/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "Auth: internal connection API tokens and personal access tokens are static tokens the user creates (api_key). OAuth integrations and public integrations use OAuth 2.0 (oauth2). The docs say you can start OAuth as soon as client credentials and a redirect URI are set, and that Marketplace submission or review is not required. So there is no app-review gate, and the verdict is ready, not ready_with_review. Access: the API works on Free workspaces. The block-limit doc covers Free workspaces using the API, and the PAT policy table has a Free row. One catch: Free workspaces with more than one member hit a 1,000-block lifetime limit on some API writes. MCP is official: a hosted remote server at mcp.notion.com/mcp, documented on developers.notion.com (makenotion/notion-mcp-server also exists on GitHub). The docs now say 'connections' where they used to say 'integrations'. api_style evidence: the reference intro describes HTTPS + JSON resource endpoints but never uses the word REST.",
+  "evidence": [
+    {"field": "auth_methods", "url": "https://developers.notion.com/docs/authorization", "quote": "use a static credential called an internal connection API token"},
+    {"field": "auth_methods", "url": "https://developers.notion.com/docs/authorization", "quote": "There is no OAuth flow and no page picker."},
+    {"field": "access", "url": "https://developers.notion.com/reference/workspace-block-limits", "quote": "Paid workspaces and single-member Free workspaces have unlimited blocks."},
+    {"field": "api_style", "url": "https://developers.notion.com/reference/intro", "quote": "Most endpoints use JSON."},
+    {"field": "mcp", "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp", "quote": "The remote server URL is"},
+    {"field": "verdict", "url": "https://developers.notion.com/docs/authorization", "quote": "Marketplace submission or review is not required."}
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

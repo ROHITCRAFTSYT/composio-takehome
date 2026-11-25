@@ -1,0 +1,9 @@
+{"t": 1795529622.2, "tool": "composio_search", "input": {"query": "Paygent Connect API developer documentation authentication", "domains": []}}
+{"t": 1795529662.0, "tool": "composio_search", "input": {"query": "Paygent Connect MCP server", "domains": []}}
+{"t": 1795529749.6, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/api/endpoints/authentication", "find": ["user-api-key", "user_id", "Basic", "OAuth", "token", "sandbox", "Paygent", "NMI"]}}
+{"t": 1795529790.4, "tool": "composio_search", "input": {"query": "Paygent Connect NMI payment gateway API access sandbox signup", "domains": ["payaconnect.com", "paygent.com", "nmi.com"]}}
+{"t": 1795529877.8, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/api/endpoints/users", "find": ["user_api_key", "generate", "sandbox", "access", "approval", "contact", "sign"]}}
+{"t": 1795529952.2, "tool": "composio_search", "input": {"query": "Paygent Connect payaconnect developer sandbox account merchant API access", "domains": ["payaconnect.com", "paygent.com"]}}
+{"t": 1795529986.2, "tool": "composio_search", "input": {"query": "payaconnect MCP server", "domains": []}}
+{"t": 1795530077.9, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/quick-start", "find": ["sandbox", "credentials", "certification", "sign up", "request", "NMI", "Paygent"]}}
+{"t": 1795530117.5, "tool": "fetch_page", "input": {"url": "https://docs.payaconnect.com/developers/api", "find": ["sandbox", "certification", "credentials", "production"]}}

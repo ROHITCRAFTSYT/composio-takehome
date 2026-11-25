@@ -1,0 +1,164 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "one_liner": "Paya Connect (Nuvei-owned) REST payments API for card and ACH transactions, vaults and recurring billing",
+  "auth_methods": [
+   "api_key",
+   "basic"
+  ],
+  "auth_notes": "Two methods on the auth page: user_id + user_api_key sent as headers, query params, or as Basic username/password; and a username/password token method via POST /v2/token. Every request also needs a developer-id.",
+  "access": "approval_required",
+  "access_notes": "Sandbox host api.sandbox.payaconnect.com is documented, but the API page says the service is for approved entities and production credentials are issued only after a certification step (sdksupport@nuvei.com). How sandbox credentials are obtained was not seen on the fetched pages.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs list endpoints for account vaults, contacts, recurrings, router transactions, signatures, quick invoices, level3 data, location info, post-back configs and more.",
+  "docs_url": "https://docs.payaconnect.com/developers/api",
+  "mcp": "none",
+  "mcp_url": "",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Production use needs the certification step before new credentials are issued. Hint says NMI-powered, but no NMI reference appeared on the Paya Connect pages fetched; the NMI pages found belong to NMI itself and were not tied to this product. No official or community MCP server found in search.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+    "quote": "Pass your user_id and user_api_key as \"user-id\" and \"user-api-key\" in your Request Headers."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+    "quote": "Pass your username, password and domain in the format depicted below under \"POST /v2/token\""
+   },
+   {
+    "field": "access",
+    "url": "https://docs.payaconnect.com/developers/api",
+    "quote": "The Web Service is currently released to Production and is available for use by approved entities."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.payaconnect.com/developers/api",
+    "quote": "Once certification is complete, developers will be provided new credentials to access the production application"
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.payaconnect.com/developers/api",
+    "quote": "The API utilizes REpresentational State Transfer (REST) and JavaScript Object Notation (JSON) to communicate."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.payaconnect.com/developers/api",
+    "quote": "The Web Service is currently released to Production and is available for use by approved entities."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Paygent Connect API developer documentation authentication",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Paygent Connect MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.payaconnect.com/developers/api/endpoints/authentication",
+     "find": [
+      "user-api-key",
+      "user_id",
+      "Basic",
+      "OAuth",
+      "token",
+      "sandbox",
+      "Paygent",
+      "NMI"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Paygent Connect NMI payment gateway API access sandbox signup",
+     "domains": [
+      "payaconnect.com",
+      "paygent.com",
+      "nmi.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.payaconnect.com/developers/api/endpoints/users",
+     "find": [
+      "user_api_key",
+      "generate",
+      "sandbox",
+      "access",
+      "approval",
+      "contact",
+      "sign"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Paygent Connect payaconnect developer sandbox account merchant API access",
+     "domains": [
+      "payaconnect.com",
+      "paygent.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "payaconnect MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.payaconnect.com/developers/quick-start",
+     "find": [
+      "sandbox",
+      "credentials",
+      "certification",
+      "sign up",
+      "request",
+      "NMI",
+      "Paygent"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.payaconnect.com/developers/api",
+     "find": [
+      "sandbox",
+      "certification",
+      "credentials",
+      "production"
+     ]
+    }
+   }
+  ]
+ }
+}

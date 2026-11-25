@@ -1,0 +1,45 @@
+{
+  "n": 73,
+  "app": "Linear",
+  "one_liner": "Issue tracking and project planning tool for software teams, with a public GraphQL API.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_style": "graphql",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://mcp.linear.app/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "Docs state personal API keys + OAuth2 (OAuth actor authorization and app manifests are variants of OAuth2, not separate methods). Pricing table lists 'API and webhook access' as Included on the Free plan, so self_serve_free. Official remote MCP at mcp.linear.app (documented on linear.app/docs/mcp). No app review is needed for OAuth apps to work. Nothing ambiguous.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://linear.app/developers/graphql",
+      "quote": "The Linear API supports personal API keys and OAuth2 authentication."
+    },
+    {
+      "field": "api_style",
+      "url": "https://linear.app/developers/graphql",
+      "quote": "Linear's public API is built using GraphQL."
+    },
+    {
+      "field": "access",
+      "url": "https://linear.app/pricing",
+      "quote": "API and webhook access"
+    },
+    {
+      "field": "mcp",
+      "url": "https://linear.app/docs/mcp",
+      "quote": "Read-write access is provided through https://mcp.linear.app/mcp by default."
+    },
+    {
+      "field": "verdict",
+      "url": "https://linear.app/developers/graphql",
+      "quote": "Visit Security & access settings to create and manage them."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

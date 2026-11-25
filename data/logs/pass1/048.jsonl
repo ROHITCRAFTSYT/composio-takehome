@@ -1,0 +1,4 @@
+{"t": 1795528246.7, "tool": "composio_search", "input": {"query": "Gumroad API authentication OAuth access token developer docs", "domains": ["gumroad.com"]}}
+{"t": 1795528353.1, "tool": "fetch_page", "input": {"url": "https://gumroad.com/api", "find": ["oauth", "access_token", "api", "token", "application"]}}
+{"t": 1795528461.7, "tool": "fetch_page", "input": {"url": "https://gumroad.com/help/article/280-create-application-api", "find": ["register", "application", "access", "free", "Generate", "redirect"]}}
+{"t": 1795528586.8, "tool": "fetch_page", "input": {"url": "https://gumroad.com/mcp", "find": ["official", "Gumroad", "OAuth", "free"]}}

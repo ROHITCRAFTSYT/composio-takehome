@@ -1,0 +1,438 @@
+{
+ "gold_apps": [
+  1,
+  3,
+  15,
+  18,
+  28,
+  30,
+  39,
+  40,
+  44,
+  50,
+  53,
+  58,
+  67,
+  68,
+  71,
+  73,
+  81,
+  82,
+  91,
+  93
+ ],
+ "pass1": {
+  "field_accuracy": 0.78,
+  "right": 78,
+  "total": 100,
+  "apps_all_fields_right": 7,
+  "apps": 20,
+  "per_field": {
+   "auth_methods": {
+    "right": 13,
+    "total": 20,
+    "acc": 0.65
+   },
+   "access": {
+    "right": 11,
+    "total": 20,
+    "acc": 0.55
+   },
+   "api_style": {
+    "right": 18,
+    "total": 20,
+    "acc": 0.9
+   },
+   "mcp": {
+    "right": 20,
+    "total": 20,
+    "acc": 1.0
+   },
+   "verdict": {
+    "right": 16,
+    "total": 20,
+    "acc": 0.8
+   },
+   "self_serve_binary": {
+    "right": 15,
+    "total": 20,
+    "acc": 0.75
+   }
+  },
+  "misses": [
+   {
+    "n": 1,
+    "app": "Salesforce",
+    "field": "api_style",
+    "got": "rest",
+    "gold": "rest+graphql"
+   },
+   {
+    "n": 3,
+    "app": "Pipedrive",
+    "field": "access",
+    "got": "self_serve_trial",
+    "gold": "self_serve_free"
+   },
+   {
+    "n": 15,
+    "app": "Pylon",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "contact_sales"
+   },
+   {
+    "n": 15,
+    "app": "Pylon",
+    "field": "verdict",
+    "got": "ready",
+    "gold": "blocked"
+   },
+   {
+    "n": 28,
+    "app": "WhatsApp Business",
+    "field": "auth_methods",
+    "got": [
+     "api_key"
+    ],
+    "gold": [
+     "oauth2",
+     "api_key"
+    ]
+   },
+   {
+    "n": 28,
+    "app": "WhatsApp Business",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "approval_required"
+   },
+   {
+    "n": 30,
+    "app": "Vonage",
+    "field": "access",
+    "got": "self_serve_trial",
+    "gold": "self_serve_free"
+   },
+   {
+    "n": 39,
+    "app": "Threads (Meta)",
+    "field": "auth_methods",
+    "got": [
+     "oauth2"
+    ],
+    "gold": [
+     "oauth2",
+     "other"
+    ]
+   },
+   {
+    "n": 40,
+    "app": "SendGrid",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "self_serve_trial"
+   },
+   {
+    "n": 44,
+    "app": "Salesforce Commerce Cloud",
+    "field": "auth_methods",
+    "got": [
+     "oauth2"
+    ],
+    "gold": [
+     "oauth2",
+     "other"
+    ]
+   },
+   {
+    "n": 44,
+    "app": "Salesforce Commerce Cloud",
+    "field": "access",
+    "got": "paid_plan",
+    "gold": "contact_sales"
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "auth_methods",
+    "got": [],
+    "gold": [
+     "api_key"
+    ]
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "access",
+    "got": "contact_sales",
+    "gold": "self_serve_free"
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "api_style",
+    "got": "none",
+    "gold": "rest"
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "verdict",
+    "got": "blocked",
+    "gold": "ready"
+   },
+   {
+    "n": 53,
+    "app": "Ahrefs",
+    "field": "auth_methods",
+    "got": [
+     "api_key"
+    ],
+    "gold": [
+     "api_key",
+     "oauth2"
+    ]
+   },
+   {
+    "n": 68,
+    "app": "MongoDB Atlas",
+    "field": "auth_methods",
+    "got": [
+     "oauth2",
+     "api_key"
+    ],
+    "gold": [
+     "api_key",
+     "other"
+    ]
+   },
+   {
+    "n": 82,
+    "app": "Plaid",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "approval_required"
+   },
+   {
+    "n": 82,
+    "app": "Plaid",
+    "field": "verdict",
+    "got": "ready",
+    "gold": "ready_with_review"
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "auth_methods",
+    "got": [
+     "other"
+    ],
+    "gold": [
+     "oauth2"
+    ]
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "access",
+    "got": "paid_plan",
+    "gold": "self_serve_trial"
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "verdict",
+    "got": "blocked",
+    "gold": "ready"
+   }
+  ]
+ },
+ "pass2": {
+  "field_accuracy": 0.83,
+  "right": 83,
+  "total": 100,
+  "apps_all_fields_right": 8,
+  "apps": 20,
+  "per_field": {
+   "auth_methods": {
+    "right": 14,
+    "total": 20,
+    "acc": 0.7
+   },
+   "access": {
+    "right": 13,
+    "total": 20,
+    "acc": 0.65
+   },
+   "api_style": {
+    "right": 19,
+    "total": 20,
+    "acc": 0.95
+   },
+   "mcp": {
+    "right": 19,
+    "total": 20,
+    "acc": 0.95
+   },
+   "verdict": {
+    "right": 18,
+    "total": 20,
+    "acc": 0.9
+   },
+   "self_serve_binary": {
+    "right": 16,
+    "total": 20,
+    "acc": 0.8
+   }
+  },
+  "misses": [
+   {
+    "n": 1,
+    "app": "Salesforce",
+    "field": "api_style",
+    "got": "rest",
+    "gold": "rest+graphql"
+   },
+   {
+    "n": 15,
+    "app": "Pylon",
+    "field": "access",
+    "got": "paid_plan",
+    "gold": "contact_sales"
+   },
+   {
+    "n": 28,
+    "app": "WhatsApp Business",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "approval_required"
+   },
+   {
+    "n": 30,
+    "app": "Vonage",
+    "field": "access",
+    "got": "self_serve_trial",
+    "gold": "self_serve_free"
+   },
+   {
+    "n": 39,
+    "app": "Threads (Meta)",
+    "field": "auth_methods",
+    "got": [
+     "oauth2"
+    ],
+    "gold": [
+     "oauth2",
+     "other"
+    ]
+   },
+   {
+    "n": 40,
+    "app": "SendGrid",
+    "field": "mcp",
+    "got": "community",
+    "gold": "official"
+   },
+   {
+    "n": 44,
+    "app": "Salesforce Commerce Cloud",
+    "field": "auth_methods",
+    "got": [
+     "oauth2"
+    ],
+    "gold": [
+     "oauth2",
+     "other"
+    ]
+   },
+   {
+    "n": 44,
+    "app": "Salesforce Commerce Cloud",
+    "field": "access",
+    "got": "paid_plan",
+    "gold": "contact_sales"
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "auth_methods",
+    "got": [],
+    "gold": [
+     "api_key"
+    ]
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "access",
+    "got": "contact_sales",
+    "gold": "self_serve_free"
+   },
+   {
+    "n": 50,
+    "app": "fanbasis",
+    "field": "verdict",
+    "got": "blocked",
+    "gold": "ready"
+   },
+   {
+    "n": 53,
+    "app": "Ahrefs",
+    "field": "auth_methods",
+    "got": [
+     "api_key"
+    ],
+    "gold": [
+     "api_key",
+     "oauth2"
+    ]
+   },
+   {
+    "n": 68,
+    "app": "MongoDB Atlas",
+    "field": "auth_methods",
+    "got": [
+     "oauth2",
+     "api_key"
+    ],
+    "gold": [
+     "api_key",
+     "other"
+    ]
+   },
+   {
+    "n": 82,
+    "app": "Plaid",
+    "field": "access",
+    "got": "self_serve_free",
+    "gold": "approval_required"
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "auth_methods",
+    "got": [
+     "other"
+    ],
+    "gold": [
+     "oauth2"
+    ]
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "access",
+    "got": "paid_plan",
+    "gold": "self_serve_trial"
+   },
+   {
+    "n": 91,
+    "app": "NotebookLM",
+    "field": "verdict",
+    "got": "blocked",
+    "gold": "ready"
+   }
+  ]
+ }
+}

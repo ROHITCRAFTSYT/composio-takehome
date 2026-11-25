@@ -1,0 +1,8 @@
+{"t": 1795526851.2, "tool": "composio_search", "input": {"query": "Freshdesk API authentication API key OAuth developer docs", "domains": ["freshdesk.com", "developers.freshdesk.com"]}}
+{"t": 1795526890.1, "tool": "composio_search", "input": {"query": "Freshdesk MCP server official", "domains": ["freshdesk.com", "github.com"]}}
+{"t": 1795526926.6, "tool": "fetch_page", "input": {"url": "https://developers.freshdesk.com/api/", "find": ["authentication", "API", "Basic", "password"]}}
+{"t": 1795527000.5, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-", "find": ["Model Context Protocol", "API key", "OAuth", "early access"]}}
+{"t": 1795527061.7, "tool": "composio_search", "input": {"query": "Freshdesk plans pricing API access free trial", "domains": ["freshdesk.com"]}}
+{"t": 1795527125.4, "tool": "fetch_page", "input": {"url": "https://developers.freshdesk.com/api", "find": ["API key", "password", "Basic"]}}
+{"t": 1795527225.3, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000001047-do-we-have-api-and-integration-capabilities-in-the-free-sprout-plan-", "find": ["No", " the access", "Blossom"]}}
+{"t": 1795527317.2, "tool": "fetch_page", "input": {"url": "https://support.freshdesk.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans", "find": ["14-day trial", "API"]}}

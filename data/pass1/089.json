@@ -1,0 +1,159 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "one_liner": "Ramp: spend management, corporate cards, bill pay and expense reporting for businesses, with a Developer API for Transactions, Reimbursements, Cards and other business data.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Client Credentials: client_id:client_secret sent as Basic auth to /developer/v1/token for a bearer token (server-to-server, no user consent). Authorization Code (with optional Refresh Token) for third-party apps with user consent. The Basic-auth client secret is treated as api_key per rubric; the token exchange is OAuth 2.0, so oauth2 is also listed. Borderline on the api_key classification.",
+  "access": "self_serve_free",
+  "access_notes": "Admin creates a developer app under Company > Developer in the Ramp dashboard. Sandbox is available via a separate sandbox access request (a request step, not verified as approval-gated). Whether production API use needs a paid plan or approval was not confirmed in fetched pages; Ramp Free plan is listed at $0/mo/user on the pricing page but the page does not state API access tier.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST endpoints on api.ramp.com (sandbox demo-api.ramp.com); OpenAPI spec published at /openapi/developer-api.json. Product areas listed in docs include Banking, Bill Pay, Cards, Procurement, Reimbursements, Spend Controls and Users. Breadth not fully audited; rated moderate as a judgement call.",
+  "docs_url": "https://docs.ramp.com/developer-api/v1/authorization",
+  "mcp": "official",
+  "mcp_url": "https://github.com/ramp-public/ramp_mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "No blocker found in fetched pages. Production approval step for third-party distribution was not verified.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Send `client_id:client_secret`, base64-encoded, in an `Authorization: Basic ...` header."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Third-party apps, public integrations"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "Click **Create New App**."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "`https://api.ramp.com` for Production"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/ramp-public/ramp_mcp",
+    "quote": "Run the MCP server from your CLI with:"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "Click **Create New App**."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ramp developer API authentication docs",
+     "domains": [
+      "docs.ramp.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ramp.com",
+     "find": [
+      "authentication",
+      "oauth",
+      "api key",
+      "access token",
+      "client credentials",
+      "mcp"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ramp MCP server official",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Ramp pricing plans API access",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "find": [
+      "client credentials",
+      "client_credentials",
+      "authorization_code",
+      "sandbox",
+      "developer console",
+      "scope",
+      "access token",
+      "approval",
+      "review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/ramp-public/ramp_mcp",
+     "find": [
+      "official",
+      "ramp-public",
+      "install",
+      "RAMP_ENV"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://ramp.com/pricing",
+     "find": [
+      "API",
+      "developer",
+      "Free",
+      "Plus",
+      "Enterprise"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "find": [
+      "developer console",
+      "sign up",
+      "plan",
+      "paid",
+      "free",
+      "sandbox",
+      "approv",
+      "access"
+     ]
+    }
+   }
+  ]
+ }
+}

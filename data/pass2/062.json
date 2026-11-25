@@ -1,0 +1,105 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Frontend cloud platform for deploying web apps, with a REST API for projects, deployments, domains and env vars.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Access tokens (Bearer) created in account settings are the main API auth. OAuth 2.0 is used by Sign in with Vercel and integration flows.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free. The Hobby plan is free and any account can create an access token on the Account Tokens page; no paid plan or approval step is documented.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Docs describe deploying, custom domains, deployment info, and secrets/env vars for projects, plus team-scoped resources.",
+  "docs_url": "https://vercel.com/docs/rest-api",
+  "mcp": "official",
+  "mcp_url": "https://mcp.vercel.com",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed ready.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "api_style",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "The API is exposed as an HTTP/1 and HTTP/2 service over SSL."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Vercel Access Tokens are required to authenticate and use the Vercel API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://vercel.com/docs/sign-in-with-vercel",
+    "quote": "Vercel's IdP uses the OAuth 2.0 authorization framework"
+   },
+   {
+    "field": "access",
+    "url": "https://vercel.com/docs/accounts/access-tokens",
+    "quote": "Create a Vercel API access token from your personal account's Account Tokens page:"
+   },
+   {
+    "field": "access",
+    "url": "https://vercel.com/docs/plans/hobby",
+    "quote": "The Hobby plan is free and includes a generous set of features on a per month basis:"
+   },
+   {
+    "field": "api_breadth",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "You can deploy new versions of web applications, manage custom domains, retrieve information about deployments, and manage secrets and environment variables for projects."
+   },
+   {
+    "field": "mcp",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "quote": "Vercel MCP is Vercel's official MCP server."
+   },
+   {
+    "field": "verdict",
+    "url": "https://vercel.com/docs/accounts/access-tokens",
+    "quote": "Create a Vercel API access token from your personal account's Account Tokens page:"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://vercel.com/docs/accounts/access-tokens",
+     "find": [
+      "Hobby",
+      "plan",
+      "Create"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+     "find": [
+      "official",
+      "mcp.vercel.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://vercel.com/docs/plans/hobby",
+     "find": [
+      "free",
+      "Hobby"
+     ]
+    }
+   }
+  ]
+ }
+}

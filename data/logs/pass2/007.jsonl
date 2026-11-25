@@ -1,0 +1,6 @@
+{"t": 1795530446.7, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html", "find": ["Free Edition", "credits"]}}
+{"t": 1795530470.3, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "find": ["MCP", "OAuth", "API key"]}}
+{"t": 1795530552.6, "tool": "composio_search", "input": {"query": "Zoho CRM free edition API access developer sandbox", "domains": ["zoho.com"]}}
+{"t": 1795530594.5, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "find": ["OAuth", "self client", "api key", "authtoken"]}}
+{"t": 1795530678.1, "tool": "composio_search", "input": {"query": "Zoho CRM GraphQL API", "domains": ["zoho.com"]}}
+{"t": 1795530717.7, "tool": "fetch_page", "input": {"url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html", "find": ["Free", "GraphQL", "Rest APIs"]}}

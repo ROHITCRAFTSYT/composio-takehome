@@ -1,0 +1,6 @@
+{"t": 1795527329.4, "tool": "composio_search", "input": {"query": "Gorgias API authentication basic auth API key developer docs", "domains": ["gorgias.com", "gorgias.io"]}}
+{"t": 1795527373.5, "tool": "composio_search", "input": {"query": "Gorgias MCP server official", "domains": ["gorgias.com", "github.com"]}}
+{"t": 1795527445.2, "tool": "fetch_page", "input": {"url": "https://docs.gorgias.com/en-US/rest-api-208286", "find": ["Basic Authentication", "API key", "plan", "trial", "admin"]}}
+{"t": 1795527488.4, "tool": "fetch_page", "input": {"url": "https://www.gorgias.com/blog/gorgias-mcp", "find": ["official", "OAuth", "mcp.gorgias.com", "plan"]}}
+{"t": 1795527601.4, "tool": "composio_search", "input": {"query": "Gorgias pricing plans REST API access which plan", "domains": ["gorgias.com"]}}
+{"t": 1795527707.7, "tool": "fetch_page", "input": {"url": "https://www.gorgias.com/pricing", "find": ["free trial", "trial", "free", "API", "Starter"]}}

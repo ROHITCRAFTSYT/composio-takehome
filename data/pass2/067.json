@@ -1,0 +1,102 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "Cloud data platform (data warehouse, lakehouse, AI and apps) with REST and SQL APIs and a Snowflake-managed MCP server.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "OAuth 2.0 for the SQL API; programmatic access tokens (sent as Bearer tokens) count as api_key; key-pair JWT counts as other. critic: confirmed.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: confirmed self_serve_trial; no free plan found, only a 30-day / free-credit trial, after which the account is suspended until upgraded to paid.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Documented REST APIs and the SQL API for executing statements; no GraphQL API seen. critic: replaced weak api_style evidence with the SQL API page quote.",
+  "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+  "mcp": "official",
+  "mcp_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Free 30-day trial gives self-serve credentials and a documented API; paid upgrade needed after trial or credits run out.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+    "quote": "To use OAuth, follow these steps:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+    "quote": "To use key pair authentication, follow these steps:"
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.snowflake.com/en/user-guide/programmatic-access-tokens",
+    "quote": "You can use a programmatic access token to authenticate to the following Snowflake endpoints:"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+    "quote": "The trial continues for 30 days (from the sign-up date) or until you’ve depleted your free usage balance, whichever occurs first."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+    "quote": "The trial continues for 30 days (from the sign-up date) or until you’ve depleted your free usage balance, whichever occurs first."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Snowflake free plan no credit card sign up free tier 2026",
+     "domains": [
+      "snowflake.com",
+      "docs.snowflake.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+     "find": [
+      "free",
+      "paid",
+      "upgrade",
+      "expire"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+     "find": [
+      "REST API",
+      "submit SQL"
+     ]
+    }
+   }
+  ]
+ }
+}

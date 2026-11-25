@@ -1,0 +1,127 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer support platform (helpdesk, issues, accounts, knowledge base) for B2B teams, with a REST API and an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Public REST API uses a Bearer API token created in Settings > Integrations & dev > API. The official MCP server also accepts OAuth 2.0, but that is for MCP clients, not the public REST API.",
+  "access": "self_serve_free",
+  "access_notes": "Token creation is self-serve for Admins. The fetched pages do not state a plan gate for API access, and free-plan status was not verified on a pricing page, so this value is provisional.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Regional base URLs (US api.usepylon.com, EU api.eu.usepylon.com). Reference covers accounts, knowledge bases, custom fields, tags, me and other objects with read and write endpoints.",
+  "docs_url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+  "mcp": "official",
+  "mcp_url": "https://mcp.usepylon.com",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Admin-created API token plus documented REST API and an official MCP server. Plan gating is unverified, which is why confidence is low.",
+  "confidence": "low",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "The Pylon API uses Bearer authentication."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Only Admins can create and manage API tokens."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "Programmatic access to read and write data in Pylon"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+    "quote": "Server URL (US): https://mcp.usepylon.com"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Only Admins can create and manage API tokens."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pylon usepylon API authentication docs",
+     "domains": [
+      "usepylon.com"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pylon MCP server official",
+     "domains": [
+      "usepylon.com",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "find": [
+      "Bearer",
+      "Generate",
+      "API token",
+      "OAuth",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+     "find": [
+      "official",
+      "OAuth",
+      "API token",
+      "Settings",
+      "Streamable"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pylon API token pricing plan API access",
+     "domains": [
+      "usepylon.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+     "find": [
+      "Admin",
+      "plan",
+      "paid",
+      "trial",
+      "free",
+      "pricing",
+      "rate limit"
+     ]
+    }
+   }
+  ]
+ }
+}

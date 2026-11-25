@@ -1,0 +1,9 @@
+{"t": 1795528190.5, "tool": "composio_search", "input": {"query": "Ecwid REST API developers authentication OAuth token", "domains": ["api-docs.ecwid.com", "ecwid.com"]}}
+{"t": 1795528269.8, "tool": "fetch_page", "input": {"url": "https://api-docs.ecwid.com/docs/authentication", "find": ["oauth", "token", "api"]}}
+{"t": 1795528340.9, "tool": "fetch_page", "input": {"url": "https://docs.ecwid.com/get-started/make-your-first-api-request", "find": ["secret token", "custom app", "free", "sign up", "plan"]}}
+{"t": 1795528410.8, "tool": "fetch_page", "input": {"url": "https://docs.ecwid.com/develop-apps/app-settings", "find": ["access token", "oauth", "expire", "store"]}}
+{"t": 1795528473.9, "tool": "composio_search", "input": {"query": "Ecwid MCP server official", "domains": ["ecwid.com", "github.com"]}}
+{"t": 1795528543.8, "tool": "fetch_page", "input": {"url": "https://docs.ecwid.com/launch-apps/native-and-external-apps", "find": ["authorization_code", "OAuth", "authorize", "public app"]}}
+{"t": 1795528603.3, "tool": "composio_search", "input": {"query": "Ecwid custom apps API access free plan pricing developer", "domains": ["ecwid.com", "docs.ecwid.com"]}}
+{"t": 1795528679.3, "tool": "fetch_page", "input": {"url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid", "find": ["paid plan", "free upgrade", "trial", "API"]}}
+{"t": 1795528748.6, "tool": "fetch_page", "input": {"url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md", "find": ["Ecwid", "secret token", "MCP"]}}

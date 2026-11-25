@@ -1,0 +1,9 @@
+{"t": 1795529365.2, "tool": "composio_search", "input": {"query": "Coda developers API authentication", "domains": ["coda.io"]}}
+{"t": 1795529403.7, "tool": "fetch_page", "input": {"url": "https://coda.io/developers/apis/v1", "find": ["API token", "OAuth", "Authentication", "API key", "Coda API"]}}
+{"t": 1795529497.1, "tool": "fetch_page", "input": {"url": "https://coda.io/developers/apis/v1/authentication", "find": ["OAuth", "API token", "bearer", "token"]}}
+{"t": 1795529566.5, "tool": "composio_search", "input": {"query": "Coda MCP server official", "domains": ["coda.io", "github.com"]}}
+{"t": 1795529660.8, "tool": "fetch_page", "input": {"url": "https://docs.superhuman.com/developers/apis/v1", "find": ["OAuth", "API token", "free of charge", "Authentication", "token"]}}
+{"t": 1795529702.1, "tool": "composio_search", "input": {"query": "Superhuman Docs official MCP server", "domains": ["docs.superhuman.com", "superhuman.com", "coda.io"]}}
+{"t": 1795529786.6, "tool": "fetch_page", "input": {"url": "https://coda.io/resources/guides/getting_started_with_coda_mcp", "find": ["Docs MCP", "Superhuman Docs' MCP server", "OAuth", "sign in", "connect"]}}
+{"t": 1795529813.5, "tool": "composio_search", "input": {"query": "Superhuman Docs API OAuth token generate API settings", "domains": ["docs.superhuman.com", "coda.io", "help.superhuman.com"]}}
+{"t": 1795529901.8, "tool": "fetch_page", "input": {"url": "https://help.superhuman.com/hc/en-us/articles/46702031846029-Manage-AI-and-MCP-controls-for-your-Docs-org", "find": ["OAuth", "Personal access tokens"]}}

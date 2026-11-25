@@ -1,0 +1,2 @@
+{"t": 1795578919.7, "tool": "fetch_page", "input": {"url": "https://docs.firecrawl.dev/mcp-server", "find": ["official", "firecrawl-mcp", "OAuth", "npx"]}}
+{"t": 1795578984.9, "tool": "fetch_page", "input": {"url": "https://www.firecrawl.dev/pricing", "find": ["No cost", "1", "000", "free", "credits"]}}

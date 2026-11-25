@@ -1,0 +1,8 @@
+{"t": 1795527356.5, "tool": "composio_search", "input": {"query": "WhatsApp Business Cloud API authentication access token developers", "domains": ["developers.facebook.com", "facebook.com"]}}
+{"t": 1795527417.8, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/docs/whatsapp", "find": ["access token", "Cloud API", "free", "pricing", "app review", "business verification"]}}
+{"t": 1795527537.4, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens", "find": ["System User", "User access token", "App Dashboard", "permanent", "Business Manager"]}}
+{"t": 1795527632.9, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started", "find": ["test number", "sandbox", "free", "business verification", "app review", "Business Manager", "Create an app"]}}
+{"t": 1795527738.7, "tool": "composio_search", "input": {"query": "WhatsApp Business MCP server official Meta", "domains": ["github.com", "developers.facebook.com", "facebook.com"]}}
+{"t": 1795527804.3, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp", "find": ["Authentication", "developer account", "WhatsApp Business Tools"]}}
+{"t": 1795527844.2, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform", "find": ["Authentication and authorization", "OAuth", "access token", "free", "test number"]}}
+{"t": 1795527921.6, "tool": "fetch_page", "input": {"url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started", "find": ["graph.facebook.com", "curl", "Graph API", "HTTP"]}}

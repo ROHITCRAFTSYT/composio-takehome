@@ -1,0 +1,102 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Document parsing, extraction, splitting, classification and form-filling API for PDFs and office files, with an MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API key created in Studio (studio.reducto.ai/api-keys), sent as a bearer token and read from REDUCTO_API_KEY. The MCP server's --login flow opens a browser and saves the key to a local config file; it is not a third-party OAuth grant.",
+  "access": "self_serve_free",
+  "access_notes": "Free account sign-up from the docs, then a key is created in the Studio. Standard pay-as-you-go tier includes $150 of free usage (no stated expiry), so working credentials are issued without payment. critic: access kept self_serve_free; pricing page confirms free credits, Growth/Enterprise are optional.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Document-focused endpoints: /parse, /extract, /split, /classify, /edit, /upload, plus async variants and GET /job/{job_id}. Not a general-purpose SaaS API.",
+  "docs_url": "https://docs.reducto.ai/quickstart",
+  "mcp": "official",
+  "mcp_url": "https://docs.reducto.ai/mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready confirmed; mcp official confirmed (hosted at mcp.reducto.ai/mcp, documented on vendor docs).",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Create a key right here."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Sign up for a free account without leaving the docs."
+   },
+   {
+    "field": "access",
+    "url": "https://reducto.ai/pricing",
+    "quote": "Standard includes $150 of free usage, then list rates apply."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.reducto.ai/agent-guide",
+    "quote": "Upload a local file"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "The Reducto MCP server connects AI agents directly to Reducto."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "The hosted server runs at https://mcp.reducto.ai/mcp."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Set your API key as an environment variable"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.reducto.ai/mcp-server",
+     "find": [
+      "hosted",
+      "mcp.reducto",
+      "github",
+      "login"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Reducto pricing free credits API key",
+     "domains": [
+      "reducto.ai",
+      "docs.reducto.ai"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://reducto.ai/pricing",
+     "find": [
+      "free credits",
+      "expire",
+      "pay-as-you-go",
+      "Standard"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,5 @@
+{"t": 1795530319.4, "tool": "composio_search", "input": {"query": "HubSpot free developer account API access private app free", "domains": ["developers.hubspot.com", "hubspot.com"]}}
+{"t": 1795530355.8, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/ai-tools/mcp", "find": ["official", "OAuth", "server"]}}
+{"t": 1795530425.1, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/getting-started/account-types", "find": ["free", "Developer", "test"]}}
+{"t": 1795530454.4, "tool": "fetch_page", "input": {"url": "https://developers.hubspot.com/docs/apps/developer-platform/overview", "find": ["cannot be created", "REST", "private"]}}
+{"t": 1795530529.7, "tool": "composio_search", "input": {"query": "HubSpot developer platform app static auth access token authentication", "domains": ["developers.hubspot.com"]}}

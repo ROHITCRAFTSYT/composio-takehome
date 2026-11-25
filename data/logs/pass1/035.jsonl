@@ -1,0 +1,8 @@
+{"t": 1795527591.9, "tool": "composio_search", "input": {"query": "Mailchimp API authentication OAuth API key docs", "domains": ["mailchimp.com", "mailchimp.com/developer"]}}
+{"t": 1795527673.4, "tool": "composio_search", "input": {"query": "Mailchimp official MCP server github", "domains": []}}
+{"t": 1795527768.7, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/api-concepts/authentication", "find": ["OAuth", "API key", "Basic", "Bearer"]}}
+{"t": 1795527856.3, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/help/about-api-keys", "find": ["free", "plan", "paid", "account"]}}
+{"t": 1795527929.1, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app", "find": ["review", "approval", "public", "submit", "register"]}}
+{"t": 1795528014.7, "tool": "composio_search", "input": {"query": "Mailchimp free plan API access pricing developer", "domains": ["mailchimp.com"]}}
+{"t": 1795528101.9, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/docs/mcp-server/", "find": ["MCP", "server", "official", "Claude"]}}
+{"t": 1795528252.9, "tool": "fetch_page", "input": {"url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server", "find": ["official", "MCP", "Claude", "server", "Bearer", "OAuth"]}}

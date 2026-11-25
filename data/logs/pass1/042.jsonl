@@ -1,0 +1,5 @@
+{"t": 1795528078.3, "tool": "composio_search", "input": {"query": "WooCommerce REST API authentication keys", "domains": ["woocommerce.com", "github.com"]}}
+{"t": 1795528239.9, "tool": "fetch_page", "input": {"url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication", "find": ["oauth", "consumer key", "basic", "api key"]}}
+{"t": 1795528342.9, "tool": "composio_search", "input": {"query": "WooCommerce official MCP server", "domains": ["woocommerce.com", "github.com", "developer.woocommerce.com"]}}
+{"t": 1795528438.4, "tool": "fetch_page", "input": {"url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication", "find": ["Creating a new REST API key", "deleted", "Consumer Secret"]}}
+{"t": 1795528514.4, "tool": "fetch_page", "input": {"url": "https://woocommerce.com/document/woocommerce-ai/mcp-server", "find": ["Setup", "MCP server", "generated"]}}

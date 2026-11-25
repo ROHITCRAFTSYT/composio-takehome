@@ -1,0 +1,119 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "one_liner": "Cloud phone system (calls, SMS, contact center) with an API and webhooks for business integrations",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Basic auth with an API ID and API token generated under Integrations > API keys in the Aircall dashboard (own/private integrations). OAuth 2.0 install flow for apps acting on behalf of other customers; install completed by an Aircall Admin and yields a permanent access_token.",
+  "access": "self_serve_trial",
+  "access_notes": "critic: access paid_plan -> self_serve_trial. Vendor pricing page says all plans include API access and that new accounts get free access to test before committing. The Professional-plan restriction applies only to calling the Messaging API directly; integrations can use it on any plan. No free plan exists, trial length not stated on the pricing page.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST Public API with webhooks documented separately; Messaging API (SMS/MMS/WhatsApp) documented but direct use needs Professional plan.",
+  "docs_url": "https://developer.aircall.io/docs/authentication",
+  "mcp": "official",
+  "mcp_url": "https://support.aircall.io/en-gb/articles/39677926959517",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict blocked -> ready, main_blocker paid_plan -> none. Core API is included on all paid plans and a free test account is offered; only direct Messaging API use needs Professional. MCP is a vendor-hosted read-only beta.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "API key authentication works by sending your credentials in the Authorization header of each request, encoded in Base64."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://developer.aircall.io/docs/oauth",
+    "quote": "Send a POST request to the Aircall API with your credentials and the authorization code."
+   },
+   {
+    "field": "access",
+    "url": "https://aircall.io/pricing",
+    "quote": "All plans include API access and 250+ integrations."
+   },
+   {
+    "field": "access",
+    "url": "https://aircall.io/pricing",
+    "quote": "Aircall offers free access to test the platform before committing."
+   },
+   {
+    "field": "access",
+    "url": "https://developer.aircall.io/docs/sms",
+    "quote": "Access through an integration is available on any plan."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "All requests to the Aircall Public API must use"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+    "quote": "Aircall MCP is currently in beta."
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+    "quote": "Aircall MCP gives an AI assistant, like Claude or ChatGPT, read-only access to your company's calls and conversation intelligence data."
+   },
+   {
+    "field": "verdict",
+    "url": "https://aircall.io/pricing",
+    "quote": "All plans include API access and 250+ integrations."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developer.aircall.io/docs/sms",
+     "find": [
+      "Professional",
+      "plan",
+      "Direct API"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall public API access plans API key pricing which plan includes API",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://aircall.io/pricing",
+     "find": [
+      "API access",
+      "free trial",
+      "trial",
+      "Free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Aircall MCP server official",
+     "domains": [
+      "aircall.io",
+      "github.com"
+     ]
+    }
+   }
+  ]
+ }
+}

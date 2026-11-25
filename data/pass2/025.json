@@ -1,0 +1,87 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "one_liner": "Pumble is a business team messaging app (channels, direct messages, threads, file sharing).",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "The API addon generates an API key from the workspace. The MCP server uses an app key, user token and bot token created by installing a custom app in Configure apps. No OAuth flow is documented on the pages read.",
+  "access": "self_serve_free",
+  "access_notes": "API addon is installed from the workspace sidebar (Add apps > Install in the API section). Pumble's addon guide lists free workspaces as allowed up to 3 addons (so addons incl. API can be installed on free), and the pricing FAQ says the FREE plan has no limitations. critic: confirmed self_serve_free; third-party docs (Persona) also say the free plan is enough for the API Keys add-on.",
+  "api_style": "rest",
+  "api_breadth": "narrow",
+  "api_notes": "HTTP API documented as sending messages, reactions and more. Rate limit is 1000 requests per minute per user. The MCP tool list depends on the scopes chosen. The full endpoint reference was not read.",
+  "docs_url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+  "mcp": "official",
+  "mcp_url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict confirmed",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+    "quote": "generate an API key that allows you to send messages"
+   },
+   {
+    "field": "access",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+    "quote": "Click on Install in the API section"
+   },
+   {
+    "field": "access",
+    "url": "https://pumble.com/help/integrations/add-pumble-apps/guide-to-pumble-integrations",
+    "quote": "Free subscription | Up to 3 addons"
+   },
+   {
+    "field": "access",
+    "url": "https://pumble.com/pricing",
+    "quote": "Our FREE plan doesn't have any limitations"
+   },
+   {
+    "field": "api_style",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration",
+    "quote": "send messages, reactions, and more via simple HTTP requests"
+   },
+   {
+    "field": "mcp",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+    "quote": "With the Pumble Model Context Protocol (MCP) server, you can connect third-party AI agents"
+   },
+   {
+    "field": "verdict",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+    "quote": "make sure to copy the App key, user token, and bot token"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Pumble API addon free plan available",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://pumble.com/help/integrations/add-pumble-apps/guide-to-pumble-integrations",
+     "find": [
+      "Free subscription",
+      "Up to 3 addons",
+      "API",
+      "OAuth"
+     ]
+    }
+   }
+  ]
+ }
+}

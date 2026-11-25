@@ -1,0 +1,9 @@
+{"t": 1795528803.7, "tool": "composio_search", "input": {"query": "Clay API documentation authentication API key", "domains": ["clay.com", "docs.clay.com"]}}
+{"t": 1795528840.5, "tool": "composio_search", "input": {"query": "Clay MCP server official", "domains": ["clay.com", "github.com"]}}
+{"t": 1795528874.4, "tool": "composio_search", "input": {"query": "Clay pricing plans API access", "domains": ["clay.com"]}}
+{"t": 1795528971.9, "tool": "fetch_page", "input": {"url": "https://developers.clay.com/public-api/authentication", "find": ["clay-api-key", "API key", "sign"]}}
+{"t": 1795528995.2, "tool": "fetch_page", "input": {"url": "https://www.clay.com/pricing", "find": ["API access", "Clay API", "Growth", "Enterprise", "contact"]}}
+{"t": 1795529020.9, "tool": "fetch_page", "input": {"url": "https://university.clay.com/docs/plans-and-billing", "find": ["API", "Enterprise", "Growth", "Launch"]}}
+{"t": 1795529049.2, "tool": "composio_search", "input": {"query": "Clay official MCP server claude.ai connector docs", "domains": ["university.clay.com", "clay.com", "developers.clay.com"]}}
+{"t": 1795529145.4, "tool": "fetch_page", "input": {"url": "https://www.clay.com/guides/clay-mcp", "find": ["official", "Claude", "connector", "ChatGPT"]}}
+{"t": 1795529178.9, "tool": "composio_search", "input": {"query": "Clay Public API key which plans include API access enterprise", "domains": ["university.clay.com", "developers.clay.com"]}}

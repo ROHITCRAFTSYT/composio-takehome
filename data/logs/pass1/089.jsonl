@@ -1,0 +1,8 @@
+{"t": 1795529800.1, "tool": "composio_search", "input": {"query": "Ramp developer API authentication docs", "domains": ["docs.ramp.com"]}}
+{"t": 1795529832.7, "tool": "fetch_page", "input": {"url": "https://docs.ramp.com", "find": ["authentication", "oauth", "api key", "access token", "client credentials", "mcp"]}}
+{"t": 1795529907.3, "tool": "composio_search", "input": {"query": "Ramp MCP server official", "domains": []}}
+{"t": 1795529942.5, "tool": "composio_search", "input": {"query": "Ramp pricing plans API access", "domains": []}}
+{"t": 1795530031.7, "tool": "fetch_page", "input": {"url": "https://docs.ramp.com/llms-guides/authorization.txt", "find": ["client credentials", "client_credentials", "authorization_code", "sandbox", "developer console", "scope", "access token", "approval", "review"]}}
+{"t": 1795530061.2, "tool": "fetch_page", "input": {"url": "https://github.com/ramp-public/ramp_mcp", "find": ["official", "ramp-public", "install", "RAMP_ENV"]}}
+{"t": 1795530098.3, "tool": "fetch_page", "input": {"url": "https://ramp.com/pricing", "find": ["API", "developer", "Free", "Plus", "Enterprise"]}}
+{"t": 1795530186.7, "tool": "fetch_page", "input": {"url": "https://docs.ramp.com/llms-guides/getting-started.txt", "find": ["developer console", "sign up", "plan", "paid", "free", "sandbox", "approv", "access"]}}

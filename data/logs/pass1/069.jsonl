@@ -1,0 +1,9 @@
+{"t": 1795529058.9, "tool": "composio_search", "input": {"query": "Datadog API authentication API keys application keys docs", "domains": ["docs.datadoghq.com"]}}
+{"t": 1795529095.2, "tool": "fetch_page", "input": {"url": "https://docs.datadoghq.com/api/latest/authentication/", "find": ["API key", "Application key", "OAuth", "pricing", "free"]}}
+{"t": 1795529171.5, "tool": "composio_search", "input": {"query": "Datadog OAuth apps third-party developer authorization", "domains": ["docs.datadoghq.com"]}}
+{"t": 1795529210.1, "tool": "composio_search", "input": {"query": "Datadog MCP server official", "domains": ["docs.datadoghq.com", "github.com"]}}
+{"t": 1795529245.8, "tool": "fetch_page", "input": {"url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/", "find": ["OAuth", "authorization", "app review", "publish", "Marketplace"]}}
+{"t": 1795529335.9, "tool": "fetch_page", "input": {"url": "https://docs.datadoghq.com/account_management/api-app-keys", "find": ["Application key", "create", "Organization Settings", "trial", "free"]}}
+{"t": 1795529364.9, "tool": "fetch_page", "input": {"url": "https://docs.datadoghq.com/mcp_server", "find": ["official", "Datadog MCP Server", "plan", "free", "setup"]}}
+{"t": 1795529401.7, "tool": "fetch_page", "input": {"url": "https://docs.datadoghq.com/extend/integrations/api_integration", "find": ["published", "partner", "approval", "review"]}}
+{"t": 1795529489.5, "tool": "fetch_page", "input": {"url": "https://www.datadoghq.com/pricing/", "find": ["free trial", "14-day", "Free", "API key"]}}

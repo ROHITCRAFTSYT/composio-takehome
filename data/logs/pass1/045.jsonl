@@ -1,0 +1,8 @@
+{"t": 1795528221.6, "tool": "composio_search", "input": {"query": "Adobe Commerce developer API authentication access token", "domains": ["developer.adobe.com", "experienceleague.adobe.com"]}}
+{"t": 1795528335.5, "tool": "composio_search", "input": {"query": "Adobe Commerce MCP server official GitHub", "domains": []}}
+{"t": 1795528423.4, "tool": "fetch_page", "input": {"url": "https://developer.adobe.com/commerce/webapi/rest/authentication", "find": ["OAuth", "bearer", "Integration", "access token", "scope"]}}
+{"t": 1795528498.3, "tool": "fetch_page", "input": {"url": "https://developer.adobe.com/commerce/webapi/rest", "find": ["OAuth 1.0a", "tokens", "Cloud Service", "Authentication", "trial", "free"]}}
+{"t": 1795528571.3, "tool": "composio_search", "input": {"query": "Adobe Commerce free trial developer sandbox account access API credentials", "domains": []}}
+{"t": 1795528661.3, "tool": "fetch_page", "input": {"url": "https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started", "find": ["license", "trial", "Sandbox", "purchase", "Commerce Cloud Manager"]}}
+{"t": 1795528738.0, "tool": "composio_search", "input": {"query": "Adobe Commerce official MCP server Adobe developer documentation", "domains": ["developer.adobe.com", "experienceleague.adobe.com", "github.com/adobe", "github.com/magento"]}}
+{"t": 1795528831.1, "tool": "fetch_page", "input": {"url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools", "find": ["Commerce Developer MCP Server", "MCP", "Skills"]}}

@@ -1,0 +1,9 @@
+{"t": 1795528977.9, "tool": "composio_search", "input": {"query": "Neo4j API authentication docs", "domains": ["neo4j.com"]}}
+{"t": 1795529011.3, "tool": "fetch_page", "input": {"url": "https://neo4j.com/docs/api", "find": ["authentication", "API", "Aura", "REST", "Query"]}}
+{"t": 1795529130.0, "tool": "composio_search", "input": {"query": "Neo4j MCP server official GitHub", "domains": ["neo4j.com", "github.com"]}}
+{"t": 1795529170.9, "tool": "composio_search", "input": {"query": "Neo4j Aura free tier pricing API access", "domains": ["neo4j.com"]}}
+{"t": 1795529265.1, "tool": "fetch_page", "input": {"url": "https://neo4j.com/docs/query-api/current/authentication-authorization", "find": ["Basic authentication", "Bearer", "OAuth", "token", "authentication is disabled"]}}
+{"t": 1795529299.5, "tool": "fetch_page", "input": {"url": "https://neo4j.com/docs/aura/api/overview", "find": ["credentials", "Client ID", "client secret", "API key", "Free", "OAuth", "Bearer", "Create"]}}
+{"t": 1795529386.3, "tool": "fetch_page", "input": {"url": "https://github.com/neo4j/mcp", "find": ["official", "MCP Server", "Neo4j official"]}}
+{"t": 1795529421.2, "tool": "fetch_page", "input": {"url": "https://neo4j.com/docs/aura/quotas-and-limits", "find": ["Free", "API", "trial"]}}
+{"t": 1795529510.1, "tool": "fetch_page", "input": {"url": "https://neo4j.com/docs/aura/api/authentication", "find": ["client", "secret", "OAuth", "Bearer", "token", "Create", "Free", "Console"]}}

@@ -1,0 +1,7 @@
+{"t": 1795528896.3, "tool": "composio_search", "input": {"query": "Vercel REST API authentication access tokens", "domains": ["vercel.com"]}}
+{"t": 1795528931.4, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/rest-api", "find": ["authentication", "token", "API"]}}
+{"t": 1795529034.5, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/rest-api/authentication", "find": ["token", "OAuth", "access"]}}
+{"t": 1795529111.2, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/accounts/access-tokens", "find": ["Account Tokens", "create", "free"]}}
+{"t": 1795529144.3, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/sign-in-with-vercel", "find": ["OAuth", "authorization", "client"]}}
+{"t": 1795529211.9, "tool": "composio_search", "input": {"query": "Vercel official MCP server", "domains": ["vercel.com", "github.com"]}}
+{"t": 1795529313.9, "tool": "fetch_page", "input": {"url": "https://vercel.com/docs/agent-resources/vercel-mcp", "find": ["official MCP server", "OAuth"]}}

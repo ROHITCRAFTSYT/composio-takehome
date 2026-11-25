@@ -1,0 +1,6 @@
+{"t": 1795527334.0, "tool": "composio_search", "input": {"query": "Twilio API authentication docs", "domains": ["twilio.com"]}}
+{"t": 1795527377.0, "tool": "composio_search", "input": {"query": "Twilio MCP server official", "domains": []}}
+{"t": 1795527416.2, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/usage/api", "find": ["authentication", "API", "credentials"]}}
+{"t": 1795527503.3, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/iam/api", "find": ["HTTP Basic authentication", "API key SID"]}}
+{"t": 1795527545.6, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/docs/ai/mcp", "find": ["No authentication required", "Hosted MCP server"]}}
+{"t": 1795527586.1, "tool": "fetch_page", "input": {"url": "https://www.twilio.com/en-us/pricing", "find": ["free trial", "Free", "trial", "sign up"]}}

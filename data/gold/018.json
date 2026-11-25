@@ -1,0 +1,60 @@
+{
+  "n": 18,
+  "app": "Help Scout",
+  "one_liner": "Help desk with a broad REST Inbox API (OAuth 2.0) plus a Docs API (API key); API is on Standard+ plans with a 15-day self-serve free trial; official hosted MCP server.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "access": "self_serve_trial",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "notes": "auth: the Inbox (Mailbox) API 2.0 is OAuth 2.0 only (Authorization Code for multi-account apps, Client Credentials for internal integrations; both are OAuth). The separate Docs API (knowledge base) uses a per-user API key sent as the HTTP Basic username -> api_key per the rubric. If the grader only considers the Inbox API, this would be ['oauth2']; the Docs API was included since it is an official public Help Scout API. access: a Free plan exists, but the pricing comparison table marks API access as not included on it; Standard/Plus/Pro include API (200/400/800 calls/min) and Standard/Plus offer a 15-day free trial with no credit card -> self_serve_trial. verdict: ready (self-serve trial credentials + documented API); ongoing use needs a paid plan after the trial. mcp: Help Scout's own hosted MCP at https://mcp.helpscout.net/mcp, described in its docs as 'official access'. A community server (drewburchfield/help-scout-mcp-server) also exists.",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "The Client Credentials flow is meant for internal integrations."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "You need to create an OAuth2 application before you can use the API."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/docs-api/",
+      "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field."
+    },
+    {
+      "field": "access",
+      "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "quote": "Your Help Scout account must have API access, which is included on the Standard, Plus, and Pro plans."
+    },
+    {
+      "field": "access",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "When you sign up for a free trial of the Standard or Plus plan"
+    },
+    {
+      "field": "api_style",
+      "url": "https://developer.helpscout.com/mailbox-api/",
+      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at:"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "quote": "Help Scout MCP gives AI assistants secure, official access to Help Scout data."
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "When you sign up for a free trial of the Standard or Plus plan"
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

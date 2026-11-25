@@ -1,0 +1,84 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "AI-driven web scraping platform with a REST scraper API, API-token auth and an official MCP server.",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API token from the MrScraper dashboard, sent in the x-api-token header; Marketplace endpoints accept an RFC 6750 Bearer token. No OAuth for the public API (the hosted MCP server uses OAuth 2.1, which is MCP-side, not the public API). critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "Free plan with no credit card; tokens reset monthly. Docs conflict on the allowance: billing page table lists 1,000 API tokens for Scraper Free, while the Free Plan Limitations section says 100 tokens per month. critic: confirmed self_serve_free, working free-plan credentials with no card.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST, JSON in and out, with pagination and analytics/subscription endpoints. Full endpoint coverage was not enumerated in this pass.",
+  "docs_url": "https://docs.mrscraper.com/docs/api/overview",
+  "mcp": "official",
+  "mcp_url": "https://github.com/mrscraper-com/mrscraper-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed; self-serve free credentials and a documented public API, no review gate found.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "Include your API token in the x-api-token HTTP header on every request:"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+    "quote": "The Free plan includes 100 tokens per month with no credit card required."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "Built on REST principles, our API offers predictable resource-oriented URLs"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+    "quote": "An MCP server exposing the seven MrScraper services through hosted HTTP or local stdio."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "Every request must include a valid API token in the HTTP request headers."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+     "find": [
+      "Free",
+      "100",
+      "1",
+      "000",
+      "credit card"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+     "find": [
+      "MCP server",
+      "seven",
+      "hosted",
+      "OAuth",
+      "API token"
+     ]
+    }
+   }
+  ]
+ }
+}

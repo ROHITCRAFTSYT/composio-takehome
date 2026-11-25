@@ -1,0 +1,3 @@
+{"t": 1795590860.0, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/api/billing-plans", "find": ["Free", "Base", "Views"]}}
+{"t": 1795590877.6, "tool": "fetch_page", "input": {"url": "https://www.airtable.com/articles/mcp-server-interfaces-automations", "find": ["official", "mcp.airtable.com", "server"]}}
+{"t": 1795590929.1, "tool": "fetch_page", "input": {"url": "https://airtable.com/developers/web/guides/oauth-integrations", "find": ["review", "approval", "register", "publish"]}}

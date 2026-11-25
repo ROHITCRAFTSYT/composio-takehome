@@ -1,0 +1,7 @@
+{"t": 1795527328.6, "tool": "composio_search", "input": {"query": "Help Scout API authentication OAuth API key developer docs", "domains": ["helpscout.com", "developer.helpscout.com"]}}
+{"t": 1795527396.8, "tool": "composio_search", "input": {"query": "Help Scout MCP server official", "domains": []}}
+{"t": 1795527483.8, "tool": "fetch_page", "input": {"url": "https://developer.helpscout.com/mailbox-api/overview/authentication", "find": ["OAuth 2.0", "Client Credential", "Authorization Code", "API key", "Personal"]}}
+{"t": 1795527562.8, "tool": "fetch_page", "input": {"url": "https://developer.helpscout.com/docs-api", "find": ["API key", "Basic Authentication", "plan"]}}
+{"t": 1795527656.4, "tool": "fetch_page", "input": {"url": "https://www.scalekit.com/blog/helpscout-mcp-vs-api", "find": ["MCP", "official", "write", "OAuth", "plan"]}}
+{"t": 1795527755.7, "tool": "composio_search", "input": {"query": "Help Scout pricing plans API access Plus Standard Free trial", "domains": ["helpscout.com"]}}
+{"t": 1795527848.9, "tool": "fetch_page", "input": {"url": "https://www.helpscout.com/pricing", "find": ["API", "free trial", "Free plan"]}}

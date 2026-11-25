@@ -1,0 +1,100 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "one_liner": "GitHub developer platform with REST and GraphQL APIs for integrations to retrieve data and automate workflows.",
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "other"
+  ],
+  "auth_notes": "Personal access tokens (api_key). OAuth tokens via OAuth apps or GitHub Apps user access tokens (oauth2). GitHub Apps also use installation tokens from a private key JWT and client ID/secret pairs for some endpoints (other). critic: confirmed.",
+  "access": "self_serve_free",
+  "access_notes": "PATs and app creation are self-serve; GitHub pricing page lists a Free plan at $0. critic: confirmed self_serve_free, free plan verified on pricing page.",
+  "api_style": "rest+graphql",
+  "api_breadth": "broad",
+  "api_notes": "REST API for integrations, data retrieval and automation; critic: api_style rest -> rest+graphql, vendor docs document a GitHub GraphQL API as well.",
+  "docs_url": "https://docs.github.com/en/rest",
+  "mcp": "official",
+  "mcp_url": "https://github.com/github/github-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "Self-serve PAT and GitHub App credentials with documented public API on a free plan. critic: confirmed ready.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity (limited by the scopes or permissions you selected) when you make requests to the REST API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "You can also create an OAuth token with an OAuth app to access the REST API."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint."
+   },
+   {
+    "field": "access",
+    "url": "https://github.com/pricing",
+    "quote": "The basics for individuals and organizations"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "You can authenticate to the REST API to access more endpoints and have a higher rate limit."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.github.com/en/graphql",
+    "quote": "The GitHub GraphQL API offers more precise and flexible queries than the GitHub REST API."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "quote": "Personal access tokens act as your identity (limited by the scopes or permissions you selected) when you make requests to the REST API."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.github.com/en/graphql",
+     "find": [
+      "GraphQL",
+      "API"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/pricing",
+     "find": [
+      "Free",
+      "API"
+     ]
+    }
+   }
+  ]
+ }
+}

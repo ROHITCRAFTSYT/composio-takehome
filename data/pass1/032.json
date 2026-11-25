@@ -1,0 +1,156 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 32,
+  "app": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Meta's Marketing API for creating, managing and reporting on ads across Facebook, Instagram, Messenger and WhatsApp.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth dialog with scope=ads_management or ads_read is documented. Fetched pages mention system user capacity but do not show a static system-user token type, so api_key is not confirmed.",
+  "access": "approval_required",
+  "access_notes": "Limited access is granted automatically when the Marketing API product is added to an app. Full access, which the docs tie to rate limits, Business Manager access and system user capacity, requires App Review.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Covers campaigns, ad sets, ad creatives and ads, plus insights. The HTTP style is not named in the fetched pages (rest is inferred), so confidence is medium.",
+  "docs_url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview",
+  "mcp": "official",
+  "mcp_url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Limited access works for development, but production use needs Full access via App Review.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "use the scope parameter to prompt them for the ads_management or ads_read permissions"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Automatically granted when you add the Marketing API product to your app."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Your tier is determined by whether your app has been approved through App Review."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/overview",
+    "quote": "Use the Marketing API to automate advertising across Meta technologies."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "quote": "The ads MCP server is a Meta-hosted Model Context Protocol server that lets you manage Meta ads directly from an AI agent."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Your tier is determined by whether your app has been approved through App Review."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Meta Marketing API authentication access token app review",
+     "domains": [
+      "developers.facebook.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/docs/marketing-apis",
+     "find": [
+      "Marketing API",
+      "access",
+      "REST",
+      "Graph API",
+      "app review"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Meta Ads official MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/docs/marketing-api/overview",
+     "find": [
+      "access token",
+      "App Review",
+      "Advanced Access",
+      "Standard Access",
+      "developer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+     "find": [
+      "OAuth",
+      "access token",
+      "System User",
+      "app secret"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+     "find": [
+      "Meta-hosted",
+      "open beta",
+      "OAuth",
+      "Business",
+      "free",
+      "access"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "find": [
+      "System-user",
+      "system user",
+      "access token",
+      "App Review"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/docs/marketing-api/overview",
+     "find": [
+      "Graph API",
+      "endpoint",
+      "HTTP",
+      "REST",
+      "SDK"
+     ]
+    }
+   }
+  ]
+ }
+}

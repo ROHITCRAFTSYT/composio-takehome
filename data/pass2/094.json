@@ -1,0 +1,90 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 94,
+  "app": "Consensus",
+  "category": "AI, Research and Media-native",
+  "one_liner": "Consensus is a research paper search engine over 400M+ scholarly papers, exposed via a REST API and a hosted MCP server.",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API keys are sent in the x-api-key header (REST) or as a Bearer token (MCP); per-user OAuth 2.0 is also offered for MCP clients. critic: confirmed; MCP platforms table lists OAuth for most clients and Bearer token for other clients.",
+  "access": "self_serve_free",
+  "access_notes": "Keys are created from the API & MCP Dashboard. The Free plan includes 30 calls per month and has no trial gate. critic: confirmed self_serve_free; Free plan works but pagination, full text and citations return 403 until upgraded.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "REST endpoints cover search, threads, full text and citations/references; pagination, full text and citations need paid plans on the Free tier.",
+  "docs_url": "https://docs.consensus.app/api-get-started",
+  "mcp": "official",
+  "mcp_url": "https://mcp.consensus.app/mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed, no blocker; free tier is rate/feature limited only.",
+  "confidence": "high",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.consensus.app/api-plans-and-access",
+    "quote": "Pass the key in the x-api-key header. Requests without a valid key return 401."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.consensus.app/enterprise/connection-reference",
+    "quote": "OAuth 2.0 (per-user)"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.consensus.app/api-plans-and-access",
+    "quote": "Free plans stop at 30 calls."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.consensus.app/api-plans-and-access",
+    "quote": "GET /v1beta/papers/citations and GET /v1beta/papers/references are charged by the papers on the page, rounded up, with a minimum of 1 credit per request."
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.consensus.app/consensus-mcp",
+    "quote": "Endpoint: Only connect to the official URL: https://mcp.consensus.app/mcp"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.consensus.app/api-plans-and-access",
+    "quote": "Pass the key in the x-api-key header. Requests without a valid key return 401."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.consensus.app/api-plans-and-access",
+     "find": [
+      "free",
+      "x-api-key",
+      "trial",
+      "approval",
+      "Free plans"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.consensus.app/consensus-mcp",
+     "find": [
+      "official",
+      "OAuth",
+      "Bearer",
+      "plan",
+      "free"
+     ]
+    }
+   }
+  ]
+ }
+}

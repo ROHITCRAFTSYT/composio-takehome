@@ -1,0 +1,3 @@
+{"t": 1795578314.2, "tool": "composio_search", "input": {"query": "Salesforce B2C Commerce MCP server", "domains": []}}
+{"t": 1795578443.4, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/scapi-get-started.html", "find": ["free", "trial", "sandbox", "demo", "client"]}}
+{"t": 1795578556.6, "tool": "fetch_page", "input": {"url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html", "find": ["free", "trial", "purchase", "credits"]}}

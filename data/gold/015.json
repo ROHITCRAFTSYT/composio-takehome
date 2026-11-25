@@ -1,0 +1,54 @@
+{
+  "n": 15,
+  "app": "Pylon",
+  "one_liner": "B2B support platform with a broad read/write REST API (admin-created bearer tokens) and an official hosted MCP server, but every plan is sales-led (book a demo, annual contract).",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "contact_sales",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "mcp": "official",
+  "mcp_url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "notes": "auth: the REST API uses admin-created API tokens sent as Bearer; no OAuth for the public REST API. The MCP server additionally supports OAuth sign-in, but that is MCP-only, so auth_methods = api_key. access: the pricing page lists API and MCP on every plan (Professional $89/seat, Advanced $139/seat, Enterprise custom), but all CTAs are 'Book a demo' / 'Talk to sales' on annual contracts, and trials are set up by a sales rep ('free trials for prospects'). No self-serve signup or free plan found -> contact_sales, verdict blocked. If Pylon allowed a self-serve trial this would flip to self_serve_trial/ready; the vendor FAQ says the trial goes through a sales rep. mcp: official hosted server at mcp.usepylon.com (OAuth or API token), documented on docs.usepylon.com. api_style: REST (JSON over HTTP, about 22 resource groups, official TS/Python/Go SDKs and an experimental CLI).",
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "quote": "The Pylon API uses Bearer authentication."
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "quote": "Only Admins can create and manage API tokens."
+    },
+    {
+      "field": "access",
+      "url": "https://www.usepylon.com/pricing",
+      "quote": "Pylon offers free trials for prospects."
+    },
+    {
+      "field": "access",
+      "url": "https://www.usepylon.com/pricing",
+      "quote": "Your sales representative will work with you on setting up the demo organization."
+    },
+    {
+      "field": "api_style",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/conventions",
+      "quote": "GET endpoints take cursor and limit as query parameters."
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+      "quote": "The Pylon MCP Server exposes Pylon data to AI tools that support the Model Context Protocol (e.g. Claude, ChatGPT, Cursor)."
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.usepylon.com/pricing",
+      "quote": "Your sales representative will work with you on setting up the demo organization."
+    }
+  ],
+  "labeled_by": "claude-interactive-gold"
+}

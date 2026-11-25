@@ -1,0 +1,602 @@
+[
+ {
+  "n": 1,
+  "status": "native",
+  "slug": "salesforce",
+  "tools": 556
+ },
+ {
+  "n": 2,
+  "status": "native",
+  "slug": "hubspot",
+  "tools": 354
+ },
+ {
+  "n": 3,
+  "status": "native",
+  "slug": "pipedrive",
+  "tools": 404
+ },
+ {
+  "n": 4,
+  "status": "native",
+  "slug": "attio",
+  "tools": 105
+ },
+ {
+  "n": 5,
+  "status": "native",
+  "slug": "twenty",
+  "tools": 23
+ },
+ {
+  "n": 6,
+  "status": "native",
+  "slug": "podio",
+  "tools": 143
+ },
+ {
+  "n": 7,
+  "status": "native",
+  "slug": "zoho",
+  "tools": 115
+ },
+ {
+  "n": 8,
+  "status": "native",
+  "slug": "close",
+  "tools": 75
+ },
+ {
+  "n": 9,
+  "status": "native",
+  "slug": "copper",
+  "tools": 65
+ },
+ {
+  "n": 10,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 11,
+  "status": "native",
+  "slug": "zendesk",
+  "tools": 483
+ },
+ {
+  "n": 12,
+  "status": "native",
+  "slug": "intercom",
+  "tools": 138
+ },
+ {
+  "n": 13,
+  "status": "native",
+  "slug": "freshdesk",
+  "tools": 184
+ },
+ {
+  "n": 14,
+  "status": "native",
+  "slug": "front",
+  "tools": 180
+ },
+ {
+  "n": 15,
+  "status": "mcp",
+  "slug": "pylon_mcp",
+  "tools": 12
+ },
+ {
+  "n": 16,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 17,
+  "status": "native",
+  "slug": "plain",
+  "tools": 119
+ },
+ {
+  "n": 18,
+  "status": "native",
+  "slug": "help_scout",
+  "tools": 129
+ },
+ {
+  "n": 19,
+  "status": "native",
+  "slug": "gorgias",
+  "tools": 51
+ },
+ {
+  "n": 20,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 21,
+  "status": "native",
+  "slug": "slack",
+  "tools": 165
+ },
+ {
+  "n": 22,
+  "status": "native",
+  "slug": "twilio",
+  "tools": 452
+ },
+ {
+  "n": 23,
+  "status": "native",
+  "slug": "zoho_cliq",
+  "tools": 162
+ },
+ {
+  "n": 24,
+  "status": "native",
+  "slug": "lark",
+  "tools": 451
+ },
+ {
+  "n": 25,
+  "status": "native",
+  "slug": "pumble",
+  "tools": 9
+ },
+ {
+  "n": 26,
+  "status": "native",
+  "slug": "discord",
+  "tools": 23
+ },
+ {
+  "n": 27,
+  "status": "native",
+  "slug": "telegram",
+  "tools": 18
+ },
+ {
+  "n": 28,
+  "status": "native",
+  "slug": "whatsapp",
+  "tools": 127
+ },
+ {
+  "n": 29,
+  "status": "native",
+  "slug": "aircall",
+  "tools": 48
+ },
+ {
+  "n": 30,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 31,
+  "status": "native",
+  "slug": "googleads",
+  "tools": 78
+ },
+ {
+  "n": 32,
+  "status": "native",
+  "slug": "metaads",
+  "tools": 99
+ },
+ {
+  "n": 33,
+  "status": "native",
+  "slug": "linkedin_ads",
+  "tools": 28
+ },
+ {
+  "n": 34,
+  "status": "native",
+  "slug": "highlevel_location",
+  "tools": 554
+ },
+ {
+  "n": 35,
+  "status": "native",
+  "slug": "mailchimp",
+  "tools": 275
+ },
+ {
+  "n": 36,
+  "status": "native",
+  "slug": "klaviyo",
+  "tools": 233
+ },
+ {
+  "n": 37,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 38,
+  "status": "native",
+  "slug": "pinterest",
+  "tools": 27
+ },
+ {
+  "n": 39,
+  "status": "native",
+  "slug": "threads",
+  "tools": 24
+ },
+ {
+  "n": 40,
+  "status": "native",
+  "slug": "sendgrid",
+  "tools": 359
+ },
+ {
+  "n": 41,
+  "status": "native",
+  "slug": "shopify",
+  "tools": 386
+ },
+ {
+  "n": 42,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 43,
+  "status": "native",
+  "slug": "bigcommerce",
+  "tools": 532
+ },
+ {
+  "n": 44,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 45,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 46,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 47,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 48,
+  "status": "native",
+  "slug": "gumroad",
+  "tools": 13
+ },
+ {
+  "n": 49,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 50,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 51,
+  "status": "native",
+  "slug": "dataforseo",
+  "tools": 354
+ },
+ {
+  "n": 52,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 53,
+  "status": "native",
+  "slug": "ahrefs",
+  "tools": 46
+ },
+ {
+  "n": 54,
+  "status": "native",
+  "slug": "mrscraper",
+  "tools": 11
+ },
+ {
+  "n": 55,
+  "status": "native",
+  "slug": "apify",
+  "tools": 184
+ },
+ {
+  "n": 56,
+  "status": "native",
+  "slug": "firecrawl",
+  "tools": 245
+ },
+ {
+  "n": 57,
+  "status": "native",
+  "slug": "brightdata",
+  "tools": 167
+ },
+ {
+  "n": 58,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 59,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 60,
+  "status": "native",
+  "slug": "clay",
+  "tools": 15
+ },
+ {
+  "n": 61,
+  "status": "native",
+  "slug": "github",
+  "tools": 883
+ },
+ {
+  "n": 62,
+  "status": "native",
+  "slug": "vercel",
+  "tools": 399
+ },
+ {
+  "n": 63,
+  "status": "mcp",
+  "slug": "netlify_mcp",
+  "tools": 9
+ },
+ {
+  "n": 64,
+  "status": "native",
+  "slug": "cloudflare",
+  "tools": 171
+ },
+ {
+  "n": 65,
+  "status": "native",
+  "slug": "supabase",
+  "tools": 230
+ },
+ {
+  "n": 66,
+  "status": "native",
+  "slug": "neo4j",
+  "tools": 21
+ },
+ {
+  "n": 67,
+  "status": "native",
+  "slug": "snowflake",
+  "tools": 16
+ },
+ {
+  "n": 68,
+  "status": "native",
+  "slug": "mongodb",
+  "tools": 496
+ },
+ {
+  "n": 69,
+  "status": "native",
+  "slug": "datadog",
+  "tools": 255
+ },
+ {
+  "n": 70,
+  "status": "native",
+  "slug": "sentry",
+  "tools": 210
+ },
+ {
+  "n": 71,
+  "status": "native",
+  "slug": "notion",
+  "tools": 59
+ },
+ {
+  "n": 72,
+  "status": "native",
+  "slug": "airtable",
+  "tools": 26
+ },
+ {
+  "n": 73,
+  "status": "native",
+  "slug": "linear",
+  "tools": 47
+ },
+ {
+  "n": 74,
+  "status": "native",
+  "slug": "jira",
+  "tools": 166
+ },
+ {
+  "n": 75,
+  "status": "native",
+  "slug": "asana",
+  "tools": 247
+ },
+ {
+  "n": 76,
+  "status": "native",
+  "slug": "monday",
+  "tools": 122
+ },
+ {
+  "n": 77,
+  "status": "native",
+  "slug": "clickup",
+  "tools": 163
+ },
+ {
+  "n": 78,
+  "status": "native",
+  "slug": "coda",
+  "tools": 109
+ },
+ {
+  "n": 79,
+  "status": "native",
+  "slug": "smartsheet",
+  "tools": 180
+ },
+ {
+  "n": 80,
+  "status": "native",
+  "slug": "harvest",
+  "tools": 60
+ },
+ {
+  "n": 81,
+  "status": "native",
+  "slug": "stripe",
+  "tools": 428
+ },
+ {
+  "n": 82,
+  "status": "native",
+  "slug": "plaid",
+  "tools": 70
+ },
+ {
+  "n": 83,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 84,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 85,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 86,
+  "status": "native",
+  "slug": "quickbooks",
+  "tools": 119
+ },
+ {
+  "n": 87,
+  "status": "native",
+  "slug": "xero",
+  "tools": 109
+ },
+ {
+  "n": 88,
+  "status": "native",
+  "slug": "brex",
+  "tools": 84
+ },
+ {
+  "n": 89,
+  "status": "native",
+  "slug": "ramp",
+  "tools": 186
+ },
+ {
+  "n": 90,
+  "status": "native",
+  "slug": "pitchbook",
+  "tools": 130
+ },
+ {
+  "n": 91,
+  "status": "native",
+  "slug": "notebook_lm",
+  "tools": 11
+ },
+ {
+  "n": 92,
+  "status": "mcp",
+  "slug": "otter_ai_mcp",
+  "tools": 3
+ },
+ {
+  "n": 93,
+  "status": "native",
+  "slug": "fathom",
+  "tools": 10
+ },
+ {
+  "n": 94,
+  "status": "native",
+  "slug": "consensus",
+  "tools": 1
+ },
+ {
+  "n": 95,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 96,
+  "status": "mcp",
+  "slug": "devin_mcp",
+  "tools": 23
+ },
+ {
+  "n": 97,
+  "status": "native",
+  "slug": "higgsfield",
+  "tools": 13
+ },
+ {
+  "n": 98,
+  "status": "none",
+  "slug": "",
+  "tools": 0
+ },
+ {
+  "n": 99,
+  "status": "native",
+  "slug": "youtube_transcript",
+  "tools": 9
+ },
+ {
+  "n": 100,
+  "status": "native",
+  "slug": "grain",
+  "tools": 17
+ }
+]

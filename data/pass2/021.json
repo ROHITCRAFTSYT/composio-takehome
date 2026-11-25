@@ -1,0 +1,112 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "one_liner": "Team messaging and collaboration platform with a developer platform (Web API, apps, and an official MCP server).",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "critic: added api_key. Apps are installed via the v2 OAuth 2.0 flow, and bot tokens (xoxb-) are also obtained by installing an app from its settings page (copied from the dashboard). User-facing MCP also uses OAuth.",
+  "access": "self_serve_free",
+  "access_notes": "critic: confirmed self_serve_free. Anyone can create a Slack app and install it in a workspace; free developer sandboxes exist; unlisted distribution to other workspaces needs no Slack review.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "Web API is HTTP RPC-style methods at slack.com/api/METHOD_FAMILY.method, described by Slack as not strictly REST. Mapped to rest as the closest enum value.",
+  "docs_url": "https://docs.slack.dev/apis/web-api/",
+  "mcp": "official",
+  "mcp_url": "https://docs.slack.dev/ai/slack-mcp-server",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: verdict ready_with_review -> ready, blocker app_review -> none. Unlisted distributed apps work without review; the Marketplace is recommended only for commercial distribution, not required. Caveat: the official MCP server is limited to Marketplace and internal apps.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+    "quote": "Slack apps are installed with a v2 OAuth 2.0 flow."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.slack.dev/authentication/tokens/",
+    "quote": "Bot token strings begin with xoxb-."
+   },
+   {
+    "field": "access",
+    "url": "https://slack.com/intl/en-gb/help/articles/13345326945043-Build-apps-with-Slack%E2%80%99s-developer-tools",
+    "quote": "Sandboxes are Enterprise environments that you can use to build against all of Slack’s features safely and securely at no cost."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "While it's not a REST API, those familiar with REST should be at home with its foundations in HTTP."
+   },
+   {
+    "field": "mcp",
+    "url": "https://slack.com/intl/en-in/help/articles/48855576908307-Guide-to-MCP-in-Slack",
+    "quote": "The Slack MCP server provides AI agents with secure access to your Slack workspace or Enterprise organisation"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "Only apps published in the Slack Marketplace and internal apps can use MCP at this time; unlisted apps are prohibited from using MCP."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.slack.dev/app-management/distribution/",
+    "quote": "Distributing your unlisted app is perfect for when you want to test out your app by running a pilot for early customers"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.slack.dev/authentication/tokens/",
+     "find": [
+      "Bot tokens",
+      "Marketplace",
+      "OAuth"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Slack MCP server docs.slack.dev",
+     "domains": [
+      "docs.slack.dev",
+      "slack.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.slack.dev/app-management/distribution/",
+     "find": [
+      "Marketplace",
+      "internal",
+      "unlisted"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.slack.dev/ai/slack-mcp-server",
+     "find": [
+      "Marketplace",
+      "approved",
+      "directory"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+{"t": 1795526812.5, "tool": "composio_search", "input": {"query": "Close CRM API authentication API key OAuth developer docs", "domains": ["close.com"]}}
+{"t": 1795526845.5, "tool": "composio_search", "input": {"query": "Close CRM pricing plans API access", "domains": ["close.com"]}}
+{"t": 1795526881.1, "tool": "composio_search", "input": {"query": "Close CRM official MCP server github", "domains": []}}
+{"t": 1795526946.6, "tool": "fetch_page", "input": {"url": "https://developer.close.com/api/overview", "find": ["API Keys", "OAuth 2.0", "MCP"]}}
+{"t": 1795526988.5, "tool": "fetch_page", "input": {"url": "https://developer.close.com/integrations/publish", "find": ["Requirements", "OAuth 2.0", "apply"]}}
+{"t": 1795527030.9, "tool": "fetch_page", "input": {"url": "https://close.com/pricing", "find": ["API access", "trial", "14"]}}
+{"t": 1795527065.1, "tool": "fetch_page", "input": {"url": "https://developer.close.com", "find": ["MCP", "Authentication", "Open in Claude"]}}
+{"t": 1795527097.5, "tool": "fetch_page", "input": {"url": "https://developer.close.com/api/overview/api-key-authentication", "find": ["Settings", "scripts"]}}
+{"t": 1795527102.8, "tool": "fetch_page", "input": {"url": "https://developer.close.com/api/overview/api-key-authentication", "find": ["Settings", "Basic"]}}
+{"t": 1795527139.3, "tool": "fetch_page", "input": {"url": "https://developer.close.com/api/overview/oauth-authentication", "find": ["OAuth 2.0", "Access Token"]}}

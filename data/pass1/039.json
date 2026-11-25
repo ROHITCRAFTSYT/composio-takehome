@@ -1,0 +1,116 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "one_liner": "Meta's Threads API for publishing and reading Threads posts, profiles, replies and insights.",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "Threads user access tokens obtained through the OAuth 2.0 Authorization Window, with scopes such as threads_basic and threads_content_publish.",
+  "access": "approval_required",
+  "access_notes": "Apps are created in the developer dashboard, but permissions must pass App Review and the app must be published before other users can grant them. Official docs do not clearly confirm an unreviewed Development-mode path for the developer's own account.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Covers posts (text, image, video, carousel), media, profiles, replies, moderation, mentions, insights, webhooks and keyword search per the docs index.",
+  "docs_url": "https://developers.facebook.com/documentation/threads",
+  "mcp": "community",
+  "mcp_url": "https://github.com/griffinwork40/threads-mcp",
+  "verdict": "ready_with_review",
+  "main_blocker": "app_review",
+  "blocker_notes": "Permissions need Meta App Review and a published app before production use. No official Meta MCP server was found; only community servers.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol."
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "each permission must first be approved through the App Review process, and your app must be published."
+   },
+   {
+    "field": "api_style",
+    "url": "https://developers.facebook.com/documentation/threads",
+    "quote": "The Threads API endpoints and their parameters."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/griffinwork40/threads-mcp",
+    "quote": "Exposes 26 tools covering profile management, content reading, publishing, replies, and discovery."
+   },
+   {
+    "field": "verdict",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "each permission must first be approved through the App Review process, and your app must be published."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Threads API Meta developers docs authentication",
+     "domains": [
+      "developers.facebook.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/documentation/threads/get-started",
+     "find": [
+      "OAuth",
+      "access",
+      "permission",
+      "test",
+      "review",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://developers.facebook.com/documentation/threads",
+     "find": [
+      "OAuth",
+      "endpoint",
+      "MCP",
+      "review",
+      "free"
+     ]
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Threads API MCP server official Meta",
+     "domains": [
+      "github.com",
+      "developers.facebook.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://github.com/griffinwork40/threads-mcp",
+     "find": [
+      "Meta",
+      "official",
+      "review",
+      "Threads"
+     ]
+    }
+   }
+  ]
+ }
+}

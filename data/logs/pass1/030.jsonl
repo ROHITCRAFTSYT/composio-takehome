@@ -1,0 +1,10 @@
+{"t": 1795527385.2, "tool": "composio_search", "input": {"query": "Vonage Video API authentication API key application ID JWT", "domains": ["developer.vonage.com"]}}
+{"t": 1795527426.9, "tool": "composio_search", "input": {"query": "Vonage API dashboard free trial account API credentials", "domains": ["developer.vonage.com", "vonage.com"]}}
+{"t": 1795527470.9, "tool": "composio_search", "input": {"query": "Vonage MCP server official github", "domains": []}}
+{"t": 1795527521.0, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/getting-started/concepts/authentication", "find": ["API key", "API secret", "Basic", "JWT", "application"]}}
+{"t": 1795527555.7, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/getting-started/concepts/accounts", "find": ["free", "trial", "credit", "sign up", "API key"]}}
+{"t": 1795527708.7, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/getting-started/overview", "find": ["sign up", "API key", "secret", "free"]}}
+{"t": 1795527747.2, "tool": "fetch_page", "input": {"url": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account", "find": ["trial credit", "registered number", "restrictions"]}}
+{"t": 1795527802.9, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/documentation", "find": ["API", "REST", "GraphQL", "SDK", "MCP"]}}
+{"t": 1795527878.4, "tool": "fetch_page", "input": {"url": "https://github.com/Vonage/vonage-mcp-server-documentation", "find": ["MCP", "server", "documentation"]}}
+{"t": 1795527912.2, "tool": "fetch_page", "input": {"url": "https://developer.vonage.com/en/api/video", "find": ["REST", "API", "endpoint"]}}

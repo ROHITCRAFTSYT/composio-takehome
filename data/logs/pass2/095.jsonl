@@ -1,0 +1,3 @@
+{"t": 1795591660.0, "tool": "fetch_page", "input": {"url": "https://docs.reducto.ai/mcp-server", "find": ["hosted", "mcp.reducto", "github", "login"]}}
+{"t": 1795591683.8, "tool": "composio_search", "input": {"query": "Reducto pricing free credits API key", "domains": ["reducto.ai", "docs.reducto.ai"]}}
+{"t": 1795591748.5, "tool": "fetch_page", "input": {"url": "https://reducto.ai/pricing", "find": ["free credits", "expire", "pay-as-you-go", "Standard"]}}

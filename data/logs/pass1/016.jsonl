@@ -1,0 +1,7 @@
+{"t": 1795526868.2, "tool": "composio_search", "input": {"query": "LiveAgent API authentication documentation", "domains": ["liveagent.com"]}}
+{"t": 1795526906.1, "tool": "composio_search", "input": {"query": "LiveAgent API key REST API pricing plan", "domains": ["liveagent.com"]}}
+{"t": 1795526942.6, "tool": "composio_search", "input": {"query": "LiveAgent MCP server", "domains": []}}
+{"t": 1795527001.7, "tool": "fetch_page", "input": {"url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors", "find": ["API key", "API v3", "Basic", "OAuth", "generate", "Settings"]}}
+{"t": 1795527047.1, "tool": "fetch_page", "input": {"url": "https://www.liveagent.com/features/api", "find": ["API", "free", "trial", "plan", "key", "OAuth", "documentation"]}}
+{"t": 1795527079.1, "tool": "fetch_page", "input": {"url": "https://support.liveagent.com/150554-AI-features", "find": ["MCP", "token", "API", "plan", "available"]}}
+{"t": 1795527123.6, "tool": "fetch_page", "input": {"url": "https://www.liveagent.com/customer-experience-software", "find": ["API", "free trial", "plan", "per agent", "contact"]}}

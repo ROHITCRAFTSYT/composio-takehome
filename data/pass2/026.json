@@ -1,0 +1,94 @@
+{
+ "stage": "pass2",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "one_liner": "Chat and community platform with a public REST API and Gateway (WebSocket) for building bots and apps.",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Bot tokens from the Bot page of the app settings (static, not OAuth) count as api_key; OAuth2 user bearer tokens count as oauth2. OAuth2 token endpoints also accept client_id:client_secret Basic credentials, which is not a username+password so not scored as basic.",
+  "access": "self_serve_free",
+  "access_notes": "Developer Portal app creation and bot token are self-serve and free per the bots overview. No paid plan or vendor approval was needed to create an app and bot token. critic: re-derived, access self_serve_free confirmed.",
+  "api_style": "rest",
+  "api_breadth": "broad",
+  "api_notes": "REST HTTP API plus Gateway for real-time events. No GraphQL seen. Breadth judged from the reference landing page only.",
+  "docs_url": "https://docs.discord.com/developers/reference",
+  "mcp": "community",
+  "mcp_url": "https://github.com/SaseQ/discord-mcp",
+  "verdict": "ready",
+  "main_blocker": "none",
+  "blocker_notes": "critic: confirmed no official Discord MCP server (search results and vendor docs show only community servers such as SaseQ/discord-mcp). Bot-based use needs no app review for creating and using a bot.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "Using a bot token found on the Bot page within your app’s settings."
+   },
+   {
+    "field": "auth_methods",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "Using an OAuth2 bearer token gained through the OAuth2 API."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.discord.com/developers/bots/overview",
+    "quote": "Create an application in the Discord Developer Portal."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.discord.com/developers/bots/overview",
+    "quote": "Connect to the API using the Gateway for real-time events, the HTTP API for REST operations, or both."
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/SaseQ/discord-mcp",
+    "quote": "designed to integrate Discord bots with MCP-compatible applications such as Claude"
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions",
+    "quote": "Authenticate as the bot user, not on behalf of any person"
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Discord official MCP server",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Discord developer portal create app bot token free",
+     "domains": [
+      "discord.com",
+      "docs.discord.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.discord.com/developers/bots/overview",
+     "find": [
+      "free",
+      "approval",
+      "verification",
+      "Create an application",
+      "intents"
+     ]
+    }
+   }
+  ]
+ }
+}

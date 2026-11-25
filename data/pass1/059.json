@@ -1,0 +1,121 @@
+{
+ "stage": "pass1",
+ "backend": "claude-code-subagent",
+ "record": {
+  "n": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "B2B data API for go-to-market workflows: find people, enrich contact and company records, match emails, find phone numbers",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Static API key sent in the x-api-key header. Keys are issued after the team approves an access request. Sub-keys can be created from the master key.",
+  "access": "contact_sales",
+  "access_notes": "No self-serve signup found. API access is by team approval on request, and the docs point to contacting the team for access and pricing.",
+  "api_style": "rest",
+  "api_breadth": "moderate",
+  "api_notes": "Endpoint groups seen in the introduction: people search and contact details, company find/enrich, verification, employment checks. Full endpoint list not verified.",
+  "docs_url": "https://docs.waterfall.io/v1/introduction",
+  "mcp": "none",
+  "mcp_url": "",
+  "verdict": "blocked",
+  "main_blocker": "contact_sales",
+  "blocker_notes": "Credentials come only through a team review of an access request, with pricing discussed by call. No free or trial path to the API was found in the docs. No official MCP server was found in the search results.",
+  "confidence": "medium",
+  "evidence": [
+   {
+    "field": "auth_methods",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "Send your API key in the x-api-key header."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Contact the team for API access and pricing."
+   },
+   {
+    "field": "access",
+    "url": "https://docs.waterfall.io/v1/faq",
+    "quote": "API access is available by approval."
+   },
+   {
+    "field": "api_style",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Data endpoints use /v1/; Account Reporter V2 uses /v2/account."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.waterfall.io/v1/faq",
+    "quote": "API access is available by approval."
+   },
+   {
+    "field": "verdict",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Contact the team for API access and pricing."
+   }
+  ]
+ },
+ "error": "",
+ "meta": {
+  "tool_calls": [
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Waterfall.io API developer documentation authentication",
+     "domains": []
+    }
+   },
+   {
+    "tool": "composio_search",
+    "input": {
+     "query": "Waterfall.io MCP server",
+     "domains": [
+      "waterfall.io",
+      "github.com"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "find": [
+      "x-api-key",
+      "api",
+      "key",
+      "OAuth",
+      "Bearer"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.waterfall.io/v1/faq",
+     "find": [
+      "approval",
+      "access",
+      "pricing",
+      "trial",
+      "free",
+      "plan"
+     ]
+    }
+   },
+   {
+    "tool": "fetch_page",
+    "input": {
+     "url": "https://docs.waterfall.io/v1/introduction",
+     "find": [
+      "REST",
+      "endpoint",
+      "Search",
+      "Prospector",
+      "API",
+      "enrich"
+     ]
+    }
+   }
+  ]
+ }
+}

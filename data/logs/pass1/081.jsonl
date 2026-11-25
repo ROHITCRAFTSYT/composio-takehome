@@ -1,0 +1,8 @@
+{"t": 1795529537.4, "tool": "composio_search", "input": {"query": "Stripe API authentication secret key restricted keys docs", "domains": ["stripe.com"]}}
+{"t": 1795529573.0, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/api/authentication", "find": ["secret key", "restricted", "Basic", "OAuth", "Connect"]}}
+{"t": 1795529649.9, "tool": "composio_search", "input": {"query": "Stripe MCP server official", "domains": ["stripe.com", "github.com"]}}
+{"t": 1795529687.4, "tool": "composio_search", "input": {"query": "Stripe Connect OAuth standard account authorize", "domains": ["stripe.com"]}}
+{"t": 1795529721.7, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/keys", "find": ["test mode", "sandbox", "free", "Dashboard"]}}
+{"t": 1795529802.3, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/mcp", "find": ["official", "OAuth", "remote"]}}
+{"t": 1795529825.5, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/connect/oauth-reference", "find": ["OAuth", "authorization code", "client_id"]}}
+{"t": 1795529853.4, "tool": "fetch_page", "input": {"url": "https://docs.stripe.com/api", "find": ["REST", "JSON", "HTTP", "resources"]}}

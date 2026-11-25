@@ -1,0 +1,8 @@
+{"t": 1795529014.5, "tool": "composio_search", "input": {"query": "Snowflake SQL API authentication docs", "domains": ["docs.snowflake.com"]}}
+{"t": 1795529047.5, "tool": "composio_search", "input": {"query": "Snowflake MCP server official", "domains": ["docs.snowflake.com", "github.com/Snowflake-Labs"]}}
+{"t": 1795529131.0, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating", "find": ["OAuth", "key", "Key"]}}
+{"t": 1795529169.0, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp", "find": ["MCP", "create", "role", "privilege"]}}
+{"t": 1795529197.8, "tool": "composio_search", "input": {"query": "Snowflake free trial account 30 days credits sign up", "domains": ["docs.snowflake.com", "snowflake.com"]}}
+{"t": 1795529287.0, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "find": ["30 days", "credits", "suspended"]}}
+{"t": 1795529314.5, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/user-guide/programmatic-access-tokens", "find": ["programmatic access token", "Bearer", "PAT"]}}
+{"t": 1795529349.5, "tool": "fetch_page", "input": {"url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating", "find": ["key-pair", "key pair", "JWT"]}}
