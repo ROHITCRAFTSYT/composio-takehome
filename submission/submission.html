@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Composio AI Product Ops take-home: submission</title>
+<style>
+body{font:12.5px/1.55 system-ui,"Segoe UI",Roboto,sans-serif;color:#111;margin:36px 44px}
+h1{font:600 22px/1.2 Georgia,serif;margin:0 0 4px}h2{font:600 14px/1.3 system-ui;margin:18px 0 6px}
+.sub{color:#555;margin:0 0 16px}a{color:#1c5cab}
+table{border-collapse:collapse;width:100%;margin:6px 0}td{border-top:1px solid #ddd;padding:5px 8px;vertical-align:top}
+td:first-child{width:34%;color:#444}.big{font-size:15px;font-weight:600}
+ul{margin:4px 0;padding-left:18px}li{margin:2px 0}
+</style></head><body>
+<h1>100 apps: can an agent use it today?</h1>
+<p class="sub">Composio AI Product Ops Intern take-home · Rohit (ROHITCRAFTSYT)</p>
+
+<table>
+<tr><td>Live case study</td><td class="big"><a href="https://rohitcraftsyt.github.io/composio-takehome/">rohitcraftsyt.github.io/composio-takehome</a></td></tr>
+<tr><td>Source repo + README</td><td class="big"><a href="https://github.com/ROHITCRAFTSYT/composio-takehome">github.com/ROHITCRAFTSYT/composio-takehome</a></td></tr>
+<tr><td>All 100 records</td><td><a href="https://rohitcraftsyt.github.io/composio-takehome/results.csv">results.csv</a> · <a href="https://rohitcraftsyt.github.io/composio-takehome/results.json">results.json</a> (each with evidence URLs + quotes)</td></tr>
+</table>
+
+<h2>Headline</h2>
+<ul>
+<li><b>83 of 100</b> apps can be agent toolkits today (72 ready, 11 buildable but production needs vendor review); 17 blocked.</li>
+<li>The hard part is <b>access, not APIs</b>: 97% have a documented public API, only 79% let a developer get credentials alone. Top blockers: app review (11), paid plan (8), sales/partner (6).</li>
+<li><b>20 apps are not on Composio yet</b> (live catalog check via the Composio CLI); <b>9</b> of those can be built right now.</li>
+</ul>
+
+<h2>The agent</h2>
+<ul>
+<li>One researcher agent per app; tools are Composio web search (Tavily toolkit via <code>composio execute</code>) and a page fetcher that returns raw text (HTTP → headless browser → reader fallback), so every quote is checkable.</li>
+<li>Verification loops: rubric lint → evidence check (re-fetches every cited URL, confirms the quote is on the page and on a vendor domain) → critic agent on every app → blind 20-app gold sample.</li>
+<li>Runnable via a Claude Code slash command (<code>/research-apps 1-100</code>) or headless with the Claude Agent SDK.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>Gold sample accuracy (100 graded fields): <b>78% after the researcher → 83% after the loops</b>; access 55% → 65%, verdict 80% → 90%.</li>
+<li>713 of 715 cited quotes found on the cited page; 95% of graded fields backed by a vendor-owned page.</li>
+<li>Every remaining miss is listed on the page. Gold labels were drafted blind by separate agents; human review status is shown on the page.</li>
+</ul>
+</body></html>
