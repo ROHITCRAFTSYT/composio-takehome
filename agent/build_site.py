@@ -11,7 +11,7 @@ import logging
 from .aggregate import SITE, build, write
 
 log = logging.getLogger("build_site")
-REPO = "ROHITCRAFTSYT/composio-toolkit-research"
+REPO = "ROHITCRAFTSYT/composio-takehome"
 # Flip to True only after a person has gone through data/gold/REVIEW.md against the cited pages.
 GOLD_HUMAN_REVIEWED = False
 

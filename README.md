@@ -3,7 +3,7 @@
 Can each of 100 SaaS apps become an AI-agent toolkit today? This repo has the agent
 pipeline that answers it, the verification loops that check it, and the case-study page.
 
-- **Case study (live):** https://rohitcraftsyt.github.io/composio-toolkit-research/
+- **Case study (live):** https://rohitcraftsyt.github.io/composio-takehome/
 - **All 100 records:** [`site/results.csv`](site/results.csv) · [`site/results.json`](site/results.json)
 - **Field definitions:** [`RUBRIC.md`](RUBRIC.md)
 
