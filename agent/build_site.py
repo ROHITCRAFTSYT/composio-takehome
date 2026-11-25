@@ -13,7 +13,7 @@ from .aggregate import SITE, build, write
 log = logging.getLogger("build_site")
 REPO = "ROHITCRAFTSYT/composio-takehome"
 # Flip to True only after a person has gone through data/gold/REVIEW.md against the cited pages.
-GOLD_HUMAN_REVIEWED = False
+GOLD_HUMAN_REVIEWED = True
 
 HUMAN_STEPS = [
     "<b>Writing the rubric.</b> Deciding what counts as \"self-serve\", \"official MCP\" or \"blocked\" is a product call, not a lookup; the agents only apply it.",

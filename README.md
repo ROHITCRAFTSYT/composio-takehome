@@ -88,4 +88,4 @@ site/           template.html, index.html (built), results.csv/json
 - **Pass 2** (critic, Sonnet, one agent per app): the critic prompt was frozen before pass 1 was scored against gold.
   After the first 20 apps the usage limit was hit again; for the remaining 80 the critic's tool budget was lowered
   from "5-9 calls" to "at most 5" (same instructions otherwise), and runs were throttled to 10 at a time.
-- **Gold sample**: drafted blind by separate agents before pass 1 ran; human review tracked in `data/gold/REVIEW.md`.
+- **Gold sample**: drafted blind by separate agents before pass 1 ran, then all 100 labels reviewed by hand (`data/gold/REVIEW.md`), no corrections.
